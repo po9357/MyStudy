@@ -1,0 +1,29 @@
+에러의 종류
+- 에러(error) : 프로그램적으로 제어할 수 없음(JVM 에러)
+- 예외(exception) : 프로그래머가 해결해야 하는 오류
+
+예외(Exception) : 예외의 최상위 클래스는 Throwable
+ - 예외의 최상위 클래스는 java.lang.Throwable
+ - RuntimeException : 실행시 발생하는 예외(Exception)
+ - 그 외의 Exception : 컴파일 단계에서 확인 가능한 Exception
+ 
+ 예외처리 키워드 : try ~ catch, finally, throws, throw
+ 
+ 예외처리 방식 
+ - catch 해서 처리 : 예외 발생시 예외에 대한 처리를 직접 하는 것
+ - 예외 던지기(throws) : 예외 발생시 catch해서 처리하지 않고 던지는 것
+ 	(호출한 곳에서 예외 처리하도록 넘긴다 - 위임)
+ 	
+ 예외를 발생 
+ - throw 예외명(예외타입);	//인위적으로 예외를 발생시킴
+ 
+ 예외를 만들기
+ - Exception 클래스를 상속 받아서 예외를 정의하고 만들어 사용
+ 
+ 예외를 잡아서(catch) 처리하는 형식
+ - try ~ catch문 : 
+ try { } catch(예외타입 변수) { }
+ 예외 발생시 해당 예외를 catch한 곳에서 예외 처리
+ -try ~ catch ~ finally문 : 
+ try { } catch(예외타입 변수) { } finally { }
+ finally{} : 예외가 발생하는 경우, 발생하지 않는 경우 모두 실행되는 문장 작성

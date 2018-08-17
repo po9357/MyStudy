@@ -1,0 +1,11 @@
+pakage	O. O. O;		(폴더)
+import	O. O. 클래스명;
+class	클래스명{										클래스(객체 공퉁)
+													객체별 고유값
+
+	변수 (필드)(Field)		 	-속성, 멤버변수.(property, attribute)				 
+	생성자(Constuctor)		->객체생성 (인스턴스화(instance) 한다)				순서는 상관 없으나 통상적으로
+	메소드 main(Method)		->기능 (함수)								(필드 -> 생성자 -> 메소드)순으로 작성.
+
+}
+ 
