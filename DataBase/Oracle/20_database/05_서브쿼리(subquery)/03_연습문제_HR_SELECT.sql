@@ -45,12 +45,87 @@ SELECT E.JOB_ID, MAX(SALARY) FROM EMPLOYEES E
  WHERE (SELECT MAX(SALARY) 
                  FROM EMPLOYEES 
                WHERE E.JOB_ID = JOB_ID) >= 10000 GROUP BY JOB_ID;
+            
+SELECT DISTINCT E.JOB_ID, JOB.MAX FROM EMPLOYEES E,
+                          (SELECT MAX(SALARY) MAX, JOB_ID
+                              FROM EMPLOYEES 
+                            GROUP BY JOB_ID) JOB
+ WHERE E.JOB_ID = JOB.JOB_ID
+             AND JOB.MAX >= 10000
+ ORDER BY JOB_ID, JOB.MAX;
+   
 -- 직종별 평균급여 이상인 직원 조회
 SELECT AVG(SALARY) FROM EMPLOYEES GROUP BY JOB_ID; --   직종별 평균 급여
 SELECT E.*
-           , (SELECT AVG(SALARY) FROM EMPLOYEES WHERE E.JOB_ID = JOB_ID) AVG_SAL  
+           , (SELECT AVG(SALARY) 
+                 FROM EMPLOYEES 
+               WHERE E.JOB_ID = JOB_ID) AVG_SAL  
    FROM EMPLOYEES E 
  WHERE SALARY >= (SELECT AVG(SALARY) 
                                    FROM EMPLOYEES 
                                  WHERE E.JOB_ID = JOB_ID)
-ORDER BY JOB_ID, SALARY;
+ORDER BY JOB_ID, SALARY;      
+SELECT * 
+   FROM EMPLOYEES E
+             , (SELECT AVG(SALARY) JOB_AVG, JOB_ID 
+                   FROM EMPLOYEES 
+                 GROUP BY JOB_ID) AVG
+WHERE E.JOB_ID = AVG.JOB_ID
+            AND E.SALARY >= AVG.JOB_AVG
+ORDER BY E.JOB_ID, E.SALARY;
+------  SUB QUERY 처리
+SELECT *
+   FROM EMPLOYEES EMP
+ WHERE EMP.SALARY >= (SELECT AVG(SALARY)
+                                           FROM EMPLOYEES E
+                                         WHERE EMP.JOB_ID = E.JOB_ID);
+--  직종별 최대 월급여를 받는 직원의 사번, 성명, 월급여, 직종코드 정보
+SELECT E.EMPLOYEE_ID 사원번호, E.LAST_NAME 이름, E.SALARY 월급여, E.JOB_ID 직종코드
+   FROM EMPLOYEES E
+             , (SELECT MAX(SALARY) MAX, JOB_ID 
+                   FROM EMPLOYEES 
+                 GROUP BY JOB_ID) JOB
+ WHERE E.JOB_ID = JOB.JOB_ID
+ AND E.SALARY = JOB.MAX
+ ORDER BY E.JOB_ID;
+--
+SELECT E.EMPLOYEE_ID 사원번호, E.LAST_NAME 이름, E.SALARY 월급여, E.JOB_ID 직종코드
+   FROM EMPLOYEES E
+ WHERE E.SALARY = (SELECT MAX(SALARY)
+                                    FROM EMPLOYEES 
+                                  WHERE E.JOB_ID = JOB_ID)
+ ORDER BY E.JOB_ID;
+--  부서별 최대 월급여를 받는 직원의 사번, 성명, 월급여, 부서코드 정보
+SELECT E.EMPLOYEE_ID 사원번호, E.LAST_NAME 이름, E.SALARY 월급여, E.DEPARTMENT_ID 부서번호, DEPT.MAX 최고급여
+   FROM EMPLOYEES E
+             , (SELECT MAX(SALARY) MAX, DEPARTMENT_ID
+                   FROM EMPLOYEES 
+                 GROUP BY DEPARTMENT_ID) DEPT
+ WHERE E.DEPARTMENT_ID = DEPT.DEPARTMENT_ID
+ AND E.SALARY = DEPT.MAX;
+--
+SELECT E.EMPLOYEE_ID 사원번호, E.LAST_NAME 이름, E.SALARY 월급여, E.DEPARTMENT_ID 부서번호
+   FROM EMPLOYEES E 
+ WHERE E.SALARY = (SELECT MAX(SALARY) 
+                                    FROM EMPLOYEES 
+                                  WHERE E.DEPARTMENT_ID = DEPARTMENT_ID);
+--===============================================================
+SELECT EMPLOYEE_ID, FIRST_NAME, MANAGER_ID
+   FROM EMPLOYEES;
+--  직원들의 매니저의 이름을 함께 조회
+--  EMPLOYEE_ID, FIRST_NAME, MANAGER_ID, FIRST_NAME (MANAGER)
+SELECT E.EMPLOYEE_ID 사원번호
+             , E.LAST_NAME 이름, E.SALARY 월급여
+             , E.DEPARTMENT_ID 부서번호
+             , (SELECT LAST_NAME 
+                   FROM EMPLOYEES 
+                 WHERE EMPLOYEE_ID = E.MANAGER_ID) 매니저이름
+   FROM EMPLOYEES E 
+ WHERE E.SALARY = (SELECT MAX(SALARY) 
+                                    FROM EMPLOYEES 
+                                  WHERE E.DEPARTMENT_ID = DEPARTMENT_ID);
+--  JOIN문으로 작성 (SELF 조인)
+SELECT E1.EMPLOYEE_ID, E1.FIRST_NAME, E1.MANAGER_ID, E2.EMPLOYEE_ID, E2.FIRST_NAME
+   FROM EMPLOYEES E1, EMPLOYEES E2
+ WHERE E1.MANAGER_ID = E2.EMPLOYEE_ID
+ ORDER BY E1.EMPLOYEE_ID;
