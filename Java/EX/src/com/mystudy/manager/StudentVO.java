@@ -10,6 +10,8 @@ public class StudentVO {
 	private double avg;
 	
 	//»ý¼ºÀÚ
+	public StudentVO() {}
+	
 	public StudentVO(String id, String name, int kor, int eng, int math) {
 		super();
 		this.id = id;

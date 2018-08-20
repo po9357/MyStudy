@@ -5,9 +5,18 @@ import java.util.ArrayList;
 public class StudentManager {
 	private ArrayList<StudentVO> list;
 //StudentVO(String id, String name, int kor, int eng, int math)
+	boolean check = false;
 	
 	StudentManager() {
 		list = new ArrayList<>();
+		StudentVO vo = new StudentVO("1", "홍길동", 90, 80, 70);
+		StudentVO vo2 = new StudentVO("2", "강감찬", 50, 90, 100);
+		StudentVO vo3 = new StudentVO("3", "이순신", 80, 70, 80);
+		StudentVO vo4 = new StudentVO("4", "홍두께", 70, 50, 30);
+		list.add(vo);
+		list.add(vo2);
+		list.add(vo3);
+		list.add(vo4);
 	}
 	
 	StudentManager(ArrayList<StudentVO> list) {
@@ -131,10 +140,12 @@ public class StudentManager {
 			if (list.get(i).getName().equals(vo.getName())) {
 				System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
 						+ "\t"+ list.get(i).getMath()+ "\t"+ list.get(i).getTot()+ "\t"+ list.get(i).getAvg());
+				return;
 			} else {
-				System.out.println("데이터 없음");
+				System.out.print("-");
 			}
 		}
+		System.out.println("데이터 없음");
 	}
 	public void displayOne(String id) {
 		//list에 있는 데이타 중 id와 일치하는 데이타 화면 출력
@@ -143,13 +154,28 @@ public class StudentManager {
 			if (list.get(i).getId().equals(id)) {
 				System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
 						+ "\t"+ list.get(i).getMath()+ "\t"+ list.get(i).getTot()+ "\t"+ list.get(i).getAvg());
+				return;
 			} else {
-				System.out.println("데이터 없음");
+				System.out.print("-");
 			}
 		}
+		System.out.println("데이터 없음");
+	}
+	public void displayOneName(String name) {
+		for (int i=0; i<list.size(); i++) {
+			if (list.get(i).getName().equals(name)) {
+				System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
+						+ "\t"+ list.get(i).getMath()+ "\t"+ list.get(i).getTot()+ "\t"+ list.get(i).getAvg());
+				return;
+			} else {
+				System.out.print("-");
+			}
+		}
+		System.out.println("데이터 없음");
 	}
 	
-	public void printSungjuk() {
+	
+	public void printScore() {
 		//list에 있는 데이타 전체를 양식에 맞춰 화면에 출력
 		//성명     국어    영어    수학     총점     평균
 		//------------------------------
@@ -163,4 +189,77 @@ public class StudentManager {
 		}
 		System.out.println("-------------------------------------------");
 	}
+	
+	public boolean checkName(String name) {
+		for (int i=0; i<list.size(); i++) {
+			if (list.get(i).getName().equals(name)) {
+				check = true;
+				break;
+			} else check = false;
+		}
+		return check;
+	}
+	
+	public int checkNameInt(String name) {
+		int check = 0;
+		for (int i=0; i<list.size(); i++) {
+			if (list.get(i).getName().equals(name)) {
+				check = i;
+			}
+		}
+		return check;
+	}
+	public int checkIdInt(String id) {
+		int check = 0;
+		for (int i=0; i<list.size(); i++) {
+			if (list.get(i).getId().equals(id)) {
+				check = i;
+			}
+		}
+		return check;
+	}
+	
+	public boolean checkId(String id) {
+		for (int i=0; i<list.size(); i++) {
+			if (list.get(i).getId().equals(id)) {
+				check = true;
+				break;
+			} else check = false;
+		}
+		return check;
+	}
+	
+	public void lastData() {
+		System.out.println(list.get(list.size()-1).toString());
+	}
+	public void inputData(String id, String name, int kor, int eng, int math) {
+		StudentVO newVO = new StudentVO(id, name, kor, eng, math);
+		list.add(newVO);
+	}
+	
+	public void updateName(String name, int index) {
+		list.get(index).setName(name);
+	}
+	public void updateKor(int kor, int index) {
+		list.get(index).setKor(kor);
+	}
+	public void updateEng(int eng, int index) {
+		list.get(index).setEng(eng);
+	}
+	public void updateMath(int math, int index) {
+		list.get(index).setMath(math);
+	}
+	public void updateAll(String name, int kor, int eng, int math, int index) {
+		list.get(index).setName(name);
+		list.get(index).setKor(kor);
+		list.get(index).setEng(eng);
+		list.get(index).setMath(math);
+	}
+	public void removeData(int index) {
+		list.remove(index);
+	}
+	public void removeDataAll() {
+		list.clear();
+	}
+	
 }

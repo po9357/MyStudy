@@ -12,6 +12,13 @@ public class Ex06_for2 {
 		for (int i=2; i<=10; i=i+2) {
 			System.out.println(i);
 		}
+		System.out.println("여기부터");
+		for (int i=1; i<=10; i++) {
+			if ((i%2) == 0) {
+				System.out.println(i);
+			}
+		}
+		System.out.println("여기까지");
 		System.out.println(">>>>");
 		for (int i=1; i<=10; i++) {
 			if (i % 2 == 0) { //2로 나눈 나머지가 0이냐?

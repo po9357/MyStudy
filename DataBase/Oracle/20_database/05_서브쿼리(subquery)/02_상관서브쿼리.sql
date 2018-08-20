@@ -1,7 +1,6 @@
 --  상관서브쿼리 (메인쿼리와 서브쿼리가 조인되어 동작)
 ----------------------------
 --  출판사별로 출판사별 평균 도서가격보다 비싼 도서 목록을 구하시오
-
 SELECT * FROM BOOK B
  WHERE PRICE > (SELECT AVG(PRICE) FROM BOOK WHERE PUBLISHER = B.PUBLISHER)
 ;

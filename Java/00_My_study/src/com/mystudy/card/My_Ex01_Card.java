@@ -38,7 +38,7 @@ public class My_Ex01_Card {
 				}
 		}
 		d.pickCardMe();
-		d.resultPlayer(player);
+		d.resultPlayer();
 		
 		int ran = (int)(Math.random()*2);	//컴퓨터가 0 혹은 1의 숫자를 생성
 		if (ran == 1) {						//1일 경우 랜덤한 카드를 바꿈
@@ -49,10 +49,12 @@ public class My_Ex01_Card {
 		}//if문 종료
 		System.out.println("-------------");
 		System.out.print("player의 점수는 ");
-		int scoreMe = d.resultPlayer(player);
+		int scoreMe = d.resultPlayer();
+		System.out.println(d.resultPlayer());
 		d.pickCardComAll();
 		System.out.print("com의 점수는 ");
-		int scoreCom = d.resultCom(com);
+		int scoreCom = d.resultCom();
+		System.out.println(d.resultCom());
 		for(int i=3; i<=13; i++) {
 			if (scoreMe == 13 && scoreCom == 13) {
 				if (d.cardArr[4].number > d.cardArr[9].number) {
@@ -349,7 +351,8 @@ class Deck {
 			System.out.println(cardArr[i]);
 	}
 	
-	public int resultPlayer(int player) {
+	public int resultPlayer() {
+		int player;
 		if (cardArr[0].kind==cardArr[1].kind && cardArr[1].kind==cardArr[2].kind && 
 				cardArr[2].kind==cardArr[3].kind && cardArr[3].kind==cardArr[4].kind && cardArr[4].kind==4 &&
 				cardArr[0].number==1 && cardArr[1].number==10 && cardArr[2].number==11	&& cardArr[3].number==12 &&
@@ -412,7 +415,8 @@ class Deck {
 		}
 		return player;
 	}
-	public int resultCom(int com) {
+	public int resultCom() {
+		int com;
 		if (cardArr[5].kind==cardArr[6].kind && cardArr[6].kind==cardArr[7].kind && 
 				cardArr[7].kind==cardArr[8].kind && cardArr[8].kind==cardArr[9].kind && cardArr[9].kind==4 &&
 				cardArr[5].number==1 && cardArr[6].number==10 && cardArr[7].number==11	&& cardArr[8].number==12 &&
