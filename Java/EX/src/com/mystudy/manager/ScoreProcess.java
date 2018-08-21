@@ -18,17 +18,22 @@ public class ScoreProcess {
 	int button;
 	
 	public void end() {
-		while(true) {
-			System.out.println("메인 화면으로 돌아가시겠습니까? (1.예 / 0.종료)");
-			button = Integer.parseInt(sc.nextLine());
-			if (button == 1) {
-				main();
-				break;
-			} else if (button == 0) {
-				exit();
-			} else {
-				System.out.println("숫자 1 혹은 0을 입력하여 주십시오.");
+		try {
+			while(true) {
+				System.out.println("메인 화면으로 돌아가시겠습니까? (1.예 / 0.종료)");
+				button = Integer.parseInt(sc.nextLine());
+				if (button == 1) {
+					main();
+					break;
+				} else if (button == 0) {
+					exit();
+				} else {
+					System.out.println("숫자 1 혹은 0을 입력하여 주십시오.");
+				}
 			}
+		}catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하여 주십시오.");
+			end();
 		}
 	}
 	
@@ -38,70 +43,80 @@ public class ScoreProcess {
 	}
 	
 	public void main() {
-		while(true) {
-			System.out.println("-------------------------------------");
-			System.out.println("1.조회\t2.입력\t3.수정\t4.삭제\t0.종료");
-			System.out.println("-------------------------------------");
-			System.out.println("원하시는 작업을 선택하여 주십시오 (숫자 0 ~ 4)");
-			button = Integer.parseInt(sc.nextLine());
-			if (button == 1) {
-				checkScore();
-				end();
-				break;
-			} else if (button == 2) {
-				inputDataMain();
-				end();
-				break;
-			} else if (button == 3) {
-				updateData();
-				end();
-				break;
-			} else if (button == 4) {
-				removeData();
-				break;
-			} else if (button == 0) {
-				exit();
-			} else {
-				System.out.println("0 ~ 4 사이의 정수를 입력하여 주십시오.");
+		try {
+			while(true) {
+				System.out.println("-------------------------------------");
+				System.out.println("1.조회\t2.입력\t3.수정\t4.삭제\t0.종료");
+				System.out.println("-------------------------------------");
+				System.out.println("원하시는 작업을 선택하여 주십시오 (숫자 0 ~ 4)");
+				button = Integer.parseInt(sc.nextLine());
+				if (button == 1) {
+					checkScore();
+					end();
+					break;
+				} else if (button == 2) {
+					inputDataMain();
+					end();
+					break;
+				} else if (button == 3) {
+					updateData();
+					end();
+					break;
+				} else if (button == 4) {
+					removeData();
+					break;
+				} else if (button == 0) {
+					exit();
+				} else {
+					System.out.println("0 ~ 4 사이의 정수를 입력하여 주십시오.");
+				}
 			}
+		}catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하여 주십시오.");
+			main();
 		}
 	}
 	
 	public void checkScore() {
-		while(true) {
-			System.out.println("-----------------------------------------------------");
-			System.out.println("1.이름으로 조회\t2.id로 조회\t3.전체 조회 \t0.종료");
-			System.out.println("-----------------------------------------------------");
-			System.out.println("원하시는 작업을 선택하여 주십시오 (숫자 0 ~ 3)");
-			button = Integer.parseInt(sc.nextLine());
-			if (button == 1) {
-				System.out.println("이름을 입력하여 주십시오");
-				String name = sc.nextLine();
-				if (sm.checkName(name)) {
-					sm.displayOneName(name);
+		try {
+			while(true) {
+				System.out.println("-----------------------------------------------------");
+				System.out.println("1.이름으로 조회\t2.id로 조회\t3.전체 조회 \t0.종료");
+				System.out.println("-----------------------------------------------------");
+				System.out.println("원하시는 작업을 선택하여 주십시오 (숫자 0 ~ 3)");
+				button = Integer.parseInt(sc.nextLine());
+				if (button == 1) {
+					System.out.println("이름을 입력하여 주십시오");
+					String name = sc.nextLine();
+					if (sm.checkName(name)) {
+						sm.displayOneName(name);
+						break;
+					} else {
+						System.out.println("일치하는 데이터가 없습니다.");
+						break;
+					}
+				} else if (button == 2) {
+					System.out.println("id를 입력하여 주십시오");
+					String id = sc.nextLine();
+					if (sm.checkId(id)) {
+						sm.displayOne(id);
+						break;
+					} else {
+						System.out.println("일치하는 데이터가 없습니다.");
+						break;
+					}
+				} else if (button == 3) {
+					sm.printScore();
 					break;
+				} else if (button == 0) {
+					exit();
 				} else {
-					System.out.println("일치하는 데이터가 없습니다.");
-					break;
+					System.out.println("0 ~ 3 사이의 정수를 입력하여 주십시오.");
 				}
-			} else if (button == 2) {
-				System.out.println("id를 입력하여 주십시오");
-				String id = sc.nextLine();
-				if (sm.checkId(id)) {
-					sm.displayOne(id);
-					break;
-				} else {
-					System.out.println("일치하는 데이터가 없습니다.");
-					break;
-				}
-			} else if (button == 3) {
-				sm.printScore();
-				break;
-			} else if (button == 0) {
-				exit();
-			} else {
-				System.out.println("0 ~ 3 사이의 정수를 입력하여 주십시오.");
 			}
+		}catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하여 주십시오.");
+			checkScore();
 		}
 	}
 	
@@ -109,6 +124,7 @@ public class ScoreProcess {
 		StudentVO vo = new StudentVO();
 		System.out.println("데이터를 입력합니다.");
 		String id;
+		try {
 		while(true) {
 			System.out.println("id를 입력하여 주십시오.");
 			id = sc.nextLine();
@@ -130,9 +146,15 @@ public class ScoreProcess {
 		sm.inputData(id, name, kor, eng, math);
 		System.out.println("입력하신 데이터 입니다.");
 		sm.lastData();
+		}catch (NumberFormatException e) {
+			System.out.println("점수 입력은 숫자만 가능합니다.");
+			System.out.println("데이터를 다시 입력합니다.");
+			inputDataMain();
+		}
 	}
 	
 	public void updateData() {
+		try {
 		while(true) {
 			System.out.println("-------------------------------------");
 			System.out.println("1.이름으로 입력\t2.id로 입력\t0.종료");
@@ -165,9 +187,14 @@ public class ScoreProcess {
 				System.out.println("0 ~ 2 사이의 정수를 입력하여 주십시오.");
 			}
 		}
+		}catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하여 주십시오.");
+			updateData();
+		}
 	}
 	
 	public void updateDataMain(int index) {
+		try {
 		while(true) {
 			System.out.println("-----------------------------");
 			System.out.println("1.이름\t2.국어\t3.영어\n4.수학\t5.전체\t0.종료");
@@ -211,9 +238,14 @@ public class ScoreProcess {
 				System.out.println("0 ~ 5 사이의 정수를 입력하여 주십시오.");
 			}
 		}
+		}catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하여 주십시오.");
+			updateDataMain(index);
+		}
 	}
 	
 	public void removeData() {
+		try {
 		Outter :
 		while(true) {
 			System.out.println("-----------------------------------------------------");
@@ -257,6 +289,11 @@ public class ScoreProcess {
 				System.out.println("0 ~ 3 사이의 정수를 입력하여 주십시오.");
 			}
 		}
+		}catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하여 주십시오.");
+			removeData();
+		}
+		
 	}
 	
 	
