@@ -1,0 +1,52 @@
+/********** 함수(FUNCTION) ***********
+RETURN 데이터 유형(타입)   -- 선언 필요
+RETURN 리턴값;     -- 최종 리턴할 값 설정
+*************************************/
+-- 파라미터 값으로 BOOKID를 전달하고, 책제목(BOOKNAME)을 돌려받는 함수
+CREATE OR REPLACE FUNCTION GET_BOOKNAME (
+    IN_ID NUMBER        -- 매개변수는 무조건 IN, 선언 필요 없음
+) RETURN VARCHAR2       -- 리턴할 데이터 타입
+AS
+    V_BOOKNAME BOOK.BOOKNAME%TYPE;
+BEGIN
+    SELECT BOOKNAME INTO V_BOOKNAME
+      FROM BOOK
+     WHERE BOOKID = IN_ID;
+     
+    RETURN V_BOOKNAME;  -- 리턴값 전달
+END;
+
+-----------------------------------
+-- 함수의 사용
+SELECT BOOKID, BOOKNAME, GET_BOOKNAME(BOOKID)
+  FROM BOOK;
+
+SELECT * FROM BOOK
+ WHERE GET_BOOKNAME(BOOKID) = '축구의 이해';
+-----------------------------------
+-- (실습)고객 ID값을 전달하고, 고객명을 가져오는 함수
+-- 함수명 : GET_CUSTNAME
+-- CUSTOMER 테이블 참조
+
+CREATE OR REPLACE FUNCTION GET_CUSTNAME (
+    IN_ID NUMBER
+) RETURN VARCHAR2
+AS
+    V_NAME CUSTOMER.NAME%TYPE;
+BEGIN
+    SELECT NAME INTO V_NAME
+      FROM CUSTOMER
+     WHERE CUSTID = IN_ID;
+     
+     RETURN V_NAME;
+END;
+
+SELECT CUSTID, NAME, GET_CUSTNAME(CUSTID) FROM CUSTOMER;
+SELECT GET_CUSTNAME(2) FROM DUAL;
+
+SELECT ORDERID
+     , CUSTID, GET_CUSTNAME(CUSTID) AS CUST_NAME
+     , BOOKID, GET_BOOKNAME(BOOKID) AS BOOKNAME
+     , SALEPRICE, ORDERDATE
+  FROM ORDERS
+;

@@ -1,0 +1,122 @@
+-- PL/SQL 프로시져 
+
+DECLARE -- 변수선언
+    V_EMPID NUMBER;
+    V_NAME VARCHAR2(30);
+BEGIN   -- 실행문 작성 시작
+    V_EMPID := 100;     -- 치환문 부호 :=
+    V_NAME := '홍길동';
+    
+    DBMS_OUTPUT.PUT_LINE(V_EMPID ||':'||V_NAME);
+    
+END;    -- 실행문 작성 끝
+
+----------------------
+DECLARE 
+    V_BOOKID NUMBER(2);
+    V_BOOKNAME VARCHAR2(40);
+    V_PUBLISHER VARCHAR2(40);
+    V_PRICE NUMBER(8);
+BEGIN
+    -- SELECT ~ INTO ~ FROM 형태
+    -- (다른 테이블에서 불어와 사용할 때)
+    -- SELECT INTO문의 실행결과는 데이터가 1건만 허용
+    SELECT BOOKID, BOOKNAME, PUBLISHER, PRICE
+      INTO V_BOOKID, V_BOOKNAME, V_PUBLISHER, V_PRICE
+      FROM BOOK
+     WHERE BOOKID = 3;
+     
+    DBMS_OUTPUT.PUT_LINE(V_BOOKID ||':'||V_BOOKNAME||':'||V_PUBLISHER||':'||V_PRICE);
+END;
+
+------------------------------
+-- 저장 프로시저 (STORED PROCEDURE)
+-- 매개변수 유형
+------- IN : 입력 받기만 하는 변수
+------- OUT : 출력만 하는 변수
+------- IN OUT : 입력, 출력 할 수 있는 변수
+CREATE OR REPLACE PROCEDURE BOOK_DISP
+(   -- 매개변수 선언부 : ()안에 작성
+    IN_BOOKID IN NUMBER
+)
+AS
+    -- 변수 선언부
+    V_BOOKID NUMBER(2);
+    V_BOOKNAME VARCHAR2(40);
+    V_PUBLISHER VARCHAR2(40);
+    V_PRICE NUMBER(8);
+BEGIN  
+    -- 실행부 시작
+    SELECT BOOKID, BOOKNAME, PUBLISHER, PRICE
+      INTO V_BOOKID, V_BOOKNAME, V_PUBLISHER, V_PRICE
+      FROM BOOK
+     WHERE BOOKID = IN_BOOKID;
+    
+    DBMS_OUTPUT.PUT_LINE(V_BOOKID ||':'||V_BOOKNAME||':'||V_PUBLISHER||':'||V_PRICE);
+END;
+
+--------------------------
+-- 프로시저 실행 (EXECUTE)
+EXECUTE BOOK_DISP(2);
+
+-- 프로시저의 삭제
+DROP PROCEDURE BOOK_DISP2;
+--------------------------
+-- GET_BOOKINFO 프로시저를 호출해서 OUT값 확인
+CREATE OR REPLACE PROCEDURE GET_BOOKINFO_TEST 
+(
+    IN_BOOKID IN NUMBER
+) AS 
+    V_BOOKNAME BOOK.BOOKNAME%TYPE;
+    V_PUBLISHER BOOK.PUBLISHER%TYPE;
+    V_PRICE BOOK.PRICE%TYPE;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('입력받은 값 : '||IN_BOOKID);
+    
+    -- GET_BOOKINFO 프로시저 실행(호출)
+    GET_BOOKINFO(IN_BOOKID, V_BOOKNAME, V_PUBLISHER, V_PRICE);
+    
+    -- 받은 값(OUT) 화면 출력
+    DBMS_OUTPUT.PUT_LINE('>>BOOKINFO_TEST 결과 : '||IN_BOOKID||':'||V_BOOKNAME||':'||V_PUBLISHER||':'||V_PRICE);
+END;
+
+----------------------------------------
+-- (실습) : 고객테이블(CUSTOMER)에 있는 데이터 조회 프로시저 작성
+-- 프로시저명 : GET_CUSTINFO
+-- 입력받는 값 : 고객ID값
+-- 처리 : 화면에 고객 ID, 고객명, 주소, 전화번호 출력
+CREATE OR REPLACE PROCEDURE GET_CUSTINFO (
+    IN_CUSTID IN NUMBER,
+    
+    OUT_NAME OUT VARCHAR,
+    OUT_ADDRESS OUT VARCHAR,
+    OUT_PHONE OUT VARCHAR
+    
+) AS
+    V_NAME CUSTOMER.NAME%TYPE;
+    V_ADDRESS CUSTOMER.ADDRESS%TYPE;
+    V_PHONE CUSTOMER.PHONE%TYPE;
+BEGIN
+    SELECT NAME, ADDRESS, PHONE
+      INTO V_NAME, V_ADDRESS, V_PHONE
+      FROM CUSTOMER
+     WHERE CUSTID = IN_CUSTID;
+     
+     OUT_NAME := V_NAME;
+     OUT_ADDRESS := V_ADDRESS;
+     OUT_PHONE := V_PHONE;
+    DBMS_OUTPUT.PUT_LINE(IN_CUSTID||' : '||V_NAME||' : '||V_ADDRESS||' : '||V_PHONE);
+END;
+
+EXECUTE GET_CUSTINFO(3);
+CREATE OR REPLACE PROCEDURE GET_CUSTINFO_TEST (
+    IN_CUSTID IN NUMBER
+) AS
+    V_NAME CUSTOMER.NAME%TYPE;
+    V_ADDRESS CUSTOMER.ADDRESS%TYPE;
+    V_PHONE CUSTOMER.PHONE%TYPE;
+BEGIN
+    GET_CUSTINFO(V_NAME, V_ADDRESS, V_PHONE);
+    
+    DBMS_OUTPUT.PUT_LINE(V_NAME||' '||V_ADDRESS||' '||V_PHONE);
+END;
