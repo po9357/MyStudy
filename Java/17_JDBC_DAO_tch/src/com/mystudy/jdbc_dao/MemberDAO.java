@@ -188,6 +188,38 @@ public class MemberDAO {
 	public int updateOne(MemberVO member) {
 		int result = 0;
 		
+		try {
+			//DB 연결
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			
+			//SQL 문장 실행을 위한 준비
+			//SQL 문장 작성
+			StringBuilder sb = new StringBuilder();
+			sb.append("UPDATE MEMBER ");
+			sb.append("   SET PASSWORD = ? ");
+			sb.append("     , NAME = ? ");
+			sb.append("     , PHONE = ? ");
+			sb.append("     , ADDRESS = ? ");
+			sb.append(" WHERE ID = ?");
+			//SQL 문장을 전달해서 실행 준비
+			pstmt = conn.prepareStatement(sb.toString());
+			
+			//SQL문의 ?에 값 매칭 작업
+			pstmt.setString(1, member.getPassword());
+			pstmt.setString(2, member.getName());
+			pstmt.setString(3, member.getPhone());
+			pstmt.setString(4, member.getAddress());
+			pstmt.setString(5, member.getId());
+			
+			//SQL문 실행
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			//사용한 자원 닫기
+			JDBC_Close.closeConnStmt(conn, pstmt);
+		}
 		
 		return result;
 	}
@@ -196,6 +228,30 @@ public class MemberDAO {
 	public int deleteOne(MemberVO member) {
 		int result = 0;
 		
+		try {
+			//DB 연결
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			
+			//SQL 문장 실행을 위한 준비
+			//SQL 문장 작성
+			StringBuilder sb = new StringBuilder();
+			sb.append("DELETE FROM MEMBER WHERE ID = ?");
+			
+			//SQL 문장을 전달해서 실행 준비
+			pstmt = conn.prepareStatement(sb.toString());
+			
+			//SQL문의 ?에 값 매칭 작업
+			pstmt.setString(1, member.getId());
+			
+			//SQL문 실행
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			//사용한 자원 닫기
+			JDBC_Close.closeConnStmt(conn, pstmt);
+		}
 		
 		return result;
 	}
@@ -204,6 +260,30 @@ public class MemberDAO {
 	public int deleteOne(String id) {
 		int result = 0;
 		
+		try {
+			//DB 연결
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			
+			//SQL 문장 실행을 위한 준비
+			//SQL 문장 작성
+			StringBuilder sb = new StringBuilder();
+			sb.append("DELETE FROM MEMBER WHERE ID = ?");
+			
+			//SQL 문장을 전달해서 실행 준비
+			pstmt = conn.prepareStatement(sb.toString());
+			
+			//SQL문의 ?에 값 매칭 작업
+			pstmt.setString(1, id);
+			
+			//SQL문 실행
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			//사용한 자원 닫기
+			JDBC_Close.closeConnStmt(conn, pstmt);
+		}
 		
 		return result;
 	}
@@ -212,11 +292,63 @@ public class MemberDAO {
 	//boolean checkIdPassword(id, password)
 	public boolean checkIdPassword(String id, String password) {
 		boolean result = false;
+		try {
+			//DB연결 - Connection 객체 생성
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("SELECT ID  ");
+			sb.append("  FROM MEMBER ");
+			sb.append(" WHERE ID = ? AND PASSWORD = ?");
+			pstmt = conn.prepareStatement(sb.toString());
+			pstmt.setString(1, id);
+			pstmt.setString(2, password);
+			
+			rs = pstmt.executeQuery();
+			if (rs.next()) { //최소 1 건 이상의 데이타가 있음
+				result = true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBC_Close.closeConnStmtRs(conn, pstmt, rs);
+		}
 		
 		
 		return result;
 	}
 	
+	public boolean checkIdPassword2(String id, String password) {
+		boolean result = false;
+		try {
+			//DB연결 - Connection 객체 생성
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("SELECT COUNT(*) AS CNT ");
+			sb.append("  FROM MEMBER ");
+			sb.append(" WHERE ID = ? AND PASSWORD = ?");
+			pstmt = conn.prepareStatement(sb.toString());
+			pstmt.setString(1, id);
+			pstmt.setString(2, password);
+			
+			rs = pstmt.executeQuery();
+			if (rs.next()) { //COUNT(*) 값은 무조건 있음 0~n
+				if (rs.getInt(1) > 0) {
+					result = true;
+				} 
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBC_Close.closeConnStmtRs(conn, pstmt, rs);
+		}
+		
+		
+		return result;
+	}
 	
 	
 	
