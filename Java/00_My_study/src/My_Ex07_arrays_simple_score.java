@@ -1,4 +1,4 @@
-
+﻿
 public class My_Ex07_arrays_simple_score {
 	
 	public static void main(String[] args) {

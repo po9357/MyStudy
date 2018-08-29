@@ -1,11 +1,11 @@
-package com.mystudy.am01_exception;
+ï»¿package com.mystudy.am01_exception;
 
 public class ExceptionThrow {
 
 	public static void main(String[] args) {
-		//¿¹¿ÜÃ³¸® throw : ¿¹¿Ü¸¦ ¹ß»ı ½ÃÅ³ ¶§ »ç¿ë
+		//ì˜ˆì™¸ì²˜ë¦¬ throw : ì˜ˆì™¸ë¥¼ ë°œìƒ ì‹œí‚¬ ë•Œ ì‚¬ìš©
 		//throw new ArithmeticException();
-		//throw new ArithmeticException("»ı¼ºÀÚ ¸Ş½ÃÁö Àü´Ş");
+		//throw new ArithmeticException("ìƒì„±ì ë©”ì‹œì§€ ì „ë‹¬");
 		
 		throw new ArrayIndexOutOfBoundsException();
 

@@ -1,25 +1,25 @@
-import java.util.*;
+ï»¿import java.util.*;
 
 public class My_Ex13_word {
 	
 	public static void main(String[] args) {
 		String[][] words = {
-				{"chair", "ÀÇÀÚ"},
-				{"computer", "ÄÄÇ»ÅÍ"},
-				{"integer", "Á¤¼ö"}
+				{"chair", "ì˜ì"},
+				{"computer", "ì»´í“¨í„°"},
+				{"integer", "ì •ìˆ˜"}
 		};
 		
 		Scanner sc = new Scanner(System.in);
 		
 		for (int i=0; i<words.length; i++) {
-			System.out.println("Q"+(i+1)+". "+words[i][0]+"ÀÇ ¶æÀº?");
+			System.out.println("Q"+(i+1)+". "+words[i][0]+"ì˜ ëœ»ì€?");
 			
 			String tmp = sc.nextLine();
 			
 			if(tmp.equals(words[i][1])) {
-				System.out.println("Á¤´äÀÔ´Ï´Ù!");
+				System.out.println("ì •ë‹µì…ë‹ˆë‹¤!");
 			} else {
-				System.out.println("Æ²·È½À´Ï´Ù. Á¤´äÀº "+ words[i][1]+"ÀÔ´Ï´Ù.");
+				System.out.println("í‹€ë ¸ìŠµë‹ˆë‹¤. ì •ë‹µì€ "+ words[i][1]+"ì…ë‹ˆë‹¤.");
 			}
 		}
 				

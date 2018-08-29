@@ -1,4 +1,4 @@
-package com.mystudy.pm01_map_score;
+ï»¿package com.mystudy.pm01_map_score;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -11,37 +11,37 @@ public class HashMapSungjukExam {
 	double avg;
 	
 	void printData() {
-		//5. Ãâ·ÂÇÏ½Ã¿À.
-		//   ¼º¸í  Á¡¼ö
+		//5. ì¶œë ¥í•˜ì‹œì˜¤.
+		//   ì„±ëª…  ì ìˆ˜
 		//   -----------
-		//   È«±æµ¿: 100
-		//   °­°¨Âù: 90
+		//   í™ê¸¸ë™: 100
+		//   ê°•ê°ì°¬: 90
 		//   ...
-		//   ±èÀ¯½Å: 92
+		//   ê¹€ìœ ì‹ : 92
 		//   ==========
-		//   ÃÑÁ¡: ???
-		//   Æò±Õ: ???
-		System.out.println("¼º¸í\tÁ¡¼ö");
+		//   ì´ì : ???
+		//   í‰ê· : ???
+		System.out.println("ì„±ëª…\tì ìˆ˜");
 		System.out.println("--------------");
 		
-		//µ¥ÀÌÅ¸ Ãâ·Â
+		//ë°ì´íƒ€ ì¶œë ¥
 		displayData("\t");
 		
 		System.out.println("==============");
-		System.out.println("ÃÑÁ¡\t" + tot);
-		System.out.println("Æò±Õ\t" + avg);
+		System.out.println("ì´ì \t" + tot);
+		System.out.println("í‰ê· \t" + avg);
 		
 	}
 
 	void computeAvg() {
-		//4. ÃÑÁ¡(tot)ÀÇ °ªÀ» ÀÎ¿ø ¼ö·Î ³ª´« Æò±Õ °ªÀ» avg¿¡ ÀúÀå
+		//4. ì´ì (tot)ì˜ ê°’ì„ ì¸ì› ìˆ˜ë¡œ ë‚˜ëˆˆ í‰ê·  ê°’ì„ avgì— ì €ì¥
 		computeTot();
 		avg = (tot * 100) / sungjuk.size() / 100.0;
 		
 	}
 
 	void computeTot() {
-		//3. ÀÔ·ÂµÈ µ¥ÀÌÅ¸¸¦ Á¶È¸ÇØ¼­ Á¡¼öÀÇ ÃÑÁ¡À» tot¿¡ ÀúÀå
+		//3. ì…ë ¥ëœ ë°ì´íƒ€ë¥¼ ì¡°íšŒí•´ì„œ ì ìˆ˜ì˜ ì´ì ì„ totì— ì €ì¥
 		tot = 0;
 		for (String name : sungjuk.keySet()) {
 			tot += sungjuk.get(name);
@@ -50,12 +50,12 @@ public class HashMapSungjukExam {
 	}
 
 	void inputData() {
-		//2. map¿¡ ÀÌ¸§:Á¡¼ö ÇüÅÂÀÇ ¾Æ·¡ÀÇ µ¥ÀÌÅ¸¸¦ ÀÔ·Â
-		//   "È«±æµ¿:100, °­°¨Âù:90, À»Áö¹®´ö:95, °è¹é:87, ±èÀ¯½Å:92"
-		sungjuk.put("È«±æµ¿", 100);
-		sungjuk.put("°­°¨Âù", 90);
-		sungjuk.put("À»Áö¹®´ö", 95);
-		sungjuk.put("°è¹é", 87);
+		//2. mapì— ì´ë¦„:ì ìˆ˜ í˜•íƒœì˜ ì•„ë˜ì˜ ë°ì´íƒ€ë¥¼ ì…ë ¥
+		//   "í™ê¸¸ë™:100, ê°•ê°ì°¬:90, ì„ì§€ë¬¸ë•:95, ê³„ë°±:87, ê¹€ìœ ì‹ :92"
+		sungjuk.put("í™ê¸¸ë™", 100);
+		sungjuk.put("ê°•ê°ì°¬", 90);
+		sungjuk.put("ì„ì§€ë¬¸ë•", 95);
+		sungjuk.put("ê³„ë°±", 87);
 	}
 	
 	void displayData() {

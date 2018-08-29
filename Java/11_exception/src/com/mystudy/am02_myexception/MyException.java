@@ -1,12 +1,12 @@
-package com.mystudy.am02_myexception;
+ï»¿package com.mystudy.am02_myexception;
 
 public class MyException extends Exception {
 	MyException() {
-		super(">> ³»°¡ ¸¸µç Exception");
+		super(">> ë‚´ê°€ ë§Œë“  Exception");
 	}
 	
 	MyException(String msg){
-		super(">> ³»°¡ ¸¸µç Exception : "+ msg);
+		super(">> ë‚´ê°€ ë§Œë“  Exception : "+ msg);
 	}	
 
 }

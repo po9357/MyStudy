@@ -1,15 +1,15 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 
 import java.util.Arrays;
 
 public class Ex03_array_copy_2dim {
 
 	public static void main(String[] args) {
-		//1Â÷¿ø, 2Â÷¿ø ¹è¿­ º¹»ç
-		//1Â÷¿ø ¹è¿­ º¹»ç
+		//1ì°¨ì›, 2ì°¨ì› ë°°ì—´ ë³µì‚¬
+		//1ì°¨ì› ë°°ì—´ ë³µì‚¬
 		int[] num1 = {10, 20, 30};
 		
-		//40 ¼ıÀÚ Ãß°¡
+		//40 ìˆ«ì ì¶”ê°€
 		int[] num2 = new int[num1.length+1];
 		System.out.println(Arrays.toString(num2));
 		
@@ -21,18 +21,18 @@ public class Ex03_array_copy_2dim {
 		System.out.println(Arrays.toString(num2));
 		
 		//----------------------------------------
-		System.out.println("======== 2Â÷¿ø ¹è¿­ ========");
-		//2Â÷¿ø ¹è¿­
+		System.out.println("======== 2ì°¨ì› ë°°ì—´ ========");
+		//2ì°¨ì› ë°°ì—´
 		int[][] num2dim = {{10, 20}, {30, 40}, {50, 60}};
-		//Q1 : 2Â÷¿ø ¹è¿­ num2dim °ªÀ» È­¸é¿¡ Ãâ·Â : 10 20 30 ...
+		//Q1 : 2ì°¨ì› ë°°ì—´ num2dim ê°’ì„ í™”ë©´ì— ì¶œë ¥ : 10 20 30 ...
 		printData(num2dim);
 				
 				
-		//Q2 : num2dim¿¡¼­ ¼¼¹øÂ° °ªÀÎ 30ÀÇ °ªÀ» 100À¸·Î º¯°æÇÏ°í ¹øÃ¼ È­¸é Ãâ·Â
+		//Q2 : num2dimì—ì„œ ì„¸ë²ˆì§¸ ê°’ì¸ 30ì˜ ê°’ì„ 100ìœ¼ë¡œ ë³€ê²½í•˜ê³  ë²ˆì²´ í™”ë©´ ì¶œë ¥
 		num2dim[1][0] = 100;
 		printData(num2dim);
 		
-		//Q3 : num2dim¿Í µ¿ÀÏÇÑ ÇüÅÂÀÇ ¹è¿­ num2Copy¸¦ ¼±¾ğÇÏ°í ¸¸µå¼¼¿ä.
+		//Q3 : num2dimì™€ ë™ì¼í•œ í˜•íƒœì˜ ë°°ì—´ num2Copyë¥¼ ì„ ì–¸í•˜ê³  ë§Œë“œì„¸ìš”.
 		int[][] num2Copy = new int[num2dim.length][num2dim[0].length];
 				
 //		for (int i=0; i<num2dim.length; i++) {
@@ -54,7 +54,7 @@ public class Ex03_array_copy_2dim {
 		num2Copy[0][0] = 10;
 		num2Copy[2][1] = 60;
 		printData(num2dim);
-		System.out.println("--- ÁÖ¼Ò°ª °øÀ¯ ---");
+		System.out.println("--- ì£¼ì†Œê°’ ê³µìœ  ---");
 		System.out.println(Arrays.toString(num2Copy));
 		System.out.println(Arrays.toString(num2dim));
 	}

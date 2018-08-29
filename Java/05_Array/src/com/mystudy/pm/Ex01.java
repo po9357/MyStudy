@@ -1,10 +1,10 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 import java.util.*;
 
 public class Ex01 {
 
 	public static void main(String[] args) {
-		//º¯¼ö°ª ±³È¯ÇÏ±â
+		//ë³€ìˆ˜ê°’ êµí™˜í•˜ê¸°
 		int i = 100;
 		int k = 200;
 		int tmp;

@@ -1,16 +1,16 @@
-package com.mystudy.pm02_list_studentvo;
+ï»¿package com.mystudy.pm02_list_studentvo;
 
 import java.util.ArrayList;
 
 public class StudentManagerList {
 	private ArrayList<StudentVO> score = new ArrayList<>();
-	static final String TITLE = "ÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ";
+	static final String TITLE = "ì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ";
 	static final String LINE = "-----------------------"
 				+ "------------------------------";
 	void inputBasicData() {
-		score.add(new StudentVO("È«±æµ¿", 100,90,81));
-		score.add(new StudentVO("±èÀ¯½Å", 90,90,90));
-		score.add(new StudentVO("È«°æ·¡", 80,80,80));
+		score.add(new StudentVO("í™ê¸¸ë™", 100,90,81));
+		score.add(new StudentVO("ê¹€ìœ ì‹ ", 90,90,90));
+		score.add(new StudentVO("í™ê²½ë˜", 80,80,80));
 	}
 	
 	void inputData(StudentVO vo) {
@@ -20,10 +20,10 @@ public class StudentManagerList {
 		score.add(new StudentVO(name, kor, eng, math));
 	}
 	
-	//[±¸Çö½Ç½À] Àü´Ş¹ŞÀº VOÀÇ name°ú 
-	//score ¸ñ·Ï¿¡ ÀÖ´Â VOÁß nameÀÌ °°Àº µ¥ÀÌÅ¸ »èÁ¦ 					//³¡
+	//[êµ¬í˜„ì‹¤ìŠµ] ì „ë‹¬ë°›ì€ VOì˜ nameê³¼ 
+	//score ëª©ë¡ì— ìˆëŠ” VOì¤‘ nameì´ ê°™ì€ ë°ì´íƒ€ ì‚­ì œ 					//ë
 	boolean deleteData(StudentVO vo) {
-		//StudentVO Å¸ÀÔÀÇ °ªÀ» Àü´Ş¹Ş¾Æ score ¸ñ·Ï¿¡¼­ »èÁ¦
+		//StudentVO íƒ€ì…ì˜ ê°’ì„ ì „ë‹¬ë°›ì•„ score ëª©ë¡ì—ì„œ ì‚­ì œ
 		boolean result = false;
 		for (int i = 0; i < score.size(); i++) {
 			if (vo.getName() == score.get(i).getName()) {
@@ -34,9 +34,9 @@ public class StudentManagerList {
 		return result;
 	}
 	
-	//[±¸Çö½Ç½À] ÀÌ¸§À» ¹Ş¾Æ¼­ °°Àº ÀÌ¸§ÀÇ °´Ã¼ »èÁ¦					//³¡
+	//[êµ¬í˜„ì‹¤ìŠµ] ì´ë¦„ì„ ë°›ì•„ì„œ ê°™ì€ ì´ë¦„ì˜ ê°ì²´ ì‚­ì œ					//ë
 	boolean deleteData(String name) {
-		//ÀÌ¸§À» Àü´Ş¹Ş¾Æ score ¿¡¼­ »èÁ¦ Ã³¸®
+		//ì´ë¦„ì„ ì „ë‹¬ë°›ì•„ score ì—ì„œ ì‚­ì œ ì²˜ë¦¬
 		boolean result = false;
 		for (int i = 0; i < score.size(); i++) {
 			if (name == score.get(i).getName()) {
@@ -47,13 +47,13 @@ public class StudentManagerList {
 		return result;
 	}
 	
-	//[±¸Çö½Ç½À] Àü´Ş¹ŞÀº VOÀÇ name°ú 
-	//score ¸ñ·Ï¿¡ ÀÖ´Â VOÁß nameÀÌ °°Àº µ¥ÀÌÅ¸ ¼öÁ¤					//³¡
+	//[êµ¬í˜„ì‹¤ìŠµ] ì „ë‹¬ë°›ì€ VOì˜ nameê³¼ 
+	//score ëª©ë¡ì— ìˆëŠ” VOì¤‘ nameì´ ê°™ì€ ë°ì´íƒ€ ìˆ˜ì •					//ë
 	boolean updateData(StudentVO vo) {
-		//1.ÀÌ¸§À» Àü´Ş¹Ş¾Æ score ¿¡¼­ Ã£°í
-		//2.Ã£¾ÒÀ¸¸é Àü´Ş¹ŞÀº VOÀÇ Á¡¼ö,ÃÑÁ¡,Æò±ÕÀ¸·Î score¿¡¼­ Ã£Àº VO°ª º¯°æ
+		//1.ì´ë¦„ì„ ì „ë‹¬ë°›ì•„ score ì—ì„œ ì°¾ê³ 
+		//2.ì°¾ì•˜ìœ¼ë©´ ì „ë‹¬ë°›ì€ VOì˜ ì ìˆ˜,ì´ì ,í‰ê· ìœ¼ë¡œ scoreì—ì„œ ì°¾ì€ VOê°’ ë³€ê²½
 		boolean result = false;
-		System.out.println("ÀÔ·Â ¹ŞÀº °ª : "+ vo);
+		System.out.println("ì…ë ¥ ë°›ì€ ê°’ : "+ vo);
 		for (int i = 0; i < score.size(); i++) {
 			if (vo.getName() == score.get(i).getName()) {
 				score.remove(score.get(i));
@@ -66,11 +66,11 @@ public class StudentManagerList {
 	}
 	
 	
-	//[±¸Çö½Ç½À]
-	StudentVO getData(String name) {					//³¡
+	//[êµ¬í˜„ì‹¤ìŠµ]
+	StudentVO getData(String name) {					//ë
 		StudentVO result = new StudentVO();
 		
-		//Àü´Ş¹ŞÀº ÀÌ¸§À» °¡Áö°í ÀÖ´Â StudentVO °´Ã¼ Ã£±â
+		//ì „ë‹¬ë°›ì€ ì´ë¦„ì„ ê°€ì§€ê³  ìˆëŠ” StudentVO ê°ì²´ ì°¾ê¸°
 		for (int i = 0; i < score.size(); i++) {
 			if (name == score.get(i).getName()) {
 				System.out.println(score.get(i));
@@ -80,12 +80,12 @@ public class StudentManagerList {
 		return result;
 	}
 	
-	//[±¸Çö½Ç½À]Á¡¼ö ÀÌ»óÀÎ »ç¶÷ ¸ñ·Ï Á¶È¸
-	ArrayList<StudentVO> getData(double avg) {			//³¡
+	//[êµ¬í˜„ì‹¤ìŠµ]ì ìˆ˜ ì´ìƒì¸ ì‚¬ëŒ ëª©ë¡ ì¡°íšŒ
+	ArrayList<StudentVO> getData(double avg) {			//ë
 		ArrayList<StudentVO> result = new ArrayList<StudentVO>();
 		
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸¿¡¼­ Àü´Ş¹ŞÀº Æò±Õ°ª(avg) ÀÌ»óÀÎ µ¥ÀÌÅ¸ Ã£¾Æ¼­
-		//result¿¡ ´ã¾Æ¼­ ¸®ÅÏ
+		//listì— ìˆëŠ” ë°ì´íƒ€ì—ì„œ ì „ë‹¬ë°›ì€ í‰ê· ê°’(avg) ì´ìƒì¸ ë°ì´íƒ€ ì°¾ì•„ì„œ
+		//resultì— ë‹´ì•„ì„œ ë¦¬í„´
 		for (int i = 0; i < score.size(); i++) {
 			if (score.get(i).getAvg() >= avg) {
 				System.out.println(score.get(i));
@@ -95,15 +95,15 @@ public class StudentManagerList {
 		return result;
 	}
 	
-	//ÀüÃ¼ µ¥ÀÌÅ¸ Ãâ·Â(Å¸ÀÌÆ² Ãâ·Â¾øÀÌ µ¥ÀÌÅ¸¸¸)
+	//ì „ì²´ ë°ì´íƒ€ ì¶œë ¥(íƒ€ì´í‹€ ì¶œë ¥ì—†ì´ ë°ì´íƒ€ë§Œ)
 	void printDataAll() {
-		//score ÇÊµå¿¡ ´ã°ÜÀÖ´Â µ¥ÀÌÅ¸¸¸ Ãâ·Â
+		//score í•„ë“œì— ë‹´ê²¨ìˆëŠ” ë°ì´íƒ€ë§Œ ì¶œë ¥
 		for (StudentVO vo : score) {
 			printDataOne(vo, "\t");
 		}
 	}
 	
-	//ÇÏ³ªÀÇ µ¥ÀÌÅ¸¸¦ Ãâ·Â(VO¿Í Ãâ·Â±¸ºĞÀÚ)
+	//í•˜ë‚˜ì˜ ë°ì´íƒ€ë¥¼ ì¶œë ¥(VOì™€ ì¶œë ¥êµ¬ë¶„ì)
 	void printDataOne(StudentVO vo, String delim) {
 		if (vo == null) return;
 		System.out.print(vo.getName());

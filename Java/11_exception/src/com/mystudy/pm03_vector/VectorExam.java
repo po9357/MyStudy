@@ -1,4 +1,4 @@
-package com.mystudy.pm03_vector;
+ï»¿package com.mystudy.pm03_vector;
 
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -7,8 +7,8 @@ import java.util.Vector;
 public class VectorExam {
 
 	public static void main(String[] args) {
-		//Vector Å¬·¡½º
-		Vector v = new Vector(5);	//¿ë·®(capacity) 5ÀÎ
+		//Vector í´ë˜ìŠ¤
+		Vector v = new Vector(5);	//ìš©ëŸ‰(capacity) 5ì¸
 		v.add("1");
 		v.add("2");
 		v.add("3");
@@ -42,18 +42,18 @@ public class VectorExam {
 		System.out.println(v);
 		
 		System.out.println("--- add(index, object) ---");
-		v.add(2, "BB");			//ÀÔ·Â(insert)
+		v.add(2, "BB");			//ì…ë ¥(insert)
 		System.out.println(v);
 		System.out.println("--- set(index, object) ---");
-		v.set(2, "CCC");		//¼öÁ¤(update)
+		v.set(2, "CCC");		//ìˆ˜ì •(update)
 		System.out.println(v);
 		
-		System.out.println("--- clone() ½ÇÇà ÈÄ ---");
+		System.out.println("--- clone() ì‹¤í–‰ í›„ ---");
 		Vector v2 = (Vector) v.clone();
 		System.out.println("v : "+ v);
 		System.out.println("v2 : "+ v2);
 		
-		System.out.println("--- clear() ½ÇÇà ÈÄ ---");
+		System.out.println("--- clear() ì‹¤í–‰ í›„ ---");
 		v2.clear();
 		System.out.println("v : "+ v);
 		System.out.println("v2 : "+ v2);
@@ -67,7 +67,7 @@ public class VectorExam {
 		}
 		System.out.println(v);
 		
-		System.out.println("----- Iterator È°¿ë Á¶È¸ -----");
+		System.out.println("----- Iterator í™œìš© ì¡°íšŒ -----");
 		Iterator ite = v.iterator();
 		while (ite.hasNext()) {
 			System.out.println("ite.next() : "+ ite.next());

@@ -1,9 +1,9 @@
-package com.mystudy.pm05_interface;
+ï»¿package com.mystudy.pm05_interface;
 
 public class TypeTest {
 
 	public static void main(String[] args) {
-		//Ãß»óÅ¬·¡½º AnimalÀº °´Ã¼ »ı¼º ÇÒ ¼ö ¾øÀ½
+		//ì¶”ìƒí´ë˜ìŠ¤ Animalì€ ê°ì²´ ìƒì„± í•  ìˆ˜ ì—†ìŒ
 		//Animal an = new Animal();
 		
 		Cat cat = new Cat();
@@ -18,7 +18,7 @@ public class TypeTest {
 		pig.sound();
 		sheep.sound();
 		
-		System.out.println("---- sound(Animal) È£Ãâ --- ");
+		System.out.println("---- sound(Animal) í˜¸ì¶œ --- ");
 		sound(cat);
 		sound(dog);
 		sound(ch);

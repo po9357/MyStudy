@@ -1,15 +1,15 @@
-package com.mystudy.pm02_arraylist;
+ï»¿package com.mystudy.pm02_arraylist;
 
-import java.util.*; //java.util¿¡ ÀÖ´Â ¸ğµç Å¬·¡½º
+import java.util.*; //java.utilì— ìˆëŠ” ëª¨ë“  í´ë˜ìŠ¤
 
 public class ArrayListExam {
 
 	public static void main(String[] args) {
-		//¹è¿­ÀÇ ¼Ó¼º°ú List ¼Ó¼ºÀ» °¡Áü
+		//ë°°ì—´ì˜ ì†ì„±ê³¼ List ì†ì„±ì„ ê°€ì§
 		ArrayList list1 = new ArrayList();
 		System.out.println("list1.size : " + list1.size());
 		list1.add(new Integer(5));
-		list1.add(1); //int -> Integer ÀÚµ¿ Çüº¯È¯ µÇ¾î ÀÔ·ÂÃ³¸®
+		list1.add(1); //int -> Integer ìë™ í˜•ë³€í™˜ ë˜ì–´ ì…ë ¥ì²˜ë¦¬
 		list1.add(new Integer(5));
 		list1.add(new Integer(6));
 		list1.add(new Integer(7));
@@ -18,7 +18,7 @@ public class ArrayListExam {
 		System.out.println(list1.toString());
 		System.out.println("list1.size : " + list1.size());
 		Collections.reverse(list1);
-		System.out.println("reverse()ÈÄ: " + list1);
+		System.out.println("reverse()í›„: " + list1);
 		
 		System.out.println("-----");
 		ArrayList list2 = new ArrayList(list1.subList(1, 4));
@@ -33,7 +33,7 @@ public class ArrayListExam {
 		System.out.println("list2 : " + list2);
 		
 		System.out.println("----- Collections.reverse() ---");
-		//reverse() : Ã³À½°ú ³¡ÀÇ À§Ä¡¸¦ ¼­·Î ¹Ù²Ù´Â ÇüÅÂ·Î µ¿ÀÛ
+		//reverse() : ì²˜ìŒê³¼ ëì˜ ìœ„ì¹˜ë¥¼ ì„œë¡œ ë°”ê¾¸ëŠ” í˜•íƒœë¡œ ë™ì‘
 		Collections.reverse(list1);
 		System.out.println("list1 : " + list1);
 		
@@ -55,14 +55,14 @@ public class ArrayListExam {
 		print(list1, list2);
 		
 		System.out.println("------------------");
-		System.out.println(">> list2¿¡¼­ list1¿¡ Æ÷ÇÔµÈ °´Ã¼ »èÁ¦");
+		System.out.println(">> list2ì—ì„œ list1ì— í¬í•¨ëœ ê°ì²´ ì‚­ì œ");
 		print(list1, list2);
 		
-//		System.out.println("list2.removeAll(list1) ½ÇÇà: "
+//		System.out.println("list2.removeAll(list1) ì‹¤í–‰: "
 //				+ list2.removeAll(list1));
 //		print(list1, list2);
 		
-		//»èÁ¦´Â µ¥ÀÌÅ¸°¡ ÀÖ´Â È®ÀÎÇÏ°í ÀÖÀ¸¸é »èÁ¦
+		//ì‚­ì œëŠ” ë°ì´íƒ€ê°€ ìˆëŠ” í™•ì¸í•˜ê³  ìˆìœ¼ë©´ ì‚­ì œ
 		System.out.println("list1.contains(list2.get(0)): "
 				+ list1.contains(list2.get(0)));
 		if (list1.contains(list2.get(0))) {
@@ -70,12 +70,12 @@ public class ArrayListExam {
 		}
 		print(list1, list2);
 		
-		System.out.println("---- ¹İº¹¹®À» ÀÌ¿ëÇÑ µ¥ÀÌÅ¸ »èÁ¦ ---");
-		//ÁÖÀÇÇÒ °Í : Æ¯Á¤ ÀÎµ¦½º °ªÀ» »èÁ¦ÇÏ¸é µÚÂÊ¿¡ ÀÖ´Â µ¥ÀÌÅ¸°¡ ¾ÕÀ¸·Î ÀÌµ¿µÊ
+		System.out.println("---- ë°˜ë³µë¬¸ì„ ì´ìš©í•œ ë°ì´íƒ€ ì‚­ì œ ---");
+		//ì£¼ì˜í•  ê²ƒ : íŠ¹ì • ì¸ë±ìŠ¤ ê°’ì„ ì‚­ì œí•˜ë©´ ë’¤ìª½ì— ìˆëŠ” ë°ì´íƒ€ê°€ ì•ìœ¼ë¡œ ì´ë™ë¨
 		System.out.println("list1: " + list1);
 		//int listCnt = list1.size();
-		//µ¥ÀÌÅ¸ ÀüÃ¼¿¡ ´ëÇÏ¿© »èÁ¦ Ã³¸®ÇÏ·Á°í ÇÏ¿´À¸³ª ÀÏºÎ¸¸ »èÁ¦µÇ´Â °á°ú¸¦ ¾òÀ½
-		//µÚÂÊ¿¡¼­ ºÎÅÍ »èÁ¦ Ã³¸® ÀÛ¾÷ÇØ¾ß Á¤»óÀûÀ¸·Î Ã³¸® °¡´É
+		//ë°ì´íƒ€ ì „ì²´ì— ëŒ€í•˜ì—¬ ì‚­ì œ ì²˜ë¦¬í•˜ë ¤ê³  í•˜ì˜€ìœ¼ë‚˜ ì¼ë¶€ë§Œ ì‚­ì œë˜ëŠ” ê²°ê³¼ë¥¼ ì–»ìŒ
+		//ë’¤ìª½ì—ì„œ ë¶€í„° ì‚­ì œ ì²˜ë¦¬ ì‘ì—…í•´ì•¼ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ ê°€ëŠ¥
 		for (int i = 0; i < list1.size(); i++) {
 			list1.remove(i);
 		}
@@ -83,11 +83,11 @@ public class ArrayListExam {
 		System.out.println("---------------------");
 		print(list1, list2);
 		
-		//µ¥ÀÌÅÍ ¼öÁ¤(ÀÎ´ö½º À§Ä¡°ª ÀÌ¿ë)
+		//ë°ì´í„° ìˆ˜ì •(ì¸ë•ìŠ¤ ìœ„ì¹˜ê°’ ì´ìš©)
 		System.out.println("list2.set(0, \"A\") : "+ list2.set(0, "A"));
 		print(list1, list2);
 		
-		list2.add(1, "BB");					//Ãß°¡(insert)
+		list2.add(1, "BB");					//ì¶”ê°€(insert)
 		print(list1, list2);
 		
 		System.out.println("--------------");
@@ -105,7 +105,7 @@ public class ArrayListExam {
 	}
 	
 	static void printData(List list) {
-		//null ¿©ºÎ È®ÀÎ
+		//null ì—¬ë¶€ í™•ì¸
 		if (list == null) return;
 		
 		System.out.print(list.get(0));
@@ -116,7 +116,7 @@ public class ArrayListExam {
 	}
 	
 	static void printData(String str, List list) {
-		//null ¿©ºÎ È®ÀÎ
+		//null ì—¬ë¶€ í™•ì¸
 		if (list == null) return;
 		
 		System.out.print(str+ " : ");

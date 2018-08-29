@@ -1,24 +1,24 @@
-package com.mystudy.bean;
+ï»¿package com.mystudy.bean;
 
 public class Student {
-	//ÀÚ¹Ù ºó »ı¼º ±ÔÄ¢
-	//1. ¸â¹öº¯¼ö(property)ÀÇ Á¢±ÙÁ¦ÇÑÀÚ´Â private ¼±¾ğ
-	//2. ¸â¹öº¯¼ö(property)¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Â set/get ¸Ş¼Òµå Á¦°ø
-	//   (ÇÊ¿ä¿¡ µû¶ó get ¸Ş¼Òµå¸¸ Á¦°ø ÇÒ ¼ö ÀÖÀ½)
-	//2-1. get¸Ş¼Òµå´Â ÆÄ¶ó¹ÌÅÍ°¡ ¾ø°í, set¸Ş¼Òµå´Â 1°³ ÀÌ»óÀÇ ÆÄ¶ó¹ÌÅÍ¸¦ °¡Áø´Ù
-	//3. set/get ¸Ş¼Òµå´Â Á¢±ÙÁ¦ÇÑÀÚ¸¦ public ¼±¾ğ
-	//4. ¸â¹öº¯¼ö(property)ÀÇ Å¸ÀÔÀÌ booleanÀÎ °æ¿ì get ´ë½Å is »ç¿ë °¡´É
-	//5. ¿ÜºÎ¿¡¼­ ¸â¹öº¯¼ö(property)¿¡ Á¢±ÙÇÒ ¶§´Â set/get ¸Ş¼Òµå¸¦ ÅëÇØ Á¢±Ù
+	//ìë°” ë¹ˆ ìƒì„± ê·œì¹™
+	//1. ë©¤ë²„ë³€ìˆ˜(property)ì˜ ì ‘ê·¼ì œí•œìëŠ” private ì„ ì–¸
+	//2. ë©¤ë²„ë³€ìˆ˜(property)ë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” set/get ë©”ì†Œë“œ ì œê³µ
+	//   (í•„ìš”ì— ë”°ë¼ get ë©”ì†Œë“œë§Œ ì œê³µ í•  ìˆ˜ ìˆìŒ)
+	//2-1. getë©”ì†Œë“œëŠ” íŒŒë¼ë¯¸í„°ê°€ ì—†ê³ , setë©”ì†Œë“œëŠ” 1ê°œ ì´ìƒì˜ íŒŒë¼ë¯¸í„°ë¥¼ ê°€ì§„ë‹¤
+	//3. set/get ë©”ì†Œë“œëŠ” ì ‘ê·¼ì œí•œìë¥¼ public ì„ ì–¸
+	//4. ë©¤ë²„ë³€ìˆ˜(property)ì˜ íƒ€ì…ì´ booleanì¸ ê²½ìš° get ëŒ€ì‹  is ì‚¬ìš© ê°€ëŠ¥
+	//5. ì™¸ë¶€ì—ì„œ ë©¤ë²„ë³€ìˆ˜(property)ì— ì ‘ê·¼í•  ë•ŒëŠ” set/get ë©”ì†Œë“œë¥¼ í†µí•´ ì ‘ê·¼
 	
 	private String name;
 	private int kor;
-	private int eng; //property ¼±¾ğ
+	private int eng; //property ì„ ì–¸
 	private int math; //math : int
 	private int tot;
 	private double avg;
 	
 	public Student() {
-		super(); //ºÎº¸Å¬·¡½ºÀÇ ±âº»»ı¼ºÀÚ È£Ãâ
+		super(); //ë¶€ë³´í´ë˜ìŠ¤ì˜ ê¸°ë³¸ìƒì„±ì í˜¸ì¶œ
 	}
 
 	public Student(String name, int kor, int eng, int math) {
@@ -32,12 +32,12 @@ public class Student {
 		computeTotAvg();
 	}
 
-	//¸íÄª : get¸Ş¼Òµå, getter, get property
+	//ëª…ì¹­ : getë©”ì†Œë“œ, getter, get property
 	public String getName() {
 		return this.name;
 	}
 	
-	//¸íÄª: set¸Ş¼Òµå, setter, set property
+	//ëª…ì¹­: setë©”ì†Œë“œ, setter, set property
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -58,7 +58,7 @@ public class Student {
 				+ avg + "]";
 	}
 
-	//eng, math, tot, avg : setter, getter Á¤ÀÇ(½Ç½À)
+	//eng, math, tot, avg : setter, getter ì •ì˜(ì‹¤ìŠµ)
 	public int getEng() {
 		return eng;
 	}

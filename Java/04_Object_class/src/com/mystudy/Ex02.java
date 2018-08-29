@@ -1,10 +1,10 @@
-package com.mystudy;
+ï»¿package com.mystudy;
 
 public class Ex02 {
 
 		public static void main(String[] args) {
-			//ÂüÁ¶Çüµ¥ÀÌÅÍÅ¸ÀÔ		º¯¼ö¸í = new
-			Ex02 ex02 = new Ex02(); //±âº»(default) »ı¼ºÀÚ »ç¿ë
+			//ì°¸ì¡°í˜•ë°ì´í„°íƒ€ì…		ë³€ìˆ˜ëª… = new
+			Ex02 ex02 = new Ex02(); //ê¸°ë³¸(default) ìƒì„±ì ì‚¬ìš©
 			int num1 = 200;
 			int num2 = 100;
 			int sum = 0;

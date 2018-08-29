@@ -1,4 +1,4 @@
-package com.mystudy.manager;
+ï»¿package com.mystudy.manager;
 
 import java.util.ArrayList;
 
@@ -9,10 +9,10 @@ public class StudentManager {
 	
 	StudentManager() {
 		list = new ArrayList<>();
-		StudentVO vo = new StudentVO("1", "È«±æµ¿", 90, 80, 70);
-		StudentVO vo2 = new StudentVO("2", "°­°¨Âù", 50, 90, 100);
-		StudentVO vo3 = new StudentVO("3", "ÀÌ¼ø½Å", 80, 70, 80);
-		StudentVO vo4 = new StudentVO("4", "È«µÎ²²", 70, 50, 30);
+		StudentVO vo = new StudentVO("1", "í™ê¸¸ë™", 90, 80, 70);
+		StudentVO vo2 = new StudentVO("2", "ê°•ê°ì°¬", 50, 90, 100);
+		StudentVO vo3 = new StudentVO("3", "ì´ìˆœì‹ ", 80, 70, 80);
+		StudentVO vo4 = new StudentVO("4", "í™ë‘ê»˜", 70, 50, 30);
 		list.add(vo);
 		list.add(vo2);
 		list.add(vo3);
@@ -25,8 +25,8 @@ public class StudentManager {
 
 	public StudentVO selectOne(String id) {
 		StudentVO result = null;
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸¸¦ Àü´Ş¹ŞÀº id°ú µ¿ÀÏÇÑ ÀÌ¸§ÀÇ µ¥ÀÌÅ¸°¡ ÀÖÀ¸¸é ¸®ÅÏ
-		//¾øÀ¸¸é null ¸®ÅÏ
+		//listì— ìˆëŠ” ë°ì´íƒ€ë¥¼ ì „ë‹¬ë°›ì€ idê³¼ ë™ì¼í•œ ì´ë¦„ì˜ ë°ì´íƒ€ê°€ ìˆìœ¼ë©´ ë¦¬í„´
+		//ì—†ìœ¼ë©´ null ë¦¬í„´
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(id)) {
 				return list.get(i);
@@ -37,8 +37,8 @@ public class StudentManager {
 	}
 	public StudentVO selectOne(StudentVO vo) {
 		StudentVO result = null;
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸¸¦ Àü´Ş¹ŞÀº voÀÇ id¿Í µ¿ÀÏÇÑ ÀÌ¸§ÀÇ µ¥ÀÌÅ¸°¡ ÀÖÀ¸¸é ¸®ÅÏ
-		//¾øÀ¸¸é null ¸®ÅÏ
+		//listì— ìˆëŠ” ë°ì´íƒ€ë¥¼ ì „ë‹¬ë°›ì€ voì˜ idì™€ ë™ì¼í•œ ì´ë¦„ì˜ ë°ì´íƒ€ê°€ ìˆìœ¼ë©´ ë¦¬í„´
+		//ì—†ìœ¼ë©´ null ë¦¬í„´
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(vo.getId())) {
 				return list.get(i);
@@ -49,18 +49,18 @@ public class StudentManager {
 	
 	public ArrayList<StudentVO> selectAll() {		//ing
 		ArrayList<StudentVO> result = null;
-		//ÀüÃ¼ µ¥ÀÌÅ¸¸¦ ¸®ÅÏ Ã³¸®
+		//ì „ì²´ ë°ì´íƒ€ë¥¼ ë¦¬í„´ ì²˜ë¦¬
 		result = list;
 		return result;
 	}
 	
 	public int insert(StudentVO vo) {
 		int result = 0;
-		//Àü´Ş¹ŞÀº voÀÇ id°¡ list¿¡ ¾øÀ¸¸é list¿¡ Ãß°¡(1 ¸®ÅÏ)
-		//Àü´Ş¹ŞÀº voÀÇ id°¡ list¿¡ ÀÖÀ¸¸é "ÀÌ¹Ì Á¸ÀçÇÏ´Â µ¥ÀÌÅ¸" Ãâ·Â(0 ¸®ÅÏ)
+		//ì „ë‹¬ë°›ì€ voì˜ idê°€ listì— ì—†ìœ¼ë©´ listì— ì¶”ê°€(1 ë¦¬í„´)
+		//ì „ë‹¬ë°›ì€ voì˜ idê°€ listì— ìˆìœ¼ë©´ "ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ë°ì´íƒ€" ì¶œë ¥(0 ë¦¬í„´)
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(vo.getId())) {
-				System.out.println("ÀÌ¹Ì Á¸ÀçÇÏ´Â µ¥ÀÌÅÍ ÀÔ´Ï´Ù.");
+				System.out.println("ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ë°ì´í„° ì…ë‹ˆë‹¤.");
 			} else {
 				list.add(vo);
 				result = 1;
@@ -75,9 +75,9 @@ public class StudentManager {
 	}
 	public int update(StudentVO vo) {
 		int result = 0;
-		//Àü´Ş¹ŞÀº voÀÇ id°¡ list¿¡ ÀÖÀ¸¸é ¼öÁ¤Ã³¸®(1 ¸®ÅÏ)
-		//	(Å°°ªÀÎ id¸¦ Á¦¿ÜÇÏ°í ¸ğµç µ¥ÀÌÅÍ¸¦ ¼öÁ¤Ã³¸®)
-		//Àü´Ş¹ŞÀº voÀÇ id°¡ list¿¡ ¾øÀ¸¸é "µ¥ÀÌÅ¸ ¾øÀ½" Ãâ·Â(0 ¸®ÅÏ)
+		//ì „ë‹¬ë°›ì€ voì˜ idê°€ listì— ìˆìœ¼ë©´ ìˆ˜ì •ì²˜ë¦¬(1 ë¦¬í„´)
+		//	(í‚¤ê°’ì¸ idë¥¼ ì œì™¸í•˜ê³  ëª¨ë“  ë°ì´í„°ë¥¼ ìˆ˜ì •ì²˜ë¦¬)
+		//ì „ë‹¬ë°›ì€ voì˜ idê°€ listì— ì—†ìœ¼ë©´ "ë°ì´íƒ€ ì—†ìŒ" ì¶œë ¥(0 ë¦¬í„´)
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(vo.getId())) {
 				list.get(i).setAvg(vo.getAvg());
@@ -88,7 +88,7 @@ public class StudentManager {
 				list.get(i).setTot(vo.getTot());
 				result = 1;
 			} else {
-				System.out.println("µ¥ÀÌÅÍ ¾øÀ½");
+				System.out.println("ë°ì´í„° ì—†ìŒ");
 			}
 		}
 		
@@ -96,14 +96,14 @@ public class StudentManager {
 	}
 	public int delete(StudentVO vo) {
 		int result = 0;
-		//Àü´Ş¹ŞÀº voÀÇ id°¡ list¿¡ ÀÖÀ¸¸é »èÁ¦Ã³¸®(¼º°ø½Ã 1 ¸®ÅÏ, ½ÇÆĞ½Ã 0¸®ÅÏ)
-		//Àü´Ş¹ŞÀº voÀÇ id°¡ list¿¡ ¾øÀ¸¸é "µ¥ÀÌÅ¸ ¾øÀ½" Ãâ·Â(0 ¸®ÅÏ)
+		//ì „ë‹¬ë°›ì€ voì˜ idê°€ listì— ìˆìœ¼ë©´ ì‚­ì œì²˜ë¦¬(ì„±ê³µì‹œ 1 ë¦¬í„´, ì‹¤íŒ¨ì‹œ 0ë¦¬í„´)
+		//ì „ë‹¬ë°›ì€ voì˜ idê°€ listì— ì—†ìœ¼ë©´ "ë°ì´íƒ€ ì—†ìŒ" ì¶œë ¥(0 ë¦¬í„´)
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(vo.getId())) {
 				list.remove(i);
 				result = 1;
 			} else {
-				System.out.println("µ¥ÀÌÅÍ ¾øÀ½");
+				System.out.println("ë°ì´í„° ì—†ìŒ");
 			}
 			
 		}
@@ -112,14 +112,14 @@ public class StudentManager {
 	}
 	public int delete(String id) {
 		int result = 0;
-		//Àü´Ş¹ŞÀº id°¡ list¿¡ ÀÖÀ¸¸é »èÁ¦Ã³¸®(¼º°ø½Ã 1 ¸®ÅÏ, ½ÇÆĞ½Ã 0¸®ÅÏ)
-		//Àü´Ş¹ŞÀº id°¡ list¿¡ ¾øÀ¸¸é "µ¥ÀÌÅ¸ ¾øÀ½" Ãâ·Â(0 ¸®ÅÏ)
+		//ì „ë‹¬ë°›ì€ idê°€ listì— ìˆìœ¼ë©´ ì‚­ì œì²˜ë¦¬(ì„±ê³µì‹œ 1 ë¦¬í„´, ì‹¤íŒ¨ì‹œ 0ë¦¬í„´)
+		//ì „ë‹¬ë°›ì€ idê°€ listì— ì—†ìœ¼ë©´ "ë°ì´íƒ€ ì—†ìŒ" ì¶œë ¥(0 ë¦¬í„´)
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(id)) {
 				list.remove(id);
 				result = 1;
 			} else {
-				System.out.println("µ¥ÀÌÅÍ ¾øÀ½");
+				System.out.println("ë°ì´í„° ì—†ìŒ");
 			}
 		}
 		
@@ -127,15 +127,15 @@ public class StudentManager {
 	}
 	
 	public void displayAll() {
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸¸¦ ÀüÃ¼ È­¸é Ãâ·Â
+		//listì— ìˆëŠ” ë°ì´íƒ€ë¥¼ ì „ì²´ í™”ë©´ ì¶œë ¥
 		for (int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
 					+ "\t"+ list.get(i).getMath()+ "\t"+ list.get(i).getTot()+ "\t"+ list.get(i).getAvg());
 		}
 	}
 	public void displayOne(StudentVO vo) {
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸ Áß voÀÇ name°ú ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅ¸ È­¸é Ãâ·Â
-		//¾øÀ¸¸é "µ¥ÀÌÅ¸ ¾øÀ½" È­¸é Ãâ·Â
+		//listì— ìˆëŠ” ë°ì´íƒ€ ì¤‘ voì˜ nameê³¼ ì¼ì¹˜í•˜ëŠ” ë°ì´íƒ€ í™”ë©´ ì¶œë ¥
+		//ì—†ìœ¼ë©´ "ë°ì´íƒ€ ì—†ìŒ" í™”ë©´ ì¶œë ¥
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getName().equals(vo.getName())) {
 				System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
@@ -145,11 +145,11 @@ public class StudentManager {
 				System.out.print("-");
 			}
 		}
-		System.out.println("µ¥ÀÌÅÍ ¾øÀ½");
+		System.out.println("ë°ì´í„° ì—†ìŒ");
 	}
 	public void displayOne(String id) {
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸ Áß id¿Í ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅ¸ È­¸é Ãâ·Â
-		//¾øÀ¸¸é "µ¥ÀÌÅ¸ ¾øÀ½" È­¸é Ãâ·Â
+		//listì— ìˆëŠ” ë°ì´íƒ€ ì¤‘ idì™€ ì¼ì¹˜í•˜ëŠ” ë°ì´íƒ€ í™”ë©´ ì¶œë ¥
+		//ì—†ìœ¼ë©´ "ë°ì´íƒ€ ì—†ìŒ" í™”ë©´ ì¶œë ¥
 		for (int i=0; i<list.size(); i++) {
 			if (list.get(i).getId().equals(id)) {
 				System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
@@ -159,7 +159,7 @@ public class StudentManager {
 				System.out.print("-");
 			}
 		}
-		System.out.println("µ¥ÀÌÅÍ ¾øÀ½");
+		System.out.println("ë°ì´í„° ì—†ìŒ");
 	}
 	public void displayOneName(String name) {
 		for (int i=0; i<list.size(); i++) {
@@ -171,18 +171,18 @@ public class StudentManager {
 				System.out.print("-");
 			}
 		}
-		System.out.println("µ¥ÀÌÅÍ ¾øÀ½");
+		System.out.println("ë°ì´í„° ì—†ìŒ");
 	}
 	
 	
 	public void printScore() {
-		//list¿¡ ÀÖ´Â µ¥ÀÌÅ¸ ÀüÃ¼¸¦ ¾ç½Ä¿¡ ¸ÂÃç È­¸é¿¡ Ãâ·Â
-		//¼º¸í     ±¹¾î    ¿µ¾î    ¼öÇĞ     ÃÑÁ¡     Æò±Õ
+		//listì— ìˆëŠ” ë°ì´íƒ€ ì „ì²´ë¥¼ ì–‘ì‹ì— ë§ì¶° í™”ë©´ì— ì¶œë ¥
+		//ì„±ëª…     êµ­ì–´    ì˜ì–´    ìˆ˜í•™     ì´ì      í‰ê· 
 		//------------------------------
-		//È«±æµ¿  100  90   80   270   90.0
+		//í™ê¸¸ë™  100  90   80   270   90.0
 		//.....
 		System.out.println("-------------------------------------------");
-		System.out.println("¼º¸í\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì„±ëª…\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		for (int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i).getName()+ "\t"+ list.get(i).getKor()+ "\t"+ list.get(i).getEng()
 					+ "\t"+ list.get(i).getMath()+ "\t"+ list.get(i).getTot()+ "\t"+ list.get(i).getAvg());

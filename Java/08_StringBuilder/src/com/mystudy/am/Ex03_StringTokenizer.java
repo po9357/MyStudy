@@ -1,4 +1,4 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 import java.util.StringTokenizer;
 
@@ -6,18 +6,18 @@ public class Ex03_StringTokenizer {
 
 	public static void main(String[] args) {
 		//String.split() vs StringTokenizer
-		System.out.println("--- String.split() ---");	//String.splitÀº ºó ¹®ÀÚ¿­À» ¹«½ÃÇÏÁö ¾Ê´Â´Ù
-		String str = "»ç°ú,¹è,º¹¼ş¾Æ,,Æ÷µµ";
+		System.out.println("--- String.split() ---");	//String.splitì€ ë¹ˆ ë¬¸ìì—´ì„ ë¬´ì‹œí•˜ì§€ ì•ŠëŠ”ë‹¤
+		String str = "ì‚¬ê³¼,ë°°,ë³µìˆ­ì•„,,í¬ë„";
 		System.out.println("str : "+ str);
 		String[] strSplit = str.split(",");
-		System.out.println("¹è¿­¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ °¹¼ö : "+strSplit.length);
-		System.out.println("str.splt(\",\") °á°ú");
+		System.out.println("ë°°ì—´ì— ì €ì¥ëœ ë°ì´í„° ê°¯ìˆ˜ : "+strSplit.length);
+		System.out.println("str.splt(\",\") ê²°ê³¼");
 		System.out.println(strSplit[0]);
 		
-		//Çâ»óµÈ for¹®
-		//for (µ¥ÀÌÅÍÅ¸ÀÔ º¯¼ö¸í : ÁıÇÕ°´Ã¼) {}
+		//í–¥ìƒëœ forë¬¸
+		//for (ë°ì´í„°íƒ€ì… ë³€ìˆ˜ëª… : ì§‘í•©ê°ì²´) {}
 		
-//		for (int i=0; i<strSplit.length; i++) {			//±âÁ¸¿¡ ¾²´Â for¹®
+//		for (int i=0; i<strSplit.length; i++) {			//ê¸°ì¡´ì— ì“°ëŠ” forë¬¸
 //			System.out.print(strSplit[i] + " ");
 //		}
 //		System.out.println();
@@ -26,34 +26,34 @@ public class Ex03_StringTokenizer {
 			System.out.print(str2 +"-");
 		}
 		System.out.println();
-		System.out.println("¹è¿­¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ °¹¼ö : "+strSplit.length);
+		System.out.println("ë°°ì—´ì— ì €ì¥ëœ ë°ì´í„° ê°¯ìˆ˜ : "+strSplit.length);
 		
 		System.out.println("==============================");
-		System.out.println("--- StringTokenizer »ç¿ë ---");
+		System.out.println("--- StringTokenizer ì‚¬ìš© ---");
 		System.out.println("str : "+ str);
 		StringTokenizer strToken = new StringTokenizer(str, ",");
-		System.out.println("ÀúÀåµÈ ÅäÅ« °¹¼ö : "+ strToken.countTokens());
-		while (strToken.hasMoreTokens()) {				//StringTokenizer´Â ºó ¹®ÀÚ¿­ ¹«½Ã
+		System.out.println("ì €ì¥ëœ í† í° ê°¯ìˆ˜ : "+ strToken.countTokens());
+		while (strToken.hasMoreTokens()) {				//StringTokenizerëŠ” ë¹ˆ ë¬¸ìì—´ ë¬´ì‹œ
 			String token = strToken.nextToken();
 			System.out.print(token+ "-");
 		}
 		System.out.println();
 		
-		System.out.println("ÀúÀåµÈ ÅäÅ« °¹¼ö : "+ strToken.countTokens());
-		//ÀúÀåµÈ ÅäÅ«À» ²¨³» ½èÁö ¶§¹®¿¡ ÅäÅ« °¹¼ö´Â 0
-		//ÇÑ ¹ø ¾´ ÅäÅ«ÀÌ¹Ç·Î ´Ù½Ã ¾µ ¼ö ¾ø´Ù.
+		System.out.println("ì €ì¥ëœ í† í° ê°¯ìˆ˜ : "+ strToken.countTokens());
+		//ì €ì¥ëœ í† í°ì„ êº¼ë‚´ ì¼ì§€ ë•Œë¬¸ì— í† í° ê°¯ìˆ˜ëŠ” 0
+		//í•œ ë²ˆ ì“´ í† í°ì´ë¯€ë¡œ ë‹¤ì‹œ ì“¸ ìˆ˜ ì—†ë‹¤.
 		
-		//String.splitÀÇ °æ¿ì´Â ¹è¿­¿¡ ÀúÀåµÇ¾î ÇØ´ç ¹è¿­À» ºÒ·¯³»µµ ¼Ò¸ğµÇÁö ¾Ê´Â´Ù.
+		//String.splitì˜ ê²½ìš°ëŠ” ë°°ì—´ì— ì €ì¥ë˜ì–´ í•´ë‹¹ ë°°ì—´ì„ ë¶ˆëŸ¬ë‚´ë„ ì†Œëª¨ë˜ì§€ ì•ŠëŠ”ë‹¤.
 		
 		//----------------------------------------------------------
 		System.out.println("------------------------------");
 		strToken = new StringTokenizer(str, ",");
-		System.out.println("ÀúÀåµÈ ÅäÅ« °¹¼ö : "+ strToken.countTokens());
+		System.out.println("ì €ì¥ëœ í† í° ê°¯ìˆ˜ : "+ strToken.countTokens());
 		int tokenCnt = strToken.countTokens();
-		for (int i=0; i<tokenCnt; i++) {			//ÅäÅ«À» ²¨³» ¾µ¶§¸¶´Ù ¼Ò¸ğµÇ±â¶§¹®¿¡ 
+		for (int i=0; i<tokenCnt; i++) {			//í† í°ì„ êº¼ë‚´ ì“¸ë•Œë§ˆë‹¤ ì†Œëª¨ë˜ê¸°ë•Œë¬¸ì— 
 			String token = strToken.nextToken();	//i<strToken.countTokens();
-			System.out.println((i+1) +" : "+ token);			//¸¦ »ç¿ëÇÏ¸é i°ªÀÌ ´Ã¾î³¯¶§¸¶´Ù
-		}											//strToken.countTokens()°ªÀº ÁÙ¾îµç´Ù.
+			System.out.println((i+1) +" : "+ token);			//ë¥¼ ì‚¬ìš©í•˜ë©´ iê°’ì´ ëŠ˜ì–´ë‚ ë•Œë§ˆë‹¤
+		}											//strToken.countTokens()ê°’ì€ ì¤„ì–´ë“ ë‹¤.
 		System.out.println();
 		
 		int i=1;

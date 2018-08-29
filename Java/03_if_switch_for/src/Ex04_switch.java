@@ -1,37 +1,37 @@
-
+ï»¿
 public class Ex04_switch {
 
 	public static void main(String[] args) {
-		//switch case¹®
+		//switch caseë¬¸
 		/*
-		switch (Á¶°Ç°ª) {
-		case ºñ±³°ª :
-			½ÇÇàÇÒ ¹®Àå;
+		switch (ì¡°ê±´ê°’) {
+		case ë¹„êµê°’ :
+			ì‹¤í–‰í•  ë¬¸ì¥;
 			break;
-		case ºñ±³°ª :
-			½ÇÇàÇÒ ¹®Àå;
+		case ë¹„êµê°’ :
+			ì‹¤í–‰í•  ë¬¸ì¥;
 			break;
 		...
 		default :
-			½ÇÇàÇÒ ¹®Àå;
+			ì‹¤í–‰í•  ë¬¸ì¥;
 			break;
 		}
 		*/
-		int month = 8; //¿ù
+		int month = 8; //ì›”
 		String result = "";
 		
 		switch (month) {
 		case 1:
-			System.out.println("31ÀÏ±îÁö  ÀÖ½À´Ï´Ù");
+			System.out.println("31ì¼ê¹Œì§€  ìˆìŠµë‹ˆë‹¤");
 			break;
 		case 2:
-			System.out.println("28 ¶Ç´Â 29ÀÏ±îÁö ÀÖ½À´Ï´Ù");
+			System.out.println("28 ë˜ëŠ” 29ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤");
 			break;
 		case 3:
-			System.out.println("31ÀÏ±îÁö  ÀÖ½À´Ï´Ù");
+			System.out.println("31ì¼ê¹Œì§€  ìˆìŠµë‹ˆë‹¤");
 			break;
 		case 4:
-			System.out.println("30ÀÏ±îÁö  ÀÖ½À´Ï´Ù");
+			System.out.println("30ì¼ê¹Œì§€  ìˆìŠµë‹ˆë‹¤");
 			break;
 		}
 		System.out.println("--------------------");
@@ -40,36 +40,36 @@ public class Ex04_switch {
 		case 3:
 		case 5:
 		case 7: case 8: case 10: case 12:
-			System.out.println(month + "¿ùÀº 31ÀÏ±îÁö  ÀÖ½À´Ï´Ù");
+			System.out.println(month + "ì›”ì€ 31ì¼ê¹Œì§€  ìˆìŠµë‹ˆë‹¤");
 			break;
 		case 2:
-			System.out.println(month + "¿ùÀº 28 ¶Ç´Â 29ÀÏ±îÁö ÀÖ½À´Ï´Ù");
+			System.out.println(month + "ì›”ì€ 28 ë˜ëŠ” 29ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤");
 			break;
 		
 		case 4: case 6: case 9: case 11:
-			System.out.println(month + "¿ùÀº 30ÀÏ±îÁö  ÀÖ½À´Ï´Ù");
+			System.out.println(month + "ì›”ì€ 30ì¼ê¹Œì§€  ìˆìŠµë‹ˆë‹¤");
 			break;
 		}
 
 		//-----------------------------------------
-		//ÃßÃ· °á°ú¿¡ µû¶ó¼­ »óÇ° Áö±Ş
-		//1µî: ³ÃÀå°í, 2µî: ±èÄ¡³ÃÀå°í, 3µî: ¼¼Å¹±â, 4µî: Ã»¼Ò±â
-		result = "4µî";
+		//ì¶”ì²¨ ê²°ê³¼ì— ë”°ë¼ì„œ ìƒí’ˆ ì§€ê¸‰
+		//1ë“±: ëƒ‰ì¥ê³ , 2ë“±: ê¹€ì¹˜ëƒ‰ì¥ê³ , 3ë“±: ì„¸íƒê¸°, 4ë“±: ì²­ì†Œê¸°
+		result = "4ë“±";
 		switch (result) {
-		case "1µî" :
-			System.out.println("³ÃÀå°í");
+		case "1ë“±" :
+			System.out.println("ëƒ‰ì¥ê³ ");
 			break;
-		case "2µî" :
-			System.out.println("±èÄ¡³ÃÀå°í");
+		case "2ë“±" :
+			System.out.println("ê¹€ì¹˜ëƒ‰ì¥ê³ ");
 			break;
-		case "3µî" :
-			System.out.println("¼¼Å¹±â");
+		case "3ë“±" :
+			System.out.println("ì„¸íƒê¸°");
 			break;
-		case "4µî" :
-			System.out.println("Ã»¼Ò±â");
-			//4µîÀº ÈŞÁöµµ Áö±ŞÇÏ±â·Î ÇÔ
+		case "4ë“±" :
+			System.out.println("ì²­ì†Œê¸°");
+			//4ë“±ì€ íœ´ì§€ë„ ì§€ê¸‰í•˜ê¸°ë¡œ í•¨
 		default :
-			System.out.println("ÈŞÁö");
+			System.out.println("íœ´ì§€");
 			//break;
 		}
 		

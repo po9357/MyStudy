@@ -1,4 +1,4 @@
-
+ï»¿
 public class My_Ex12_ex_arrays_matrix {
 	
 	public static void main(String[] args) {
@@ -13,20 +13,20 @@ public class My_Ex12_ex_arrays_matrix {
 				{5,6}
 		};
 		
-		final int ROW		= m1.length;	//m1ÀÇ Çà ±æÀÌ	2
-		final int M2_ROW	= m2.length;	//m2ÀÇ Çà ±æÀÌ	3
-		final int COL		= m2[0].length;	//m2ÀÇ ¿­ ±æÀÌ	2
+		final int ROW		= m1.length;	//m1ì˜ í–‰ ê¸¸ì´	2
+		final int M2_ROW	= m2.length;	//m2ì˜ í–‰ ê¸¸ì´	3
+		final int COL		= m2[0].length;	//m2ì˜ ì—´ ê¸¸ì´	2
 		
 		int[][]	m3 = new int[ROW][COL];
 		
-		//Çà·Ä°ö m1 x m2 ÀÇ °á°ú¸¦ m3¿¡ ÀúÀå
+		//í–‰ë ¬ê³± m1 x m2 ì˜ ê²°ê³¼ë¥¼ m3ì— ì €ì¥
 		for (int i=0; i<ROW; i++)
 			for(int j=0; j<COL; j++)
 				for(int k=0; k<M2_ROW; k++) {
 					m3[i][j] += m1[i][k] * m2[k][j];
 				}
 		
-		//Çà·Ä m3¸¦ Ãâ·Â
+		//í–‰ë ¬ m3ë¥¼ ì¶œë ¥
 		for (int i=0; i<ROW; i++) {
 			for(int j=0; j<COL; j++) {
 				System.out.print(m3[i][j] +" ");

@@ -1,7 +1,7 @@
-package com.mystudy.am03_score;
+ï»¿package com.mystudy.am03_score;
 
 class ScoreVO {
-	//ÇÊµå(¼Ó¼º)
+	//í•„ë“œ(ì†ì„±)
 	private String name;
 	private int kor;
 	private int eng;
@@ -9,7 +9,7 @@ class ScoreVO {
 	private int tot;
 	private double avg;
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public ScoreVO() {}
 	public ScoreVO(String name, int kor, int eng, int math) {
 		this.name = name;
@@ -36,7 +36,7 @@ class ScoreVO {
 
 	public void setKor(int kor) {
 		if (kor < 0 || kor > 100) {
-			System.out.println("[¿¹¿Ü ¹ß»ı] Á¡¼ö ¹üÀ§ ¹ş¾î³²(0 ~ 100)");
+			System.out.println("[ì˜ˆì™¸ ë°œìƒ] ì ìˆ˜ ë²”ìœ„ ë²—ì–´ë‚¨(0 ~ 100)");
 			return;
 		}
 		this.kor = kor;
@@ -50,7 +50,7 @@ class ScoreVO {
 
 	public void setEng(int eng) throws ScoreOutOfValueException{
 		if (eng < 0 || eng > 100) {
-			//¿¹¿Ü ¹ß»ı ½ÃÅ°±â
+			//ì˜ˆì™¸ ë°œìƒ ì‹œí‚¤ê¸°
 			throw new ScoreOutOfValueException();
 		}
 		this.eng = eng;
@@ -100,6 +100,6 @@ class ScoreVO {
 				+ avg + "]";
 	}
 	
-	//±â´É(¸Ş¼Òµå)
+	//ê¸°ëŠ¥(ë©”ì†Œë“œ)
 	
 }

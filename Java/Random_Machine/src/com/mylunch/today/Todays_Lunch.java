@@ -1,4 +1,4 @@
-package com.mylunch.today;
+ï»¿package com.mylunch.today;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,13 @@ public class Todays_Lunch {
 		Scanner sc = new Scanner(System.in);
 		List<String> list = new ArrayList<String>();
 		
-		
+		list.add("ì²­ì„ê³¨");
+		list.add("ë¶ˆë°±");
 		Outter:
 		while (true) {
 			Inner:
 			while (true) {
-				System.out.println("¿À´ÃÀÇ ÈÄº¸Áö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä (±×¸¸ ÀÔ·ÂÇÏ·Á¸é 0À» ´­·¯ÁÖ¼¼¿ä)");
+				System.out.println("ì˜¤ëŠ˜ì˜ í›„ë³´ì§€ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” (ê·¸ë§Œ ì…ë ¥í•˜ë ¤ë©´ 0ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”)");
 				lunch = sc.nextLine();
 				if (!lunch.equals("0")) {
 					list.add(lunch);
@@ -26,15 +27,15 @@ public class Todays_Lunch {
 					break;
 			}
 			while (true) {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¿À´ÃÀÇ ÈÄº¸ÁöÀÔ´Ï´Ù.");
+				System.out.println("ì…ë ¥í•˜ì‹  ì˜¤ëŠ˜ì˜ í›„ë³´ì§€ì…ë‹ˆë‹¤.");
 				for (int i = 0; i < list.size(); i++) {
 					System.out.print(list.get(i)+ " ");
 				}
-				System.out.println("\nÃßÃ·À» ½ÃÀÛÇÏ·Á¸é 1, ÈÄº¸Áö¸¦ ´Ù½Ã ÀÔ·ÂÇÏ·Á¸é 0À» ´­·¯ÁÖ¼¼¿ä");
+				System.out.println("\nì¶”ì²¨ì„ ì‹œì‘í•˜ë ¤ë©´ 1, í›„ë³´ì§€ë¥¼ ë‹¤ì‹œ ì…ë ¥í•˜ë ¤ë©´ 0ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”");
 				cancel = sc.nextLine();
 				if (cancel.equals("1")) {
 					random = (int)(Math.random()*list.size());
-					System.out.println("¿À´ÃÀÇ Á¡½É ¸Ş´º´Â....\n");
+					System.out.println("ì˜¤ëŠ˜ì˜ ì ì‹¬ ë©”ë‰´ëŠ”....\n");
 					char[] lunchArr = list.get(random).toCharArray();
 					for (int i =0; i < lunchArr.length; i++) {
 						System.out.print(list.get(random).charAt(i) + " ");
@@ -42,12 +43,12 @@ public class Todays_Lunch {
 							Thread.sleep(1000);
 						} catch (InterruptedException e) {}
 					}
-					System.out.println("\nÃàÇÏÇÕ´Ï´Ù!! ¿À´ÃÀÇ ¸Ş´º´Â "+ list.get(random)+ "ÀÔ´Ï´Ù!!");
+					System.out.println("\nì¶•í•˜í•©ë‹ˆë‹¤!! ì˜¤ëŠ˜ì˜ ë©”ë‰´ëŠ” "+ list.get(random)+ "ì…ë‹ˆë‹¤!!");
 					break Outter;
 				} else if (cancel.equals("0")) {
 					break;
 				} else {
-					System.out.println("´Ù½Ã ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+					System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 				}
 			}
 		}

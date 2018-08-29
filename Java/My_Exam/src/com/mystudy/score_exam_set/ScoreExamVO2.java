@@ -1,4 +1,4 @@
-package com.mystudy.score_exam_set;
+Ôªøpackage com.mystudy.score_exam_set;
 
 public class ScoreExamVO2 {
 	private String name;
@@ -9,7 +9,7 @@ public class ScoreExamVO2 {
 	private double avg;
 	
 	public ScoreExamVO2() {
-		this.name = "±Êµø¿Ã";
+		this.name = "Í∏∏ÎèôÏù¥";
 		this.kor = 0;
 		this.eng = 0;
 		this.math = 0;

@@ -1,7 +1,7 @@
-package com.mystudy.pm03_overriding;
+ï»¿package com.mystudy.pm03_overriding;
 
 public class Chicken extends Animal {
 	void sound() {
-		System.out.println(">> ²¿³¢¿À~ ²¿³¢¿À~");
+		System.out.println(">> ê¼¬ë¼ì˜¤~ ê¼¬ë¼ì˜¤~");
 	}
 }

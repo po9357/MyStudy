@@ -1,10 +1,10 @@
-
+ï»¿
 public class Ex10_gt_lt {
 
 	public static void main(String[] args) {
-		//ºñ±³¿¬»êÀÚ : >, <, >= (Å©°Å³ª °°´Ù), <= (ÀÛ°Å³ª °°´Ù)
-		//         == (°°´Ù), != (°°Áö ¾Ê´Ù, ´Ù¸£´Ù)
-		//ºñ±³ ¿¬»êÀÇ °á°ú : true, false
+		//ë¹„êµì—°ì‚°ìž : >, <, >= (í¬ê±°ë‚˜ ê°™ë‹¤), <= (ìž‘ê±°ë‚˜ ê°™ë‹¤)
+		//         == (ê°™ë‹¤), != (ê°™ì§€ ì•Šë‹¤, ë‹¤ë¥´ë‹¤)
+		//ë¹„êµ ì—°ì‚°ì˜ ê²°ê³¼ : true, false
 		int num1 = 10;
 		int num2 = 20;
 		int num3 = 20;
@@ -18,8 +18,8 @@ public class Ex10_gt_lt {
 		System.out.println(num2 +" == "+ num3 +" : "+ (num2 == num3));
 		
 		System.out.println("---------------------");
-		//ºÎÁ¤ÀÇ ÀÇ¹Ì : ! (not)
-		boolean power = true; //Àü¿øÀÌ ÄÑÁü
+		//ë¶€ì •ì˜ ì˜ë¯¸ : ! (not)
+		boolean power = true; //ì „ì›ì´ ì¼œì§
 		System.out.println("power : " + power);
 		power = !power;
 		System.out.println("power : " + power);
@@ -28,17 +28,17 @@ public class Ex10_gt_lt {
 		
 		System.out.println("-------------");
 		power = false;
-		//power °ªÀÌ true ÀÏ¶§ if¹® ½ÇÇà
-		if (power) { //power°¡ true°ªÀ» °¡Áö¸é ½ÇÇà
-			System.out.println("power°ªÀÌ true : Àü¿ø ON »óÅÂ ÀÔ´Ï´Ù");
+		//power ê°’ì´ true ì¼ë•Œ ifë¬¸ ì‹¤í–‰
+		if (power) { //powerê°€ trueê°’ì„ ê°€ì§€ë©´ ì‹¤í–‰
+			System.out.println("powerê°’ì´ true : ì „ì› ON ìƒíƒœ ìž…ë‹ˆë‹¤");
 		}
-		//power °ªÀÌ false ÀÏ¶§ if¹® ½ÇÇà
-		if (!power) { //power °ªÀÌ trueÀÏ¶§ ½ÇÇàµÇÁö ¾Ê°í, false ÀÏ¶§ ½ÇÇà
-			System.out.println("power°ªÀÌ false : Àü¿ø OFF »óÅÂ ÀÔ´Ï´Ù");
+		//power ê°’ì´ false ì¼ë•Œ ifë¬¸ ì‹¤í–‰
+		if (!power) { //power ê°’ì´ trueì¼ë•Œ ì‹¤í–‰ë˜ì§€ ì•Šê³ , false ì¼ë•Œ ì‹¤í–‰
+			System.out.println("powerê°’ì´ false : ì „ì› OFF ìƒíƒœ ìž…ë‹ˆë‹¤");
 		}
 		
 		
-		System.out.println(">>> ÇÁ·Î±×·¥ ³¡ ");
+		System.out.println(">>> í”„ë¡œê·¸ëž¨ ë ");
 	}
 
 }

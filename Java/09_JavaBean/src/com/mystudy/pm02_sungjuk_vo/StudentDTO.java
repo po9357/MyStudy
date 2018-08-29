@@ -1,33 +1,33 @@
-package com.mystudy.pm02_sungjuk_vo;
+ï»¿package com.mystudy.pm02_sungjuk_vo;
 
 public class StudentDTO {
 
 	public static void main(String[] args) {
-		StudentVO sv = new StudentVO("È«±æµ¿", 80, 90, 88);
+		StudentVO sv = new StudentVO("í™ê¸¸ë™", 80, 90, 88);
 		System.out.println(sv);
 		System.out.println("------------------");
 		System.out.println(sv);
 		sv.printData();
 		sv.setEng(100);
-		System.out.println("--- ¿µ¾î Á¡¼ö º¯°æ ---");
+		System.out.println("--- ì˜ì–´ ì ìˆ˜ ë³€ê²½ ---");
 		System.out.println(sv);
 		sv.printData();
 		
-		System.out.println("--- È«±İº¸ ¼ºÀû ---");
-		StudentVO sv2 = new StudentVO("È«±İº¸", 50, 10, 33);
+		System.out.println("--- í™ê¸ˆë³´ ì„±ì  ---");
+		StudentVO sv2 = new StudentVO("í™ê¸ˆë³´", 50, 10, 33);
 		System.out.println(sv2);
 		sv2.printData();
 		
-		System.out.println("--- È«¼®Ãµ ¼ºÀû ---");
-		StudentVO sv3 = new StudentVO("È«¼®Ãµ", 31, 28, 88);
+		System.out.println("--- í™ì„ì²œ ì„±ì  ---");
+		StudentVO sv3 = new StudentVO("í™ì„ì²œ", 31, 28, 88);
 		System.out.println(sv3);
 		sv3.printData();
 		sv3.setEng(100);
 		sv3.printData();
 		
 		StudentVO[] stArr = new StudentVO[2];
-		stArr[0] = new StudentVO("Àç¼ö»ı", 80, 70, 95);
-		stArr[1] = new StudentVO("»ï¼ö»ı", 70, 60, 85);
+		stArr[0] = new StudentVO("ì¬ìˆ˜ìƒ", 80, 70, 95);
+		stArr[1] = new StudentVO("ì‚¼ìˆ˜ìƒ", 70, 60, 85);
 		
 		stArr[0].printData();
 		System.out.println(stArr[0]);

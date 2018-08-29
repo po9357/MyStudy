@@ -1,13 +1,13 @@
-package com.mystudy.wordscramble;
+ï»¿package com.mystudy.wordscramble;
 
 import java.util.Scanner;
 /*
 Question :HEOP
 Your answer is :phoe
-phoeÀº/´Â Á¤´äÀÌ ¾Æ´Õ´Ï´Ù. ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.
+phoeì€/ëŠ” ì •ë‹µì´ ì•„ë‹™ë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ë³´ì„¸ìš”.
 Question :HEOP
 Your answer is :hope
-Á¤´äÀÔ´Ï´Ù.
+ì •ë‹µì…ë‹ˆë‹¤.
 */
 public class WordScrambleEx2 {
 	public static void main(String[] args) { 
@@ -27,10 +27,10 @@ public class WordScrambleEx2 {
 	              if (ans.equalsIgnoreCase("q")) {
 	            	  System.exit(0);
 	              } else if (ans.equalsIgnoreCase(answer)) {
-	            	  System.out.println("Á¤´äÀÔ´Ï´Ù");
+	            	  System.out.println("ì •ë‹µì…ë‹ˆë‹¤");
 	            	  break;
 	              } else {
-	            	  System.out.println(ans+"Àº/´Â Á¤´äÀÌ ¾Æ´Õ´Ï´Ù. ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.");
+	            	  System.out.println(ans+"ì€/ëŠ” ì •ë‹µì´ ì•„ë‹™ë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ë³´ì„¸ìš”.");
 	              }
 	              
 	              

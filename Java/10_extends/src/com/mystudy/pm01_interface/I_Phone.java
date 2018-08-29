@@ -1,21 +1,21 @@
-package com.mystudy.pm01_interface;
+ï»¿package com.mystudy.pm01_interface;
 
-//ÀÎÅÍÆäÀÌ½º ±¸¼º ¿ä¼Ò(»ó¼öÈ­µÈ Å¬·¡½ºº¯¼ö, Ãß»ó¸Ş¼Òµå)
-//Å¬·¡½º»ó¼ö : public static final Å¸ÀÔ º¯¼ö¸í
-//Ãß»ó¸Ş¼Òµå : ¼±¾ğºÎ¸¸ ÀÖ´Â ¸Ş¼Òµå
-//         public abstract ¸®ÅÏÅ¸ÀÔ ¸Ş¼Òµå¸í();
-// - ¸Ş¼Òµå¿¡ ±¸ÇöºÎ {} °¡ ¾øÀ½
+//ì¸í„°í˜ì´ìŠ¤ êµ¬ì„± ìš”ì†Œ(ìƒìˆ˜í™”ëœ í´ë˜ìŠ¤ë³€ìˆ˜, ì¶”ìƒë©”ì†Œë“œ)
+//í´ë˜ìŠ¤ìƒìˆ˜ : public static final íƒ€ì… ë³€ìˆ˜ëª…
+//ì¶”ìƒë©”ì†Œë“œ : ì„ ì–¸ë¶€ë§Œ ìˆëŠ” ë©”ì†Œë“œ
+//         public abstract ë¦¬í„´íƒ€ì… ë©”ì†Œë“œëª…();
+// - ë©”ì†Œë“œì— êµ¬í˜„ë¶€ {} ê°€ ì—†ìŒ
 public interface I_Phone {
-	//º¯¼ö(Å¬·¡½º »ó¼ö)
+	//ë³€ìˆ˜(í´ë˜ìŠ¤ ìƒìˆ˜)
 	public static final boolean SUCCESS = true;
-	boolean FAIL = false; //public static final »ı·«
+	boolean FAIL = false; //public static final ìƒëµ
 	
-	//Ãß»ó¸Ş¼Òµå
+	//ì¶”ìƒë©”ì†Œë“œ
 	public abstract String getType();
-	abstract String getPhoneNo(); //public »ı·«
-	public String toString(); //abstract »ı·«
-	void call(); //public abstract »ı·«
-	void receiveCall(); //public abstract »ı·«
-	void sendMsg(); //public abstract »ı·«
-	void receiveMsg(); //public abstract »ı·«
+	abstract String getPhoneNo(); //public ìƒëµ
+	public String toString(); //abstract ìƒëµ
+	void call(); //public abstract ìƒëµ
+	void receiveCall(); //public abstract ìƒëµ
+	void sendMsg(); //public abstract ìƒëµ
+	void receiveMsg(); //public abstract ìƒëµ
 }

@@ -1,20 +1,20 @@
-
+ï»¿
 public class Ex13_question {
 
 	public static void main(String[] args) {
-		//»ïÇ×¿¬»êÀÚ(Ternary Operator)
-		//»ç¿ëÇüÅÂ : Á¶°Ç ? trueÀÏ¶§ ½ÇÇà¹®Àå : falseÀÏ¶§ ½ÇÇà¹®Àå;
+		//ì‚¼í•­ì—°ì‚°ìž(Ternary Operator)
+		//ì‚¬ìš©í˜•íƒœ : ì¡°ê±´ ? trueì¼ë•Œ ì‹¤í–‰ë¬¸ìž¥ : falseì¼ë•Œ ì‹¤í–‰ë¬¸ìž¥;
 		int num1 = 30;
 		int num2 = 20;
 		boolean big = num1 > num2;
 		System.out.println(big);
 		
-		String str = "¹®ÀÚ¿­ÀúÀå StringÅ¸ÀÔ";
+		String str = "ë¬¸ìžì—´ì €ìž¥ Stringíƒ€ìž…";
 		System.out.println("str : " + str);
 		
-		System.out.println("--- »ïÇ×¿¬»êÀÚ ½ÇÇà °á°ú ----");
-		str = (num1 > num2) ? "num1Å©´Ù" : "num1 Å©Áö¾Ê´Ù";
-		System.out.println("num1 > num2 °á°ú : " + str);
+		System.out.println("--- ì‚¼í•­ì—°ì‚°ìž ì‹¤í–‰ ê²°ê³¼ ----");
+		str = (num1 > num2) ? "num1í¬ë‹¤" : "num1 í¬ì§€ì•Šë‹¤";
+		System.out.println("num1 > num2 ê²°ê³¼ : " + str);
 
 	}
 

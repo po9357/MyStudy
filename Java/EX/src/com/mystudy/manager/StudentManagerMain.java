@@ -1,15 +1,15 @@
-package com.mystudy.manager;
+ï»¿package com.mystudy.manager;
 
 public class StudentManagerMain {
 
 	public static void main(String[] args) {
 		StudentManager manager = new StudentManager();
-		//StudentManager Å¬·¡½ºÀÇ ¸Ş¼Òµå ÀÌ¿ë CRUD Å×½ºÆ®
+		//StudentManager í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œ ì´ìš© CRUD í…ŒìŠ¤íŠ¸
 
 		manager.printScore();
 		
 		ScoreProcess sp = new ScoreProcess();
-		System.out.println("¿©±â");
+		System.out.println("ì—¬ê¸°");
 		manager.displayOne("1");
 		sp.main();
 	}

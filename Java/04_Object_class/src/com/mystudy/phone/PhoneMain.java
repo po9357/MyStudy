@@ -1,4 +1,4 @@
-package com.mystudy.phone;
+ï»¿package com.mystudy.phone;
 
 public class PhoneMain {
 	public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class PhoneMain {
 		
 		System.out.println("---------------------");
 		
-		Phone phone2 = new Phone("°¡·Îº»´É", "½º¸¶Æ®Æù");
+		Phone phone2 = new Phone("ê°€ë¡œë³¸ëŠ¥", "ìŠ¤ë§ˆíŠ¸í°");
 		phone2.view();
 		phone2.call();
 		phone2.receiveCall();
@@ -21,17 +21,17 @@ public class PhoneMain {
 		
 		
 		System.out.println("---------------------");
-		Phone phone3 = new Phone("¾ÆÀÌÆù", "½º¸¶Æ®Æù", true);
+		Phone phone3 = new Phone("ì•„ì´í°", "ìŠ¤ë§ˆíŠ¸í°", true);
 		phone3.view();
-		System.out.println(phone3.receiveSms("¾È³ç"));
+		System.out.println(phone3.receiveSms("ì•ˆë…•"));
 		
-		String rms = phone3.receiveSms("ÇÏÀÌ");
+		String rms = phone3.receiveSms("í•˜ì´");
 //		String rms;
-//		rms = phone.receiveSms("ÇÏÀÌ");
+//		rms = phone.receiveSms("í•˜ì´");
 		System.out.println('-');
 		System.out.println(rms);
 		System.out.println('-');
-		System.out.println(phone3.receiveSms("ÇÏÀÌ"));
+		System.out.println(phone3.receiveSms("í•˜ì´"));
 		
 	}
 

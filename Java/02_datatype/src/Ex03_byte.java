@@ -1,18 +1,18 @@
-
+ï»¿
 public class Ex03_byte {
 
 	public static void main(String[] args) {
-		//Á¤¼öÇü byte : Á¤¼ö ¼ıÀÚ ÀúÀå 256°¡Áö(-128 ~ 127)
+		//ì •ìˆ˜í˜• byte : ì •ìˆ˜ ìˆ«ì ì €ì¥ 256ê°€ì§€(-128 ~ 127)
 		byte byte1 = 100;
 		byte byte2 = 30;
 		byte byte3 = 0;
 		
-		//sysout Å¸ÀÌÇÎ ÈÄ ctrl + space¹Ù Å¬¸¯
+		//sysout íƒ€ì´í•‘ í›„ ctrl + spaceë°” í´ë¦­
 		System.out.println("byte1: " + byte1);
-		//ctrl + alt + È­»ìÇ¥¾Æ·¡
+		//ctrl + alt + í™”ì‚´í‘œì•„ë˜
 		System.out.println("byte2: " + byte2);
 		
-		//¹ÙÀÌÆ® Å¸ÀÔÀÇ ¿¬»ê °á°ú°ªÀº int Å¸ÀÔÀÌ µÊ
+		//ë°”ì´íŠ¸ íƒ€ì…ì˜ ì—°ì‚° ê²°ê³¼ê°’ì€ int íƒ€ì…ì´ ë¨
 		byte3 = (byte)(byte1 + byte2);
 		System.out.println("byte1 + byte2 : " + byte3);
 		

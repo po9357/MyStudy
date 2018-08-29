@@ -1,4 +1,4 @@
-package com.mystudy.pm05_interface;
+﻿package com.mystudy.pm05_interface;
 
 public interface I_Animal {
 	void eat();

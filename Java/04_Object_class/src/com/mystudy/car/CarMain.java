@@ -1,4 +1,4 @@
-package com.mystudy.car;
+ï»¿package com.mystudy.car;
 
 public class CarMain {
 
@@ -6,48 +6,48 @@ public class CarMain {
 		
 		Car car1 = new Car();
 		
-		System.out.println("ÀÚµ¿Â÷ ÀÌ¸§: "+ car1.name);
-		System.out.println("¸ðµ¨¸í: "+ car1.model);
-		System.out.println("»ö»ó: "+ car1.color);
-		System.out.println("Â÷·®±æÀÌ: "+ car1.CAR_LENGTH);
-		System.out.println("Â÷·®³Êºñ: "+ car1.CAR_WIDTH);
-		System.out.println("¿¡¾î¹é: " + car1.existAirbag);
+		System.out.println("ìžë™ì°¨ ì´ë¦„: "+ car1.name);
+		System.out.println("ëª¨ë¸ëª…: "+ car1.model);
+		System.out.println("ìƒ‰ìƒ: "+ car1.color);
+		System.out.println("ì°¨ëŸ‰ê¸¸ì´: "+ car1.CAR_LENGTH);
+		System.out.println("ì°¨ëŸ‰ë„ˆë¹„: "+ car1.CAR_WIDTH);
+		System.out.println("ì—ì–´ë°±: " + car1.existAirbag);
 
 		System.out.println("-------------------");
 		
-		car1.name = "Ã³À½°¡Á®º»Â÷";
-		System.out.println("ÀÚµ¿Â÷ ÀÌ¸§: "+ car1.name);
+		car1.name = "ì²˜ìŒê°€ì ¸ë³¸ì°¨";
+		System.out.println("ìžë™ì°¨ ì´ë¦„: "+ car1.name);
 		car1.existAirbag = true;
-		System.out.println("¿¡¾î¹é: " + car1.existAirbag);
+		System.out.println("ì—ì–´ë°±: " + car1.existAirbag);
 		
-		System.out.println(">>> ±â´É ÀÛµ¿ -------------");
+		System.out.println(">>> ê¸°ëŠ¥ ìž‘ë™ -------------");
 		car1.run();
 		car1.stop();
 		car1.back();
 		
 		System.out.println("======= Car2 =======");
-		Car car2 = new Car("ÆÐ¹Ð¸®Ä«", "¼Ò³ªÅ¸", "°ËÁ¤");
+		Car car2 = new Car("íŒ¨ë°€ë¦¬ì¹´", "ì†Œë‚˜íƒ€", "ê²€ì •");
 		
-		System.out.println("ÀÚµ¿Â÷ ÀÌ¸§: "+ car2.name);
-		System.out.println("¸ðµ¨¸í: "+ car2.model);
-		System.out.println("»ö»ó: "+ car2.color);
-		System.out.println("Â÷·®±æÀÌ: "+ car2.CAR_LENGTH);
-		System.out.println("Â÷·®³Êºñ: "+ car2.CAR_WIDTH);
-		System.out.println("¿¡¾î¹é: " + car2.existAirbag);
+		System.out.println("ìžë™ì°¨ ì´ë¦„: "+ car2.name);
+		System.out.println("ëª¨ë¸ëª…: "+ car2.model);
+		System.out.println("ìƒ‰ìƒ: "+ car2.color);
+		System.out.println("ì°¨ëŸ‰ê¸¸ì´: "+ car2.CAR_LENGTH);
+		System.out.println("ì°¨ëŸ‰ë„ˆë¹„: "+ car2.CAR_WIDTH);
+		System.out.println("ì—ì–´ë°±: " + car2.existAirbag);
 		
-		System.out.println(">>> ±â´É ÀÛµ¿ -------------");
+		System.out.println(">>> ê¸°ëŠ¥ ìž‘ë™ -------------");
 		car2.run();
 		car2.stop();
 		car2.back();
 		
-		//final º¯¼ö°ª º¯°æ ½Ãµµ
+		//final ë³€ìˆ˜ê°’ ë³€ê²½ ì‹œë„
 		//The final field Car.CAR_LENGTH cannot be assigned
-//		car2.CAR_LENGTH = 400;		»ó¼öÃ³¸®µÇ±â ¶§¹®¿¡ º¯°æ ¸øÇÔ(final)
+//		car2.CAR_LENGTH = 400;		ìƒìˆ˜ì²˜ë¦¬ë˜ê¸° ë•Œë¬¸ì— ë³€ê²½ ëª»í•¨(final)
 		
 		//final 
-		//º¯¼ö¿¡ ºÙÀ¸¸é º¯°æ ºÒ°¡(»ó¼öÃ³¸®)
-		//Å¬·¡½º¿¡ ºÙÀ¸¸é È®Àå ¹Ø »ó¼Ó ºÒ°¡
-		//¸Þ¼Òµå¿¡ ºÙÀ¸¸é ¿À¹ö¶óÀÌµù ºÒ°¡
+		//ë³€ìˆ˜ì— ë¶™ìœ¼ë©´ ë³€ê²½ ë¶ˆê°€(ìƒìˆ˜ì²˜ë¦¬)
+		//í´ëž˜ìŠ¤ì— ë¶™ìœ¼ë©´ í™•ìž¥ ë°‘ ìƒì† ë¶ˆê°€
+		//ë©”ì†Œë“œì— ë¶™ìœ¼ë©´ ì˜¤ë²„ë¼ì´ë”© ë¶ˆê°€
 		
 		System.out.println(car2);
 		System.out.println(car1);

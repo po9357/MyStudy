@@ -1,4 +1,4 @@
-package com.mystudy.manager;
+ï»¿package com.mystudy.manager;
 
 public class StudentVO {
 	private String id;
@@ -9,7 +9,7 @@ public class StudentVO {
 	private int tot;
 	private double avg;
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public StudentVO() {}
 	
 	public StudentVO(String id, String name, int kor, int eng, int math) {

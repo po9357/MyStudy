@@ -32,7 +32,7 @@ public class StudentManager_Select {
 		// 2. DB연결 - Connection 객체 생성
 		Connection conn = null;
 		try {
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe"
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@203.236.209.182:1521:xe"
 					                    , "mystudy", "mystudypw");
 			System.out.println(">> DB연결 성공");
 		} catch (SQLException e) {
@@ -56,7 +56,9 @@ public class StudentManager_Select {
 			//    - SELECT : 조회(검색) 데이터 결과 값에 대한 처리
 			while (rs.next()) {
 				String str = "";
-				str += rs.getString("ID") + "\t";
+				// resultset.get메소드를 불러올 떄 
+				// 컬럼명("name")을 적어도 되고, 해당 인덱스(순서, id - 1, name - 2...)를 적어도 된다.
+				str += rs.getString(1) + "\t";
 				str += rs.getString("NAME") + "\t";
 				str += rs.getInt("KOR") + "\t";
 				str += rs.getInt("ENG") + "\t";

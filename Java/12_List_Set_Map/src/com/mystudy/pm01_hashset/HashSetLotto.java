@@ -1,4 +1,4 @@
-package com.mystudy.pm01_hashset;
+ï»¿package com.mystudy.pm01_hashset;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,30 +12,30 @@ public class HashSetLotto {
 	public static void main(String[] args) {
 		Set lotto = new HashSet();
 		
-		//SetÀ» ÀÌ¿ëÇÑ ·Î¶Ç ¸¸µé±â : 1~45 ·£´ı¼ıÀÚ 6°³¸¦ set¿¡ ÀúÀå
-		//·Î¶Ç¹øÈ£ 6°³¸¦ ÃßÃ·ÇÏ°í, ÀÛÀº ¼ıÀÚºÎÅÍ ¼ø¼­´ë·Î È­¸é¿¡ Ç¥½Ã
+		//Setì„ ì´ìš©í•œ ë¡œë˜ ë§Œë“¤ê¸° : 1~45 ëœë¤ìˆ«ì 6ê°œë¥¼ setì— ì €ì¥
+		//ë¡œë˜ë²ˆí˜¸ 6ê°œë¥¼ ì¶”ì²¨í•˜ê³ , ì‘ì€ ìˆ«ìë¶€í„° ìˆœì„œëŒ€ë¡œ í™”ë©´ì— í‘œì‹œ
 		//Math.random();
-		//Ãâ·Â °á°ú
-		//±İÁÖÀÇ ·Î¶Ç¹øÈ£ : 5, 8, 10, 25, 33, 44
+		//ì¶œë ¥ ê²°ê³¼
+		//ê¸ˆì£¼ì˜ ë¡œë˜ë²ˆí˜¸ : 5, 8, 10, 25, 33, 44
 		
 		
 		int ran;
-//		for (; lotto.size() < 6;) {}			//ÀÌ¿Í °°Àº for¹® »ç¿ë °¡´É
+//		for (; lotto.size() < 6;) {}			//ì´ì™€ ê°™ì€ forë¬¸ ì‚¬ìš© ê°€ëŠ¥
 		while (lotto.size()<6) {
 			ran = (int)(Math.random()*45+1);
 			lotto.add(ran);
 		}
 		System.out.println(lotto);
 		
-		System.out.println("--- setÅ¸ÀÔÀ» listÅ¸ÀÔÀ¸·Î ---");
-		List lottoList = new ArrayList(lotto);					//set, list ¸ğµÎ Collection Å¸ÀÔ
+		System.out.println("--- setíƒ€ì…ì„ listíƒ€ì…ìœ¼ë¡œ ---");
+		List lottoList = new ArrayList(lotto);					//set, list ëª¨ë‘ Collection íƒ€ì…
 		
-		System.out.println("--- ¿À¸§Â÷¼ø Á¤·Ä (Collections.sort) ---");
+		System.out.println("--- ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ (Collections.sort) ---");
 		Collections.sort(lottoList);
 		
 		Iterator ite = lottoList.iterator();
 		
-		System.out.print("·Î¶Ç ÃßÃ· ¹øÈ£ : "+ ite.next());
+		System.out.print("ë¡œë˜ ì¶”ì²¨ ë²ˆí˜¸ : "+ ite.next());
 		while (ite.hasNext()) {
 			System.out.print(", "+ ite.next());
 		}

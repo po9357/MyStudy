@@ -1,4 +1,4 @@
-package com.mystudy.wordscramble;
+ï»¿package com.mystudy.wordscramble;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class WordScrambleEx4 {
 	
 	public static void main(String[] args) { 
         String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW"}; 
-        Scanner s = new Scanner(System.in);  // ÇÑ¹ø »ı¼ºÇØ ³õ°í Àç»ç¿ëÇÏ¸é µÇ¹Ç·Î ¹İº¹¹® ¹ÛÀ¸·Î ÀÌµ¿
+        Scanner s = new Scanner(System.in);  // í•œë²ˆ ìƒì„±í•´ ë†“ê³  ì¬ì‚¬ìš©í•˜ë©´ ë˜ë¯€ë¡œ ë°˜ë³µë¬¸ ë°–ìœ¼ë¡œ ì´ë™
 
         while(true) { 
               String answer = getAnswer(strArr); 
@@ -14,7 +14,7 @@ public class WordScrambleEx4 {
               char[] hint = new char[answer.length()];
 
 
-              // hint¸¦ '_'·Î ÃÊ±âÈ­ ÇÑ´Ù. Á¤´äÀÌ LOVE¶ó¸é hint´Â "____"ÀÌ µÈ´Ù.
+              // hintë¥¼ '_'ë¡œ ì´ˆê¸°í™” í•œë‹¤. ì •ë‹µì´ LOVEë¼ë©´ hintëŠ” "____"ì´ ëœë‹¤.
               for(int i=0;i < hint.length;i++) { 
                     hint[i] = '_'; 
               } 
@@ -29,11 +29,11 @@ public class WordScrambleEx4 {
                           System.exit(0); 
 
                     if(input.equalsIgnoreCase(answer)) { 
-                          System.out.println("Á¤´äÀÔ´Ï´Ù."); 
+                          System.out.println("ì •ë‹µì…ë‹ˆë‹¤."); 
                           System.out.println(); 
                           break; 
                     } else { 
-                          System.out.println(input+"Àº/´Â Á¤´äÀÌ ¾Æ´Õ´Ï´Ù. ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.");       
+                          System.out.println(input+"ì€/ëŠ” ì •ë‹µì´ ì•„ë‹™ë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ë³´ì„¸ìš”.");       
                           System.out.println("Hint:"+getHint(answer,hint)); 
                     } 
 	          } // while 
@@ -46,7 +46,7 @@ public class WordScrambleEx4 {
 	        return strArr[idx]; 
 	  } 
 	  
-	  // ¼¯Àº °á°ú°¡ Á¤´ä°ú °°Àº°æ¿ìµµ ÀÖÀ» ¼ö ÀÖÀ½. º¹ÀâÇÏÁö ¾Ê°Ô... ±×³É °£´ÜÈ÷ 
+	  // ì„ì€ ê²°ê³¼ê°€ ì •ë‹µê³¼ ê°™ì€ê²½ìš°ë„ ìˆì„ ìˆ˜ ìˆìŒ. ë³µì¡í•˜ì§€ ì•Šê²Œ... ê·¸ëƒ¥ ê°„ë‹¨íˆ 
 	  public static String getScrambledWord(String str) { 
 	        char[] chArr = str.toCharArray(); 
 	
@@ -62,16 +62,16 @@ public class WordScrambleEx4 {
 	        return new String(chArr); 
 	  } // scramble(String str) 
 	  public static String getHint(String answer, char[] hint) { 
-	        int count = 0; // ÈùÆ®¿¡ Æ÷ÇÔµÈ '_'ÀÇ °³¼ö
+	        int count = 0; // íŒíŠ¸ì— í¬í•¨ëœ '_'ì˜ ê°œìˆ˜
 	        char[] chArr = new char[answer.length()];
-	       // 1. ¹İº¹¹®À» ÀÌ¿ëÇØ¼­ hint¿¡ Æ÷ÇÔµÈ '_'ÀÇ °³¼ö¸¦ ¼¾´Ù.
+	       // 1. ë°˜ë³µë¬¸ì„ ì´ìš©í•´ì„œ hintì— í¬í•¨ëœ '_'ì˜ ê°œìˆ˜ë¥¼ ì„¼ë‹¤.
 	        for (int i=0; i<hint.length; i++) {
 	        	if (hint[i] == '_') {
 	        		count++;
 	        	}
 	        }
 	        chArr = answer.toCharArray();
-	       // 2. countÀÇ °ªÀÌ 2º¸´Ù Å¬ ¶§¸¸ Á¤´äÀÇ ÇÑ ±ÛÀÚ¸¦ hint¿¡ ³Ö´Â´Ù.
+	       // 2. countì˜ ê°’ì´ 2ë³´ë‹¤ í´ ë•Œë§Œ ì •ë‹µì˜ í•œ ê¸€ìë¥¼ hintì— ë„£ëŠ”ë‹¤.
 	  
    			while(true) {
 	     		if (count > 2) {

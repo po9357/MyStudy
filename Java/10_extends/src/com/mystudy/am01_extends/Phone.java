@@ -1,14 +1,14 @@
-package com.mystudy.am01_extends;
+ï»¿package com.mystudy.am01_extends;
 
 public class Phone {
-	//ÇÊµå(¼Ó¼º)---------------
+	//í•„ë“œ(ì†ì„±)---------------
 	private String type;
 	private String phoneNo;
 	
-	//»ý¼ºÀÚ-----------------------
+	//ìƒì„±ìž-----------------------
 //	public Phone() {}
 	public Phone(String phoneNo) {
-		type = "Phone Å¸ÀÔ";
+		type = "Phone íƒ€ìž…";
 		this.phoneNo = phoneNo;
 	}
 
@@ -18,7 +18,7 @@ public class Phone {
 		this.phoneNo = phoneNo;
 	}
 
-	//¸Þ¼Òµå(±â´É) -------------------------------
+	//ë©”ì†Œë“œ(ê¸°ëŠ¥) -------------------------------
 	public String getType() {
 		return type;
 	}
@@ -27,10 +27,10 @@ public class Phone {
 	}
 	
 	public void call() {
-		System.out.println(">> ÀüÈ­°É±â");
+		System.out.println(">> ì „í™”ê±¸ê¸°");
 	}
 	public void receiveCall() {
-		System.out.println(">> ÀüÈ­¹Þ±â");
+		System.out.println(">> ì „í™”ë°›ê¸°");
 	}
 	
 	public void view() {

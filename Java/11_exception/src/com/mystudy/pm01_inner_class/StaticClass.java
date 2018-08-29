@@ -1,6 +1,6 @@
-package com.mystudy.pm01_inner_class;
+ï»¿package com.mystudy.pm01_inner_class;
 
-//½ºÅÂÆ½ Å¬·¡½º : Å¬·¡½º ±¸¼º¸â¹ö¿Í µ¿ÀÏÇÑ ·¹º§¿¡ staticÀ» ºÙ¿© ÀÛ¼º
+//ìŠ¤íƒœí‹± í´ë˜ìŠ¤ : í´ë˜ìŠ¤ êµ¬ì„±ë©¤ë²„ì™€ ë™ì¼í•œ ë ˆë²¨ì— staticì„ ë¶™ì—¬ ì‘ì„±
 public class StaticClass {
 	int a = 10;
 	private int b = 100;
@@ -12,8 +12,8 @@ public class StaticClass {
 		StaticClass sc = new StaticClass();
 		void printData() {
 //			System.out.println("int a : "+ a);		
-//			System.out.println("private int b : "+ b);	//static¿¡¼­ non-staticÀº »ç¿ëÇÒ ¼ö ¾ø´Ù
-			System.out.println("int c : "+ c);			//°´Ã¼ »ı¼º ÈÄ »ç¿ë °¡´É
+//			System.out.println("private int b : "+ b);	//staticì—ì„œ non-staticì€ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤
+			System.out.println("int c : "+ c);			//ê°ì²´ ìƒì„± í›„ ì‚¬ìš© ê°€ëŠ¥
 			System.out.println("int d : "+ d);
 			System.out.println("int a : "+ sc.a);
 			System.out.println("private int b : "+ sc.b);

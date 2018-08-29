@@ -1,19 +1,19 @@
-package com.mystudy.pm04_abstract_class;
+ï»¿package com.mystudy.pm04_abstract_class;
 
-//Ãß»óÅ¬·¡½º : abstract class
-//±¸Çö¸Ş¼Òµå¿Í Ãß»ó¸Ş¼Òµå¸¦  ÇÔ²² °¡Áö°í ÀÖ´Â Å¬·¡½º
-//Ãß»ó¸Ş¼Òµå°¡ ÀÖ±â ¶§¹®¿¡ °´Ã¼¸¦ »ı¼ºÇÒ ¼ö ¾øÀ½
+//ì¶”ìƒí´ë˜ìŠ¤ : abstract class
+//êµ¬í˜„ë©”ì†Œë“œì™€ ì¶”ìƒë©”ì†Œë“œë¥¼  í•¨ê»˜ ê°€ì§€ê³  ìˆëŠ” í´ë˜ìŠ¤
+//ì¶”ìƒë©”ì†Œë“œê°€ ìˆê¸° ë•Œë¬¸ì— ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ìŒ
 public abstract class Animal {
-	String name; //ÀÌ¸§, ¸íÄª
-	int legCnt; //´Ù¸®°¹¼ö
+	String name; //ì´ë¦„, ëª…ì¹­
+	int legCnt; //ë‹¤ë¦¬ê°¯ìˆ˜
 	
-	//±¸Çö¸Ş¼Òµå
+	//êµ¬í˜„ë©”ì†Œë“œ
 	void eat() {
-		System.out.println(">> ¸Ô´Â´Ù");
+		System.out.println(">> ë¨¹ëŠ”ë‹¤");
 	}
 	void sleep() {
-		System.out.println(">> ÀáÀ» ÀÜ´Ù");
+		System.out.println(">> ì ì„ ì”ë‹¤");
 	}
 	
-	abstract void sound(); //Ãß»ó¸Ş¼Òµå
+	abstract void sound(); //ì¶”ìƒë©”ì†Œë“œ
 }

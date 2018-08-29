@@ -1,32 +1,32 @@
-package com.mystudy.am01_exception;
+ï»¿package com.mystudy.am01_exception;
 
 public class ExceptionFinally {
 public static int a = 0;
 public int b = 1;
 	public static void main(String[] args) {
 		//try ~ catch  finally
-		System.out.println("--- main() ½ÃÀÛ ---");
+		System.out.println("--- main() ì‹œì‘ ---");
 		int num = 0;
 		try {
-			System.out.println(">> try¹® ½ÃÀÛ");
-			System.out.println(">> ¿¬»êÃ³¸® ½ÃÀÛ");
-			int result = 100 / num;			//¿¹¿Ü¹ß»ı °¡´É : 0À¸·Î ³ª´®
-			System.out.println(">> ¿¬»êÃ³¸® Á¤»ì ½ÇÇà");
-			System.out.println(">> try¹® Á¾·á");
+			System.out.println(">> tryë¬¸ ì‹œì‘");
+			System.out.println(">> ì—°ì‚°ì²˜ë¦¬ ì‹œì‘");
+			int result = 100 / num;			//ì˜ˆì™¸ë°œìƒ ê°€ëŠ¥ : 0ìœ¼ë¡œ ë‚˜ëˆ”
+			System.out.println(">> ì—°ì‚°ì²˜ë¦¬ ì •ì‚´ ì‹¤í–‰");
+			System.out.println(">> tryë¬¸ ì¢…ë£Œ");
 		} catch (ArithmeticException e) {
-			System.out.println(">> catch¹® ½ÇÇà");
+			System.out.println(">> catchë¬¸ ì‹¤í–‰");
 		} finally {
-			System.out.println(">> finally : Ç×»ó ½ÇÇà(¹«Á¶°Ç)");
+			System.out.println(">> finally : í•­ìƒ ì‹¤í–‰(ë¬´ì¡°ê±´)");
 		}
 		System.out.println("------------------");
-		System.out.println("test() ½ÇÇà °á°ú : "+ test());
+		System.out.println("test() ì‹¤í–‰ ê²°ê³¼ : "+ test());
 		
 		
-		System.out.println("--- main() Á¾·á ---");
-//		System.out.println(a);		//½ºÅÂÆ½ ¸Ş¼Òµå¿¡¼­ ½ºÅÂÆ½ º¯¼ö´Â »ç¿ë °¡´É
-////		System.out.println(b);		//½ºÅÂÆ½ ¸Ş¼Òµå¿¡¼­ ÀÎ½ºÅÏ½º º¯¼ö´Â »ç¿ë ºÒ°¡´É
+		System.out.println("--- main() ì¢…ë£Œ ---");
+//		System.out.println(a);		//ìŠ¤íƒœí‹± ë©”ì†Œë“œì—ì„œ ìŠ¤íƒœí‹± ë³€ìˆ˜ëŠ” ì‚¬ìš© ê°€ëŠ¥
+////		System.out.println(b);		//ìŠ¤íƒœí‹± ë©”ì†Œë“œì—ì„œ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ëŠ” ì‚¬ìš© ë¶ˆê°€ëŠ¥
 //		ExceptionFinally ef = new ExceptionFinally();
-//		System.out.println(ef.b);	//½ºÅÂÆ½ ¸Ş¼Òµå¿¡¼­ ÀÎ½ºÅÏ½º º¯¼ö¸¦ °´Ã¼»ı¼º ÈÄ »ç¿ë °¡´É
+//		System.out.println(ef.b);	//ìŠ¤íƒœí‹± ë©”ì†Œë“œì—ì„œ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ê°ì²´ìƒì„± í›„ ì‚¬ìš© ê°€ëŠ¥
 	}
 		static String test() {
 			String result = "";
@@ -34,12 +34,12 @@ public int b = 1;
 			
 			try {
 				num[3] = 100;
-				result = "<Á¤»ó½ÇÇà>";
+				result = "<ì •ìƒì‹¤í–‰>";
 			} catch (Exception e) {
-				result = "<¿¹¿Ü¹ß»ı>"+ e.getMessage();
+				result = "<ì˜ˆì™¸ë°œìƒ>"+ e.getMessage();
 				e.printStackTrace();
 			} finally {
-				System.out.println("finally : ¹«Á¶°Ç ½ÇÇà");
+				System.out.println("finally : ë¬´ì¡°ê±´ ì‹¤í–‰");
 			}
 		
 			return result;

@@ -1,96 +1,96 @@
-package com.mystudy.pm03_scanner_game;
+ï»¿package com.mystudy.pm03_scanner_game;
 
 import java.util.Scanner;
 
 public class ScannerGame {
 
 	public static void main(String[] args) {
-		//Scanner¸¦ ÀÌ¿ëÇÑ °¡À§ ¹ÙÀ§ º¸ °ÔÀÓ
-		//ÄÄÇ»ÅÍ¿Í ÇÔ²²ÇÏ´Â °¡À§(1),¹ÙÀ§(2),º¸(3) °ÔÀÓ
-		//1. °¡À§, ¹ÙÀ§, º¸ ¼±ÅÃ ¸Ş´º Ãâ·Â
-		//2. ¼±ÅÃ°ª ÀÔ·Â
-		//3. ÄÄÇ»ÅÍµµ ¼±ÅÃ(Math.random())
-		//4. °á°ú ºñ±³ÈÄ ½ÂÀÚ, ÆĞÀÚ °áÁ¤
+		//Scannerë¥¼ ì´ìš©í•œ ê°€ìœ„ ë°”ìœ„ ë³´ ê²Œì„
+		//ì»´í“¨í„°ì™€ í•¨ê»˜í•˜ëŠ” ê°€ìœ„(1),ë°”ìœ„(2),ë³´(3) ê²Œì„
+		//1. ê°€ìœ„, ë°”ìœ„, ë³´ ì„ íƒ ë©”ë‰´ ì¶œë ¥
+		//2. ì„ íƒê°’ ì…ë ¥
+		//3. ì»´í“¨í„°ë„ ì„ íƒ(Math.random())
+		//4. ê²°ê³¼ ë¹„êµí›„ ìŠ¹ì, íŒ¨ì ê²°ì •
 		////////////////////////////////
 		
-		//1. °¡À§, ¹ÙÀ§, º¸ ¼±ÅÃ ¸Ş´º Ãâ·Â
-		System.out.println("°¡À§, ¹ÙÀ§, º¸ Áß¿¡ ÇÏ³ª¸¦ ¼±ÅÃÇÏ¼¼¿ä.");
-		System.out.println("1.°¡À§  2.¹ÙÀ§  3.º¸");
-		System.out.print(">>´ç½ÅÀÇ ¼±ÅÃÀº(1~3)? ");
+		//1. ê°€ìœ„, ë°”ìœ„, ë³´ ì„ íƒ ë©”ë‰´ ì¶œë ¥
+		System.out.println("ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ì— í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì„¸ìš”.");
+		System.out.println("1.ê°€ìœ„  2.ë°”ìœ„  3.ë³´");
+		System.out.print(">>ë‹¹ì‹ ì˜ ì„ íƒì€(1~3)? ");
 		
-		//2. ¼±ÅÃ°ª ÀÔ·Â
+		//2. ì„ íƒê°’ ì…ë ¥
 		Scanner sc = new Scanner(System.in);
 		int select = Integer.parseInt(sc.nextLine());
 		
 		String strPerson = "";
 		if (select == 1) {
-			strPerson = "°¡À§";
+			strPerson = "ê°€ìœ„";
 		} else if (select == 2) {
-			strPerson = "¹ÙÀ§";
+			strPerson = "ë°”ìœ„";
 		} else if (select == 3) {
-			strPerson = "º¸";
+			strPerson = "ë³´";
 		} else {
-			System.out.println("1 ~ 3 Áß¿¡¼­ ¼±ÅÃÇÏ¼¼¿ä");
+			System.out.println("1 ~ 3 ì¤‘ì—ì„œ ì„ íƒí•˜ì„¸ìš”");
 			return;
 		}
 		
-		//3. ÄÄÇ»ÅÍµµ ¼±ÅÃ(Math.random())
+		//3. ì»´í“¨í„°ë„ ì„ íƒ(Math.random())
 		int comSelect = (int)(Math.random() * 3 + 1);
 		String strComputer = "";
 		switch (comSelect) {
 		case 1:
-			strComputer = "°¡À§";
+			strComputer = "ê°€ìœ„";
 			break;
 		case 2:
-			strComputer = "¹ÙÀ§";
+			strComputer = "ë°”ìœ„";
 			break;
 		case 3:
-			strComputer = "º¸";
+			strComputer = "ë³´";
 			break;
 		default:
-			System.out.println("1 ~ 3 Áß¿¡¼­ ¼±ÅÃÇÏ¼¼¿ä");
+			System.out.println("1 ~ 3 ì¤‘ì—ì„œ ì„ íƒí•˜ì„¸ìš”");
 		}
-		System.out.println("»ç¶÷: " + strPerson + ", ÄÄÇ»ÅÍ: " + strComputer);
+		System.out.println("ì‚¬ëŒ: " + strPerson + ", ì»´í“¨í„°: " + strComputer);
 			
-		//4. °á°ú ºñ±³ ÈÄ ½ÂÀÚ, ÆĞÀÚ °áÁ¤
-		//»ç¶÷ÀÌ '°¡À§'ÀÎ °æ¿ì
+		//4. ê²°ê³¼ ë¹„êµ í›„ ìŠ¹ì, íŒ¨ì ê²°ì •
+		//ì‚¬ëŒì´ 'ê°€ìœ„'ì¸ ê²½ìš°
 		String result = "";
-		if (strPerson.equals("°¡À§")) {
-			//ÄÄÇ»ÅÍ : °¡À§, ¹ÙÀ§, º¸
-			if (strComputer.equals("°¡À§")) {
-				result = "ºñ±è";
+		if (strPerson.equals("ê°€ìœ„")) {
+			//ì»´í“¨í„° : ê°€ìœ„, ë°”ìœ„, ë³´
+			if (strComputer.equals("ê°€ìœ„")) {
+				result = "ë¹„ê¹€";
 			}
-			if (strComputer.equals("¹ÙÀ§")) {
-				result = "Áü";
+			if (strComputer.equals("ë°”ìœ„")) {
+				result = "ì§";
 			}
-			if (strComputer.equals("º¸")) {
-				result = "ÀÌ±è";
-			}
-		}
-		
-		if (strPerson.equals("¹ÙÀ§")) {
-			//ÄÄÇ»ÅÍ : °¡À§, ¹ÙÀ§, º¸
-			if (strComputer.equals("°¡À§")) {
-				result = "ÀÌ±è";
-			}
-			if (strComputer.equals("¹ÙÀ§")) {
-				result = "ºñ±è";
-			}
-			if (strComputer.equals("º¸")) {
-				result = "Áü";
+			if (strComputer.equals("ë³´")) {
+				result = "ì´ê¹€";
 			}
 		}
 		
-		if (strPerson.equals("º¸")) {
-			//ÄÄÇ»ÅÍ : °¡À§, ¹ÙÀ§, º¸
-			if (strComputer.equals("°¡À§")) {
-				result = "Áü";
+		if (strPerson.equals("ë°”ìœ„")) {
+			//ì»´í“¨í„° : ê°€ìœ„, ë°”ìœ„, ë³´
+			if (strComputer.equals("ê°€ìœ„")) {
+				result = "ì´ê¹€";
 			}
-			if (strComputer.equals("¹ÙÀ§")) {
-				result = "ÀÌ±è";
+			if (strComputer.equals("ë°”ìœ„")) {
+				result = "ë¹„ê¹€";
 			}
-			if (strComputer.equals("º¸")) {
-				result = "ºñ±è";
+			if (strComputer.equals("ë³´")) {
+				result = "ì§";
+			}
+		}
+		
+		if (strPerson.equals("ë³´")) {
+			//ì»´í“¨í„° : ê°€ìœ„, ë°”ìœ„, ë³´
+			if (strComputer.equals("ê°€ìœ„")) {
+				result = "ì§";
+			}
+			if (strComputer.equals("ë°”ìœ„")) {
+				result = "ì´ê¹€";
+			}
+			if (strComputer.equals("ë³´")) {
+				result = "ë¹„ê¹€";
 			}
 		}
 		

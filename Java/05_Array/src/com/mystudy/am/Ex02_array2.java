@@ -1,13 +1,13 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 public class Ex02_array2 {
 	
 	public static void main(String[] args) {
-			//1~100±îÁöÀÇ ¼ö Áß¿¡ È¦¼öÀÇ ÇÕ ±¸ÇÏ±â(¹è¿­ »ç¿ë)
-			//¹®Á¦1. ¹è¿­ÀÇ °¹¼ö 50°³ »ç¿ë
-			//ÀúÀå°ø°£ ¸¸µé±â int Å¸ÀÔÀÇ °ªÀ» ÀúÀåÇÒ ¼ö ÀÖ´Â Å©±â 50ÀÎ ¹è¿­ »ý¼º
-			//1~100 ¼ýÀÚ Áß È¦¼ö °ª¸¸ ¹è¿­¿¡ ÀúÀå
-			//¹è¿­¿¡ ÀúÀåµÈ °ªÀ» ¸ðµÎ ´õÇÑ ÈÄ °á°ú Ãâ·Â
+			//1~100ê¹Œì§€ì˜ ìˆ˜ ì¤‘ì— í™€ìˆ˜ì˜ í•© êµ¬í•˜ê¸°(ë°°ì—´ ì‚¬ìš©)
+			//ë¬¸ì œ1. ë°°ì—´ì˜ ê°¯ìˆ˜ 50ê°œ ì‚¬ìš©
+			//ì €ìž¥ê³µê°„ ë§Œë“¤ê¸° int íƒ€ìž…ì˜ ê°’ì„ ì €ìž¥í•  ìˆ˜ ìžˆëŠ” í¬ê¸° 50ì¸ ë°°ì—´ ìƒì„±
+			//1~100 ìˆ«ìž ì¤‘ í™€ìˆ˜ ê°’ë§Œ ë°°ì—´ì— ì €ìž¥
+			//ë°°ì—´ì— ì €ìž¥ëœ ê°’ì„ ëª¨ë‘ ë”í•œ í›„ ê²°ê³¼ ì¶œë ¥
 			int sum=0;
 			
 			int[] odd = new int[50];
@@ -17,16 +17,16 @@ public class Ex02_array2 {
 				sum+=odd[i];
 			}
 			System.out.println();
-			System.out.println("1~100±îÁöÀÇ ¼ö Áß È¦¼öÀÇ ÇÕÀº "+sum +"ÀÌ´Ù.");
+			System.out.println("1~100ê¹Œì§€ì˜ ìˆ˜ ì¤‘ í™€ìˆ˜ì˜ í•©ì€ "+sum +"ì´ë‹¤.");
 			
 			
 			////////////////////////////////////////////////
-			//1~100±îÁöÀÇ ¼ö Áß¿¡¼­ È¦¼öÀÇ ÇÕ ±¸ÇÏ±â(¹è¿­»ç¿ë)
-			//1~100±îÁöÀÇ ¼ýÀÚ¸¦ ¹è¿­¿¡ ÀúÀå
-			//1. ¹è¿­¼±¾ð(int Å¸ÀÔÀÇ °ª 100°³ ÀúÀå)
-			//2. ¹è¿­ ÃÊ±âÈ­(1~100±îÁöÀÇ ¼ýÀÚ¸¦ ¼ø¼­´ë·Î ¹è¿­¿¡ ÀúÀå)
-			//3. ¹è¿­ °ª Áß È¦¼ö °ª ÃßÃâÇØ¼­ ÇÕ»ê
-			//4. È¦¼ö°ª ÇÕ°è Ãâ·Â
+			//1~100ê¹Œì§€ì˜ ìˆ˜ ì¤‘ì—ì„œ í™€ìˆ˜ì˜ í•© êµ¬í•˜ê¸°(ë°°ì—´ì‚¬ìš©)
+			//1~100ê¹Œì§€ì˜ ìˆ«ìžë¥¼ ë°°ì—´ì— ì €ìž¥
+			//1. ë°°ì—´ì„ ì–¸(int íƒ€ìž…ì˜ ê°’ 100ê°œ ì €ìž¥)
+			//2. ë°°ì—´ ì´ˆê¸°í™”(1~100ê¹Œì§€ì˜ ìˆ«ìžë¥¼ ìˆœì„œëŒ€ë¡œ ë°°ì—´ì— ì €ìž¥)
+			//3. ë°°ì—´ ê°’ ì¤‘ í™€ìˆ˜ ê°’ ì¶”ì¶œí•´ì„œ í•©ì‚°
+			//4. í™€ìˆ˜ê°’ í•©ê³„ ì¶œë ¥
 			sum = 0;
 			int[] numArr = new int[100];
 			for (int i=0; i<numArr.length; i++) {
@@ -37,7 +37,7 @@ public class Ex02_array2 {
 				}
 			}
 			System.out.println();
-			System.out.println("1~100±îÁöÀÇ ¼ö Áß È¦¼öÀÇ ÇÕÀº "+sum +"ÀÌ´Ù.");
+			System.out.println("1~100ê¹Œì§€ì˜ ìˆ˜ ì¤‘ í™€ìˆ˜ì˜ í•©ì€ "+sum +"ì´ë‹¤.");
 			
 			int oddSum = 0;
 			int evenSum = 0;
@@ -48,7 +48,7 @@ public class Ex02_array2 {
 					oddSum += numArr[i];
 				}
 			}
-			System.out.println("È¦¼öÀÇ ÇÕ :"+evenSum+ ", Â¦¼öÀÇ ÇÕ"+ oddSum);
+			System.out.println("í™€ìˆ˜ì˜ í•© :"+evenSum+ ", ì§ìˆ˜ì˜ í•©"+ oddSum);
 			
 	}
 }

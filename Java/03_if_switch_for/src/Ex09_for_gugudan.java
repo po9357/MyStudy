@@ -1,8 +1,8 @@
-
+ï»¿
 public class Ex09_for_gugudan {
 
 	public static void main(String[] args) {
-		//È­¸é¿¡ ±¸±¸´Ü 2´Ü
+		//í™”ë©´ì— êµ¬êµ¬ë‹¨ 2ë‹¨
 		/*
 		2*1=2  -> 2*1=(2*1)
 		2*2=4  -> 2*2=(2*2)
@@ -19,37 +19,37 @@ public class Ex09_for_gugudan {
 		num++;
 		
 		System.out.println("-------------------");
-		System.out.println("--2´Ü--");
+		System.out.println("--2ë‹¨--");
 		for (int i=1; i<=9; i++) {
 			System.out.println("2*"+ i + "=" + (2*i));
 		}
 		
-		System.out.println("--3´Ü--");
+		System.out.println("--3ë‹¨--");
 		for (int i=1; i<=9; i++) {
 			System.out.println("3*"+ i + "=" + (3*i));
 		}
 		
-		System.out.println("--4´Ü--");
+		System.out.println("--4ë‹¨--");
 		for (int i=1; i<=9; i++) {
 			System.out.println("4*"+ i + "=" + (4*i));
 		}
 		
-		System.out.println("==== 2~9´Ü Ãâ·Â =====");
-		//1. ÀÌÁß(ÁßÃ¸) for¹®À» »ç¿ëÇØ¼­ 2~9´Ü±îÁö Ãâ·Â
+		System.out.println("==== 2~9ë‹¨ ì¶œë ¥ =====");
+		//1. ì´ì¤‘(ì¤‘ì²©) forë¬¸ì„ ì‚¬ìš©í•´ì„œ 2~9ë‹¨ê¹Œì§€ ì¶œë ¥
 		for (int dan=2; dan<=9; dan++) {
-			System.out.println("--"+ dan +"´Ü--");
+			System.out.println("--"+ dan +"ë‹¨--");
 			for (int i=1; i<=9; i++) {
 				System.out.println(dan +"*"+ i + "=" + (dan*i));
 			}
 			System.out.println();
 		}
 		
-		//2. ½ÃÀÛ´Ü(startDan)°ú ³¡³ª´Â ´Ü(endDan)À» ÀÔ·ÂÇÏ¸é ±¸±¸´Ü Ãâ·ÂÇÏµµ·Ï º¸¿Ï
+		//2. ì‹œìž‘ë‹¨(startDan)ê³¼ ëë‚˜ëŠ” ë‹¨(endDan)ì„ ìž…ë ¥í•˜ë©´ êµ¬êµ¬ë‹¨ ì¶œë ¥í•˜ë„ë¡ ë³´ì™„
 		int startDan = 11;
 		int endDan = 19;
 		
 		for (int dan=startDan; dan<=endDan; dan++) {
-			System.out.println("--"+ dan +"´Ü--");
+			System.out.println("--"+ dan +"ë‹¨--");
 			for (int i=1; i<=9; i++) {
 				System.out.println(dan +"*"+ i + "=" + (dan*i));
 			}

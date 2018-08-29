@@ -1,10 +1,10 @@
-package com.mystudy.pm02_person;
+ï»¿package com.mystudy.pm02_person;
 
 public class PersonVO {
 	private String name;
 	private int age;
 	
-	//»ı¼ºÀÚ name, age
+	//ìƒì„±ì name, age
 	public PersonVO(String name, int age) {
 		super();
 		this.name = name;
@@ -28,7 +28,7 @@ public class PersonVO {
 		this.age = age;
 	}
 	
-	//toString ¿À¹ö¶óÀÌµù
+	//toString ì˜¤ë²„ë¼ì´ë”©
 	@Override
 	public String toString() {
 		return "PersonVO [name=" + name + ", age=" + age + "]";

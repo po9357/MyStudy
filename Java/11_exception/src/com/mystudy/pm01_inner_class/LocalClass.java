@@ -1,16 +1,16 @@
-package com.mystudy.pm01_inner_class;
+ï»¿package com.mystudy.pm01_inner_class;
 
-//Áö¿ªÅ¬·¡½º (Local class) : ¸Ş¼Òµå ³» ¶Ç´Â ÃÊ±âÈ­ ºí·° ³»¿¡ ¼±¾ğ
+//ì§€ì—­í´ë˜ìŠ¤ (Local class) : ë©”ì†Œë“œ ë‚´ ë˜ëŠ” ì´ˆê¸°í™” ë¸”ëŸ­ ë‚´ì— ì„ ì–¸
 public class LocalClass {
 	int a = 100;
 	
 	
 	void innerTest(int k) {
-		int b = 200;		//Áö¿ªº¯¼ö (local variable)
+		int b = 200;		//ì§€ì—­ë³€ìˆ˜ (local variable)
 		final int c = k;
 		
-		//¸Ş¼Òµå ³»¿¡ ÀÖ´Â Å¬·¡½º(Áö¿ª Å¬·¡½º (Local class))
-		//¼±¾ğµÈ ¸Ş¼Òµå ³»ºÎ¿¡¼­¸¸ »ç¿ë °¡´É
+		//ë©”ì†Œë“œ ë‚´ì— ìˆëŠ” í´ë˜ìŠ¤(ì§€ì—­ í´ë˜ìŠ¤ (Local class))
+		//ì„ ì–¸ëœ ë©”ì†Œë“œ ë‚´ë¶€ì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥
 		class Inner {
 			void printData() {
 				System.out.println("int a : "+ a);
@@ -23,7 +23,7 @@ public class LocalClass {
 	}
 	
 	
-	{//ÃÊ±âÈ­ ºí·° (static ºÙÀÏ ¼ö ÀÖÀ½ - staticº¯¼ö ÃÊ±âÈ­)
+	{//ì´ˆê¸°í™” ë¸”ëŸ­ (static ë¶™ì¼ ìˆ˜ ìˆìŒ - staticë³€ìˆ˜ ì´ˆê¸°í™”)
 	}
 	
 	

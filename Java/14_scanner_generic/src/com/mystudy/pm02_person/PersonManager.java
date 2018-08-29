@@ -1,4 +1,4 @@
-package com.mystudy.pm02_person;
+ï»¿package com.mystudy.pm02_person;
 
 import java.util.ArrayList;
 
@@ -7,22 +7,22 @@ public class PersonManager {
 	public static void main(String[] args) {
 		ArrayList<PersonVO> list = new ArrayList<>();
 		
-		PersonVO person = new PersonVO("È«±æµ¿", 27);
+		PersonVO person = new PersonVO("í™ê¸¸ë™", 27);
 		
 		list.add(person);
 		
 		System.out.println(list);
 		System.out.println("-----------------------");
 		System.out.println("person : "+ person);
-		person = new PersonVO("±èÀ¯½Å", 30);
+		person = new PersonVO("ê¹€ìœ ì‹ ", 30);
 		System.out.println("person : "+ person);
 		
 		list.add(person);
 		System.out.println(list);
 		
 		for (PersonVO vo : list) {
-			System.out.println("ÀÌ¸§ : "+ vo.getName());
-			System.out.println("³ªÀÌ : "+ vo.getAge());
+			System.out.println("ì´ë¦„ : "+ vo.getName());
+			System.out.println("ë‚˜ì´ : "+ vo.getAge());
 		}
 		
 		

@@ -1,14 +1,14 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 public class Ex02_method_overloading {
 	public static void main(String[] args) {
-		//¸Ş¼Òµå ¿À¹ö·Îµù
-		//Á¤ÀÇ : µ¿ÀÏÇÑ ¸Ş¼Òµå¸íÀ» »ç¿ëÇØ¼­ ¼­·Î ´Ù¸¥ ±â´ÉÀ» ±¸Çö
-		//1. ÇÏ³ªÀÇ Å¬·¡½º ³»¿¡¼­ µ¿ÀÏÇÑ ¸Ş¼Òµå ¸íÀ¸·Î Á¤ÀÇ
-		//2. ÆÄ¶ó¹ÌÅÍ(parameter)ÀÇ Å¸ÀÔ, °¹¼ö, ¼ø¼­¸¦ ´Ş¸®ÇØ¼­ ÀÛ¼º
-		//	- ¸Ş¼ÒµåÀÇ ¸®ÅÏÅ¸ÀÔÀº ¹«°ü
-		//¸Ş¼Òµå ¿À¹ö·ÎµùÀº Å¬·¡½º ³»¿¡¼­ ¸Ş¼Òµå¸¦ Áßº¹¼±¾ğ
-		String name = "È«±æµ¿";
+		//ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©
+		//ì •ì˜ : ë™ì¼í•œ ë©”ì†Œë“œëª…ì„ ì‚¬ìš©í•´ì„œ ì„œë¡œ ë‹¤ë¥¸ ê¸°ëŠ¥ì„ êµ¬í˜„
+		//1. í•˜ë‚˜ì˜ í´ë˜ìŠ¤ ë‚´ì—ì„œ ë™ì¼í•œ ë©”ì†Œë“œ ëª…ìœ¼ë¡œ ì •ì˜
+		//2. íŒŒë¼ë¯¸í„°(parameter)ì˜ íƒ€ì…, ê°¯ìˆ˜, ìˆœì„œë¥¼ ë‹¬ë¦¬í•´ì„œ ì‘ì„±
+		//	- ë©”ì†Œë“œì˜ ë¦¬í„´íƒ€ì…ì€ ë¬´ê´€
+		//ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©ì€ í´ë˜ìŠ¤ ë‚´ì—ì„œ ë©”ì†Œë“œë¥¼ ì¤‘ë³µì„ ì–¸
+		String name = "í™ê¸¸ë™";
 //		int kor = 100, eng = 90, math = 80;
 		int kor = 100;
 		int eng = 90;
@@ -19,12 +19,12 @@ public class Ex02_method_overloading {
 		
 		System.out.println(avg);
 		
-		System.out.println("--- ¸Ş¼Òµå È£Ãâ(½ÇÇà) ---");
+		System.out.println("--- ë©”ì†Œë“œ í˜¸ì¶œ(ì‹¤í–‰) ---");
 		displayData(name, avg, tot);	//String, double, int
 		displayData(name, tot, avg);	//String, int, double
 		
-		//°´Ã¼ »ı¼º
-		//staticÀÌ ºÙÁö ¾Ê¾Æ Å¬·¡½º °´Ã¼ »ı¼º ÈÄ »ç¿ë
+		//ê°ì²´ ìƒì„±
+		//staticì´ ë¶™ì§€ ì•Šì•„ í´ë˜ìŠ¤ ê°ì²´ ìƒì„± í›„ ì‚¬ìš©
 		Ex02_method_overloading mo = new Ex02_method_overloading();
 		mo.displayData(name, avg);
 		displayData(avg);
@@ -34,32 +34,32 @@ public class Ex02_method_overloading {
 	}
 	
 	static void displayData(String name, double avg, int tot) {
-		System.out.println("1. ÀÌ¸§ : "+ name+ ", ÃÑÁ¡ : "+ tot +", Æò±Õ : "+ avg);
+		System.out.println("1. ì´ë¦„ : "+ name+ ", ì´ì  : "+ tot +", í‰ê·  : "+ avg);
 	}
 	
 	static void displayData(String name, int tot, double avg) {
-		System.out.println("2. ÀÌ¸§ : "+ name+ ", ÃÑÁ¡ : "+ tot +", Æò±Õ : "+ avg);
+		System.out.println("2. ì´ë¦„ : "+ name+ ", ì´ì  : "+ tot +", í‰ê·  : "+ avg);
 	}
 	
 	void displayData(String name, double avg) {
-		System.out.println("3. ÀÌ¸§ : "+ name +", Æò±Õ : "+ avg);
+		System.out.println("3. ì´ë¦„ : "+ name +", í‰ê·  : "+ avg);
 	}
 	
-	//Æò±Õ°ª¸¸ ¹Ş¾Æ¼­ Ãâ·Â
+	//í‰ê· ê°’ë§Œ ë°›ì•„ì„œ ì¶œë ¥
 	static void displayData(double avg) {
-		System.out.println("4. Æò±Õ : "+ avg);
+		System.out.println("4. í‰ê·  : "+ avg);
 	}
-	//ÀÌ¸§¸¸ ¹Ş¾Æ¼­ Ãâ·Â
+	//ì´ë¦„ë§Œ ë°›ì•„ì„œ ì¶œë ¥
 	static void displayData(String name) {
-		System.out.println("5. ÀÌ¸§ : "+ name);
+		System.out.println("5. ì´ë¦„ : "+ name);
 	}
-	//ÃÑÁ¡¸¸ ¹Ş¾Æ¼­ Ãâ·Â
+	//ì´ì ë§Œ ë°›ì•„ì„œ ì¶œë ¥
 	static void displayData(int tot) {
-		System.out.println("6. ÃÑÁ¡ : "+ tot);
+		System.out.println("6. ì´ì  : "+ tot);
 	}
-	//±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö¸¦ ¹Ş¾Æ¼­ Ãâ·Â
+	//êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ë¥¼ ë°›ì•„ì„œ ì¶œë ¥
 	static void displayData(int kor, int eng, int math) {
-		System.out.println("7. ±¹¾î : "+ kor+ ", ¿µ¾î : "+ eng +", ¼öÇĞ : "+ math);
+		System.out.println("7. êµ­ì–´ : "+ kor+ ", ì˜ì–´ : "+ eng +", ìˆ˜í•™ : "+ math);
 	}
 	
 }

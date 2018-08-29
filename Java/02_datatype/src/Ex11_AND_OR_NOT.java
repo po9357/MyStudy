@@ -1,9 +1,9 @@
-
+ï»¿
 public class Ex11_AND_OR_NOT {
 
 	public static void main(String[] args) {
-		//³í¸®¿¬»êÀÚ : && (AND), || (OR), ! (NOT)
-		//³í¸®¿¬»êÀÚ(&&, ||)ÀÇ ÁÂ, ¿ì¿¡´Â true, false °ªÀÌ ÀÖ¾î¾ß ÇÔ
+		//ë…¼ë¦¬ì—°ì‚°ì : && (AND), || (OR), ! (NOT)
+		//ë…¼ë¦¬ì—°ì‚°ì(&&, ||)ì˜ ì¢Œ, ìš°ì—ëŠ” true, false ê°’ì´ ìˆì–´ì•¼ í•¨
 		int num1 = 10;
 		int num2 = 20;
 		int num3 = 20;

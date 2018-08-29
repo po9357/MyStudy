@@ -1,10 +1,10 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 
 public class LottoArray {
 
 	public static void main(String[] args) {
-		//·£´ı ÇÑ ¼ıÀÚ¸¦ ¸¸µé±â : Math.random()
-		//Math.random() : 0.0 <= ¸®ÅÏ°ª < 1.0
+		//ëœë¤ í•œ ìˆ«ìë¥¼ ë§Œë“¤ê¸° : Math.random()
+		//Math.random() : 0.0 <= ë¦¬í„´ê°’ < 1.0
 		System.out.println(Math.random());
 		System.out.println((Math.random()*10));
 		for (int i=0; i<100; i++) {
@@ -12,18 +12,18 @@ public class LottoArray {
 		}
 		System.out.println();
 		System.out.println("---------------------------");
-		//·Î¶Ç¸¸µé±â
-		//1. Á¤¼ö°ª 45°³¸¦ ÀúÀåÇÒ ¼ö ÀÖ´Â ¹è¿­ ¼±¾ğ
+		//ë¡œë˜ë§Œë“¤ê¸°
+		//1. ì •ìˆ˜ê°’ 45ê°œë¥¼ ì €ì¥í•  ìˆ˜ ìˆëŠ” ë°°ì—´ ì„ ì–¸
 		int[] nums = new int[45];
 		
-		//2. ¼ıÀÚ 1 ~ 45¸¦ ¹è¿­¿¡ ÀúÀå
+		//2. ìˆ«ì 1 ~ 45ë¥¼ ë°°ì—´ì— ì €ì¥
 		for (int i=0; i<nums.length; i++) {
 			nums[i] = i+1;
 			System.out.print(nums[i]+ " ");
 		}
 		System.out.println();
 		
-		int rNum;	//0 ~ 44±îÁöÀÇ ¼ıÀÚ¸¦ ÀúÀå
+		int rNum;	//0 ~ 44ê¹Œì§€ì˜ ìˆ«ìë¥¼ ì €ì¥
 		int tmp;
 		for (int i=0; i<10000; i++) {
 			rNum = (int)(Math.random()*45);
@@ -40,14 +40,14 @@ public class LottoArray {
 		}
 		System.out.println();
 		
-		//·Î¶Ç¹øÈ£ ÃßÃâ : ¸Ç ¾Õ¿¡¼­ 6°³ ¹øÈ£ ÃßÃâ
+		//ë¡œë˜ë²ˆí˜¸ ì¶”ì¶œ : ë§¨ ì•ì—ì„œ 6ê°œ ë²ˆí˜¸ ì¶”ì¶œ
 		for (int i=0; i<6; i++) {
 			System.out.print(nums[i] + " ");
 		}
 		System.out.println();
 		
 		System.out.println("---------------");
-		//¿À¸§Â÷¼øÀ¸·Î Á¤¸®
+		//ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë¦¬
 		for (int i=0; i<6; i++) {
 			for(int j=0; j<6-1-i; j++) {
 				if(nums[j]>nums[j+1]) {

@@ -1,4 +1,4 @@
-
+ï»¿
 public class My_Ex03_arrays_counting {
 	public static void main(String[] args) {
 		int[] numArr = new int[10];
@@ -14,7 +14,7 @@ public class My_Ex03_arrays_counting {
 		}
 		
 		for (int i=0; i<numArr.length; i++) {
-			System.out.println(i + "ÀÇ °¹¼ö´Â " + counter[i]+"°³ ÀÔ´Ï´Ù.");
+			System.out.println(i + "ì˜ ê°¯ìˆ˜ëŠ” " + counter[i]+"ê°œ ìž…ë‹ˆë‹¤.");
 		}
 		
 		

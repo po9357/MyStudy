@@ -1,14 +1,14 @@
-package com.mystudy.pm03_phone;
+ï»¿package com.mystudy.pm03_phone;
 
 public class Phone_mine {
 
 	public static void main(String[] args) {
-		Phone ph = new Phone("³» ¹øÈ£");
+		Phone ph = new Phone("ë‚´ ë²ˆí˜¸");
 		System.out.println(ph);
 		
 		ph.view();
 		
-		Mp3Phone mp3 = new Mp3Phone("mp3¹øÈ£", "mp3Æù");
+		Mp3Phone mp3 = new Mp3Phone("mp3ë²ˆí˜¸", "mp3í°");
 		System.out.println(mp3);
 		mp3.view();
 		

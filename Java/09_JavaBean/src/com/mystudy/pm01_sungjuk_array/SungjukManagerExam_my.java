@@ -1,14 +1,14 @@
-package com.mystudy.pm01_sungjuk_array;
+ï»¿package com.mystudy.pm01_sungjuk_array;
 
 public class SungjukManagerExam_my {
 
 	public static void main(String[] args) {
-		//2Â÷¿ø ¹è¿­À» »ç¿ëÇÑ ¼ºÀû Ã³¸®
-		//½Ç½À¹®Á¦. 
-		//  ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö 3°³¸¦ ÀúÀåÇÑ 2Â÷¿ø ¹è¿­(sungjuk) ¸¸µé°í
-		//  ¼ºÀûÀ» ÀÔ·ÂÇÏ°í °³ÀÎº° ÃÑÁ¡°ú Æò±ÕÀ» °è»ê ÇÏ¿© È­¸é¿¡ µ¥ÀÌÅÍ Ãâ·Â
+		//2ì°¨ì› ë°°ì—´ì„ ì‚¬ìš©í•œ ì„±ì  ì²˜ë¦¬
+		//ì‹¤ìŠµë¬¸ì œ. 
+		//  êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ 3ê°œë¥¼ ì €ì¥í•œ 2ì°¨ì› ë°°ì—´(sungjuk) ë§Œë“¤ê³ 
+		//  ì„±ì ì„ ì…ë ¥í•˜ê³  ê°œì¸ë³„ ì´ì ê³¼ í‰ê· ì„ ê³„ì‚° í•˜ì—¬ í™”ë©´ì— ë°ì´í„° ì¶œë ¥
 		/*
-			±¹¾î	 ¿µ¾î	  ¼öÇĞ	  ÃÑÁ¡	       Æò±Õ
+			êµ­ì–´	 ì˜ì–´	  ìˆ˜í•™	  ì´ì 	       í‰ê· 
 			-------------------------------------
 			100  90  80  270   90.0
 			100  90  81  271   90.33
@@ -64,30 +64,30 @@ public class SungjukManagerExam_my {
 		System.out.println(avg1);
 		System.out.println(avg2);
 		System.out.println(avg3);
-		System.out.println("--- °ú¸ñ º° ÃÑÁ¡ ¹× Æò±Õ ---");
+		System.out.println("--- ê³¼ëª© ë³„ ì´ì  ë° í‰ê·  ---");
 		int korTot = 0;
 		for (int i=0; i<score.length; i++) {
 			korTot += score[i][0];
 		}
-		System.out.println("±¹¾î ÃÑÁ¡ : "+korTot);
+		System.out.println("êµ­ì–´ ì´ì  : "+korTot);
 		int engTot = 0;
 		for (int i=0; i<score.length; i++) {
 			engTot += score[i][1];
 		}
-		System.out.println("¿µ¾î ÃÑÁ¡ : "+engTot);
+		System.out.println("ì˜ì–´ ì´ì  : "+engTot);
 		int mathTot = 0;
 		for (int i=0; i<score.length; i++) {
 			mathTot += score[i][2];
 		}
-		System.out.println("¼öÇĞ ÃÑÁ¡ : "+mathTot);
+		System.out.println("ìˆ˜í•™ ì´ì  : "+mathTot);
 		
 		double korAvg = (korTot * 100) / 3 / 100.0;
 		double engAvg = (engTot * 100) / 3 / 100.0;
 		double mathAvg = (mathTot * 100) / 3 / 100.0;
 		
-		System.out.println("±¹¾î Æò±Õ : "+ korAvg);
-		System.out.println("¿µ¾î Æò±Õ : "+ engAvg);
-		System.out.println("¼öÇĞ Æò±Õ : "+ mathAvg);
+		System.out.println("êµ­ì–´ í‰ê·  : "+ korAvg);
+		System.out.println("ì˜ì–´ í‰ê·  : "+ engAvg);
+		System.out.println("ìˆ˜í•™ í‰ê·  : "+ mathAvg);
 		
 	}
 }

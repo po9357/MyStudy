@@ -1,4 +1,4 @@
-package com.mystudy.pm01_hashset;
+ï»¿package com.mystudy.pm01_hashset;
 
 import java.util.*;
 import java.util.Iterator;
@@ -50,34 +50,34 @@ class Person {
 public class HashSetExam2 {
 	
 	public static void main(String[] args) {
-		//SetÀº Áßº¹µ¥ÀÌÅÍ´Â ÇÏ³ª¸¸ ÀúÀå
-		//ÂüÁ¶Çü µ¥ÀÌÅÍÀÇ µ¿ÀÏ µ¥ÀÌÅÍ ¿©ºÎ´Â equals ¸Ş¼Òµå ±âÁØ
+		//Setì€ ì¤‘ë³µë°ì´í„°ëŠ” í•˜ë‚˜ë§Œ ì €ì¥
+		//ì°¸ì¡°í˜• ë°ì´í„°ì˜ ë™ì¼ ë°ì´í„° ì—¬ë¶€ëŠ” equals ë©”ì†Œë“œ ê¸°ì¤€
 		HashSet set = new HashSet();
 		set.add("ab");
 		set.add("abc");
 		set.add("def");
-		set.add(new Person("È«±æµ¿", 27, "901010-1111111"));
-		Person person = new Person("È«±æµ¿2", 28, "901010-1222222");
+		set.add(new Person("í™ê¸¸ë™", 27, "901010-1111111"));
+		Person person = new Person("í™ê¸¸ë™2", 28, "901010-1222222");
 		set.add(person);
 		Person person2 = person;
 		set.add(person);
 		System.out.println("--------");
-		System.out.println(set.contains("È«±æµ¿"));
+		System.out.println(set.contains("í™ê¸¸ë™"));
 		System.out.println("--------");
 		
 		System.out.println(set);
 		System.out.println("=====================");
 		
-		//ÀüÃ¼ µ¥ÀÌÅÍ Á¶È¸ÇØ¼­ È­¸é Ãâ·Â
+		//ì „ì²´ ë°ì´í„° ì¡°íšŒí•´ì„œ í™”ë©´ ì¶œë ¥
 		Iterator ite = set.iterator();
 		while (ite.hasNext()) {
 			System.out.println(ite.next());
 		}
 		
 		//--------
-		set.add(new Person("È«±æµ¿", 27, "901010-1111111"));
+		set.add(new Person("í™ê¸¸ë™", 27, "901010-1111111"));
 		System.out.println("-----------------");
-		//ÀüÃ¼ µ¥ÀÌÅÍ Á¶È¸
+		//ì „ì²´ ë°ì´í„° ì¡°íšŒ
 		ite = set.iterator();
 		while (ite.hasNext()) {
 			System.out.println(ite.next());

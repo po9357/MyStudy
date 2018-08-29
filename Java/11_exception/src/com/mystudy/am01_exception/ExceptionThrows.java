@@ -1,24 +1,24 @@
-package com.mystudy.am01_exception;
+ï»¿package com.mystudy.am01_exception;
 
 public class ExceptionThrows {
 
 	public static void main(String[] args) {
-		// ¿¹¿ÜÃ³¸® : throws - ¿¹¿Ü¸¦ ´øÁú ¶§(À§ÀÓ,Àü°¡) »ç¿ë
-		// ¿¹¿Ü°¡ ¹ß»ıÇÑ °÷¿¡¼­ Ã³¸®ÇÏÁö ¿¹¿Ü¸¦ ´øÁ®¼­ ´Ù¸¥ °÷¿¡¼­ Ã³¸®ÇÏµµ·Ï ÇÔ
-		// È£ÃâµÈ °÷¿¡¼­ Ã³¸®ÇÏµµ·Ï ¿¹¿Ü¸¦ ´øÁü
-		System.out.println("--- main() ½ÃÀÛ ---");
+		// ì˜ˆì™¸ì²˜ë¦¬ : throws - ì˜ˆì™¸ë¥¼ ë˜ì§ˆ ë•Œ(ìœ„ì„,ì „ê°€) ì‚¬ìš©
+		// ì˜ˆì™¸ê°€ ë°œìƒí•œ ê³³ì—ì„œ ì²˜ë¦¬í•˜ì§€ ì˜ˆì™¸ë¥¼ ë˜ì ¸ì„œ ë‹¤ë¥¸ ê³³ì—ì„œ ì²˜ë¦¬í•˜ë„ë¡ í•¨
+		// í˜¸ì¶œëœ ê³³ì—ì„œ ì²˜ë¦¬í•˜ë„ë¡ ì˜ˆì™¸ë¥¼ ë˜ì§
+		System.out.println("--- main() ì‹œì‘ ---");
 		int num1 = 100;
 		int num2 = 20;
 		int result = 0;
 		
-		System.out.println(">> ¿¬»êÃ³¸®");
+		System.out.println(">> ì—°ì‚°ì²˜ë¦¬");
 		num2 = 0;
 		try {
 			div(num1, num2);
 		} catch(ArithmeticException e) {
-			System.out.println("[main-¿¹¿ÜÃ³¸®]" + e.getMessage());
+			System.out.println("[main-ì˜ˆì™¸ì²˜ë¦¬]" + e.getMessage());
 		}
-		System.out.println(">> div() Á¤»óÃ³¸®");
+		System.out.println(">> div() ì •ìƒì²˜ë¦¬");
 		
 		num2 = 0;
 		
@@ -26,13 +26,13 @@ public class ExceptionThrows {
 		try {
 			divThrows(num1, num2);
 		} catch(ArithmeticException e) {
-			System.out.println("[¿¹¿ÜÃ³¸®-throwsµÈ]" + e.getMessage());
+			System.out.println("[ì˜ˆì™¸ì²˜ë¦¬-throwsëœ]" + e.getMessage());
 		}
-		System.out.println(">> divThrows() Á¤»óÃ³¸®");
+		System.out.println(">> divThrows() ì •ìƒì²˜ë¦¬");
 		
-		System.out.println(">> ¿¬»êÃ³¸® ¿Ï·á");
+		System.out.println(">> ì—°ì‚°ì²˜ë¦¬ ì™„ë£Œ");
 		
-		System.out.println("--- main() Á¾·á ---");
+		System.out.println("--- main() ì¢…ë£Œ ---");
 	}
 	
 	static int div(int num1, int num2) {
@@ -40,7 +40,7 @@ public class ExceptionThrows {
 		try {
 			result = num1 / num2;
 		} catch (ArithmeticException e) {
-			System.out.println("[div ¿¹¿Ü¹ß»ı]" + e.getMessage());
+			System.out.println("[div ì˜ˆì™¸ë°œìƒ]" + e.getMessage());
 		}
 		return result;
 	}

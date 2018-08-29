@@ -1,22 +1,22 @@
-package com.mystudy.string;
+ï»¿package com.mystudy.string;
 
 public class Ex02_String2 {
 	
 	public static void main(String[] args) {
-		//String ¸Ş¼Òµåµé
+		//String ë©”ì†Œë“œë“¤
 		String st1 = "Java";
 		System.out.println(st1);
 		System.out.println(st1.toString());
 		
-		System.out.println("--- indexOf() ---");	//¹®ÀÚ¿­ÀÇ À§Ä¡¸¦ Ã£´Â ¸Ş¼Òµå
-		System.out.println(st1.indexOf("J"));		//¾øÀ¸¸é -1, 0 ºÎÅÍ ÇØ´ç ¹®ÀÚ°¡ ¾îµø´ÂÁö int°ªÀ¸·Î ¾Ë·ÁÁÜ.
-													//			(¹è¿­ ¹øÈ£¶ó »ı°¢ÇÏ¸é ÆíÇÔ)
+		System.out.println("--- indexOf() ---");	//ë¬¸ìì—´ì˜ ìœ„ì¹˜ë¥¼ ì°¾ëŠ” ë©”ì†Œë“œ
+		System.out.println(st1.indexOf("J"));		//ì—†ìœ¼ë©´ -1, 0 ë¶€í„° í•´ë‹¹ ë¬¸ìê°€ ì–´ë”¨ëŠ”ì§€ intê°’ìœ¼ë¡œ ì•Œë ¤ì¤Œ.
+													//			(ë°°ì—´ ë²ˆí˜¸ë¼ ìƒê°í•˜ë©´ í¸í•¨)
 		System.out.println("--- isEmpty ---");
-		System.out.println(st1.isEmpty());			//st1 = "";¶ó¸é true°ª ¹İÈ¯
+		System.out.println(st1.isEmpty());			//st1 = "";ë¼ë©´ trueê°’ ë°˜í™˜
 		
 		System.out.println("--- replace() ---");
 		System.out.println("st1 : "+ st1);
-		System.out.println(st1.replace('a', 'B'));	//¿øº» µ¥ÀÌÅÍ´Â º¯ÇÏÁö ¾ÊÀ½.
+		System.out.println(st1.replace('a', 'B'));	//ì›ë³¸ ë°ì´í„°ëŠ” ë³€í•˜ì§€ ì•ŠìŒ.
 		System.out.println(st1);					
 	
 		st1 = "java java";
@@ -32,8 +32,8 @@ public class Ex02_String2 {
 		String str = "java World";
 		System.out.println("str : "+ str);
 		System.out.println("str.substring(5) : "+ str.substring(5));
-		System.out.println(str.substring(0, str.length()));		//beginIndexºÎÅÍ(Æ÷ÇÔ)(0ºÎÅÍ ½ÃÀÛ)
-		System.out.println(str.substring(0, str.length()-2));	//endIndexÀÌÀü(¹ÌÆ÷ÇÔ)±îÁö
+		System.out.println(str.substring(0, str.length()));		//beginIndexë¶€í„°(í¬í•¨)(0ë¶€í„° ì‹œì‘)
+		System.out.println(str.substring(0, str.length()-2));	//endIndexì´ì „(ë¯¸í¬í•¨)ê¹Œì§€
 		
 		System.out.println("--- toCharArray() ---");
 		char[] ch = str.toCharArray();
@@ -41,8 +41,8 @@ public class Ex02_String2 {
 		
 		System.out.println("--- toUpperCase(), toLowerCase() ---");
 		System.out.println("str : "+ str);
-		System.out.println("´ë¹®ÀÚ·Î toUpperCase() : "+ str.toUpperCase());
-		System.out.println("¼Ò¹®ÀÚ·Î toLowerCase() : "+ str.toLowerCase());
+		System.out.println("ëŒ€ë¬¸ìë¡œ toUpperCase() : "+ str.toUpperCase());
+		System.out.println("ì†Œë¬¸ìë¡œ toLowerCase() : "+ str.toLowerCase());
 		
 		System.out.println("--- trim() ---");
 		String str2 = "    ab c D    EFG     ";
@@ -51,7 +51,7 @@ public class Ex02_String2 {
 		
 		System.out.println("--- valueOf() ---");
 		int num = 100;
-		str2 = String.valueOf(num);		//static ¸Ş¼Òµå valueOf »ç¿ë
+		str2 = String.valueOf(num);		//static ë©”ì†Œë“œ valueOf ì‚¬ìš©
 		System.out.println(num+1);
 		System.out.println(String.valueOf(num)+1);
 		

@@ -1,11 +1,11 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 public class Ex04_Wrapper {
 
 	public static void main(String[] args) {
-		//Wrapper Class : ±âº» µ¥ÀÌÅÍ Å¸ÀÔÀ» ±â´ÉÈ®ÀåÇØ ³õÀº Å¬·¡½º ÃÑÄª
-		//±âº» µ¥ÀÌÅÍ Å¸ÀÔ : ÀüÃ¼ ¼Ò¹®ÀÚ, char, int ...
-		//Wrapper Class : ±âº» µ¥ÀÌÅÍ Å¸ÀÔÀÇ Ã¹ ±ÛÀÚ ´ë¹®ÀÚ.
+		//Wrapper Class : ê¸°ë³¸ ë°ì´í„° íƒ€ì…ì„ ê¸°ëŠ¥í™•ì¥í•´ ë†“ì€ í´ë˜ìŠ¤ ì´ì¹­
+		//ê¸°ë³¸ ë°ì´í„° íƒ€ì… : ì „ì²´ ì†Œë¬¸ì, char, int ...
+		//Wrapper Class : ê¸°ë³¸ ë°ì´í„° íƒ€ì…ì˜ ì²« ê¸€ì ëŒ€ë¬¸ì.
 		//char - Character, int - Integer
 		int num = 100;
 		System.out.println("num : "+ num);
@@ -13,11 +13,11 @@ public class Ex04_Wrapper {
 		Integer intNum = new Integer("100");
 		System.out.println("intNum : "+ intNum);
 		
-		intNum = 900;		//Integer	<--	int : ÀÚµ¿Çüº¯È¯
-		num = intNum;		//int	<--	Integer : ÀÚµ¿Çüº¯È¯
+		intNum = 900;		//Integer	<--	int : ìë™í˜•ë³€í™˜
+		num = intNum;		//int	<--	Integer : ìë™í˜•ë³€í™˜
 		
-		System.out.println("Á¤¼öÇü int ÃÖ´ë°ª : "+ Integer.MAX_VALUE);
-		System.out.println("Á¤¼öÇü int ÃÖ´ë°ª : "+ Integer.MIN_VALUE);
+		System.out.println("ì •ìˆ˜í˜• int ìµœëŒ€ê°’ : "+ Integer.MAX_VALUE);
+		System.out.println("ì •ìˆ˜í˜• int ìµœëŒ€ê°’ : "+ Integer.MIN_VALUE);
 		
 		num = Integer.parseInt("999");		//int	<-	Sting
 		intNum = Integer.valueOf("999");	//Integer	<-	String
@@ -26,17 +26,17 @@ public class Ex04_Wrapper {
 		Boolean bool = true;
 		bool = new Boolean(true);
 		System.out.println("bool : "+ bool);
-		bool = new Boolean("true1");		//±âº»ÀûÀ¸·Î »ı¼ºÀÚ¿¡¼­ ¹®ÀÚ¿­À» ÀúÀåÇÒ ¼ö ÀÖ´Ù.
+		bool = new Boolean("true1");		//ê¸°ë³¸ì ìœ¼ë¡œ ìƒì„±ìì—ì„œ ë¬¸ìì—´ì„ ì €ì¥í•  ìˆ˜ ìˆë‹¤.
 		System.out.println("bool : "+ bool);
 		System.out.println(Boolean.TRUE);
 		System.out.println(Boolean.FALSE);
 		
 		System.out.println("------------------------------");
-		//StringÅ¸ÀÔ -> Boolean
+		//Stringíƒ€ì… -> Boolean
 		bool = Boolean.valueOf("true");		//true
 		System.out.println(bool);
 		bool = Boolean.valueOf("true1");	//false		
-		System.out.println(bool);						//´ë,¼Ò¹®ÀÚ ±¸ºĞ ¾øÀÌ "true"¶õ ¹®ÀÚ°¡ ¿À¸é true°ªÀ¸·Î ¹İÈ¯
+		System.out.println(bool);						//ëŒ€,ì†Œë¬¸ì êµ¬ë¶„ ì—†ì´ "true"ë€ ë¬¸ìê°€ ì˜¤ë©´ trueê°’ìœ¼ë¡œ ë°˜í™˜
 		bool = Boolean.valueOf("True");		//true
 		System.out.println(bool);
 		bool = Boolean.valueOf("TRUE");		//true

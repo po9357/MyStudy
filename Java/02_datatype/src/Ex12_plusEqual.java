@@ -1,14 +1,14 @@
-
+ï»¿
 public class Ex12_plusEqual {
 
 	public static void main(String[] args) {
-		//´ëÀÔ¿¬»êÀÚ : =, +=, -=, *=, /=, %=
-		//»ç¿ëÇüÅÂ : ÀúÀåÇÒº¯¼ö ´ëÀÔ¿¬»êÀÚ ÀúÀåÇÒ°ª(»ó¼ö) ¶Ç´Â º¯¼ö
-		//¿¹) num += 2;  ---> num = num + 2;
-		//   numÀÇ º¯¼ö°ª¿¡ 2¸¦ Áõ°¡ ½ÃÅ´
+		//ëŒ€ì…ì—°ì‚°ì : =, +=, -=, *=, /=, %=
+		//ì‚¬ìš©í˜•íƒœ : ì €ì¥í• ë³€ìˆ˜ ëŒ€ì…ì—°ì‚°ì ì €ì¥í• ê°’(ìƒìˆ˜) ë˜ëŠ” ë³€ìˆ˜
+		//ì˜ˆ) num += 2;  ---> num = num + 2;
+		//   numì˜ ë³€ìˆ˜ê°’ì— 2ë¥¼ ì¦ê°€ ì‹œí‚´
 		
-//		int num1; //º¯¼ö ¼±¾ğ
-//		num1 = 10; //ÃÊ±â°ª ¼³Á¤
+//		int num1; //ë³€ìˆ˜ ì„ ì–¸
+//		num1 = 10; //ì´ˆê¸°ê°’ ì„¤ì •
 		int num1 = 10; 
 		int num2 = 20;
 		int result = 0;
@@ -16,14 +16,14 @@ public class Ex12_plusEqual {
 		System.out.println("result: " + result);
 		result += 15; //result = result + 15;
 		System.out.println("result += 15 : " + result);
-		//ÇÑ¹ø ´õ µ¿ÀÏ ¿¬»ê ½ÇÇà
+		//í•œë²ˆ ë” ë™ì¼ ì—°ì‚° ì‹¤í–‰
 		result += 15; //result = result + 15;
 		System.out.println("result += 15 : " + result);
 		
-		System.out.println("--- -= ¿¬»ê ---");
+		System.out.println("--- -= ì—°ì‚° ---");
 		result -= 10; //result = result - 10;
 		System.out.println("result -= 10 : " + result);
-		System.out.println(); //ºóÁÙ ÇÏ³ª Ãß°¡
+		System.out.println(); //ë¹ˆì¤„ í•˜ë‚˜ ì¶”ê°€
 		
 		result *= 10; //result = result * 10;
 		System.out.println("result *= 10 : " + result);

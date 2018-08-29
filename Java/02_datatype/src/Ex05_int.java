@@ -1,8 +1,8 @@
-
+ï»¿
 public class Ex05_int {
 
 	public static void main(String[] args) {
-		//Á¤¼öÇü int : 4byte, ¹üÀ§(-2,147,483,648 ~ 2,147,483,647)
+		//ì •ìˆ˜í˜• int : 4byte, ë²”ìœ„(-2,147,483,648 ~ 2,147,483,647)
 		int num1 = 70000;
 		int num2 = 30000;
 		int sum = num1 + num2; //sum <- num1 + num2
@@ -11,14 +11,14 @@ public class Ex05_int {
 		System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
 		System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
 		System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
-		// % ¿¬»êÀÚ : ³ª´©±â ¿¬»ê ÈÄ ³ª¸ÓÁö °ªÀ» ±¸ÇÔ
+		// % ì—°ì‚°ì : ë‚˜ëˆ„ê¸° ì—°ì‚° í›„ ë‚˜ë¨¸ì§€ ê°’ì„ êµ¬í•¨
 		System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
 		
-		//0À¸·Î ³ª´©´Â °æ¿ì 
+		//0ìœ¼ë¡œ ë‚˜ëˆ„ëŠ” ê²½ìš° 
 		int num3 = 0;
 		System.out.println(num1 + " / 0" + (num1 / num3));
 		
-		System.out.println(">>> ÇÁ·Î±×·¥ÀÇ ³¡");
+		System.out.println(">>> í”„ë¡œê·¸ë¨ì˜ ë");
 
 	}
 

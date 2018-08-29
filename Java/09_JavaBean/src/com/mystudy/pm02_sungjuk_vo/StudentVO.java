@@ -1,18 +1,18 @@
-package com.mystudy.pm02_sungjuk_vo;
+ï»¿package com.mystudy.pm02_sungjuk_vo;
 
-//ºó(Bean) °´Ã¼ ¸¸µé±â
-//VO(Value Object) : °ªÀ» ÀúÀåÇÏ±â À§ÇÑ Å¬·¡½º(°´Ã¼)
-//DTO(Data Transfer Object) : °ªÀ» ¼­·Î Àü´ŞÇÏ±â À§ÇÑ °´Ã¼
+//ë¹ˆ(Bean) ê°ì²´ ë§Œë“¤ê¸°
+//VO(Value Object) : ê°’ì„ ì €ì¥í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤(ê°ì²´)
+//DTO(Data Transfer Object) : ê°’ì„ ì„œë¡œ ì „ë‹¬í•˜ê¸° ìœ„í•œ ê°ì²´
 //StudentVO, StudentDTO, StudentVo, StudentDto ...
 public class StudentVO {
-	private String name;	//ÀÌ¸§
-	private int kor;		//±¹¾î Á¡¼ö
-	private int eng;		//¿µ¾î Á¡¼ö
-	private int math;		//¼öÇĞ Á¡¼ö
-	private int tot;		//ÃÑÁ¡
-	private double avg;		//Æò±Õ
+	private String name;	//ì´ë¦„
+	private int kor;		//êµ­ì–´ ì ìˆ˜
+	private int eng;		//ì˜ì–´ ì ìˆ˜
+	private int math;		//ìˆ˜í•™ ì ìˆ˜
+	private int tot;		//ì´ì 
+	private double avg;		//í‰ê· 
 	
-	//»ı¼ºÀÚ ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö¸¦ ÀÔ·Â¹Ş´Â »ı¼ºÀÚ (tot, avg ÀÚµ¿°è»ê)
+	//ìƒì„±ì êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ëŠ” ìƒì„±ì (tot, avg ìë™ê³„ì‚°)
 	public StudentVO(String name, int kor, int eng, int math) {
 		this.name = name;
 		this.kor = kor;
@@ -21,8 +21,8 @@ public class StudentVO {
 		calcTotAvg();
 	}
 
-	//¸ğµç ÇÊµå(¸â¹öº¯¼ö)ÀÇ setter, getter ÀÛ¼º
-	//(±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö°¡ ¹Ù²î¸é tot, avg ÀÚµ¿ ¼öÁ¤ µÇµµ·Ï Ã³¸®)
+	//ëª¨ë“  í•„ë“œ(ë©¤ë²„ë³€ìˆ˜)ì˜ setter, getter ì‘ì„±
+	//(êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ê°€ ë°”ë€Œë©´ tot, avg ìë™ ìˆ˜ì • ë˜ë„ë¡ ì²˜ë¦¬)
 	public String getName() {
 		return name;
 	}
@@ -74,21 +74,21 @@ public class StudentVO {
 		this.avg = avg;
 	}
 
-	//toString() ¿À¹ö¶óÀÌµù
+	//toString() ì˜¤ë²„ë¼ì´ë”©
 	@Override
 	public String toString() {
 		return "StudentVO [name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math + ", tot=" + tot
 				+ ", avg=" + avg + "]";
 	}
 	
-	//tot, avg °è»êÇÏ´Â ¸Ş¼Òµå ÀÛ¼º
+	//tot, avg ê³„ì‚°í•˜ëŠ” ë©”ì†Œë“œ ì‘ì„±
 	public void calcTotAvg() {
 		this.tot = kor + eng + math;
 		this.avg = (tot * 100) / 3 / 100.0;
 	}
 	
-	//printData ¸Ş¼Òµå Ãß°¡
-	///(ÀÌ¸§\t±¹¾î\t¿µ¾î\t...)
+	//printData ë©”ì†Œë“œ ì¶”ê°€
+	///(ì´ë¦„\têµ­ì–´\tì˜ì–´\t...)
 	public void printData () {
 		System.out.println(this.name+"\t"+this.kor+"\t"+this.eng+"\t"+this.math+"\t"+this.tot+"\t"+this.avg);
 	}

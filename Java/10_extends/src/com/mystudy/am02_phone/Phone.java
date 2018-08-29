@@ -1,15 +1,15 @@
-package com.mystudy.am02_phone;
+ï»¿package com.mystudy.am02_phone;
 
 import java.util.Scanner;
 
 ////////////////////////////////////////
-//±â´É ±¸Çö(¸Ş¼Òµå¸íÀº °¢ÀÚ ¾Ë¾Æ¼­)
-//ÀüÈ­±â ¼Ó¼º : Å¸ÀÔ(type), ÀüÈ­¹øÈ£(phoneNo)
-//0. ÀüÈ­Á¤º¸ È®ÀÎ
-//1. ÀüÈ­°É±â
-//2. ÀüÈ­ ¹Ş±â
-//3. ¸Ş½ÃÁö º¸³»±â
-//4. ¸Ş½ÃÁö ¹Ş±â
+//ê¸°ëŠ¥ êµ¬í˜„(ë©”ì†Œë“œëª…ì€ ê°ì ì•Œì•„ì„œ)
+//ì „í™”ê¸° ì†ì„± : íƒ€ì…(type), ì „í™”ë²ˆí˜¸(phoneNo)
+//0. ì „í™”ì •ë³´ í™•ì¸
+//1. ì „í™”ê±¸ê¸°
+//2. ì „í™” ë°›ê¸°
+//3. ë©”ì‹œì§€ ë³´ë‚´ê¸°
+//4. ë©”ì‹œì§€ ë°›ê¸°
 public class Phone {
 	Scanner sc = new Scanner(System.in);
 	
@@ -17,11 +17,11 @@ public class Phone {
 	private String phoneNo;
 	
 	Phone(){
-		this.type = "±âº» Å¸ÀÔ";
+		this.type = "ê¸°ë³¸ íƒ€ì…";
 		this.phoneNo = "000-0000-0000";
 	}
 	Phone(String phoneNo){
-		this.type = "±âº» Å¸ÀÔ";
+		this.type = "ê¸°ë³¸ íƒ€ì…";
 		this.phoneNo = phoneNo;
 	}
 	Phone(String type, String phoneNo){
@@ -46,24 +46,24 @@ public class Phone {
 	}
 	
 	public void call() {
-		System.out.println("ÀüÈ­ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+		System.out.println("ì „í™” ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 		String phNo = sc.nextLine();
-		System.out.println(phNo +"¹øÈ£·Î ÀüÈ­¸¦ °Ì´Ï´Ù.");
+		System.out.println(phNo +"ë²ˆí˜¸ë¡œ ì „í™”ë¥¼ ê²ë‹ˆë‹¤.");
 	}
 	public void receiveCall() {
-		System.out.println("ÀüÈ­ ¹Ş±â");
+		System.out.println("ì „í™” ë°›ê¸°");
 	}
 	public void sendMsg(String sms) {
 		sms = sc.nextLine();
-		System.out.println("¸Ş½ÃÁö¸¦ Àü¼ÛÇÕ´Ï´Ù : "+ sms);
+		System.out.println("ë©”ì‹œì§€ë¥¼ ì „ì†¡í•©ë‹ˆë‹¤ : "+ sms);
 	}
 	public void receiveMsg(String rms) {
-		System.out.println("¸Ş½ÃÁö¸¦ Àü¼Û ¹Ş¾Ò½À´Ï´Ù : "+ rms);
+		System.out.println("ë©”ì‹œì§€ë¥¼ ì „ì†¡ ë°›ì•˜ìŠµë‹ˆë‹¤ : "+ rms);
 	}
 	
 	
 	public static void main(String[] args) {
-		Phone ph = new Phone("½º¸¶Æ®Æù", "000-1234-5678");
+		Phone ph = new Phone("ìŠ¤ë§ˆíŠ¸í°", "000-1234-5678");
 		ph.call();
 	}
 }

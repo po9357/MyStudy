@@ -1,27 +1,27 @@
-package com.mystudy.pm02_instanceof;
+ï»¿package com.mystudy.pm02_instanceof;
 
 public class CarTest {
 
 	public static void main(String[] args) {
-		System.out.println("=== Car Å¬·¡½º ===");
+		System.out.println("=== Car í´ë˜ìŠ¤ ===");
 		Car car = new Car();
-		car.type = "ÀÚµ¿Â÷";
-		System.out.println("Å¸ÀÔ: " + car.type);
+		car.type = "ìë™ì°¨";
+		System.out.println("íƒ€ì…: " + car.type);
 		car.drive();
 		car.stop();
 		
 		System.out.println("==== Ambulance ===");
 		Ambulance am = new Ambulance();
-		am.type = "±¸±ŞÂ÷";
-		System.out.println("Å¸ÀÔ: " + am.type);
+		am.type = "êµ¬ê¸‰ì°¨";
+		System.out.println("íƒ€ì…: " + am.type);
 		am.drive();
 		am.stop();
 		am.siren();
 		
 		System.out.println("==== FireEngine =====");
 		FireEngine fe = new FireEngine();
-		fe.type = "¼Ò¹æÂ÷";
-		System.out.println("Å¸ÀÔ: " + fe.type);
+		fe.type = "ì†Œë°©ì°¨";
+		System.out.println("íƒ€ì…: " + fe.type);
 		fe.drive();
 		fe.stop();
 		fe.siren();
@@ -30,48 +30,48 @@ public class CarTest {
 		System.out.println("----------------------");
 		//Car <- Ambulance
 		Car carTemp = new Car();
-		carTemp = am; //ÀÚµ¿Çüº¯È¯ : Car <- Ambulance
+		carTemp = am; //ìë™í˜•ë³€í™˜ : Car <- Ambulance
 		carTemp.drive();
 		carTemp.stop();
-		Ambulance am2 = (Ambulance)carTemp; //¸í½ÃÀû Çüº¯È¯, °­Á¦Çüº¯È¯
+		Ambulance am2 = (Ambulance)carTemp; //ëª…ì‹œì  í˜•ë³€í™˜, ê°•ì œí˜•ë³€í™˜
 		am2.siren();
-		((Ambulance)(carTemp)).siren(); //¸í½ÃÀû Çüº¯È¯
+		((Ambulance)(carTemp)).siren(); //ëª…ì‹œì  í˜•ë³€í™˜
 
 /*	
 		System.out.println("---- Ambulance <- Car -----");
-		//Ambulance <- Car : ºÎ¸ğÅ¸ÀÔÀ» ÀÚ³àÅ¸ÀÔÀ¸·Î Çüº¯È¯ÇÏ´Â °ÍÀº ¾ÈµÊ
-		//ÄÄÆÄÀÏ½Ã¿¡´Â Çã¿ëÇÏÁö¸¸ ½ÇÇà½Ã ClassCastException ¿¹¿Ü ¹ß»ıµÊ
+		//Ambulance <- Car : ë¶€ëª¨íƒ€ì…ì„ ìë…€íƒ€ì…ìœ¼ë¡œ í˜•ë³€í™˜í•˜ëŠ” ê²ƒì€ ì•ˆë¨
+		//ì»´íŒŒì¼ì‹œì—ëŠ” í—ˆìš©í•˜ì§€ë§Œ ì‹¤í–‰ì‹œ ClassCastException ì˜ˆì™¸ ë°œìƒë¨
 		Ambulance amTemp = new Ambulance();
-		amTemp = (Ambulance) car; //ÀÚµ¿Çüº¯È¯ ¾ÈµÊ : Ambulance <- Car
+		amTemp = (Ambulance) car; //ìë™í˜•ë³€í™˜ ì•ˆë¨ : Ambulance <- Car
 		System.out.println(">>> ((Ambulance)car).siren ");
 		amTemp.siren();
 */	
 /*		
 		//-----------------------
-		//¼Ò¹æÂ÷ <- ±¸±ŞÂ÷
+		//ì†Œë°©ì°¨ <- êµ¬ê¸‰ì°¨
 		System.out.println("---- FireEngine <- Ambulance -------");
 		carTemp = am;
-		//ÄÄÆÄÀÏ½Ã¿¡´Â Çã¿ëÇÏÁö¸¸ ½ÇÇà½Ã ClassCastException ¿¹¿Ü ¹ß»ıµÊ
+		//ì»´íŒŒì¼ì‹œì—ëŠ” í—ˆìš©í•˜ì§€ë§Œ ì‹¤í–‰ì‹œ ClassCastException ì˜ˆì™¸ ë°œìƒë¨
 		fe = (FireEngine) carTemp; //FireEngine <- Ambulance
 		fe.siren();
 		fe.water();
 */		
 		
-		System.out.println("---- instanceof Å¸ÀÔ È®ÀÎ ---");
+		System.out.println("---- instanceof íƒ€ì… í™•ì¸ ---");
 		carTemp = am; //Car <- Ambulance
-		if (carTemp instanceof Car) { //CarÅ¸ÀÔÀÇ °´Ã¼³Ä?
+		if (carTemp instanceof Car) { //Caríƒ€ì…ì˜ ê°ì²´ëƒ?
 			car.drive();
 			car.stop();
 		} 
-		if (carTemp instanceof Ambulance) { //Ambulance °´Ã¼³Ä?
-			((Ambulance)carTemp).siren(); //±¸±ŞÂ÷
+		if (carTemp instanceof Ambulance) { //Ambulance ê°ì²´ëƒ?
+			((Ambulance)carTemp).siren(); //êµ¬ê¸‰ì°¨
 		}
-		if (carTemp instanceof FireEngine) {//FireEngine °´Ã¼³Ä?
+		if (carTemp instanceof FireEngine) {//FireEngine ê°ì²´ëƒ?
 			((FireEngine) carTemp).siren();
 			((FireEngine) carTemp).water();
 		}
 		
-		System.out.println("--- function µ¿ÀÛ ----");
+		System.out.println("--- function ë™ì‘ ----");
 		System.out.println("--- Car function ---");
 		function(car);
 		
@@ -86,12 +86,12 @@ public class CarTest {
 		car.drive();
 		car.stop();
 		
-		//instanceof : °´Ã¼ÀÇ Å¸ÀÔ È®ÀÎ
-		//ºñ±³ÇÒ°´Ã¼ instanceof ºñ±³Å¬·¡½º¸í(Å¸ÀÔ¸í)
-		if (car instanceof Ambulance) { //Ambulance °´Ã¼³Ä?
-			((Ambulance) car).siren(); //±¸±ŞÂ÷
+		//instanceof : ê°ì²´ì˜ íƒ€ì… í™•ì¸
+		//ë¹„êµí• ê°ì²´ instanceof ë¹„êµí´ë˜ìŠ¤ëª…(íƒ€ì…ëª…)
+		if (car instanceof Ambulance) { //Ambulance ê°ì²´ëƒ?
+			((Ambulance) car).siren(); //êµ¬ê¸‰ì°¨
 		}
-		if (car instanceof FireEngine) {//FireEngine °´Ã¼³Ä?
+		if (car instanceof FireEngine) {//FireEngine ê°ì²´ëƒ?
 			((FireEngine) car).siren();
 			((FireEngine) car).water();
 		}

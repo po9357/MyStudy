@@ -1,15 +1,15 @@
-package com.mystudy.pm03_phone;
+ï»¿package com.mystudy.pm03_phone;
 
 public class Mp3Phone {
-		//ºÎÈ£·Î Á¢±Ù Á¦ÇÑÀÚ Ç¥½Ã
-		//+: public, #: protected, -: private, (default) ¾øÀ½
+		//ë¶€í˜¸ë¡œ ì ‘ê·¼ ì œí•œì í‘œì‹œ
+		//+: public, #: protected, -: private, (default) ì—†ìŒ
 		//-type: String
 		//-phoneNo: String
 	private String type;
 	private String phoneNo;
 	
-		//»ı¼ºÀÚ(phoneNo) : type°ª "Phone Å¸ÀÔ" ÀÔ·ÂÃ³¸®
-		//»ı¼ºÀÚ(type, phoneNo)
+		//ìƒì„±ì(phoneNo) : typeê°’ "Phone íƒ€ì…" ì…ë ¥ì²˜ë¦¬
+		//ìƒì„±ì(type, phoneNo)
 	public Mp3Phone (String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
@@ -27,25 +27,25 @@ public class Mp3Phone {
 		return phoneNo;
 	}
 		
-		//call() : ">> ÀüÈ­°É±â" È­¸éÃâ·Â
-		//receiveCall() : ">> ÀüÈ­¹Ş±â" È­¸éÃâ·Â
-		//playMusic() : ">> À½¾ÇÇÃ·¹ÀÌ" È­¸éÃâ·Â
+		//call() : ">> ì „í™”ê±¸ê¸°" í™”ë©´ì¶œë ¥
+		//receiveCall() : ">> ì „í™”ë°›ê¸°" í™”ë©´ì¶œë ¥
+		//playMusic() : ">> ìŒì•…í”Œë ˆì´" í™”ë©´ì¶œë ¥
 	public void call() {
-		System.out.println(">> ÀüÈ­°É±â");
+		System.out.println(">> ì „í™”ê±¸ê¸°");
 	}
 	public void receiveCall() {
-		System.out.println(">> ÀüÈ­¹Ş±â");
+		System.out.println(">> ì „í™”ë°›ê¸°");
 	}
 	public void playMusic() {
-		System.out.println(">> À½¾ÇÇÃ·¹ÀÌ");
+		System.out.println(">> ìŒì•…í”Œë ˆì´");
 	}
 	
-		//view() : toString() È£Ãâ
+		//view() : toString() í˜¸ì¶œ
 	public void view(){
 		System.out.println(this.toString());
 	}
 	
-		//toString() : ÀÌÅ¬¸³½º¿¡¼­ ÀÚµ¿ »ı¼º
+		//toString() : ì´í´ë¦½ìŠ¤ì—ì„œ ìë™ ìƒì„±
 	@Override
 	public String toString() {
 		return "Mp3Phone [type=" + type + ", phoneNo=" + phoneNo + "]";

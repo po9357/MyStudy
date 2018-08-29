@@ -1,21 +1,21 @@
-
+ï»¿
 public class My_Ex16_Callstack_method {
 
 	public static void main(String[] args) {
-		System.out.println("main(String[] args) ½ÃÀÛ");
+		System.out.println("main(String[] args) ì‹œìž‘");
 		firstMethod();
-		System.out.println("main(String[] args) Á¾·á");
+		System.out.println("main(String[] args) ì¢…ë£Œ");
 	}
 	
 	static void firstMethod() {
-		System.out.println("firstMethod() ½ÃÀÛ");
+		System.out.println("firstMethod() ì‹œìž‘");
 		secondMethod();
-		System.out.println("firstMethod() Á¾·á");
+		System.out.println("firstMethod() ì¢…ë£Œ");
 	}
 	
 	static void secondMethod() {
-		System.out.println("secondMethod() ½ÃÀÛ");
-		System.out.println("secondMethod() Á¾·á");
+		System.out.println("secondMethod() ì‹œìž‘");
+		System.out.println("secondMethod() ì¢…ë£Œ");
 	}
 	
 

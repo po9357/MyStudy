@@ -1,4 +1,4 @@
-package com.mystudy.score_exam_set;
+﻿package com.mystudy.score_exam_set;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class ScoreExamVO {
 	double avg;
 	
 	public ScoreExamVO(){
-		this.name = "ȫ�浿";
+		this.name = "홍길동";
 		this.kor = 0;
 		this.eng = 0;
 		this.math = 0;

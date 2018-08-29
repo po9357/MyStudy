@@ -1,4 +1,4 @@
-package com.mystudy.am01_extends;
+ï»¿package com.mystudy.am01_extends;
 
 public class PhoneTest {
 	
@@ -9,7 +9,7 @@ public class PhoneTest {
 		ph1.call();
 		ph1.receiveCall();
 
-		Phone ph2 = new Phone("»ï¼º°¶·°½Ã", "010-2222-2222");
+		Phone ph2 = new Phone("ì‚¼ì„±ê°¤ëŸ­ì‹œ", "010-2222-2222");
 		ph2.view();
 		ph2.call();
 		ph2.receiveCall();
@@ -17,8 +17,8 @@ public class PhoneTest {
 		System.out.println("=== Mp3Phone ===");
 		Mp3Phone mp3ph = new Mp3Phone("010-3333-3333");
 		mp3ph.view();
-		System.out.println("ÀüÈ­Å¸ÀÔ: " + mp3ph.getType());
-		System.out.println("ÀüÈ­¹øÈ£: " + mp3ph.getPhoneNo());
+		System.out.println("ì „í™”íƒ€ìž…: " + mp3ph.getType());
+		System.out.println("ì „í™”ë²ˆí˜¸: " + mp3ph.getPhoneNo());
 		mp3ph.call();
 		mp3ph.receiveCall();
 		mp3ph.playMusic();

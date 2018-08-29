@@ -1,25 +1,25 @@
-
+ï»¿
 public class Ex11_while {
 	public static void main(String[] args) {
-		// ¹Ýº¹¹®: for, while do ~ while
-		// break : ¹Ýº¹¹®À» Á¾·áÇÏ°í ºüÁ®³ª°¨(ÇöÀç ½ÇÇàÁßÀÎ ¹Ýº¹¹®¿¡¼­ ºüÁ®³ª°¨)
+		// ë°˜ë³µë¬¸: for, while do ~ while
+		// break : ë°˜ë³µë¬¸ì„ ì¢…ë£Œí•˜ê³  ë¹ ì ¸ë‚˜ê°(í˜„ìž¬ ì‹¤í–‰ì¤‘ì¸ ë°˜ë³µë¬¸ì—ì„œ ë¹ ì ¸ë‚˜ê°)
 		/* while
-		ÃÊ±â°ª ¼³Á¤
-		while (½ÇÇàÁ¶°Ç¹®) {
-			Á¶°Ç¹®º¯¼ö Áõ°¨¼³Á¤ (¹Ýº¹¹®½ÃÀÛ Áö°Ë - ¼±ÅÃ)
-			½ÇÇàÇÒ ¹®Àå;
-			Á¶°Ç¹®º¯¼ö Áõ°¨¼³Á¤ (¹Ýº¹¹®³¡³ª´Â ÁöÁ¡ - ¼±ÅÃ)
+		ì´ˆê¸°ê°’ ì„¤ì •
+		while (ì‹¤í–‰ì¡°ê±´ë¬¸) {
+			ì¡°ê±´ë¬¸ë³€ìˆ˜ ì¦ê°ì„¤ì • (ë°˜ë³µë¬¸ì‹œìž‘ ì§€ê²€ - ì„ íƒ)
+			ì‹¤í–‰í•  ë¬¸ìž¥;
+			ì¡°ê±´ë¬¸ë³€ìˆ˜ ì¦ê°ì„¤ì • (ë°˜ë³µë¬¸ëë‚˜ëŠ” ì§€ì  - ì„ íƒ)
 		}
 		 */
 		
-		//1~10 Ãâ·Â
+		//1~10 ì¶œë ¥
 		for (int i=1; i<=10; i++) {
 			System.out.print(i + " ");
 		}
 		System.out.println();
 		
 		System.out.println("---------------------------------");
-		//while ¹®À¸·Î º¯°æ
+		//while ë¬¸ìœ¼ë¡œ ë³€ê²½
 		int num = 1;
 		while (num <=10) {
 			System.out.print(num + " ");
@@ -28,24 +28,24 @@ public class Ex11_while {
 		System.out.println();
 		
 		
-		System.out.println("--- while¹® ¹«ÇÑ¹Ýº¹ ---");
+		System.out.println("--- whileë¬¸ ë¬´í•œë°˜ë³µ ---");
 		num = 1;
 		while (true) {
 			System.out.print(num + " ");
-			if (num == 7) break; //¹Ýº¹ Á¾·áÇÏ°í ºüÁ®³ª°¨
+			if (num == 7) break; //ë°˜ë³µ ì¢…ë£Œí•˜ê³  ë¹ ì ¸ë‚˜ê°
 			num++;
 		}
 		
 		//-------------------------------
-		/*do ~ while : ¹«Á¶°Ç 1¹øÀº ½ÇÇà
-		ÃÊ±â°ª¼³Á¤;
+		/*do ~ while : ë¬´ì¡°ê±´ 1ë²ˆì€ ì‹¤í–‰
+		ì´ˆê¸°ê°’ì„¤ì •;
 		do {
-			Áõ°¨Ä¡ ¼³Á¤(½ÇÇà¸í·É¹® Àü/ÈÄ)
-			½ÇÇàÇÒ ¸í·É¹®;
-		} while (Á¶°Ç¹®);
+			ì¦ê°ì¹˜ ì„¤ì •(ì‹¤í–‰ëª…ë ¹ë¬¸ ì „/í›„)
+			ì‹¤í–‰í•  ëª…ë ¹ë¬¸;
+		} while (ì¡°ê±´ë¬¸);
 		*/
 		System.out.println("===========================");
-		//1~10±îÁö Ãâ·Â
+		//1~10ê¹Œì§€ ì¶œë ¥
 		num = 1;
 		do {
 			System.out.println("do ~ while : "+ num);
@@ -61,17 +61,17 @@ public class Ex11_while {
 		
 		System.out.println("==== break, continue ====");
 		////////////////////////////////////////
-		//break : ÇöÀç ½ÇÇàÁßÀÎ ¹Ýº¹¹®À» Á¾·áÇÏ°í ºüÁ®³ª°¨
-		//continue : ¹Ýº¹¹®ÀÇ ³¡À¸·Î ÀÌµ¿ ÈÄ Áõ°¨½Ä ¶Ç´Â Á¶°Ç¹® Ã³¸®
-		//			(continue¹® ÀÌÈÄÀÇ ½ÇÇà¹®À» ½ÇÇàÇÏÁö ¾ÊÀ½)
+		//break : í˜„ìž¬ ì‹¤í–‰ì¤‘ì¸ ë°˜ë³µë¬¸ì„ ì¢…ë£Œí•˜ê³  ë¹ ì ¸ë‚˜ê°
+		//continue : ë°˜ë³µë¬¸ì˜ ëìœ¼ë¡œ ì´ë™ í›„ ì¦ê°ì‹ ë˜ëŠ” ì¡°ê±´ë¬¸ ì²˜ë¦¬
+		//			(continueë¬¸ ì´í›„ì˜ ì‹¤í–‰ë¬¸ì„ ì‹¤í–‰í•˜ì§€ ì•ŠìŒ)
 		
-		//1~10±îÁö Ãâ·Â (7±îÁö Ãâ·Â ÈÄ Áß´Ü)
+		//1~10ê¹Œì§€ ì¶œë ¥ (7ê¹Œì§€ ì¶œë ¥ í›„ ì¤‘ë‹¨)
 		for (int i =1; i<=10; i++) {
 			System.out.print(i +" ");
-			if (i == 7) break; //7±îÁö Ãâ·Â ÈÄ ¹Ýº¹ Á¾·á
+			if (i == 7) break; //7ê¹Œì§€ ì¶œë ¥ í›„ ë°˜ë³µ ì¢…ë£Œ
 		}
 		System.out.println();
-		//1~10±îÁö Ãâ·Â (7¸¸ Ãâ·ÂÇÏÁö ¾Ê´Â´Ù)
+		//1~10ê¹Œì§€ ì¶œë ¥ (7ë§Œ ì¶œë ¥í•˜ì§€ ì•ŠëŠ”ë‹¤)
 		for (int i=1; i<=10; i++) {
 			if (i != 7) {
 				System.out.print(i +" ");
@@ -80,7 +80,7 @@ public class Ex11_while {
 		System.out.println();
 		
 		for (int i=1; i<=10; i++) {
-			if (i == 7) continue; // ÇöÀçÀ§Ã¼ÀÌ¼­ ´ÙÀ½ ¹Ýº¹¹® ½ÃÀÛ
+			if (i == 7) continue; // í˜„ìž¬ìœ„ì²´ì´ì„œ ë‹¤ìŒ ë°˜ë³µë¬¸ ì‹œìž‘
 			System.out.print(i +" ");
 		}
 		System.out.println();
@@ -90,7 +90,7 @@ public class Ex11_while {
 		
 		while (num2 < 10) {
 			num2++;
-			if (num2 == 7) continue; //while¹®¿¡¼­ »ç¿ë½Ã Áõ°¨½Ä Ã³¸® ÀÌÈÄ »ç¿ë (continue)
+			if (num2 == 7) continue; //whileë¬¸ì—ì„œ ì‚¬ìš©ì‹œ ì¦ê°ì‹ ì²˜ë¦¬ ì´í›„ ì‚¬ìš© (continue)
 			System.out.print(num2 + " ");
 		}
 		System.out.println();
@@ -99,17 +99,17 @@ public class Ex11_while {
 		for (int i=1; i<=3; i++) {
 			for (int j=1; j<=5; j++) {
 				System.out.println("i: "+ i +", j: " +j);
-				if (j == 3) break;//¾ÈÂÊ¿¡ ÀÖ´Â for¹®À» ºüÁ®³ª°¨
+				if (j == 3) break;//ì•ˆìª½ì— ìžˆëŠ” forë¬¸ì„ ë¹ ì ¸ë‚˜ê°
 			}
 		}
 		System.out.println("---------------------");
-		//ÁßÃ¸ ¹Ýº¹¹®À» ¸ðµÎ Á¾·áÇÏ´Â °æ¿ì (À§Ä¡ÁöÁ¤)
-		outFor: //¶óº§ÁöÁ¤
+		//ì¤‘ì²© ë°˜ë³µë¬¸ì„ ëª¨ë‘ ì¢…ë£Œí•˜ëŠ” ê²½ìš° (ìœ„ì¹˜ì§€ì •)
+		outFor: //ë¼ë²¨ì§€ì •
 		for (int i=1; i<=3; i++) {
 			inFor:
 			for (int j=1; j<=5; j++) {
 				System.out.println("i: "+ i +", j: " +j);
-				if (j == 4) break outFor; //outFor ÀÌ¸§ÀÌ ÀÖ´Â for¹®À» ºüÁ®³ª°¨
+				if (j == 4) break outFor; //outFor ì´ë¦„ì´ ìžˆëŠ” forë¬¸ì„ ë¹ ì ¸ë‚˜ê°
 			}
 		}
 		

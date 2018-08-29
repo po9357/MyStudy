@@ -1,46 +1,46 @@
-package com.mystudy.car;
+ï»¿package com.mystudy.car;
 
 public class Car {
-	//ÇÊµåº¯¼ö(¼Ó¼º)
-	String name = "¸¶ÀÌÄ«"; //Â÷·®¸í
-	String model;	//¸ğµ¨¸í
-	String color;	//Â÷·®»ö
+	//í•„ë“œë³€ìˆ˜(ì†ì„±)
+	String name = "ë§ˆì´ì¹´"; //ì°¨ëŸ‰ëª…
+	String model;	//ëª¨ë¸ëª…
+	String color;	//ì°¨ëŸ‰ìƒ‰
 
-	//final Á¦ÇÑÀÚ : º¯¼ö¿¡ °ªÀÌ ÇÒ´çµÇ¸é ´õ ÀÌ»ó º¯°æ ÇÒ ¼ö ¾øÀ½
-	//»ó¼öÈ­µÈ º¯¼ö ¸í¸í±ÔÄ¢ : ÀüÃ¼ ´ë¹®ÀÚ·Î ÀÛ¼º, ÀÇ¹Ì°¡ ´Ş¶óÁö¸é '_' »ç¿ë
-	final int CAR_LENGTH = 350;	//Â÷·®±æÀÌ
-	final int CAR_WIDTH = 200;	//Â÷·®Æø(³Êºñ)
+	//final ì œí•œì : ë³€ìˆ˜ì— ê°’ì´ í• ë‹¹ë˜ë©´ ë” ì´ìƒ ë³€ê²½ í•  ìˆ˜ ì—†ìŒ
+	//ìƒìˆ˜í™”ëœ ë³€ìˆ˜ ëª…ëª…ê·œì¹™ : ì „ì²´ ëŒ€ë¬¸ìë¡œ ì‘ì„±, ì˜ë¯¸ê°€ ë‹¬ë¼ì§€ë©´ '_' ì‚¬ìš©
+	final int CAR_LENGTH = 350;	//ì°¨ëŸ‰ê¸¸ì´
+	final int CAR_WIDTH = 200;	//ì°¨ëŸ‰í­(ë„ˆë¹„)
 	
-	boolean existAirbag;	//¿¡¾î¹é Á¸Àç ¿©ºÎ
+	boolean existAirbag;	//ì—ì–´ë°± ì¡´ì¬ ì—¬ë¶€
 	
-	//»ı¼ºÀÚ : ¸®ÅÏÅ¸ÀÔ ¾øÀ½
-	//Å¬·¡½º¸í() {}	- ±âº»»ı¼ºÀÚ(default constructor)
-	//Å¬·¡½º¸í(¸Å°³º¯¼ö, ...) {}
+	//ìƒì„±ì : ë¦¬í„´íƒ€ì… ì—†ìŒ
+	//í´ë˜ìŠ¤ëª…() {}	- ê¸°ë³¸ìƒì„±ì(default constructor)
+	//í´ë˜ìŠ¤ëª…(ë§¤ê°œë³€ìˆ˜, ...) {}
 	
 	Car () {
-		name = "¸¶ÀÌÄ«";
-		model = "µå·³Ä«";
-		color = "¹«Áö°³»ö";
+		name = "ë§ˆì´ì¹´";
+		model = "ë“œëŸ¼ì¹´";
+		color = "ë¬´ì§€ê°œìƒ‰";
 	}
 	
 	Car (String n, String m, String c) {
 		name = n;
 		model = m;
 		color = c;
-		existAirbag = true;	//¿¡¾î¹é ÀÖÀ½
+		existAirbag = true;	//ì—ì–´ë°± ìˆìŒ
 	}
 	
-	//¸Ş¼Òµå(±â´É, ÇÔ¼ö)
+	//ë©”ì†Œë“œ(ê¸°ëŠ¥, í•¨ìˆ˜)
 	void run() {
-		System.out.println(">> ¾ÕÀ¸·Î ÀÌµ¿");
+		System.out.println(">> ì•ìœ¼ë¡œ ì´ë™");
 	}
 	
 	void stop() {
-		System.out.println(">> ¸ØÃã");
+		System.out.println(">> ë©ˆì¶¤");
 	}
 	
 	void back() {
-		System.out.println(">> µÚ·Î ÀÌµ¿");
+		System.out.println(">> ë’¤ë¡œ ì´ë™");
 	}
 
 //	@Override
@@ -49,13 +49,13 @@ public class Car {
 //				+ ", CAR_WIDTH=" + CAR_WIDTH + ", existAirbag=" + existAirbag + "]";
 		
 		public void dispData() {
-			System.out.println("=== ÀÚµ¿Â÷ Á¤º¸ ===");
-			System.out.println("ÀÚµ¿Â÷ ÀÌ¸§: "+ name);
-			System.out.println("¸ğµ¨¸í: "+ model);
-			System.out.println("»ö»ó: "+ color);
-			System.out.println("Â÷·®±æÀÌ: "+ CAR_LENGTH);
-			System.out.println("Â÷·®³Êºñ: "+ CAR_WIDTH);
-			System.out.println("¿¡¾î¹é: " + existAirbag);
+			System.out.println("=== ìë™ì°¨ ì •ë³´ ===");
+			System.out.println("ìë™ì°¨ ì´ë¦„: "+ name);
+			System.out.println("ëª¨ë¸ëª…: "+ model);
+			System.out.println("ìƒ‰ìƒ: "+ color);
+			System.out.println("ì°¨ëŸ‰ê¸¸ì´: "+ CAR_LENGTH);
+			System.out.println("ì°¨ëŸ‰ë„ˆë¹„: "+ CAR_WIDTH);
+			System.out.println("ì—ì–´ë°±: " + existAirbag);
 			System.out.println("===============");
 	}
 	

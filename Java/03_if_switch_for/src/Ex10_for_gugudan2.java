@@ -1,15 +1,15 @@
-
+ï»¿
 public class Ex10_for_gugudan2 {
 	public static void main(String[] args) {
-		/* ±¸±¸´Ü
+		/* êµ¬êµ¬ë‹¨
 		2*1=2	3*1=3 ..... 9*1=9
 		2*2=4 ...
 		2*9=18 ...			9*9=81
 		 */
-		System.out.println("---±¸±¸´Ü---");
-		//Å¸ÀÌÆ² Ãâ·Â
+		System.out.println("---êµ¬êµ¬ë‹¨---");
+		//íƒ€ì´í‹€ ì¶œë ¥
 		for(int dan=2; dan<=9; dan++) {
-				System.out.print("--"+dan+"´Ü--");
+				System.out.print("--"+dan+"ë‹¨--");
 				System.out.print("\t");
 			}
 		System.out.println();
@@ -42,7 +42,7 @@ public class Ex10_for_gugudan2 {
 		}
 		System.out.println();
 		
-		//2¹øÂ° ¶óÀÎ
+		//2ë²ˆì§¸ ë¼ì¸
 		
 		
 		
@@ -62,13 +62,13 @@ public class Ex10_for_gugudan2 {
 		
 		
 		//===============================
-		//for¹® 3°³ »ç¿ë
+		//forë¬¸ 3ê°œ ì‚¬ìš©
 		for (int i=1; i<=3; i++) {
-			System.out.println(">>> °¡Àå ¹Ù±ùÂÊ for¹® ½ÃÀÛ(i)");
+			System.out.println(">>> ê°€ì¥ ë°”ê¹¥ìª½ forë¬¸ ì‹œì‘(i)");
 			for (int j=1; j<=5; j++) {
-				System.out.println(">>> Áß°£ for¹® ½ÃÀÛ(j)");
+				System.out.println(">>> ì¤‘ê°„ forë¬¸ ì‹œì‘(j)");
 				for (int k=1; k<=2; k++) {
-					//System.out.println(">>> ¾ÈÂÊ for¹® ½ÃÀÛ(k)");
+					//System.out.println(">>> ì•ˆìª½ forë¬¸ ì‹œì‘(k)");
 					System.out.println("i: "+ i +", j: "+ j +", k: "+ k);
 				}
 			}

@@ -1,21 +1,21 @@
-package com.mystudy.sort;
+ï»¿package com.mystudy.sort;
 
 public class ArraySelectionSort {
 
 	public static void main(String[] args) {
-		//¹è¿­¿¡ ÀúÀåµÈ ¼ıÀÚ Á¤·Ä
+		//ë°°ì—´ì— ì €ì¥ëœ ìˆ«ì ì •ë ¬
 		//30, 20, 50, 40, 10
 		int[] num = {30, 20, 50, 40, 10};
 		
-		//µ¥ÀÌÅÍ È®ÀÎ
+		//ë°ì´í„° í™•ì¸
 //		for (int i=0; i<num.length; i++) {
 //			System.out.print(num[i] +" ");
 //		}
 //		System.out.println();
 		printData(num);
 		
-		System.out.println("--- Á¤·Ä½ÃÀÛ ---");
-		//Ã¹¹øÂ° °ª ±âÁØÀ¸·Î ºñ±³ ÀÛ¾÷(0ÀÎµ¦½º - 1ÀÎµ¦½º)
+		System.out.println("--- ì •ë ¬ì‹œì‘ ---");
+		//ì²«ë²ˆì§¸ ê°’ ê¸°ì¤€ìœ¼ë¡œ ë¹„êµ ì‘ì—…(0ì¸ë±ìŠ¤ - 1ì¸ë±ìŠ¤)
 		int temp;
 //		if (num[0] > num[1]) {
 //			temp = num[0];
@@ -31,7 +31,7 @@ public class ArraySelectionSort {
 //		}
 //		printData(num);
 //		//...
-//		//Ã¹¹øÂ° °ª ±âÁØÀ¸·Î ºñ±³ ÀÛ¾÷(0ÀÎµ¦½º - ¸Ç¸¶Áö¸·ÀÎµ¦½º)
+//		//ì²«ë²ˆì§¸ ê°’ ê¸°ì¤€ìœ¼ë¡œ ë¹„êµ ì‘ì—…(0ì¸ë±ìŠ¤ - ë§¨ë§ˆì§€ë§‰ì¸ë±ìŠ¤)
 //		if (num[0] > num[4]) {
 //			temp = num[0];
 //			num[0] = num[4];
@@ -39,7 +39,7 @@ public class ArraySelectionSort {
 //		}
 //		printData(num);
 //		
-//		//¹İº¹¹® Ã³¸®
+//		//ë°˜ë³µë¬¸ ì²˜ë¦¬
 //		for (int i=1; i<=4; i++) {
 //			if (num[1] > num[i]) {
 //				temp = num[i];
@@ -61,8 +61,8 @@ public class ArraySelectionSort {
 //				num[3] = temp;
 //			}
 //		}
-		//for¹®ÀÇ ½ÃÀÛÀº ±âÁØÀÎµ¦½º + 1 °ªÀ¸·Î ½ÃÀÛÇÏ°í ¸¶Áö¸· ÀÎµ¦½º±îÁö
-		//num[0]°ú num[1~4]ºñ±³, num[1]°ú num[2~4]ºñ±³, num[2]°ú num[3~4]ºñ±³, num[3]°ú num[4]ºñ±³
+		//forë¬¸ì˜ ì‹œì‘ì€ ê¸°ì¤€ì¸ë±ìŠ¤ + 1 ê°’ìœ¼ë¡œ ì‹œì‘í•˜ê³  ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ê¹Œì§€
+		//num[0]ê³¼ num[1~4]ë¹„êµ, num[1]ê³¼ num[2~4]ë¹„êµ, num[2]ê³¼ num[3~4]ë¹„êµ, num[3]ê³¼ num[4]ë¹„êµ
 //		for (int idx=0; idx<num.length-1; idx++) {
 //			for (int i=idx+1; i<num.length; i++) {
 //				//
@@ -75,27 +75,27 @@ public class ArraySelectionSort {
 //		}
 		
 		//////////////////////////////////////////////////
-		//°ª ºñ±³ ÈÄ À§Ä¡°ª¸¸ È®ÀÎÇÏ°í ¸¶Áö¸·¿¡ °ª ±³È¯ ÇÑ ¹ø¸¸ ½ÇÇà
+		//ê°’ ë¹„êµ í›„ ìœ„ì¹˜ê°’ë§Œ í™•ì¸í•˜ê³  ë§ˆì§€ë§‰ì— ê°’ êµí™˜ í•œ ë²ˆë§Œ ì‹¤í–‰
 		printData(num);
 		
-		System.out.println("--- Á¤·Ä ½ÃÀÛ ---");
-		int changeIdx;	//º¯°æÇÒ ´ë»óÀÌ µÇ´Â ÀÎµ¦½º °ª ÀúÀå¿ë
+		System.out.println("--- ì •ë ¬ ì‹œì‘ ---");
+		int changeIdx;	//ë³€ê²½í•  ëŒ€ìƒì´ ë˜ëŠ” ì¸ë±ìŠ¤ ê°’ ì €ì¥ìš©
 		for (int idx=0; idx<num.length-1; idx++) {
 			changeIdx = idx;
 			for (int i=idx+1; i<num.length; i++) {
 				if (num[changeIdx]>num[i]) {						
-					changeIdx = i;									//Å©±â ºñ±³ ÈÄ ¹è¿­ÀÇ ¹øÈ£¸¸ ÀÔ·Â
+					changeIdx = i;									//í¬ê¸° ë¹„êµ í›„ ë°°ì—´ì˜ ë²ˆí˜¸ë§Œ ì…ë ¥
 				}
 			}
-			//±âÁØ°ª°ú ÃÖÁ¾ ÀÎµ¦½ºµÈ À§Ä¡°ª°ú ±³È¯
-			if (changeIdx != idx) {									//ÀÔ·ÂµÈ ¹øÈ£¸¦ ¹è¿­¿¡ ³Ö¾î ±³È¯
+			//ê¸°ì¤€ê°’ê³¼ ìµœì¢… ì¸ë±ìŠ¤ëœ ìœ„ì¹˜ê°’ê³¼ êµí™˜
+			if (changeIdx != idx) {									//ì…ë ¥ëœ ë²ˆí˜¸ë¥¼ ë°°ì—´ì— ë„£ì–´ êµí™˜
 				System.out.println(changeIdx +" < - > "+ idx);
 				temp = num[idx];
 				num[idx] = num[changeIdx];
 				num[changeIdx] = temp;
 			}
 		}
-		//³»¸²Â÷¼ø Á¤¸®. ºÎµîÈ£ ¹æÇâ¸¸ ¹Ù²ãÁÖ¸é µÈ´Ù.
+		//ë‚´ë¦¼ì°¨ìˆœ ì •ë¦¬. ë¶€ë“±í˜¸ ë°©í–¥ë§Œ ë°”ê¿”ì£¼ë©´ ëœë‹¤.
 //		for (int idx=0; idx<num.length-1; idx++) {
 //			for (int i=idx+1; i<num.length; i++) {
 //				if (num[idx]<num[i]) {
@@ -106,8 +106,8 @@ public class ArraySelectionSort {
 //			}
 //		}
 		
-		//num[0]°ú num[1], num[1]°ú num[2], num[2]°ú num[3], num[3]°únum[4]ºñ±³ ÈÄ
-		//num[1]°ú num[2], num[2]°ú num[3], num[3]°ú num[4]ºñ±³ ÈÄ ...
+		//num[0]ê³¼ num[1], num[1]ê³¼ num[2], num[2]ê³¼ num[3], num[3]ê³¼num[4]ë¹„êµ í›„
+		//num[1]ê³¼ num[2], num[2]ê³¼ num[3], num[3]ê³¼ num[4]ë¹„êµ í›„ ...
 //		for (int i=0; i<num.length; i++) {
 //			for (int j=0; j<num.length-1-i; j++) {
 //				if (num[j]>num[j+1]) {

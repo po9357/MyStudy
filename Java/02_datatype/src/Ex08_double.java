@@ -1,9 +1,9 @@
-
+ï»¿
 public class Ex08_double {
 
 	public static void main(String[] args) {
-		//½Ç¼öÇü double : 8 byte(¹üÀ§ -1.7E308 ~ 1.7E308)
-		//Ç¥½ÃÇü½Ä : ¼ıÀÚ.¼ıÀÚ     / ¼ıÀÚ.¼ıÀÚ + D ¶Ç´Â d
+		//ì‹¤ìˆ˜í˜• double : 8 byte(ë²”ìœ„ -1.7E308 ~ 1.7E308)
+		//í‘œì‹œí˜•ì‹ : ìˆ«ì.ìˆ«ì     / ìˆ«ì.ìˆ«ì + D ë˜ëŠ” d
 		double d1 = 1.1;
 		double d2 = 1.12345678901234567890d;
 		System.out.println("double 1.1 : " + d1);
@@ -15,9 +15,9 @@ public class Ex08_double {
 		System.out.println("3.4d + 3.2d : " + (3.4d + 3.2d));
 		
 		float f1 = 3.4f;
-		d1 = f1; //double <- float : ÀÚµ¿Çüº¯È¯
+		d1 = f1; //double <- float : ìë™í˜•ë³€í™˜
 		
-		//Á¤¼öÇü <->½Ç¼öÇü
+		//ì •ìˆ˜í˜• <->ì‹¤ìˆ˜í˜•
 		f1 = 123456789012345.0f;
 		System.out.println("123456789012345.0f : " + f1);
 		
@@ -25,10 +25,10 @@ public class Ex08_double {
 		System.out.println("123456789012345.0d ->double : " + d1);
 		
 		int numInt = 1234567890;
-		f1 = numInt; //ÀÚµ¿Çüº¯È¯ Ã³¸®
+		f1 = numInt; //ìë™í˜•ë³€í™˜ ì²˜ë¦¬
 		System.out.println("1234567890 -> float : " + f1);
 		
-		//numInt = f1; //ÀÚµ¿Çüº¯È¯ µÇÁö ¾ÊÀ½ : float Ç¥Çö¹üÀ§°¡ intº¸´Ù Å©±â ¶§¹®
+		//numInt = f1; //ìë™í˜•ë³€í™˜ ë˜ì§€ ì•ŠìŒ : float í‘œí˜„ë²”ìœ„ê°€ intë³´ë‹¤ í¬ê¸° ë•Œë¬¸
 	}
 
 }

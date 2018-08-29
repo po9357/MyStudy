@@ -1,21 +1,21 @@
-public class Ex02_char {
+ï»¿public class Ex02_char {
 
 	public static void main(String[] args) {
-		//¹®ÀÚÇü(Character - char) : 2byte, ¹®ÀÚ1±ÛÀÚ ÀúÀå(65536°³)
-		//ÀÚ¹Ù ¹®ÀÚÃ³¸® À¯´ÏÄÚµå(Unicode) ÇüÅÂ
-		char ch1 = 'A'; //"A"´Â ¹®ÀÚ¿­(String)
-		System.out.println("ch1 : " + ch1); //A : ¾Æ½ºÅ°ÄÚµå°ª 65
+		//ë¬¸ìí˜•(Character - char) : 2byte, ë¬¸ì1ê¸€ì ì €ì¥(65536ê°œ)
+		//ìë°” ë¬¸ìì²˜ë¦¬ ìœ ë‹ˆì½”ë“œ(Unicode) í˜•íƒœ
+		char ch1 = 'A'; //"A"ëŠ” ë¬¸ìì—´(String)
+		System.out.println("ch1 : " + ch1); //A : ì•„ìŠ¤í‚¤ì½”ë“œê°’ 65
 		System.out.println(ch1);
 		System.out.println(ch1 + 1); //65 + 1
 		System.out.println( (char)(ch1 + 1) ); //(char)66
 		System.out.println(    (char)(67)   );
 		
-		char ch2 = '°¡';
+		char ch2 = 'ê°€';
 		System.out.println("ch2: " + ch2);
 		System.out.println(   (ch2 + 1)   );
 		System.out.println(   (char)(ch2 + 1)   );
 
-		//À¯´ÏÄÚµå Ç¥Çö¹æ½Ä : \uAC00 - °¡
+		//ìœ ë‹ˆì½”ë“œ í‘œí˜„ë°©ì‹ : \uAC00 - ê°€
 		char ch3 = '\uAC01';
 		System.out.println("ch3: " + ch3);
 		

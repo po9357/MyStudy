@@ -1,34 +1,34 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 public class Ex03_Array_copy {
 
 	public static void main(String[] args) {
-		//1Â÷¿ø ¹è¿­ º¹»ç
+		//1ì°¨ì› ë°°ì—´ ë³µì‚¬
 		int[] num1 = {10, 20, 30, 40 ,50};
 		int[] num2 = new int[num1.length];
 
-		System.out.println("--- ¹è¿­ÀÇ ÃÊ±â°ª È®ÀÎ ---");
-		System.out.println("num1 ¹è¿­°ª : ");
+		System.out.println("--- ë°°ì—´ì˜ ì´ˆê¸°ê°’ í™•ì¸ ---");
+		System.out.println("num1 ë°°ì—´ê°’ : ");
 		printData(num1);
-		System.out.println("num2 ¹è¿­°ª : ");
+		System.out.println("num2 ë°°ì—´ê°’ : ");
 		printData(num2);
 		
-		System.out.println("--- ÁÖ¼Ò°ª º¹»ç ÇüÅÂ(¾èÀº º¹»ç) ---");
-		num2 = num1;	//num1 °´Ã¼°¡ ÀÖ´Â ÁÖ¼Ò°ªÀ» num2¿¡ º¹»ç
+		System.out.println("--- ì£¼ì†Œê°’ ë³µì‚¬ í˜•íƒœ(ì–•ì€ ë³µì‚¬) ---");
+		num2 = num1;	//num1 ê°ì²´ê°€ ìˆëŠ” ì£¼ì†Œê°’ì„ num2ì— ë³µì‚¬
 		printData("num1", num1);
 		printData("num2", num2);
 		
-		System.out.println("--- num2ÀÇ °ª º¯°æ ÈÄ ---");
+		System.out.println("--- num2ì˜ ê°’ ë³€ê²½ í›„ ---");
 		num2[0] = 999;
 		printData("num1", num1);
 		printData("num2", num2);
 		
-		System.out.println("=== ¹è¿­ÀÇ °ªÀ» º¹»ç(num1 -> num3) ===");
+		System.out.println("=== ë°°ì—´ì˜ ê°’ì„ ë³µì‚¬(num1 -> num3) ===");
 		int[] num3 = new int[num1.length];
 		printData("num1", num1);
 		printData("num3", num3);
 		
-		System.out.println(">> °ª º¹»ç ÀÛ¾÷ ÁøÇà");
+		System.out.println(">> ê°’ ë³µì‚¬ ì‘ì—… ì§„í–‰");
 		//num1[0] -> num3[0]
 		for (int i=0; i<num1.length; i++) {
 			num3[i] = num1[i];
@@ -36,7 +36,7 @@ public class Ex03_Array_copy {
 		printData("num1", num1);
 		printData("num3", num3);
 		
-		System.out.println("--- num3ÀÇ °ªÀ» º¯°æ ÈÄ È®ÀÎ ---");
+		System.out.println("--- num3ì˜ ê°’ì„ ë³€ê²½ í›„ í™•ì¸ ---");
 		num3[0] = 444;
 		printData("num1", num1);
 		printData("num3", num3);
@@ -49,12 +49,12 @@ public class Ex03_Array_copy {
 		printData("arr",arr);
 		printData("arr2",arr2);
 		
-		System.out.println(">> System.arraycopy() º¹»ç ÈÄ ---");
+		System.out.println(">> System.arraycopy() ë³µì‚¬ í›„ ---");
 		System.arraycopy(arr, 0, arr2, 0, arr.length);
 		printData("arr",arr);
 		printData("arr2",arr2);
 		
-		System.out.println("--- arrÀÇ °ª º¯°æ ÈÄ ---");
+		System.out.println("--- arrì˜ ê°’ ë³€ê²½ í›„ ---");
 		arr[0] = 999;
 		printData("arr",arr);
 		printData("arr2",arr2);

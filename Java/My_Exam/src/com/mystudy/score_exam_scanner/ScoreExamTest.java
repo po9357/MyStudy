@@ -1,4 +1,4 @@
-package com.mystudy.score_exam_scanner;
+ï»¿package com.mystudy.score_exam_scanner;
 
 import java.util.*;
 
@@ -21,13 +21,13 @@ public class ScoreExamTest {
 		stu[4] = stu5;
 		
 		for (int i = 0; i < stu.length; i++) {
-			System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			System.out.println("ì´ë¦„ì„ ìž…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.");
 			stu[i].add(sev.setName());
-			System.out.println("±¹¾î Á¡¼ö¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			System.out.println("êµ­ì–´ ì ìˆ˜ë¥¼ ìž…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.");
 			stu[i].add(sev.setKor());
-			System.out.println("¿µ¾î Á¡¼ö¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			System.out.println("ì˜ì–´ ì ìˆ˜ë¥¼ ìž…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.");
 			stu[i].add(sev.setEng());
-			System.out.println("¼öÇÐ Á¡¼ö¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ˜í•™ ì ìˆ˜ë¥¼ ìž…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.");
 			stu[i].add(sev.setMath());
 			stu[i].add(sev.tot());
 			stu[i].add(sev.avg());
@@ -35,7 +35,7 @@ public class ScoreExamTest {
 		
 		
 		System.out.println("===========================================");
-		System.out.println("ÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇÐ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		sev.printData(stu1);
 		sev.printData(stu2);
 		sev.printData(stu3);

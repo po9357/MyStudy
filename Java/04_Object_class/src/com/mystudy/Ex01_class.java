@@ -1,10 +1,10 @@
-package com.mystudy;
+ï»¿package com.mystudy;
 
 public class Ex01_class {
-	int num;	//ÇÊµå(¸â¹öº¯¼ö, ÀÎ½ºÅÏ½º º¯¼ö), ¼Ó¼º(property, attribute)
-	static int staticNum;	//Å¬·¡½º º¯¼ö, ½ºÅÂÆ½(static) º¯¼ö, ÀÎ½ºÅÏ½º(instance) °øÅë º¯¼ö
+	int num;	//í•„ë“œ(ë©¤ë²„ë³€ìˆ˜, ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜), ì†ì„±(property, attribute)
+	static int staticNum;	//í´ë˜ìŠ¤ ë³€ìˆ˜, ìŠ¤íƒœí‹±(static) ë³€ìˆ˜, ì¸ìŠ¤í„´ìŠ¤(instance) ê³µí†µ ë³€ìˆ˜
 
-//	public Ex01_class() {}		±âº» »ı¼ºÀÚ (default »ı¼ºÀÚ. »ı¼ºÀÚ¸¦ ÀÛ¼ºÇÏÁö ¾ÊÀ¸¸é ±âº»À¸·Î »ı¼ºµÊ.)
+//	public Ex01_class() {}		ê¸°ë³¸ ìƒì„±ì (default ìƒì„±ì. ìƒì„±ìë¥¼ ì‘ì„±í•˜ì§€ ì•Šìœ¼ë©´ ê¸°ë³¸ìœ¼ë¡œ ìƒì„±ë¨.)
 	
 	public static void main(String[] args) {
 		int num1 = 200;
@@ -14,40 +14,40 @@ public class Ex01_class {
 		System.out.println("result: "+ result);
 		System.out.println("------------------");
 		
-		//			num1, num2(ÀÎÀÚ (argument))
+		//			num1, num2(ì¸ì (argument))
 		result = add(num1, num2);
 		System.out.println("result: "+ result);
 		System.out.println("------------------");
 		
 		/////////////////////////////////////////
-		// °´Ã¼ »ı¼º(ÀÎ½ºÅÏ½º »ı¼º)
-		// Å¬·¡½ºÅ¸ÀÔ¸í º¯¼ö¸í;
-		// º¯¼ö¸í = new Å¬·¡½º»ı¼ºÀÚ();
-		// Å¬·¡½ºÅ¸ÀÔ¸í º¯¼ö¸í = new Å¬·¡½º»ı¼ºÀÚ();
-		Ex01_class ex01 = new Ex01_class();	//±âº»»ı¼ºÀÚ·Î °´Ã¼»ı¼º
+		// ê°ì²´ ìƒì„±(ì¸ìŠ¤í„´ìŠ¤ ìƒì„±)
+		// í´ë˜ìŠ¤íƒ€ì…ëª… ë³€ìˆ˜ëª…;
+		// ë³€ìˆ˜ëª… = new í´ë˜ìŠ¤ìƒì„±ì();
+		// í´ë˜ìŠ¤íƒ€ì…ëª… ë³€ìˆ˜ëª… = new í´ë˜ìŠ¤ìƒì„±ì();
+		Ex01_class ex01 = new Ex01_class();	//ê¸°ë³¸ìƒì„±ìë¡œ ê°ì²´ìƒì„±
 		ex01.num = 1000;
 		result = ex01.add(num1, num2);
 		
 		//Cannot make a static reference to the non-static field num
 //		num = 2000;
 //		Cannot make a static reference to the non-static method sub(int, int) from the type Ex01_class
-//		½ºÅÂÆ½ ¸Ş¼Òµå ¾È¿¡¼­ non-static¸Ş¼Òµå¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù.
+//		ìŠ¤íƒœí‹± ë©”ì†Œë“œ ì•ˆì—ì„œ non-staticë©”ì†Œë“œë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
 //		result = sub(num1, num2);
 		
-		//static ¸Ş¼Òµå ¾È¿¡¼­ non-static ¸Ş¼Òµå »ç¿ë
-		//»ı¼ºµÈ °´Ã¼¸¦ ÅëÇØ¼­¸¸ Á¢±Ù °¡´É
+		//static ë©”ì†Œë“œ ì•ˆì—ì„œ non-static ë©”ì†Œë“œ ì‚¬ìš©
+		//ìƒì„±ëœ ê°ì²´ë¥¼ í†µí•´ì„œë§Œ ì ‘ê·¼ ê°€ëŠ¥
 		result = ex01.sub(num1,  num2);
 		System.out.println("ex01.sub(num1, num2) : "+ result);
 		System.out.println("ex01: " + ex01);
 		
 	}
-	//¸Ş¼Òµå ÇüÅÂ
-	//void ¸Ş¼Òµå¸í() {}
-	//¸®ÅÏÅ¸ÀÔ ¸Ş¼Òµå¸í() {}
-	//¸®ÅÏÅ¸ÀÔ ¸Ş¼Òµå¸í(ÆÄ¶ó¹ÌÅÍÅ¸ÀÔ ÆÄ¶ó¹ÌÅÍ¸í, ...) {}
+	//ë©”ì†Œë“œ í˜•íƒœ
+	//void ë©”ì†Œë“œëª…() {}
+	//ë¦¬í„´íƒ€ì… ë©”ì†Œë“œëª…() {}
+	//ë¦¬í„´íƒ€ì… ë©”ì†Œë“œëª…(íŒŒë¼ë¯¸í„°íƒ€ì… íŒŒë¼ë¯¸í„°ëª…, ...) {}
 	
-	//2°³ÀÇ Á¤¼ö°ªÀ» Àü´Ş ¹Ş¾Æ¼­ 2°³ÀÇ Á¤¼ö°ªÀ» ´õÇÑ °á°ú¸¦ µÇµ¹·ÁÁÜ
-	//			int(¸®ÅÏÅ¸ÀÔ) add(¸Ş¼Òµå ¸í) int a, int b('a', 'b' -> ÆÄ¶ó¹ÌÅÍ(parameter), ¸Å°³º¯¼ö)
+	//2ê°œì˜ ì •ìˆ˜ê°’ì„ ì „ë‹¬ ë°›ì•„ì„œ 2ê°œì˜ ì •ìˆ˜ê°’ì„ ë”í•œ ê²°ê³¼ë¥¼ ë˜ëŒë ¤ì¤Œ
+	//			int(ë¦¬í„´íƒ€ì…) add(ë©”ì†Œë“œ ëª…) int a, int b('a', 'b' -> íŒŒë¼ë¯¸í„°(parameter), ë§¤ê°œë³€ìˆ˜)
 	public static int add(int a, int b) {
 		return a + b;
 		

@@ -1,4 +1,4 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 
 import java.util.Arrays;
 import java.util.StringTokenizer;
@@ -7,25 +7,25 @@ public class StringControlExam2 {
 
 	public static void main(String[] args) {
 		/*
-		0. ¹®ÀÚ¿­ µ¥ÀÌÅÍ
-			String str1 = "È«±æµ¿ ÀÌ¼ø½Å  ÀÌ¼ø½Å Tom È«±æµ¿"
-			String str2 = "     TOM    À»Áö¹®´ö ±èÀ¯½Å ¿¬°³¼Ò¹®"
-		1. À§ÀÇ ¹®ÀÚ¿­À» StringBuilder º¯¼ö sb¸¦ ÀÌ¿ëÇØ¼­ ÇÏ³ªÀÇ ¹®ÀÚ¿­·Î ¸¸µé°í,
-		2. sbÀÇ ¹®ÀÚ¿­À» ºóÄ­ (" ")À» ±¸ºĞÀÚ·Î Àß¶ó¼­ (ÀÌ¸§¸¸ ÃßÃâ) È­¸éÃâ·Â
-		       (String.split() ¶Ç´Â StringTokenizer »ç¿ë)
-		3. ±¸ºĞÀÚ ÄŞ¸¶(,)·Î ±¸ºĞÇÏ¿© ÇÑ¶óÀÎ¿¡ Ãâ·Â(StringBuilder »ç¿ë)
-			(Ãâ·Â¿¹: È«±æµ¿,ÀÌ¼ø½Å,ÀÌ¼ø½Å,Tom,È«±æµ¿,TOM,À»Áö¹®´ö,±èÀ¯½Å,¿¬°³¼Ò¹®)
-		4. µ¥ÀÌÅÍÀÇ Ã¹±ÛÀÚ¸¸ ÃßÃâÇØ¼­ ÄŞ¸¶(,)·Î ±¸ºĞÇÏ¿© ÇÑ¶óÀÎ¿¡ Ãâ·Â(StringBuilder »ç¿ë)
-			(¿¹: È«,ÀÌ,ÀÌ,T,È«,T,À»,±è,¿¬)
-		5. ¹è¿­ÀÇ ¹®ÀÚ¿­ Áß ÀÌ¸§ÀÇ ±ÛÀÚ¼ö°¡ 4 ÀÌ»óÀÎ °ªÀ» "¹øÈ£:ÀÌ¸§" Ãâ·Â
-			Ãâ·Â¿¹:
-			6:À»Áö¹®´ö
-			8:¿¬°³¼Ò¹®
+		0. ë¬¸ìì—´ ë°ì´í„°
+			String str1 = "í™ê¸¸ë™ ì´ìˆœì‹   ì´ìˆœì‹  Tom í™ê¸¸ë™"
+			String str2 = "     TOM    ì„ì§€ë¬¸ë• ê¹€ìœ ì‹  ì—°ê°œì†Œë¬¸"
+		1. ìœ„ì˜ ë¬¸ìì—´ì„ StringBuilder ë³€ìˆ˜ sbë¥¼ ì´ìš©í•´ì„œ í•˜ë‚˜ì˜ ë¬¸ìì—´ë¡œ ë§Œë“¤ê³ ,
+		2. sbì˜ ë¬¸ìì—´ì„ ë¹ˆì¹¸ (" ")ì„ êµ¬ë¶„ìë¡œ ì˜ë¼ì„œ (ì´ë¦„ë§Œ ì¶”ì¶œ) í™”ë©´ì¶œë ¥
+		       (String.split() ë˜ëŠ” StringTokenizer ì‚¬ìš©)
+		3. êµ¬ë¶„ì ì½¤ë§ˆ(,)ë¡œ êµ¬ë¶„í•˜ì—¬ í•œë¼ì¸ì— ì¶œë ¥(StringBuilder ì‚¬ìš©)
+			(ì¶œë ¥ì˜ˆ: í™ê¸¸ë™,ì´ìˆœì‹ ,ì´ìˆœì‹ ,Tom,í™ê¸¸ë™,TOM,ì„ì§€ë¬¸ë•,ê¹€ìœ ì‹ ,ì—°ê°œì†Œë¬¸)
+		4. ë°ì´í„°ì˜ ì²«ê¸€ìë§Œ ì¶”ì¶œí•´ì„œ ì½¤ë§ˆ(,)ë¡œ êµ¬ë¶„í•˜ì—¬ í•œë¼ì¸ì— ì¶œë ¥(StringBuilder ì‚¬ìš©)
+			(ì˜ˆ: í™,ì´,ì´,T,í™,T,ì„,ê¹€,ì—°)
+		5. ë°°ì—´ì˜ ë¬¸ìì—´ ì¤‘ ì´ë¦„ì˜ ê¸€ììˆ˜ê°€ 4 ì´ìƒì¸ ê°’ì„ "ë²ˆí˜¸:ì´ë¦„" ì¶œë ¥
+			ì¶œë ¥ì˜ˆ:
+			6:ì„ì§€ë¬¸ë•
+			8:ì—°ê°œì†Œë¬¸
 		 ***********************************************************/
-		String str1 = "È«±æµ¿ ÀÌ¼ø½Å  ÀÌ¼ø½Å Tom È«±æµ¿";
-		String str2 = "     TOM    À»Áö¹®´ö ±èÀ¯½Å ¿¬°³¼Ò¹®";
-		//"È«±æµ¿ ÀÌ¼ø½Å  ÀÌ¼ø½Å Tom È«±æµ¿    TOM     À»Áö¹®´ö ±èÀ¯½Å ¿¬°³¼Ò¹®"
-		//1. À§ÀÇ ¹®ÀÚ¿­À» StringBuilder º¯¼ö sb¸¦ ÀÌ¿ëÇØ¼­ ÇÏ³ªÀÇ ¹®ÀÚ¿­·Î ¸¸µé°í,
+		String str1 = "í™ê¸¸ë™ ì´ìˆœì‹   ì´ìˆœì‹  Tom í™ê¸¸ë™";
+		String str2 = "     TOM    ì„ì§€ë¬¸ë• ê¹€ìœ ì‹  ì—°ê°œì†Œë¬¸";
+		//"í™ê¸¸ë™ ì´ìˆœì‹   ì´ìˆœì‹  Tom í™ê¸¸ë™    TOM     ì„ì§€ë¬¸ë• ê¹€ìœ ì‹  ì—°ê°œì†Œë¬¸"
+		//1. ìœ„ì˜ ë¬¸ìì—´ì„ StringBuilder ë³€ìˆ˜ sbë¥¼ ì´ìš©í•´ì„œ í•˜ë‚˜ì˜ ë¬¸ìì—´ë¡œ ë§Œë“¤ê³ ,
 		StringBuilder sb = new StringBuilder();
 		//sb.append(str1).append(str2);
 		sb = new StringBuilder(str1);
@@ -33,16 +33,16 @@ public class StringControlExam2 {
 		System.out.println(sb);
 		
 		System.out.println("------------------------------");
-		//2. sbÀÇ ¹®ÀÚ¿­À» ºóÄ­ (" ")À» ±¸ºĞÀÚ·Î Àß¶ó¼­ (ÀÌ¸§¸¸ ÃßÃâ) È­¸éÃâ·Â
-		//		(String.split() ¶Ç´Â StringTokenizer »ç¿ë)
+		//2. sbì˜ ë¬¸ìì—´ì„ ë¹ˆì¹¸ (" ")ì„ êµ¬ë¶„ìë¡œ ì˜ë¼ì„œ (ì´ë¦„ë§Œ ì¶”ì¶œ) í™”ë©´ì¶œë ¥
+		//		(String.split() ë˜ëŠ” StringTokenizer ì‚¬ìš©)
 		StringTokenizer stk = new StringTokenizer(sb.toString(), " ");
 		
-		//Àß¶ó³½ µ¥ÀÌÅÍ¸¦ ¹è¿­¿¡ ÀúÀå
+		//ì˜ë¼ë‚¸ ë°ì´í„°ë¥¼ ë°°ì—´ì— ì €ì¥
 		
 		int tokenCnt = stk.countTokens();
 		String[] names = new String[tokenCnt];
 		
-		//names <- stk °ªÀ» ÀúÀå
+		//names <- stk ê°’ì„ ì €ì¥
 		for (int i=0; i<tokenCnt; i++) {
 			names[i] = stk.nextToken();
 			System.out.println(stk.countTokens());
@@ -55,25 +55,25 @@ public class StringControlExam2 {
 		System.out.println();
 		
 		System.out.println("------------------------------");
-		//3. ±¸ºĞÀÚ ÄŞ¸¶(,)·Î ±¸ºĞÇÏ¿© ÇÑ¶óÀÎ¿¡ Ãâ·Â(StringBuilder »ç¿ë)
-		//	(Ãâ·Â¿¹: È«±æµ¿,ÀÌ¼ø½Å,ÀÌ¼ø½Å,Tom,È«±æµ¿,TOM,À»Áö¹®´ö,±èÀ¯½Å,¿¬°³¼Ò¹®)
+		//3. êµ¬ë¶„ì ì½¤ë§ˆ(,)ë¡œ êµ¬ë¶„í•˜ì—¬ í•œë¼ì¸ì— ì¶œë ¥(StringBuilder ì‚¬ìš©)
+		//	(ì¶œë ¥ì˜ˆ: í™ê¸¸ë™,ì´ìˆœì‹ ,ì´ìˆœì‹ ,Tom,í™ê¸¸ë™,TOM,ì„ì§€ë¬¸ë•,ê¹€ìœ ì‹ ,ì—°ê°œì†Œë¬¸)
 		StringBuilder sbResult = new StringBuilder();
 		
-		System.out.println("----- ¹æ¹ı 1 -----");
+		System.out.println("----- ë°©ë²• 1 -----");
 		sbResult.setLength(0);
 		sbResult.append(names[0]);
 		for (int i=1; i<names.length; i++) {
 			sbResult.append(",").append(names[i]);
-			//¸¶Áö¸·ÀÏ¶§´Â ÀÌ¸§¸¸ ºÙÀÌ±â
+			//ë§ˆì§€ë§‰ì¼ë•ŒëŠ” ì´ë¦„ë§Œ ë¶™ì´ê¸°
 		}
 		System.out.println(sbResult.toString());
 		
-		System.out.println("----- ¹æ¹ı 2 -----");
+		System.out.println("----- ë°©ë²• 2 -----");
 		sbResult.setLength(0);
 		boolean isFirst = true;
 		for (int i=0; i<names.length; i++) {
 			if (isFirst) {
-				//Ã¹¹øÂ° µ¥ÀÌÅÍ¿¡ ´ëÇÑ Ã³¸®
+				//ì²«ë²ˆì§¸ ë°ì´í„°ì— ëŒ€í•œ ì²˜ë¦¬
 				//isFirst = false;
 				System.out.print(names[i]);
 				isFirst = false;
@@ -83,10 +83,10 @@ public class StringControlExam2 {
 		}
 		System.out.println();
 		
-		System.out.println("----- ¹æ¹ı 3 -----");
+		System.out.println("----- ë°©ë²• 3 -----");
 		sbResult.setLength(0);
 		for (int i=0; i<names.length; i++) {
-			//¸¶Áö¸· µ¥ÀÌÅÍ¸é
+			//ë§ˆì§€ë§‰ ë°ì´í„°ë©´
 			if (i == names.length-1) {
 				sbResult.append(names[i]);
 			} else {
@@ -96,8 +96,8 @@ public class StringControlExam2 {
 		System.out.println(sbResult);
 		
 		//--------------------------------------------------------
-		//4. µ¥ÀÌÅÍÀÇ Ã¹±ÛÀÚ¸¸ ÃßÃâÇØ¼­ ÄŞ¸¶(,)·Î ±¸ºĞÇÏ¿© ÇÑ¶óÀÎ¿¡ Ãâ·Â(StringBuilder »ç¿ë)
-		//		(¿¹: È«,ÀÌ,ÀÌ,T,È«,T,À»,±è,¿¬)
+		//4. ë°ì´í„°ì˜ ì²«ê¸€ìë§Œ ì¶”ì¶œí•´ì„œ ì½¤ë§ˆ(,)ë¡œ êµ¬ë¶„í•˜ì—¬ í•œë¼ì¸ì— ì¶œë ¥(StringBuilder ì‚¬ìš©)
+		//		(ì˜ˆ: í™,ì´,ì´,T,í™,T,ì„,ê¹€,ì—°)
 		sbResult.setLength(0);
 		isFirst = true;
 		for (String name : names) {
@@ -110,10 +110,10 @@ public class StringControlExam2 {
 		}
 		System.out.println(sbResult);
 		
-		//5. ¹è¿­ÀÇ ¹®ÀÚ¿­ Áß ÀÌ¸§ÀÇ ±ÛÀÚ¼ö°¡ 4 ÀÌ»óÀÎ °ªÀ» "¹øÈ£:ÀÌ¸§" Ãâ·Â
-		//		Ãâ·Â¿¹:
-		//		6:À»Áö¹®´ö
-		//		8:¿¬°³¼Ò¹®
+		//5. ë°°ì—´ì˜ ë¬¸ìì—´ ì¤‘ ì´ë¦„ì˜ ê¸€ììˆ˜ê°€ 4 ì´ìƒì¸ ê°’ì„ "ë²ˆí˜¸:ì´ë¦„" ì¶œë ¥
+		//		ì¶œë ¥ì˜ˆ:
+		//		6:ì„ì§€ë¬¸ë•
+		//		8:ì—°ê°œì†Œë¬¸
 		sbResult.setLength(0);
 		int idx=0;
 		for (String str : names) {

@@ -1,14 +1,14 @@
-
+ï»¿
 public class Ex06_long {
 	public static void main(String[] args) {
-		//Á¤¼öÇü long : 8byte
-		//¹üÀ§ : -9,223,372,036,854,775,808 
+		//ì •ìˆ˜í˜• long : 8byte
+		//ë²”ìœ„ : -9,223,372,036,854,775,808 
 		//    ~ 9,223,372,036,854,775,807
-		//long Å¸ÀÔ°ª ¸í½ÃÀû Ç¥Çö : ¼ýÀÚ + L ¶Ç´Â l(¿µ¹® ´ë¼Ò¹®ÀÚ ¿¤)
+		//long íƒ€ìž…ê°’ ëª…ì‹œì  í‘œí˜„ : ìˆ«ìž + L ë˜ëŠ” l(ì˜ë¬¸ ëŒ€ì†Œë¬¸ìž ì—˜)
 		long num1 = 200000000000L;
 		long num2 = 300000000000l;
 		long sum = num1 + num2;
-		//Ãâ·Â : num1 + num2 = sum
+		//ì¶œë ¥ : num1 + num2 = sum
 		System.out.println(num1 + " + " + num2 + " = " + sum);
 		
 		System.out.println("------------------");
@@ -20,12 +20,12 @@ public class Ex06_long {
 		System.out.println("numByte: " + numByte);
 		System.out.println("numShort: " + numShort);
 		
-		numByte = (byte) numShort; //°­Á¦ Çüº¯È¯ short(2byte) -> byte(1byte)
+		numByte = (byte) numShort; //ê°•ì œ í˜•ë³€í™˜ short(2byte) -> byte(1byte)
 		System.out.println("numByte: " + numByte);
 		System.out.println("numShort: " + numShort);
 		
 		System.out.println("----------------");
-		numInt = numShort; //ÀÚµ¿Çüº¯È¯(ÀÛÀºµ¥ÀÌÅ¸ Å¸ÀÔ -> Å« µ¥ÀÌÅ¸ Å¸ÀÔ)
+		numInt = numShort; //ìžë™í˜•ë³€í™˜(ìž‘ì€ë°ì´íƒ€ íƒ€ìž… -> í° ë°ì´íƒ€ íƒ€ìž…)
 		
 		numInt = (int) numLong; //long(8byte) -> int(4byte)
 		System.out.println("numInt = (int)numLong : " + numInt);

@@ -1,16 +1,16 @@
-package com.mystudy.am01_extends;
+ï»¿package com.mystudy.am01_extends;
 
-//Å¬·¡½º »ó¼Ó(extends) ½Ç½À
-/* ½Ç½À1 : Phone Å¬·¡½º »ó¼Ó È®Àå(extends)
- WebPhone Å¬·¡½º ÀÛ¼º
- Phone Å¬·¡½º¸¦ »ó¼Ó È®Àå(extends)ÇØ¼­ ÀÛ¼º
- »ý¼ºÀÚ Á¤ÀÇ
-  - Æù¹øÈ£(phoneNo)¸¸ ¹Þ¾Æ¼­ °´Ã¼»ý¼º
-  - Å¸ÀÔ °ªÀº "WebPhone"À¸·Î ÀÔ·Â
+//í´ëž˜ìŠ¤ ìƒì†(extends) ì‹¤ìŠµ
+/* ì‹¤ìŠµ1 : Phone í´ëž˜ìŠ¤ ìƒì† í™•ìž¥(extends)
+ WebPhone í´ëž˜ìŠ¤ ìž‘ì„±
+ Phone í´ëž˜ìŠ¤ë¥¼ ìƒì† í™•ìž¥(extends)í•´ì„œ ìž‘ì„±
+ ìƒì„±ìž ì •ì˜
+  - í°ë²ˆí˜¸(phoneNo)ë§Œ ë°›ì•„ì„œ ê°ì²´ìƒì„±
+  - íƒ€ìž… ê°’ì€ "WebPhone"ìœ¼ë¡œ ìž…ë ¥
   
- ±â´É Ãß°¡
- À¥°Ë»ö ±â´É Ãß°¡
-  - webSearch() : ">>WebPhone - À¥ °Ë»ö" ¹®±¸ È­¸é Ãâ·Â
+ ê¸°ëŠ¥ ì¶”ê°€
+ ì›¹ê²€ìƒ‰ ê¸°ëŠ¥ ì¶”ê°€
+  - webSearch() : ">>WebPhone - ì›¹ ê²€ìƒ‰" ë¬¸êµ¬ í™”ë©´ ì¶œë ¥
  */
 public class WebPhone extends Phone {
 	
@@ -19,7 +19,7 @@ public class WebPhone extends Phone {
 	}
 	
 	public void webSearch() {
-		System.out.println(">>WebPhone - À¥ °Ë»ö");
+		System.out.println(">>WebPhone - ì›¹ ê²€ìƒ‰");
 	}
 	
 	

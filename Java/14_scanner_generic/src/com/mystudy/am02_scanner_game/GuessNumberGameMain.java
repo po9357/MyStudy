@@ -1,4 +1,4 @@
-package com.mystudy.am02_scanner_game;
+﻿package com.mystudy.am02_scanner_game;
 
 public class GuessNumberGameMain {
 

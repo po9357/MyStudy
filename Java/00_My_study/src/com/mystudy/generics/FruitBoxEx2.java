@@ -1,4 +1,4 @@
-package com.mystudy.generics;
+ï»¿package com.mystudy.generics;
 import java.util.ArrayList;
 
 class Fruit extends FruitBox implements Eatable{
@@ -31,11 +31,11 @@ class FruitBoxEx2 {
 		System.out.println("grapeBox-"+ grapeBox);
 		
 		Apple ap = new Apple();
-		ap.add("»ç°ú");
+		ap.add("ì‚¬ê³¼");
 		System.out.println(ap.toString());
 		Box<String> box = new Box<String>();
 		System.out.println(box.toString());
-		box.add("¹Ú½º");
+		box.add("ë°•ìŠ¤");
 		System.out.println(box.toString());
 		System.out.println(ap.get(0));
 		

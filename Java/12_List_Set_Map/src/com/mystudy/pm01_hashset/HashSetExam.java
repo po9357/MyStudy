@@ -1,4 +1,4 @@
-package com.mystudy.pm01_hashset;
+ï»¿package com.mystudy.pm01_hashset;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -8,40 +8,40 @@ import java.util.Set;
 public class HashSetExam {
 
 	public static void main(String[] args) {
-		//Set ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ ±¸ÇöÃ¼
+		//Set ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ êµ¬í˜„ì²´
 		//HashSet set = new HashSet();
 		Set set = new HashSet();
 		
-		set.add("1");						//String Å¸ÀÔ
-		set.add(new Integer(1));			//Integer Å¸ÀÔ
-		set.add("È«±æµ¿");
-		set.add("È«±æµ¿");
-		System.out.println(set);			//Áßº¹À» Çã¿ëÇÏÁö ¾Ê´Â´Ù. (°°Àº µ¥ÀÌÅÍ´Â µ¿ÀÏÇÑ µ¥ÀÌÅÍ Ãë±Ş)
+		set.add("1");						//String íƒ€ì…
+		set.add(new Integer(1));			//Integer íƒ€ì…
+		set.add("í™ê¸¸ë™");
+		set.add("í™ê¸¸ë™");
+		System.out.println(set);			//ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ”ë‹¤. (ê°™ì€ ë°ì´í„°ëŠ” ë™ì¼í•œ ë°ì´í„° ì·¨ê¸‰)
 		
 		set.remove("1");
 		System.out.println(set);
 		System.out.println("set.contains(1) : "+ set.contains(1));
 		System.out.println("set.size() : "+ set.size());
-		set.add("±èÀ¯½Å");
-		set.add("À»Áö¹®´ö");
+		set.add("ê¹€ìœ ì‹ ");
+		set.add("ì„ì§€ë¬¸ë•");
 		
-		System.out.println("--- Set ÀüÃ¼ µ¥ÀÌÅÍ Á¶È¸ ---");
+		System.out.println("--- Set ì „ì²´ ë°ì´í„° ì¡°íšŒ ---");
 		Iterator ite = set.iterator();
 		while (ite.hasNext()) {
 			System.out.println(ite.next());
 		}
 		
-		//¼öÁ¤ : ±èÀ¯½Å -> È«°æ·¡
+		//ìˆ˜ì • : ê¹€ìœ ì‹  -> í™ê²½ë˜
 		System.out.println(set);
-		System.out.println("±èÀ¯½Å ÀÖ´ÂÁö È®ÀÎ : "+ set.contains("±èÀ¯½Å"));
-		set.remove("±èÀ¯½Å");					//¼ø¼­°¡ ¾ø´Â ¹è¿­ÀÌ±â¿¡
-		set.add("È«°æ·¡");					//»èÁ¦ÇÏ°í Ãß°¡. (set, getµîÀÇ ¸Ş¼Òµå°¡ ¾ø´Ù)
+		System.out.println("ê¹€ìœ ì‹  ìˆëŠ”ì§€ í™•ì¸ : "+ set.contains("ê¹€ìœ ì‹ "));
+		set.remove("ê¹€ìœ ì‹ ");					//ìˆœì„œê°€ ì—†ëŠ” ë°°ì—´ì´ê¸°ì—
+		set.add("í™ê²½ë˜");					//ì‚­ì œí•˜ê³  ì¶”ê°€. (set, getë“±ì˜ ë©”ì†Œë“œê°€ ì—†ë‹¤)
 		System.out.println(set);
 		
 		
 		
 		
-		//·Î¶Ç ¸¸µé±â
+		//ë¡œë˜ ë§Œë“¤ê¸°
 		Set lot = new HashSet();
 		
 		

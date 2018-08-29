@@ -1,52 +1,52 @@
-
+ï»¿
 public class Ex02_if_else {
 
 	public static void main(String[] args) {
-		//if¹® 3Á¾·ù
-		//1. if (Á¶°Ç) {}
-		//2. if (Á¶°Ç) {} else {}
-		//3. if (Á¶°Ç) {} else if () {} else if {} ...
+		//ifë¬¸ 3ì¢…ë¥˜
+		//1. if (ì¡°ê±´) {}
+		//2. if (ì¡°ê±´) {} else {}
+		//3. if (ì¡°ê±´) {} else if () {} else if {} ...
 		int num1 = 30;
 		int num2 = 50;
 		System.out.println("num1: " + num1 + ", num2: " + num2);
 		
-		//1. if (Á¶°Ç) {}
+		//1. if (ì¡°ê±´) {}
 		if (num1 > num2) {
-			System.out.println("num1ÀÌ num2º¸´Ù Å©´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ í¬ë‹¤.");
 		}
-		System.out.println(">>> if()³¡");
+		System.out.println(">>> if()ë");
 		
 		System.out.println("----------------------");
-		//2. if (Á¶°Ç) {} else {}
+		//2. if (ì¡°ê±´) {} else {}
 		if (num1 > num2) {
-			System.out.println("num1ÀÌ num2º¸´Ù Å©´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ í¬ë‹¤.");
 		} else {
-			System.out.println("num1ÀÌ num2º¸´Ù ÀÛ°Å³ª °°´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ë‹¤.");
 		}
 		System.out.println(">>>>");
 //		if (num1 > num2) 
-//			System.out.println("num1ÀÌ num2º¸´Ù Å©´Ù.");
+//			System.out.println("num1ì´ num2ë³´ë‹¤ í¬ë‹¤.");
 //		else 
-//			System.out.println("num1ÀÌ num2º¸´Ù ÀÛ°Å³ª °°´Ù.");
+//			System.out.println("num1ì´ num2ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ë‹¤.");
 		
 		System.out.println("------------------------");
-		//3. if (Á¶°Ç) {} else if () {} else if {} ...
+		//3. if (ì¡°ê±´) {} else if () {} else if {} ...
 		if (num1 > num2) {
-			System.out.println("num1ÀÌ num2º¸´Ù Å©´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ í¬ë‹¤.");
 		} else if (num1 == num2) {
-			System.out.println("num1Àº num2¿Í °°´Ù");
+			System.out.println("num1ì€ num2ì™€ ê°™ë‹¤");
 		} else {
-			System.out.println("num1ÀÌ num2º¸´Ù ÀÛ´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ ì‘ë‹¤.");
 		}
 		System.out.println("--------------------------");
 		if (num1 > num2) {
-			System.out.println("num1ÀÌ num2º¸´Ù Å©´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ í¬ë‹¤.");
 		} else if (num1 == num2) {
-			System.out.println("num1Àº num2¿Í °°´Ù");
+			System.out.println("num1ì€ num2ì™€ ê°™ë‹¤");
 		} else if (num1 < num2) {
-			System.out.println("num1ÀÌ num2º¸´Ù ÀÛ´Ù.");
-		} else { //¾î¶°ÇÑ °æ¿ì¶óµµ ½ÇÇàµÇÁö ¾Ê´Â ¹®Àå
-			System.out.println("½ÇÇàµÇÁö ¾Ê´Â ¹®Àå");
+			System.out.println("num1ì´ num2ë³´ë‹¤ ì‘ë‹¤.");
+		} else { //ì–´ë– í•œ ê²½ìš°ë¼ë„ ì‹¤í–‰ë˜ì§€ ì•ŠëŠ” ë¬¸ì¥
+			System.out.println("ì‹¤í–‰ë˜ì§€ ì•ŠëŠ” ë¬¸ì¥");
 		}
 		
 		//==========================================

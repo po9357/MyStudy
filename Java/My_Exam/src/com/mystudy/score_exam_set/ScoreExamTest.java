@@ -1,4 +1,4 @@
-package com.mystudy.score_exam_set;
+ï»¿package com.mystudy.score_exam_set;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,11 +10,11 @@ public class ScoreExamTest {
 
 	public static void main(String[] args) {
 		ScoreExamVO svo = new ScoreExamVO();
-		ScoreExamVO svo1 = new ScoreExamVO("È«±æµ¿", 90, 80, 70);
-		ScoreExamVO svo2 = new ScoreExamVO("È«±æµ¿2", 50, 70, 20);
-		ScoreExamVO svo3 = new ScoreExamVO("È«±æµ¿3", 60, 70, 20);
-		ScoreExamVO svo4 = new ScoreExamVO("È«±æµ¿4", 70, 40, 80);
-		ScoreExamVO svo5 = new ScoreExamVO("È«±æµ¿5", 80, 60, 90);
+		ScoreExamVO svo1 = new ScoreExamVO("í™ê¸¸ë™", 90, 80, 70);
+		ScoreExamVO svo2 = new ScoreExamVO("í™ê¸¸ë™2", 50, 70, 20);
+		ScoreExamVO svo3 = new ScoreExamVO("í™ê¸¸ë™3", 60, 70, 20);
+		ScoreExamVO svo4 = new ScoreExamVO("í™ê¸¸ë™4", 70, 40, 80);
+		ScoreExamVO svo5 = new ScoreExamVO("í™ê¸¸ë™5", 80, 60, 90);
 		System.out.println(svo1);
 		
 //		List list = new ArrayList();
@@ -38,7 +38,7 @@ public class ScoreExamTest {
 		svo5.addList(svo5, stu5);
 		
 		System.out.println("=============================================");
-		System.out.println("ÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		svo1.printData(stu1);
 		svo2.printData(stu2);
 		svo3.printData(stu3);
@@ -59,25 +59,25 @@ public class ScoreExamTest {
 		System.out.println();
 		
 		
-		System.out.println("--- List¸¦ List[]¿¡ Ãß°¡ ---");
+		System.out.println("--- Listë¥¼ List[]ì— ì¶”ê°€ ---");
 		ArrayList[] stuList = new ArrayList[5];
 		stuList[0] = stu1;
 		stuList[1] = stu2;
 		stuList[2] = stu3;
 		stuList[3] = stu4;
 		stuList[4] = stu5;
-		svo.addTotAvg(stuList);						//ÃÑÁ¡°ú Æò±Õ list¿¡ Ãß°¡
-		for (int i=0; i<setStu.length; i++) {		//Ãâ·Â
+		svo.addTotAvg(stuList);						//ì´ì ê³¼ í‰ê·  listì— ì¶”ê°€
+		for (int i=0; i<setStu.length; i++) {		//ì¶œë ¥
 			System.out.println(stuList[i]);
 		}
 		System.out.println();
 		
-		System.out.println("--- ÀÌ¸§À¸·Î ÇĞ»ı Ã£±â ---");
-		System.out.println("È«±æµ¿ ÀÌ¸§À» °¡Áø ÇĞ»ıÀÇ ¼ºÀû : ");
-		svo.findName("È«±æµ¿", stuList);
+		System.out.println("--- ì´ë¦„ìœ¼ë¡œ í•™ìƒ ì°¾ê¸° ---");
+		System.out.println("í™ê¸¸ë™ ì´ë¦„ì„ ê°€ì§„ í•™ìƒì˜ ì„±ì  : ");
+		svo.findName("í™ê¸¸ë™", stuList);
 		System.out.println();
-		System.out.println("--- Æò±Õ Á¡¼ö·Î ÇĞ»ı Ã£±â ---");
-		System.out.println("Æò±Õ 65Á¡ ÀÌ»óÀ» ¹ŞÀº ÇĞ»ıÀÇ Á¡¼ö : ");
+		System.out.println("--- í‰ê·  ì ìˆ˜ë¡œ í•™ìƒ ì°¾ê¸° ---");
+		System.out.println("í‰ê·  65ì  ì´ìƒì„ ë°›ì€ í•™ìƒì˜ ì ìˆ˜ : ");
 		svo.findAvg(65, stuList);
 	}
 }

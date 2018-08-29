@@ -1,22 +1,22 @@
-package com.mystudy.am03_score;
+ï»¿package com.mystudy.am03_score;
 
 public class ScoreTest {
 
 	public static void main(String[] args) {
-		ScoreVO scv = new ScoreVO("È«±æµ¿", 100, 90, 70);
+		ScoreVO scv = new ScoreVO("í™ê¸¸ë™", 100, 90, 70);
 		System.out.println(scv.toString());
 		scv.setKor(999);
 		System.out.println(scv.toString());
 		try {
 			scv.setEng(1000);
 		} catch (ScoreOutOfValueException e) {
-			System.out.println(">> main()¿¡¼­ ¿¹¿Ü¸¦ catch Ã³¸® "+ e.getMessage());
+			System.out.println(">> main()ì—ì„œ ì˜ˆì™¸ë¥¼ catch ì²˜ë¦¬ "+ e.getMessage());
 //			e.printStackTrace();
 		}
 		System.out.println(scv.toString());
 		
 		
-		System.out.println("--- main() Á¾·á ---");
+		System.out.println("--- main() ì¢…ë£Œ ---");
 	}
 
 }

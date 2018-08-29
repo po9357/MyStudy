@@ -1,13 +1,13 @@
-package com.mystudy.am03_scanner_bank;
+ï»¿package com.mystudy.am03_scanner_bank;
 
 import java.util.Scanner;
 
-//[½Ç½À] ÀºÇàÀÇ ATM
-//1.ÀÔ±Ý  2.Ãâ±Ý  3.ÅëÀåÈ®ÀÎ  0.Á¾·á
+//[ì‹¤ìŠµ] ì€í–‰ì˜ ATM
+//1.ìž…ê¸ˆ  2.ì¶œê¸ˆ  3.í†µìž¥í™•ì¸  0.ì¢…ë£Œ
 //------------------------------
-//°èÁÂ¸¦ ÇÏ³ª ¸¸µé°í ÀÔ±Ý/Ãâ±Ý/ÅëÀåÈ®ÀÎ ÀÛ¾÷À» Ã³¸®
+//ê³„ì¢Œë¥¼ í•˜ë‚˜ ë§Œë“¤ê³  ìž…ê¸ˆ/ì¶œê¸ˆ/í†µìž¥í™•ì¸ ìž‘ì—…ì„ ì²˜ë¦¬
 public class BankATM {
-	private int money; //ÅëÀå°èÁÂ
+	private int money; //í†µìž¥ê³„ì¢Œ
 	private Scanner sc = new Scanner(System.in);
 	
 //	public static void main(String[] args) {
@@ -17,13 +17,13 @@ public class BankATM {
 //	}
 	
 	public void startBank() {
-		System.out.println(">> ¾î¼­¿À¼¼¿ä");
+		System.out.println(">> ì–´ì„œì˜¤ì„¸ìš”");
 		while (true) {
 			if (bankATM() == false) {
 				break;
 			};
 		}
-		System.out.println(">>ÀÛ¾÷À» Á¾·áÇß½À´Ï´Ù.");
+		System.out.println(">>ìž‘ì—…ì„ ì¢…ë£Œí–ˆìŠµë‹ˆë‹¤.");
 	}
 	
 	private boolean bankATM() {
@@ -33,45 +33,45 @@ public class BankATM {
 		try {
 			select = Integer.parseInt(sc.nextLine());
 		} catch (NumberFormatException e) {
-			System.out.println("Àß¸øµÈ °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù." 
-					+ " ¸Þ´º(0~3) ¼ýÀÚ¸¸ ¼±ÅÃÇÏ¼¼¿ä");
+			System.out.println("ìž˜ëª»ëœ ê°’ì´ ìž…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤." 
+					+ " ë©”ë‰´(0~3) ìˆ«ìžë§Œ ì„ íƒí•˜ì„¸ìš”");
 			return jobContinue;
 		}
 		if (select == 1) {
-			//System.out.println("ÀÔ±ÝÀÛ¾÷Ã³¸®~~");
+			//System.out.println("ìž…ê¸ˆìž‘ì—…ì²˜ë¦¬~~");
 			inputMoney();
 		} else if (select == 2) {
-			//System.out.println("Ãâ±ÝÀÛ¾÷Ã³¸®~~");
+			//System.out.println("ì¶œê¸ˆìž‘ì—…ì²˜ë¦¬~~");
 			outputMoney();
 		} else if (select == 3) {
-			//System.out.println("ÅëÀåÈ®ÀÎ ÀÛ¾÷Ã³¸®~~");
+			//System.out.println("í†µìž¥í™•ì¸ ìž‘ì—…ì²˜ë¦¬~~");
 			showMoney();
 		} else if (select == 0) {
-			System.out.println("Á¾·áÀÛ¾÷Ã³¸®~~");
-			jobContinue = false; //ÀÛ¾÷Á¾·áÀÎ °æ¿ì false ¸®ÅÏ
+			System.out.println("ì¢…ë£Œìž‘ì—…ì²˜ë¦¬~~");
+			jobContinue = false; //ìž‘ì—…ì¢…ë£Œì¸ ê²½ìš° false ë¦¬í„´
 		} else {
-			System.out.println("Àß¸øµÈ °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù." 
-					+ " ¸Þ´º(0~3) ¼ýÀÚ¸¸ ¼±ÅÃÇÏ¼¼¿ä");
+			System.out.println("ìž˜ëª»ëœ ê°’ì´ ìž…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤." 
+					+ " ë©”ë‰´(0~3) ìˆ«ìžë§Œ ì„ íƒí•˜ì„¸ìš”");
 		}
 		
 		return jobContinue;
 	}
 	private void showMenu() {
 		System.out.println("------------------------");
-		System.out.println("1.ÀÔ±Ý  2.Ãâ±Ý  3.ÅëÀåÈ®ÀÎ  0.Á¾·á");
+		System.out.println("1.ìž…ê¸ˆ  2.ì¶œê¸ˆ  3.í†µìž¥í™•ì¸  0.ì¢…ë£Œ");
 		System.out.println("------------------------");
-		System.out.print(">>ÀÛ¾÷¼±ÅÃ : ");
+		System.out.print(">>ìž‘ì—…ì„ íƒ : ");
 	}
 	
 	private void inputMoney() {
 		while (true) {
-			System.out.print(">>ÀÔ±Ý¾× : ");
+			System.out.print(">>ìž…ê¸ˆì•¡ : ");
 			try {
 				money += Integer.parseInt(sc.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("Àß¸øµÈ °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù." 
-						+ " ¼ýÀÚ(0~9)¸¸ ÀÔ·ÂÇÏ¼¼¿ä"
-						+ "\n´Ù½Ã ÀÛ¾÷¼±ÅÃÇÏ¼¼¿ä.");
+				System.out.println("ìž˜ëª»ëœ ê°’ì´ ìž…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤." 
+						+ " ìˆ«ìž(0~9)ë§Œ ìž…ë ¥í•˜ì„¸ìš”"
+						+ "\në‹¤ì‹œ ìž‘ì—…ì„ íƒí•˜ì„¸ìš”.");
 				continue;
 			}
 			break;
@@ -80,13 +80,13 @@ public class BankATM {
 	
 	private void outputMoney() {
 		while (true) {
-			System.out.print(">>Ãâ±Ý¾× : ");
+			System.out.print(">>ì¶œê¸ˆì•¡ : ");
 			try {
 				money -= Integer.parseInt(sc.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("Àß¸øµÈ °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù." 
-						+ " ¼ýÀÚ(0~9)¸¸ ÀÔ·ÂÇÏ¼¼¿ä"
-						+ "\n´Ù½Ã ÀÛ¾÷¼±ÅÃÇÏ¼¼¿ä.");
+				System.out.println("ìž˜ëª»ëœ ê°’ì´ ìž…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤." 
+						+ " ìˆ«ìž(0~9)ë§Œ ìž…ë ¥í•˜ì„¸ìš”"
+						+ "\në‹¤ì‹œ ìž‘ì—…ì„ íƒí•˜ì„¸ìš”.");
 				continue;
 			}
 			break;
@@ -94,7 +94,7 @@ public class BankATM {
 	}
 	
 	private void showMoney() {
-		System.out.println(">>ÅëÀå±Ý¾× : " + money + "¿ø");
+		System.out.println(">>í†µìž¥ê¸ˆì•¡ : " + money + "ì›");
 	}
 
 }

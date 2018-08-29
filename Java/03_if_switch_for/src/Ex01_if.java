@@ -1,55 +1,55 @@
-
+ï»¿
 public class Ex01_if {
 
 	public static void main(String[] args) {
-		//Á¦¾î¹®-ºĞ±â¹®(ºñ±³¹®)
-		//if¹®
-		//if (ºñ±³¹®) { ºñ±³°á°ú trueÀÏ ¶§ ½ÇÇàÇÒ ¹®Àåµé; }
+		//ì œì–´ë¬¸-ë¶„ê¸°ë¬¸(ë¹„êµë¬¸)
+		//ifë¬¸
+		//if (ë¹„êµë¬¸) { ë¹„êµê²°ê³¼ trueì¼ ë•Œ ì‹¤í–‰í•  ë¬¸ì¥ë“¤; }
 		/*
-		if (ºñ±³¹®) {
-			½ÇÇàÇÒ ¹®Àå;
+		if (ë¹„êµë¬¸) {
+			ì‹¤í–‰í•  ë¬¸ì¥;
 		}
 		*/
 		int num1 = 10;
 		int num2 = 20;
 		if (num1 < num2) {
-			System.out.println("num1ÀÌ num2º¸´Ù ÀÛ´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ ì‘ë‹¤.");
 		}
-		System.out.println(">>> ºñ±³ÀÛ¾÷ ³¡");
+		System.out.println(">>> ë¹„êµì‘ì—… ë");
 		
 		System.out.println("-------------");
 		boolean result = num1 < num2;
 		if (result) {
-			System.out.println("num1ÀÌ num2º¸´Ù ÀÛ´Ù.");
+			System.out.println("num1ì´ num2ë³´ë‹¤ ì‘ë‹¤.");
 		}
 		
 		//-------------------------------
-		//Á¡¼ö Æò°¡ °á°ú : ¼ö, ¿ì, ¹Ì, ¾ç, °¡
-		//100 ~ 90 : ¼ö
-		//89 ~ 80 : ¿ì
-		//79 ~ 70 : ¹Ì
-		//69 ~ 60 : ¾ç
-		//59 ~ 0 : °¡
+		//ì ìˆ˜ í‰ê°€ ê²°ê³¼ : ìˆ˜, ìš°, ë¯¸, ì–‘, ê°€
+		//100 ~ 90 : ìˆ˜
+		//89 ~ 80 : ìš°
+		//79 ~ 70 : ë¯¸
+		//69 ~ 60 : ì–‘
+		//59 ~ 0 : ê°€
 		int jumsu = 90;
 		if (jumsu < 100 && jumsu >= 90) {
 		//if (jumsu >= 90 && jumsu < 100 ) {
 		//if (90 >= jumsu && 100 < jumsu ) {
 		//if (90 <= jumsu && jumsu < 100) { //90 <= jumsu < 100
-			System.out.println("¼ºÀû : ¼ö");
+			System.out.println("ì„±ì  : ìˆ˜");
 		}
 		if (jumsu < 90 && jumsu >= 80) { //80 ~ 89
-			System.out.println("¼ºÀû : ¿ì");
+			System.out.println("ì„±ì  : ìš°");
 		}
 		if (jumsu <= 79 && jumsu >= 70) {
-			System.out.println("¼ºÀû : ¹Ì");
+			System.out.println("ì„±ì  : ë¯¸");
 		}
 		if (jumsu < 70 && jumsu >= 60) {
-			System.out.println("¼ºÀû : ¾ç");
+			System.out.println("ì„±ì  : ì–‘");
 		}
 		if (jumsu < 60 && jumsu >= 0) {
-			System.out.println("¼ºÀû : °¡");
+			System.out.println("ì„±ì  : ê°€");
 		}
-		System.out.println(">>> ¼ºÀûÃ³¸® ³¡");
+		System.out.println(">>> ì„±ì ì²˜ë¦¬ ë");
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.mylunch.today;
+﻿package com.mylunch.today;
 
 public class ex {
 	public static void main(String[] args) {

@@ -1,20 +1,20 @@
-package com.mystudy.pm05_interface;
+๏ปฟpackage com.mystudy.pm05_interface;
 
 public class Cat implements I_Animal {
 
 	@Override
 	public void eat() {
-		System.out.println(">> ธิดยดู");
+		System.out.println(">> ๋จน๋”๋ค");
 	}
 
 	@Override
 	public void sleep() {
-		System.out.println(">> ภÜดู");
+		System.out.println(">> ์”๋ค");
 	}
 
 	@Override
 	public void sound() {
-		System.out.println(">> ณฤฟภฟภฟห");
+		System.out.println(">> ๋์ค์ค์น");
 	}
 
 }

@@ -1,24 +1,24 @@
-import java.util.*;
+Ôªøimport java.util.*;
 
 public class My_Ex14_word_test {
 
 	public static void main(String[] args) {
 		String[][] words = {
-							{"book", "√•"},
-							{"keyboard", "≈∞∫∏µÂ"},
-							{"Lotto", "∑Œ∂«"}
+							{"book", "Ï±Ö"},
+							{"keyboard", "ÌÇ§Î≥¥Îìú"},
+							{"Lotto", "Î°úÎòê"}
 		};
 		
 		Scanner sc = new Scanner(System.in);
 		
 		for (int i=0; i<words.length; i++) {
-			System.out.println("πÆ¡¶"+(i+1)+ ") "+ words[i][0]+ "¿« ∂Ê¿∫?");
+			System.out.println("Î¨∏Ï†ú"+(i+1)+ ") "+ words[i][0]+ "Ïùò ÎúªÏùÄ?");
 			String input = sc.nextLine();
 			
 			if (input.equals(words[i][1])) {
-				System.out.println("¡§¥‰¿‘¥œ¥Ÿ!");
+				System.out.println("Ï†ïÎãµÏûÖÎãàÎã§!");
 			} else {
-				System.out.println("∆≤∑»Ω¿¥œ¥Ÿ. ¡§¥‰¿∫ "+'\''+words[i][1]+'\''+"¿‘¥œ¥Ÿ.");
+				System.out.println("ÌãÄÎ†∏ÏäµÎãàÎã§. Ï†ïÎãµÏùÄ "+'\''+words[i][1]+'\''+"ÏûÖÎãàÎã§.");
 			}
 		}
 		

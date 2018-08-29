@@ -1,4 +1,4 @@
-
+ï»¿
 public class My_Ex09_arrays_score {
 
 	public static void main(String[] args) {
@@ -8,10 +8,10 @@ public class My_Ex09_arrays_score {
 							{40, 40, 40},
 							{50, 50, 50}
 						};
-		//°ú¸ñº° ÃÑÁ¡
+		//ê³¼ëª©ë³„ ì´ì 
 		int korTotal = 0, engTotal = 0, mathTotal = 0;
 		
-		System.out.println("¹øÈ£      ±¹¾î      ¿µ¾î      ¼öÇĞ      ÃÑÁ¡      Æò±Õ ");
+		System.out.println("ë²ˆí˜¸      êµ­ì–´      ì˜ì–´      ìˆ˜í•™      ì´ì       í‰ê·  ");
 		System.out.println("==============================");
 		
 		for (int i=0; i<score.length; i++) {
@@ -32,6 +32,6 @@ public class My_Ex09_arrays_score {
 		}
 		
 		System.out.println("==============================");
-		System.out.printf("ÃÑÁ¡ : %3d %4d %4d%n", korTotal, engTotal, mathTotal);
+		System.out.printf("ì´ì  : %3d %4d %4d%n", korTotal, engTotal, mathTotal);
 	}
 }

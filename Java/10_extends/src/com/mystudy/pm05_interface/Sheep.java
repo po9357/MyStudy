@@ -1,9 +1,9 @@
-package com.mystudy.pm05_interface;
+﻿package com.mystudy.pm05_interface;
 
 public class Sheep extends Animal {
 	@Override
 	public
 	void sound() {
-		System.out.println(">> �޿�~~~");;
+		System.out.println(">> 메에~~~");;
 	}
 }

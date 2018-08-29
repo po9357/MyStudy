@@ -1,41 +1,41 @@
-package com.mystudy.am01_exception;
+ï»¿package com.mystudy.am01_exception;
 
 public class ExceptionEx {
 
 	public static void main(String[] args) {
-		System.out.println("--- main() ½ÃÀÛ  ---");
+		System.out.println("--- main() ì‹œì‘  ---");
 		int num = 100;
 		int num1 = 0;
 		int num2 = 30;
 		int result = 0;
-		System.out.println(">> ¿¬»ê½ÃÀÛ");
+		System.out.println(">> ì—°ì‚°ì‹œì‘");
 //		result = num / num1;
-//		System.out.println("¿¬»ê°á°ú : "+ result);
+//		System.out.println("ì—°ì‚°ê²°ê³¼ : "+ result);
 		
 		
-		//if¹®À¸·Î ¿¹¿Ü Ã³¸®
+		//ifë¬¸ìœ¼ë¡œ ì˜ˆì™¸ ì²˜ë¦¬
 //		if (num1 == 0) {
-//			System.out.println("[¿¹¿Ü¹ß»ı] 0À¸·Î ³ª´©·Á°í Çß½À´Ï´Ù.");
+//			System.out.println("[ì˜ˆì™¸ë°œìƒ] 0ìœ¼ë¡œ ë‚˜ëˆ„ë ¤ê³  í–ˆìŠµë‹ˆë‹¤.");
 //		} else {
 //			result = num / num1;
-//			System.out.println("¿¬»ê°á°ú : "+ result);
+//			System.out.println("ì—°ì‚°ê²°ê³¼ : "+ result);
 //		}
 		
 		try {
 			num1 = 0;
-			result = num / num1;	//0À¸·Î ³ª´­ ¶§ ¿¹¿Ü ¹ß»ı
-			System.out.println("¿¬»ê°á°ú : "+ result);
+			result = num / num1;	//0ìœ¼ë¡œ ë‚˜ëˆŒ ë•Œ ì˜ˆì™¸ ë°œìƒ
+			System.out.println("ì—°ì‚°ê²°ê³¼ : "+ result);
 		} catch (ArithmeticException e) {
-			System.out.println("[¿¹¿Ü¹ß»ı-¸Ş½ÃÁö]"+ e.getMessage());
-			e.printStackTrace();					//½ÇÇàµÇ°í ÀÖ´Â ¸í·É¹®µéÀÇ ¸ñ·ÏÀ» Ãâ·Â
+			System.out.println("[ì˜ˆì™¸ë°œìƒ-ë©”ì‹œì§€]"+ e.getMessage());
+			e.printStackTrace();					//ì‹¤í–‰ë˜ê³  ìˆëŠ” ëª…ë ¹ë¬¸ë“¤ì˜ ëª©ë¡ì„ ì¶œë ¥
 		} catch (RuntimeException e) {
-			System.out.println("[¿¹¿Ü¹ß»ı-Runtime]"+ e.getMessage());
+			System.out.println("[ì˜ˆì™¸ë°œìƒ-Runtime]"+ e.getMessage());
 		} catch (Exception e) {
-			System.out.println("[¿¹¿Ü¹ß»ı] 0À¸·Î ³ª´©·Á°í Çß½À´Ï´Ù."+ e.getMessage());
+			System.out.println("[ì˜ˆì™¸ë°œìƒ] 0ìœ¼ë¡œ ë‚˜ëˆ„ë ¤ê³  í–ˆìŠµë‹ˆë‹¤."+ e.getMessage());
 		}
 		
 		
-		System.out.println("--- main() Á¾·á ---");
+		System.out.println("--- main() ì¢…ë£Œ ---");
 
 	}
 

@@ -1,4 +1,6 @@
-import java.util.*;
+ï»¿import java.util.*;
+
+import com.mystudy.ternary_operator.Hungry;
 
 public class My_Ex_bingo {
 
@@ -29,7 +31,7 @@ public class My_Ex_bingo {
 		int temp;
 		
 		do {
-			System.out.println("1 ~ 25»çÀÌÀÇ ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À. (Á¾·á : 0)>");
+			System.out.println("1 ~ 25ì‚¬ì´ì˜ ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤. (ì¢…ë£Œ : 0)>");
 			printArray(bingo);
 			temp = sc.nextInt();
 			
@@ -43,7 +45,7 @@ public class My_Ex_bingo {
 				}
 			}
 		} while (temp != 0);
-	}//main Á¾·á
+	}//main ì¢…ë£Œ
 	
 	static void printArray(int[][] arr) {
 		for (int i=0; i<arr.length; i++) {

@@ -1,4 +1,4 @@
-package com.mystudy.pm01_map_score;
+ï»¿package com.mystudy.pm01_map_score;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -8,30 +8,30 @@ import java.util.Set;
 public class HashMapScoreExam {
 	
 	public static void main(String[] args) {
-		//1. HashMap<String, Integer> Å¸ÀÔÀÇ º¯¼ö mapÀ» ¼±¾ğÇÏ°í
-		//2. map¿¡ ÀÌ¸§:Á¡¼ö ÇüÅÂÀÇ ¾Æ·¡ÀÇ µ¥ÀÌÅ¸¸¦ ÀÔ·Â
-		//   "È«±æµ¿:100, °­°¨Âù:90, À»Áö¹®´ö:95, °è¹é:87, ±èÀ¯½Å:92"
-		//3. ÀÔ·ÂµÈ µ¥ÀÌÅ¸¸¦ Á¶È¸ÇØ¼­ Á¡¼öÀÇ ÃÑÁ¡À» tot¿¡ ÀúÀå
-		//4. ÃÑÁ¡(tot)ÀÇ °ªÀ» ÀÎ¿ø ¼ö·Î ³ª´« Æò±Õ °ªÀ» avg¿¡ ÀúÀå
-		//5. Ãâ·ÂÇÏ½Ã¿À.
-		//   ¼º¸í  Á¡¼ö
+		//1. HashMap<String, Integer> íƒ€ì…ì˜ ë³€ìˆ˜ mapì„ ì„ ì–¸í•˜ê³ 
+		//2. mapì— ì´ë¦„:ì ìˆ˜ í˜•íƒœì˜ ì•„ë˜ì˜ ë°ì´íƒ€ë¥¼ ì…ë ¥
+		//   "í™ê¸¸ë™:100, ê°•ê°ì°¬:90, ì„ì§€ë¬¸ë•:95, ê³„ë°±:87, ê¹€ìœ ì‹ :92"
+		//3. ì…ë ¥ëœ ë°ì´íƒ€ë¥¼ ì¡°íšŒí•´ì„œ ì ìˆ˜ì˜ ì´ì ì„ totì— ì €ì¥
+		//4. ì´ì (tot)ì˜ ê°’ì„ ì¸ì› ìˆ˜ë¡œ ë‚˜ëˆˆ í‰ê·  ê°’ì„ avgì— ì €ì¥
+		//5. ì¶œë ¥í•˜ì‹œì˜¤.
+		//   ì„±ëª…  ì ìˆ˜
 		//   -----------
-		//   ÀÌ¸§: Á¡¼ö
-		//   ÀÌ¸§: Á¡¼ö
+		//   ì´ë¦„: ì ìˆ˜
+		//   ì´ë¦„: ì ìˆ˜
 		//   ...
-		//   ÀÌ¸§: Á¡¼ö
+		//   ì´ë¦„: ì ìˆ˜
 		//   ==========
-		//   ÃÑÁ¡: ???
-		//   Æò±Õ: ???
+		//   ì´ì : ???
+		//   í‰ê· : ???
 		////////////////////////////////////////////
 		int sum=0;
 	
 		Map<String, Integer> score = new HashMap<String, Integer>();
-		score.put("È«±æµ¿", 100);
-		score.put("°­°¨Âù", 90);
-		score.put("À»Áö¹®´ö", 95);
-		score.put("°è¹é", 87);
-		score.put("±èÀ¯½Å", 92);
+		score.put("í™ê¸¸ë™", 100);
+		score.put("ê°•ê°ì°¬", 90);
+		score.put("ì„ì§€ë¬¸ë•", 95);
+		score.put("ê³„ë°±", 87);
+		score.put("ê¹€ìœ ì‹ ", 92);
 
 		Set<Map.Entry<String, Integer>> scoreSet = score.entrySet();
 		Iterator<Map.Entry<String, Integer>> scoreIte = scoreSet.iterator();
@@ -41,7 +41,7 @@ public class HashMapScoreExam {
 			sum += e.getValue();
 		}
 		
-		System.out.println("ÀÌ¸§ \tÁ¡¼ö");
+		System.out.println("ì´ë¦„ \tì ìˆ˜");
 		System.out.println("------------");
 		scoreIte = scoreSet.iterator();
 		while (scoreIte.hasNext()) {
@@ -49,9 +49,9 @@ public class HashMapScoreExam {
 			System.out.println(e.getKey() +" :\t"+ e.getValue());
 		}
 		System.out.println("============");
-		System.out.println("ÃÑÁ¡ : \t"+ sum);
+		System.out.println("ì´ì  : \t"+ sum);
 		double avg = (sum * 100) / scoreSet.size() / 100.0;
-		System.out.println("Æò±Õ : \t"+ avg);
+		System.out.println("í‰ê·  : \t"+ avg);
 		
 	}
 	

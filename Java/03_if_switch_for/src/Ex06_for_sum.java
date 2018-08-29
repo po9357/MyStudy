@@ -1,40 +1,40 @@
-
+ï»¿
 public class Ex06_for_sum {
 
 	public static void main(String[] args) {
-		//¹®Á¦: 1~10±îÁöÀÇ ÇÕ°è¸¦ ±¸ÇÏ½Ã¿À(È­¸éÃâ·Â)
+		//ë¬¸ì œ: 1~10ê¹Œì§€ì˜ í•©ê³„ë¥¼ êµ¬í•˜ì‹œì˜¤(í™”ë©´ì¶œë ¥)
 		//System.out.println(55);
-		//System.out.println("1~10±îÁö ÇÕ°è: " + (1+2+3+4+5+6+7+8+9+10));
-		//ÈùÆ®
+		//System.out.println("1~10ê¹Œì§€ í•©ê³„: " + (1+2+3+4+5+6+7+8+9+10));
+		//íŒíŠ¸
 		int num = 0;
 		int sum = 0;
 		
 //		num = num + 1;
-//		sum = sum + num; //sum ´©Àû
+//		sum = sum + num; //sum ëˆ„ì 
 //		System.out.println(sum);
 		
-		//ÃÖÁ¾ ÇÁ·Î±×·¥ °á°ú
+		//ìµœì¢… í”„ë¡œê·¸ë¨ ê²°ê³¼
 		for (int i=1; i<=10; i++) {
 			sum = sum + i;
 		}
-		System.out.println("1~10±îÁöÀÇ ÇÕ°è : " + sum);
+		System.out.println("1~10ê¹Œì§€ì˜ í•©ê³„ : " + sum);
 		
 		//---------------------
 		System.out.println("====================");
-		num = 1; //1~10±îÁö º¯ÇÏ´Â ¼ö
-		sum = 0; //´©ÀûÇÑ °ªÀ» ÀúÀåÇÒ º¯¼ö
+		num = 1; //1~10ê¹Œì§€ ë³€í•˜ëŠ” ìˆ˜
+		sum = 0; //ëˆ„ì í•œ ê°’ì„ ì €ì¥í•  ë³€ìˆ˜
 /*		
-		//¹İº¹: 1
+		//ë°˜ë³µ: 1
 		sum = sum + num; //sum = 0 + 1
 		System.out.println("sum: " + sum);
 		num = num + 1; //num: 2 -  num++, num += 1 
 		
-		//¹İº¹: 2
+		//ë°˜ë³µ: 2
 		sum = sum + num; //sum = (0 + 1) + 2
 		System.out.println("sum: " + sum);
 		num = num + 1; //num: 3 -  num++, num += 1 
 		
-		//¹İº¹: 3
+		//ë°˜ë³µ: 3
 		sum = sum + num; //sum = (0 + 1 + 2) + 3
 		System.out.println("sum: " + sum);
 		num = num + 1; //num: 3 -  num++, num += 1 
@@ -45,7 +45,7 @@ public class Ex06_for_sum {
 			System.out.println("i: "+ i +", num: "+ num + ", sum: " + sum);
 			num = num + 1; 
 		}
-		System.out.println("1~10±îÁöÀÇ ÇÕ°è: " + sum);
+		System.out.println("1~10ê¹Œì§€ì˜ í•©ê³„: " + sum);
 		
 		System.out.println(">>>>> ");
 		sum = 0;
@@ -53,10 +53,10 @@ public class Ex06_for_sum {
 			sum = sum + i; 
 			System.out.println("i: "+ i +", sum: " + sum);
 		}
-		System.out.println("1~10±îÁöÀÇ ÇÕ°è: " + sum);
+		System.out.println("1~10ê¹Œì§€ì˜ í•©ê³„: " + sum);
 		
 		//-------------------------
-		//10 ~ 1 Ãâ·Â(for¹®)
+		//10 ~ 1 ì¶œë ¥(forë¬¸)
 		/*
 		10
 		9

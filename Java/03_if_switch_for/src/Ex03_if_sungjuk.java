@@ -1,77 +1,77 @@
-
+ï»¿
 public class Ex03_if_sungjuk {
 
 	public static void main(String[] args) {
-		//¼ºÀûÃ³¸®
-		//±¹¾î(kor), ¿µ¾î(eng), ¼öÇĞ(math) Á¡¼ö
-		//ÃÑÁ¡(tot) = ±¹¾î + ¿µ¾î + ¼öÇĞ
-		//Æò±Õ(avg) = ÃÑÁ¡ / 3
+		//ì„±ì ì²˜ë¦¬
+		//êµ­ì–´(kor), ì˜ì–´(eng), ìˆ˜í•™(math) ì ìˆ˜
+		//ì´ì (tot) = êµ­ì–´ + ì˜ì–´ + ìˆ˜í•™
+		//í‰ê· (avg) = ì´ì  / 3
 		//--------------------
-		//Æò±ÕÁ¡¼ö ±¸°£¿¡ µû¶ó ÇĞÁ¡ ºÎ¿©
+		//í‰ê· ì ìˆ˜ êµ¬ê°„ì— ë”°ë¼ í•™ì  ë¶€ì—¬
 		//90 ~ 100 : A
 		//80 ~ 89 : B
 		//70 ~ 79 : C
 		//60 ~ 69 : D
-		//60 ¹Ì¸¸(0~59) : F + ¸Ş½ÃÁö(Àç¼ö°­ÇÏ¼¼¿ä)
+		//60 ë¯¸ë§Œ(0~59) : F + ë©”ì‹œì§€(ì¬ìˆ˜ê°•í•˜ì„¸ìš”)
 		///////////////////////////////////
-		/* Ãâ·Â ÇüÅÂ
-		±¹¾î : 100
-		¿µ¾î : 90
-		¼öÇĞ : 80
+		/* ì¶œë ¥ í˜•íƒœ
+		êµ­ì–´ : 100
+		ì˜ì–´ : 90
+		ìˆ˜í•™ : 80
 		----------
-		¼ºÀûÇÕ°è : 270
-		Æò±ÕÁ¡¼ö : 90
-		<Æò°¡°á°ú>
-		A ÇĞÁ¡
+		ì„±ì í•©ê³„ : 270
+		í‰ê· ì ìˆ˜ : 90
+		<í‰ê°€ê²°ê³¼>
+		A í•™ì 
 		***********************/
 		int kor = 150;
 		int eng = 90;
 		int math = 50;
-		int tot = 0; //ÇÕ°è(ÃÑÁ¡)
-		int avg = 0; //Æò±Õ
+		int tot = 0; //í•©ê³„(ì´ì )
+		int avg = 0; //í‰ê· 
 		
-		//ÃÑÁ¡ ±¸ÇÏ±â(Ãâ·Â)
+		//ì´ì  êµ¬í•˜ê¸°(ì¶œë ¥)
 		tot = kor + eng + math;
-		System.out.println("¼ºÀûÇÕ°è : " + tot);
+		System.out.println("ì„±ì í•©ê³„ : " + tot);
 		
-		//Æò±Õ ±¸ÇÏ±â(Ãâ·Â)
+		//í‰ê·  êµ¬í•˜ê¸°(ì¶œë ¥)
 		avg = tot / 3;
-		System.out.println("Æò±ÕÁ¡¼ö : " + avg);
+		System.out.println("í‰ê· ì ìˆ˜ : " + avg);
 		
-		System.out.println("<Æò°¡°á°ú>");
+		System.out.println("<í‰ê°€ê²°ê³¼>");
 		String hakjum = "Z";
-		//Æò±Õ Á¡¼ö¿¡ µû¸¥ ÇĞÁ¡ Ãâ·Â
+		//í‰ê·  ì ìˆ˜ì— ë”°ë¥¸ í•™ì  ì¶œë ¥
 		if (avg >= 90) {
-			System.out.println("A ÇĞÁ¡");
+			System.out.println("A í•™ì ");
 			hakjum = "A";
 		//} else if (avg >= 80 && avg < 90) {
 		} else if (avg >= 80) {
-			System.out.println("B ÇĞÁ¡");
+			System.out.println("B í•™ì ");
 			hakjum = "B";
 		} else if (avg >= 70) {
-			System.out.println("C ÇĞÁ¡");
+			System.out.println("C í•™ì ");
 			hakjum = "C";
 		} else if (avg >= 60) {
-			System.out.println("D ÇĞÁ¡");
+			System.out.println("D í•™ì ");
 			hakjum = "D";
 		} else {
-			System.out.println("F ÇĞÁ¡ - Àç¼ö°­ÇÏ¼¼¿ä");
+			System.out.println("F í•™ì  - ì¬ìˆ˜ê°•í•˜ì„¸ìš”");
 			hakjum = "F";
 		}
 		
 		System.out.println("=====================");
-		System.out.println("±¹¾î : " + kor);
-		System.out.println("¿µ¾î : " + eng);
-		System.out.println("¼öÇĞ : " + math);
+		System.out.println("êµ­ì–´ : " + kor);
+		System.out.println("ì˜ì–´ : " + eng);
+		System.out.println("ìˆ˜í•™ : " + math);
 		System.out.println("----------");
 		
-		System.out.println("¼ºÀûÇÕ°è : " + tot);
-		System.out.println("Æò±ÕÁ¡¼ö : " + avg);
-		System.out.println("<Æò°¡°á°ú>");
+		System.out.println("ì„±ì í•©ê³„ : " + tot);
+		System.out.println("í‰ê· ì ìˆ˜ : " + avg);
+		System.out.println("<í‰ê°€ê²°ê³¼>");
 		if (hakjum == "F") {
-			System.out.println(hakjum + " ÇĞÁ¡(Àç¼ö°­ÇÏ¼¼¿ä)");
+			System.out.println(hakjum + " í•™ì (ì¬ìˆ˜ê°•í•˜ì„¸ìš”)");
 		} else {
-			System.out.println(hakjum + " ÇĞÁ¡");
+			System.out.println(hakjum + " í•™ì ");
 		}
 	}
 

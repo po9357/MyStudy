@@ -1,14 +1,14 @@
-
+ï»¿
 public class Ex09_plusplus {
 
 	public static void main(String[] args) {
-		//Áõ°¨¿¬»êÀÚ : ++, --
-		//»ç¿ëÇüÅÂ : ++º¯¼ö¸í, º¯¼ö¸í++, --º¯¼ö¸í, º¯¼ö¸í--
-		//++ : °ªÀ» 1 Áõ°¡ ½ÃÅ´
-		//-- : °ªÀ» 1 °¨¼Ò ½ÃÅ´
+		//ì¦ê°ì—°ì‚°ì : ++, --
+		//ì‚¬ìš©í˜•íƒœ : ++ë³€ìˆ˜ëª…, ë³€ìˆ˜ëª…++, --ë³€ìˆ˜ëª…, ë³€ìˆ˜ëª…--
+		//++ : ê°’ì„ 1 ì¦ê°€ ì‹œí‚´
+		//-- : ê°’ì„ 1 ê°ì†Œ ì‹œí‚´
 		// ++num -> num = num + 1;
 		int num1 = 100;
-		num1 = num1 + 1; // ++num1; ¶Ç´Â num1++
+		num1 = num1 + 1; // ++num1; ë˜ëŠ” num1++
 		System.out.println("num1 = num1 + 1 : " + num1);
 		
 		num1 = 100;
@@ -23,15 +23,15 @@ public class Ex09_plusplus {
 		int sum = 0;
 		num1 = 100;
 		sum = ++num1 + 1;
-		//sum °ª Ãâ·Â
-		//num1 °ª Ãâ·Â
+		//sum ê°’ ì¶œë ¥
+		//num1 ê°’ ì¶œë ¥
 		System.out.println("num1 : " + num1);
 		System.out.println("sum : " + sum);
 		
 		num1 = 100;
 		sum = num1++ + 1;
-		//sum °ª Ãâ·Â
-		//num1 °ª Ãâ·Â
+		//sum ê°’ ì¶œë ¥
+		//num1 ê°’ ì¶œë ¥
 		System.out.println("num1 : " + num1);
 		System.out.println("sum : " + sum);
 		

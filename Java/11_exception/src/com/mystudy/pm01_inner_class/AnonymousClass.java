@@ -1,4 +1,4 @@
-package com.mystudy.pm01_inner_class;
+ï»¿package com.mystudy.pm01_inner_class;
 
 interface TestInter {
 	int DATA = 100;
@@ -16,8 +16,8 @@ class TestInterImp implements TestInter{
 	}
 }
 
-//ÀÍ¸íÅ¬·¡½º : Å¬·¡½ºÀÇ ÀÌ¸§ÀÌ ¾ø´Â Å¬·¡½º
-//ÇÑ ¹ø¸¸ »ç¿ëÇÏ´Â ¿ëµµ·Î ¸¸µé¾î »ç¿ëÇÏ´Â Å¬·¡½º
+//ìµëª…í´ë˜ìŠ¤ : í´ë˜ìŠ¤ì˜ ì´ë¦„ì´ ì—†ëŠ” í´ë˜ìŠ¤
+//í•œ ë²ˆë§Œ ì‚¬ìš©í•˜ëŠ” ìš©ë„ë¡œ ë§Œë“¤ì–´ ì‚¬ìš©í•˜ëŠ” í´ë˜ìŠ¤
 public class AnonymousClass {
 
 	void test() {

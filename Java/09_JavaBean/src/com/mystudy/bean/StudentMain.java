@@ -1,37 +1,37 @@
-package com.mystudy.bean;
+ï»¿package com.mystudy.bean;
 
 public class StudentMain {
 
 	public static void main(String[] args) {
-		//ÀÚ¹Ùºó »ç¿ëÇÏ±â
-		Student stu = new Student("È«±æµ¿", 100, 90, 80);
+		//ìë°”ë¹ˆ ì‚¬ìš©í•˜ê¸°
+		Student stu = new Student("í™ê¸¸ë™", 100, 90, 80);
 		System.out.println(stu);
 		System.out.println(stu.getName());
 		
-		//ÃÑÁ¡ ±¸ÇÏ°í ÀúÀå
+		//ì´ì  êµ¬í•˜ê³  ì €ì¥
 		int tot = stu.getKor() + stu.getEng() + stu.getMath();
 		//stu.setTot(stu.getKor() + stu.getEng() + stu.getMath());
 //		stu.setTot(tot);
 		System.out.println(stu);
 		
-		//Æò±Õ °ª ±¸ÇÏ°í ÀúÀå
+		//í‰ê·  ê°’ êµ¬í•˜ê³  ì €ì¥
 		double avg = (tot * 100) / 3 / 100.0;
 //		stu.setAvg(avg);
 		System.out.println(stu);
 		
-		//¼öÇĞÁ¡¼ö 80 -> 81 º¯°æ
+		//ìˆ˜í•™ì ìˆ˜ 80 -> 81 ë³€ê²½
 		stu.setMath(81);
-		System.out.println("¼öÇĞ 80->81 º¯°æÈÄ: " + stu);
+		System.out.println("ìˆ˜í•™ 80->81 ë³€ê²½í›„: " + stu);
 		
-		//ÃÑÁ¡, Æò±Õ Àç°è»ê
+		//ì´ì , í‰ê·  ì¬ê³„ì‚°
 //		stu.setTot(stu.getKor() + stu.getEng() + stu.getMath());
 //		stu.setAvg((stu.getTot() * 100) / 3 / 100.0);
 		
 //		stu.setTot(300);
 //		stu.setAvg(100);
-		System.out.println("ÃÑÁ¡, Æò±Õ Àç°è»êÈÄ: " + stu);
+		System.out.println("ì´ì , í‰ê·  ì¬ê³„ì‚°í›„: " + stu);
 		
-		Student stu2 = new Student("ÀÌ¼ø½Å", 100, 90, 81);
+		Student stu2 = new Student("ì´ìˆœì‹ ", 100, 90, 81);
 		stu2.setMath(89);
 		System.out.println(stu2);
 		

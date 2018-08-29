@@ -1,8 +1,8 @@
-
+ï»¿
 public class Ex07_for_star {
 
 	public static void main(String[] args) {
-		//ÁßÃ¸for¹® »ç¿ë
+		//ì¤‘ì²©forë¬¸ ì‚¬ìš©
 		//* * * * *
 		//*****
 		//*****
@@ -15,7 +15,7 @@ public class Ex07_for_star {
 		System.out.println("*****");
 		System.out.println("-----------");
 		
-		System.out.println("---ÁßÃ¸ ÀÌÁß for¹® »ç¿ë---");
+		System.out.println("---ì¤‘ì²© ì´ì¤‘ forë¬¸ ì‚¬ìš©---");
 		for (int j=1; j<=5; j++) {
 			for (int i=1; i<=3; i++) {
 				System.out.print("*");
@@ -32,7 +32,7 @@ public class Ex07_for_star {
 		
 		//---------------------------
 		System.out.println("======================");
-		/* »ï°¢Çü ±×¸®±â
+		/* ì‚¼ê°í˜• ê·¸ë¦¬ê¸°
 		 * 
 		 **
 		 ***

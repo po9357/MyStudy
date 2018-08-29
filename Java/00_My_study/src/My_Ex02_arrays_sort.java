@@ -1,4 +1,4 @@
-
+﻿
 public class My_Ex02_arrays_sort {
 	public static void main(String[] args) {
 		int[] numArr = new int[10];

@@ -1,18 +1,18 @@
-package com.mystudy.ternary_operator;
+ï»¿package com.mystudy.ternary_operator;
 
 public class My_Ex_TernaryOperator {
 
 	public static void main(String[] args) {
-		//»ïÇ× ¿¬»êÀÚ
-		//º¯¼ö = (boolean) ? (true) : (false)
-		//º¯¼ö´Â  (ÀÌ°Ô Æ®·ç¸é) = (¿ä°Å°í)
-		//º¯¼ö´Â  (ÀÌ°Ô Æú½º¸é) = 			(¿ä°Å´Ù)
+		//ì‚¼í•­ ì—°ì‚°ì
+		//ë³€ìˆ˜ = (boolean) ? (true) : (false)
+		//ë³€ìˆ˜ëŠ”  (ì´ê²Œ íŠ¸ë£¨ë©´) = (ìš”ê±°ê³ )
+		//ë³€ìˆ˜ëŠ”  (ì´ê²Œ í´ìŠ¤ë©´) = 			(ìš”ê±°ë‹¤)
 		
 		int a = 100;
 		int b = 500;
 		int result;
 		
-		//±âÁ¸ if - else¹®
+		//ê¸°ì¡´ if - elseë¬¸
 		if ((a+b) > 300) {
 			result = 5000;
 		} else {
@@ -20,7 +20,7 @@ public class My_Ex_TernaryOperator {
 		}
 		System.out.println(result);
 		
-		//»ïÇ×¿¬»êÀÚ »ç¿ë
+		//ì‚¼í•­ì—°ì‚°ì ì‚¬ìš©
 		result = ((a+b) > 300) ? (9999) : (6666);
 		System.out.println(result);
 		

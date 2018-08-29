@@ -1,17 +1,17 @@
-package com.mystudy.pm01_sungjuk_array;
+ï»¿package com.mystudy.pm01_sungjuk_array;
 
 public class SungjukManagerExam {
-	static final String TITLE = "±¹¾î\t¿µ¾î\t¼öÇĞ\tÃß°¡°ú¸ñ\tÃÑÁ¡\tÆò±Õ";
+	static final String TITLE = "êµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì¶”ê°€ê³¼ëª©\tì´ì \tí‰ê· ";
 	static final String LINE = "--------------------------------"
 			+ "---------------";
 
 	public static void main(String[] args) {
-		//2Â÷¿ø ¹è¿­À» »ç¿ëÇÑ ¼ºÀû Ã³¸®
-		//½Ç½À¹®Á¦. 
-		//  ±¹¾î, ¿µ¾î, ¼öÇĞ Á¡¼ö 3°³¸¦ ÀúÀåÇÑ 2Â÷¿ø ¹è¿­(sungjuk) ¸¸µé°í
-		//  ¼ºÀûÀ» ÀÔ·ÂÇÏ°í °³ÀÎº° ÃÑÁ¡°ú Æò±ÕÀ» °è»ê ÇÏ¿© È­¸é¿¡ µ¥ÀÌÅÍ Ãâ·Â
+		//2ì°¨ì› ë°°ì—´ì„ ì‚¬ìš©í•œ ì„±ì  ì²˜ë¦¬
+		//ì‹¤ìŠµë¬¸ì œ. 
+		//  êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ 3ê°œë¥¼ ì €ì¥í•œ 2ì°¨ì› ë°°ì—´(sungjuk) ë§Œë“¤ê³ 
+		//  ì„±ì ì„ ì…ë ¥í•˜ê³  ê°œì¸ë³„ ì´ì ê³¼ í‰ê· ì„ ê³„ì‚° í•˜ì—¬ í™”ë©´ì— ë°ì´í„° ì¶œë ¥
 		/*
-			±¹¾î	 ¿µ¾î	  ¼öÇĞ	  ÃÑÁ¡	       Æò±Õ
+			êµ­ì–´	 ì˜ì–´	  ìˆ˜í•™	  ì´ì 	       í‰ê· 
 			-------------------------------------
 			100  90  80  270   90.0
 			100  90  81  271   90.33
@@ -22,7 +22,7 @@ public class SungjukManagerExam {
 		*/
 		
 		
-		//                 ±¹¾î  ¿µ¾î ¼öÇĞ
+		//                 êµ­ì–´  ì˜ì–´ ìˆ˜í•™
 		int[][] sungjuk = {{88,90,80, 90},
 				          {100,90,81, 88},
 				          {100,90,83, 77}};
@@ -59,14 +59,14 @@ public class SungjukManagerExam {
 		System.out.println("-----");
 		for (int i = 0; i < sungjuk.length; i++) {
 			tot = 0;
-			tot = tot + sungjuk[i][0]; //±¹¾î
-			tot = tot + sungjuk[i][1]; //¿µ¾î
-			tot = tot + sungjuk[i][2]; //¼öÇĞ
+			tot = tot + sungjuk[i][0]; //êµ­ì–´
+			tot = tot + sungjuk[i][1]; //ì˜ì–´
+			tot = tot + sungjuk[i][2]; //ìˆ˜í•™
 			
 			avg = (tot * 100) / 3 / 100.0;
-			System.out.print(sungjuk[i][0] +"\t"); //±¹¾î
-			System.out.print(sungjuk[i][1] +"\t"); //¿µ¾î
-			System.out.print(sungjuk[i][2] +"\t"); //¼öÇĞ
+			System.out.print(sungjuk[i][0] +"\t"); //êµ­ì–´
+			System.out.print(sungjuk[i][1] +"\t"); //ì˜ì–´
+			System.out.print(sungjuk[i][2] +"\t"); //ìˆ˜í•™
 			System.out.println(tot +"\t" + avg);
 		}
 		
@@ -78,7 +78,7 @@ public class SungjukManagerExam {
 		for (int i = 0; i < sungjuk.length; i++) {
 			tot = 0;
 			for (int k = 0; k < sungjuk[i].length; k++) {
-				tot = tot + sungjuk[i][k]; //±¹¾î + ¿µ¾î + ¼öÇĞ
+				tot = tot + sungjuk[i][k]; //êµ­ì–´ + ì˜ì–´ + ìˆ˜í•™
 				System.out.print(sungjuk[i][k] +"\t");
 			}
 			avg = (tot * 100) / sungjuk[i].length / 100.0;

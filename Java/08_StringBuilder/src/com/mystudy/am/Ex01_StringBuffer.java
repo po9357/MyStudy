@@ -1,32 +1,32 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 public class Ex01_StringBuffer {
 
 	public static void main(String[] args) {
-		//StringBuffer Å¬·¡½º
+		//StringBuffer í´ëž˜ìŠ¤
 		String str = new String("Hello World!!!");
 		System.out.println(str);
 		
 		StringBuffer sb = new StringBuffer("Hello World!!!");
 		System.out.println(sb);
-		System.out.println("sb.length() : "+ sb.length());			//±æÀÌ
-		System.out.println("sb.capacity() : "+ sb.capacity());		//¿ë·® : 16ÀÇ ¿©À¯¸¦ µÎ°í »ý¼º
+		System.out.println("sb.length() : "+ sb.length());			//ê¸¸ì´
+		System.out.println("sb.capacity() : "+ sb.capacity());		//ìš©ëŸ‰ : 16ì˜ ì—¬ìœ ë¥¼ ë‘ê³  ìƒì„±
 		System.out.println();
 		
-		str = str + " ¹Ý°©½À´Ï´Ù.";
-		System.out.println("str + \" ¹Ý°©½À´Ï´Ù.\" : "+ str);
+		str = str + " ë°˜ê°‘ìŠµë‹ˆë‹¤.";
+		System.out.println("str + \" ë°˜ê°‘ìŠµë‹ˆë‹¤.\" : "+ str);
 		System.out.println(str.toString());
 		System.out.println();
 		
-		System.out.println(str.replace("l", "L"));		//¿øº» µ¥ÀÌÅÍ º¯°æ ¾ÈÇÔ
+		System.out.println(str.replace("l", "L"));		//ì›ë³¸ ë°ì´í„° ë³€ê²½ ì•ˆí•¨
 		System.out.println(str);
 		System.out.println();
 		
 		System.out.println("--- StringBuffer ---");
-		sb.append(" ¹Ý°©½À´Ï´Ù.");
+		sb.append(" ë°˜ê°‘ìŠµë‹ˆë‹¤.");
 		System.out.println(sb);
 		System.out.println(sb.toString());
-		sb.reverse();				//¿øº» µ¥ÀÌÅÍ º¯°æ
+		sb.reverse();				//ì›ë³¸ ë°ì´í„° ë³€ê²½
 		System.out.println(sb.toString());
 		System.out.println(sb.reverse());
 		System.out.println();
@@ -41,36 +41,36 @@ public class Ex01_StringBuffer {
 		System.out.println("sb.replace(0, 5, \"Hi,\") : "
 								+ sb.replace(0, 5, "Hi,"));
 		
-		System.out.println("sb.length() : "+ sb.length());			//±æÀÌ º¯È­. (¹Ý°©½À´Ï´Ù µî ¹®ÀÚ Ãß°¡)
-		System.out.println("sb.capacity() : "+ sb.capacity());		//¿ë·®Àº À¯Áö
+		System.out.println("sb.length() : "+ sb.length());			//ê¸¸ì´ ë³€í™”. (ë°˜ê°‘ìŠµë‹ˆë‹¤ ë“± ë¬¸ìž ì¶”ê°€)
+		System.out.println("sb.capacity() : "+ sb.capacity());		//ìš©ëŸ‰ì€ ìœ ì§€
 		
 		System.out.println("----------------------------------");
 		StringBuffer sb2 = new StringBuffer(100);
 		System.out.println("sb2.length() : "+ sb2.length());
 		System.out.println("sb2.capacity() : "+ sb2.capacity());
 		
-		//sb2.append("¾È³çÇÏ¼¼¿ä. ¹Ý°©½À´Ï´Ù!!");
-		sb2.append("¾È³çÇÏ¼¼¿ä.").append(" ¹Ý°©½À´Ï´Ù!!");
+		//sb2.append("ì•ˆë…•í•˜ì„¸ìš”. ë°˜ê°‘ìŠµë‹ˆë‹¤!!");
+		sb2.append("ì•ˆë…•í•˜ì„¸ìš”.").append(" ë°˜ê°‘ìŠµë‹ˆë‹¤!!");
 		System.out.println("sb2 : "+ sb2);
 		System.out.println("sb2.length() : "+ sb2.length());
 		System.out.println("sb2.capacity() : "+ sb2.capacity());
 		System.out.println();
 		
-		System.out.println("--- trimToSize() ½ÇÇà ÈÄ ---");
+		System.out.println("--- trimToSize() ì‹¤í–‰ í›„ ---");
 		sb2.trimToSize();
 		System.out.println("sb2 : "+ sb2);
 		System.out.println("sb2.length() : "+ sb2.length());
 		System.out.println("sb2.capacity() : "+ sb2.capacity());
 		System.out.println();
 		
-		System.out.println(">> append ½ÇÇà ÈÄ");
-		sb2.append(" ÀÚ¹Ù °øºÎ Áß");
+		System.out.println(">> append ì‹¤í–‰ í›„");
+		sb2.append(" ìžë°” ê³µë¶€ ì¤‘");
 		System.out.println("sb2 : "+ sb2);
 		System.out.println("sb2.length() : "+ sb2.length());
 		System.out.println("sb2.capacity() : "+ sb2.capacity());
 		System.out.println();
 		
-		System.out.println(">> setLength() ½ÇÇà ÈÄ");
+		System.out.println(">> setLength() ì‹¤í–‰ í›„");
 		sb2.setLength(5);
 		System.out.println("sb2 : "+ sb2);
 		System.out.println("sb2.length() : "+ sb2.length());

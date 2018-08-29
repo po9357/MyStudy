@@ -1,8 +1,8 @@
-package com.mystudy.pm03_overriding;
+Ôªøpackage com.mystudy.pm03_overriding;
 
 public class Dog extends Animal {
 
 	void sound() {
-		System.out.println(">> ∏€~∏€~");
+		System.out.println(">> Î©ç~Î©ç~");
 	}
 }

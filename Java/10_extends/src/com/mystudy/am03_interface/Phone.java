@@ -1,9 +1,9 @@
-package com.mystudy.am03_interface;
+ï»¿package com.mystudy.am03_interface;
 
 import java.util.Scanner;
 
-//ÀÎÅÍÆäÀÌ½º¸¦ ±¸Çö(implements)
-//I_Phone ÀÎÅÍÆäÀÌ½º¸¦ »ç¿ëÇØ¼­ Phone Å¬·¡½º¸¦ ±¸Çö
+//ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„(implements)
+//I_Phone ì¸í„°í˜ì´ìŠ¤ë¥¼ ì‚¬ìš©í•´ì„œ Phone í´ë˜ìŠ¤ë¥¼ êµ¬í˜„
 public class Phone implements I_Phone{
 	
 	Scanner sc = new Scanner(System.in);
@@ -12,11 +12,11 @@ public class Phone implements I_Phone{
 	private String phoneNo;
 	
 	Phone(){
-		this.type = "±âº» Å¸ÀÔ";
+		this.type = "ê¸°ë³¸ íƒ€ì…";
 		this.phoneNo = "000-0000-0000";
 	}
 	Phone(String phoneNo){
-		this.type = "±âº» Å¸ÀÔ";
+		this.type = "ê¸°ë³¸ íƒ€ì…";
 		this.phoneNo = phoneNo;
 	}
 	Phone(String type, String phoneNo){
@@ -36,28 +36,28 @@ public class Phone implements I_Phone{
 
 	@Override
 	public void call() {
-		System.out.println("ÀüÈ­ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+		System.out.println("ì „í™” ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 		String phNo = sc.nextLine();
-		System.out.println(phNo +"¹øÈ£·Î ÀüÈ­¸¦ °Ì´Ï´Ù.");
+		System.out.println(phNo +"ë²ˆí˜¸ë¡œ ì „í™”ë¥¼ ê²ë‹ˆë‹¤.");
 		
 	}
 
 	@Override
 	public void receiveCall() {
-		System.out.println("ÀüÈ­ ¹Ş±â");
+		System.out.println("ì „í™” ë°›ê¸°");
 		
 	}
 
 	@Override
 	public void sendMsg() {
-		System.out.println("¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¿©ÁÖ½Ê½Ã¿À");
+		System.out.println("ë©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì—¬ì£¼ì‹­ì‹œì˜¤");
 		String sms = sc.nextLine();
-		System.out.println("¸Ş½ÃÁö¸¦ Àü¼ÛÇÕ´Ï´Ù : "+ sms);
+		System.out.println("ë©”ì‹œì§€ë¥¼ ì „ì†¡í•©ë‹ˆë‹¤ : "+ sms);
 	}
 
 	@Override
 	public void receiveMsg(String rms) {
-		System.out.println("¸Ş½ÃÁö¸¦ Àü¼Û ¹Ş¾Ò½À´Ï´Ù : "+ rms);
+		System.out.println("ë©”ì‹œì§€ë¥¼ ì „ì†¡ ë°›ì•˜ìŠµë‹ˆë‹¤ : "+ rms);
 	}
 	
 

@@ -1,24 +1,24 @@
-package com.mystudy.am03_stack_queue;
+ï»¿package com.mystudy.am03_stack_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-//Å¥(Queue) ÀÎÅÍÆäÀÌ½º - LinkedList Å¬·¡½º
-// - ÇüÅÂ»ó ÆÄÀÌÇÁ ¸ğ¾ç (¼±ÀÔ¼±Ãâ)
+//í(Queue) ì¸í„°í˜ì´ìŠ¤ - LinkedList í´ë˜ìŠ¤
+// - í˜•íƒœìƒ íŒŒì´í”„ ëª¨ì–‘ (ì„ ì…ì„ ì¶œ)
 
-//½ºÅÃ(Stack)
-//ÇüÅÂ»óÀ¸·Î ¹Ù´ÚÀÌ ¸·Èù ÅëÀÇ ÇüÅÂ (ÈÄÀÔ ¼±Ãâ)
+//ìŠ¤íƒ(Stack)
+//í˜•íƒœìƒìœ¼ë¡œ ë°”ë‹¥ì´ ë§‰íŒ í†µì˜ í˜•íƒœ (í›„ì… ì„ ì¶œ)
 public class Stack_Queue {
 
 	public static void main(String[] args) {
-		//Å¥ (Queue) : ¼±ÀÔ¼±Ãâ
-		System.out.println("--- Å¥ (Queue) : ¼±ÀÔ¼±Ãâ  ---");
+		//í (Queue) : ì„ ì…ì„ ì¶œ
+		System.out.println("--- í (Queue) : ì„ ì…ì„ ì¶œ  ---");
 		Queue que = new LinkedList();
-		que.offer("1. Ã¹Â°");			//add¿Í µ¿ÀÏ
-		que.offer("2. µÑÂ°");
-		que.offer("3. ¼ÂÂ°");
-		que.offer("4. ³İÂ°");
+		que.offer("1. ì²«ì§¸");			//addì™€ ë™ì¼
+		que.offer("2. ë‘˜ì§¸");
+		que.offer("3. ì…‹ì§¸");
+		que.offer("4. ë„·ì§¸");
 		System.out.println(que);
 		System.out.println("--- que.peek() ---");
 		System.out.println("que.peek() : "+ que.peek());
@@ -27,10 +27,10 @@ public class Stack_Queue {
 //		System.out.println("que.poll() : "+ que.poll());
 //		System.out.println("que.poll() : "+ que.poll());
 		
-		//ÀüÃ¼ µ¥ÀÌÅÍ ÃßÃâ
-		System.out.println("--- ÀüÃ¼ µ¥ÀÌÅÍ ÃßÃâ ---");
+		//ì „ì²´ ë°ì´í„° ì¶”ì¶œ
+		System.out.println("--- ì „ì²´ ë°ì´í„° ì¶”ì¶œ ---");
 		System.out.println("que.isEmpty() : "+ que.isEmpty());
-		//Å¥°¡ ºñ¾îÀÖÁö ¾ÊÀº¸é µ¥ÀÌÅÍ ÃßÃâ
+		//íê°€ ë¹„ì–´ìˆì§€ ì•Šì€ë©´ ë°ì´í„° ì¶”ì¶œ
 		System.out.println("que.size() : "+ que.size());
 //		while (que.isEmpty() == false) {
 		while (!que.isEmpty()) {
@@ -39,19 +39,19 @@ public class Stack_Queue {
 		System.out.println("que.size() : "+ que.size());
 		
 		/////////////////////////////////////////////////
-		System.out.println("=== ½ºÅÃ(Stack) : LIFO (ÈÄÀÔ ¼±Ãâ) ===");
+		System.out.println("=== ìŠ¤íƒ(Stack) : LIFO (í›„ì… ì„ ì¶œ) ===");
 		Stack st = new Stack();
-		st.push("1. Ã¹Â°");
-		st.push("2. µÑÂ°");
-		st.push("3. ¼ÂÂ°");
-		st.push("4. ³İÂ°");
+		st.push("1. ì²«ì§¸");
+		st.push("2. ë‘˜ì§¸");
+		st.push("3. ì…‹ì§¸");
+		st.push("4. ë„·ì§¸");
 		System.out.println(st);
 		System.out.println("st.peek() : "+ st.peek());
 		System.out.println("st.size() : "+ st.size());
 		
 		
-		//peek(), pop() µ¥ÀÌÅÍ¸¦ Á¶È¸ ¶Ç´Â ²¨³¾ ¶§ ºñ¾îÀÖÀ¸¸é
-		//EmptyStackException ¿¹¿Ü ¹ß»ı
+		//peek(), pop() ë°ì´í„°ë¥¼ ì¡°íšŒ ë˜ëŠ” êº¼ë‚¼ ë•Œ ë¹„ì–´ìˆìœ¼ë©´
+		//EmptyStackException ì˜ˆì™¸ ë°œìƒ
 //		System.out.println("st.pop() : "+ st.pop());
 //		System.out.println("st.pop() : "+ st.pop());
 //		System.out.println("st.pop() : "+ st.pop());
@@ -59,10 +59,10 @@ public class Stack_Queue {
 //		System.out.println("st.pop() : "+ st.pop());		//java.util.EmptyStackException
 //		System.out.println("st.peek() : "+ st.peek());		//java.util.EmptyStackException
 		
-		System.out.println("--- ÀüÃ¼ µ¥ÀÌÅÍ Á¶È¸ ---");
+		System.out.println("--- ì „ì²´ ë°ì´í„° ì¡°íšŒ ---");
 		System.out.println(st.isEmpty());
 		System.out.println(st.empty());
-		while (!st.isEmpty()) {				//ºñ¾îÀÖÁö ¾ÊÀ¸¸é
+		while (!st.isEmpty()) {				//ë¹„ì–´ìˆì§€ ì•Šìœ¼ë©´
 			System.out.println(st.pop());
 		}
 		System.out.println("st.size() : "+ st.size());

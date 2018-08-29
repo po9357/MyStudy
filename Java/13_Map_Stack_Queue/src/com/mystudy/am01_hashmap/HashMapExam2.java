@@ -1,4 +1,4 @@
-package com.mystudy.am01_hashmap;
+ï»¿package com.mystudy.am01_hashmap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,13 +11,13 @@ import java.util.Set;
 public class HashMapExam2 {
 
 	public static void main(String[] args) {
-		//Map¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ È®ÀÎ
+		//Mapì— ì €ì¥ëœ ë°ì´í„°ë¥¼ í™•ì¸
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("Å°1", "°ª1");
-		map.put("Å°2", "°ª2");
-		map.put("Å°3", "°ª3");
-		map.put("Å°4", "°ª4");
-		map.put("Å°5", "°ª5");
+		map.put("í‚¤1", "ê°’1");
+		map.put("í‚¤2", "ê°’2");
+		map.put("í‚¤3", "ê°’3");
+		map.put("í‚¤4", "ê°’4");
+		map.put("í‚¤5", "ê°’5");
 		System.out.println(map);
 		
 		int[] num = {1, 2, 3, 4};
@@ -26,39 +26,39 @@ public class HashMapExam2 {
 		}
 		System.out.println();
 		
-		System.out.println("--- Çâ»óµÈ for¹®(forEach) ÀÌ¿ëÇÑ ¹è¿­°ª Ãâ·Â ---");
+		System.out.println("--- í–¥ìƒëœ forë¬¸(forEach) ì´ìš©í•œ ë°°ì—´ê°’ ì¶œë ¥ ---");
 		for (int i : num) {
 			System.out.print(i+ " ");
 		}
 		System.out.println();
 		
-		//Map Ãâ·Â½Ã °³¼±µÈ for¹® »ç¿ë
-		System.out.println("--- MapÀ» °³¼±µÈ for¹®À¸·Î Á¶È¸ ---");
+		//Map ì¶œë ¥ì‹œ ê°œì„ ëœ forë¬¸ ì‚¬ìš©
+		System.out.println("--- Mapì„ ê°œì„ ëœ forë¬¸ìœ¼ë¡œ ì¡°íšŒ ---");
 		for (String key : map.keySet()) {
 			System.out.println("key : "+ key + ", value : "+ map.get(key));
 		}
 		
-		System.out.println("--- Map.Entry Å¸ÀÔÀ» Çâ»óµÈ for¹®À¸·Î Á¶È¸ ---");
-		for (Map.Entry<String, String> entry : map.entrySet()) {				//Çâ»óµÈ for¹®
+		System.out.println("--- Map.Entry íƒ€ì…ì„ í–¥ìƒëœ forë¬¸ìœ¼ë¡œ ì¡°íšŒ ---");
+		for (Map.Entry<String, String> entry : map.entrySet()) {				//í–¥ìƒëœ forë¬¸
 			System.out.println(entry.getKey() +" : "+ entry.getValue());
 		}
-		//Entry Å¸ÀÔÀÇ °ªÀ» ¹Ş¾Æ¼­ Å°-°ª Á¶È¸ (iterator)
-		System.out.println("--- Map.Entry Å¸ÀÔÀÇ µ¥ÀÌÅÍ Á¶È¸(iterator) ---");
+		//Entry íƒ€ì…ì˜ ê°’ì„ ë°›ì•„ì„œ í‚¤-ê°’ ì¡°íšŒ (iterator)
+		System.out.println("--- Map.Entry íƒ€ì…ì˜ ë°ì´í„° ì¡°íšŒ(iterator) ---");
 		Set<Map.Entry<String, String>> entrySet = map.entrySet();
 		Iterator<Map.Entry<String, String>> ite = entrySet.iterator();
 		while (ite.hasNext()) {
 			Map.Entry<String, String> e = ite.next();
-			System.out.println("Å° : "+ e.getKey()+ ", °ª : "+ e.getValue());
+			System.out.println("í‚¤ : "+ e.getKey()+ ", ê°’ : "+ e.getValue());
 		}
 		
 		
-		//Å° (key) °ªÀ» ¹Ş¾Æ¼­ Å°-°ª Á¶È¸ (iterator)
-		System.out.println("--- Map¿¡¼­ Å° (key)¸¦ ¹Ş¾Æ¼­ iterator Á¶È¸ ---");
+		//í‚¤ (key) ê°’ì„ ë°›ì•„ì„œ í‚¤-ê°’ ì¡°íšŒ (iterator)
+		System.out.println("--- Mapì—ì„œ í‚¤ (key)ë¥¼ ë°›ì•„ì„œ iterator ì¡°íšŒ ---");
 		Iterator<String> stringSet = map.keySet().iterator();
 		while (stringSet.hasNext()) {
 			String key = stringSet.next();
 			String value = map.get(key);
-			System.out.println("Å° : "+ key+ ", °ª : "+ value);
+			System.out.println("í‚¤ : "+ key+ ", ê°’ : "+ value);
 		}
 		
 		

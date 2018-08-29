@@ -1,10 +1,10 @@
-package com.mystudy.wordscramble;
+ï»¿package com.mystudy.wordscramble;
 
 public class WordScrambleEx1 {
 	
 /*
-getAnswer(String[] strArr)´Â ¹è¿­strArrÀÇ ¿ä¼ÒÁßÀÇ ÇÏ³ª¸¦ ÀÓÀÇ·Î °ñ¶ó¼­ ¹İÈ¯ÇÑ´Ù.(Math.random()»ç¿ë)
-getScrambledWord(String str)´Â ÁÖ¾îÁø ¹®ÀÚ¿­ strÀÇ °¢ ¹®ÀÚÀÇ ¼ø¼­¸¦ µÚ¼¯Àº ´ÙÀ½, »õ·Î¿î ¹®ÀÚ¿­·Î ¹İÈ¯ÇÑ´Ù.
+getAnswer(String[] strArr)ëŠ” ë°°ì—´strArrì˜ ìš”ì†Œì¤‘ì˜ í•˜ë‚˜ë¥¼ ì„ì˜ë¡œ ê³¨ë¼ì„œ ë°˜í™˜í•œë‹¤.(Math.random()ì‚¬ìš©)
+getScrambledWord(String str)ëŠ” ì£¼ì–´ì§„ ë¬¸ìì—´ strì˜ ê° ë¬¸ìì˜ ìˆœì„œë¥¼ ë’¤ì„ì€ ë‹¤ìŒ, ìƒˆë¡œìš´ ë¬¸ìì—´ë¡œ ë°˜í™˜í•œë‹¤.
  */
 	public static void main(String[] args) { 
         String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW"}; 
@@ -17,13 +17,13 @@ getScrambledWord(String str)´Â ÁÖ¾îÁø ¹®ÀÚ¿­ strÀÇ °¢ ¹®ÀÚÀÇ ¼ø¼­¸¦ µÚ¼¯Àº ´ÙÀ½,
 	} // main 
 
 	public static String getAnswer(String[] strArr) { 
-       // ³»¿ëÀ» ¿Ï¼ºÇÏ¼¼¿ä.
+       // ë‚´ìš©ì„ ì™„ì„±í•˜ì„¸ìš”.
 		int ran = (int)(Math.random()*strArr.length);
 		return strArr[ran];
 	} 
   
 	public static String getScrambledWord(String str) { 
-        // ³»¿ëÀ» ¿Ï¼ºÇÏ¼¼¿ä.
+        // ë‚´ìš©ì„ ì™„ì„±í•˜ì„¸ìš”.
 		char[] charArr = str.toCharArray();
 		int ran = (int)(Math.random()*charArr.length);
 		char tmp;

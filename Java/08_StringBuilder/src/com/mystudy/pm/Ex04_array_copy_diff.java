@@ -1,9 +1,9 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 
 public class Ex04_array_copy_diff {
 
 	public static void main(String[] args) {
-		//2Â÷¿ø ¹è¿­ º¹»ç : 1Â÷¿ø ¹è¿­ÀÇ Å©±â°¡ ´Ù¸¦ ¶§
+		//2ì°¨ì› ë°°ì—´ ë³µì‚¬ : 1ì°¨ì› ë°°ì—´ì˜ í¬ê¸°ê°€ ë‹¤ë¥¼ ë•Œ
 		int[][] nums = {	{10, 20},
 							{30, 40, 50},
 							{60}
@@ -18,27 +18,27 @@ public class Ex04_array_copy_diff {
 		}
 		printData(dest);
 		
-		//¿øº»(nums) -> º¹»çº»(dest) º¹»ç
-		//º¹»ç ÈÄ °ª Ã¼Å©±îÁö
-		System.out.println("-------- °ª º¹»ç --------");
+		//ì›ë³¸(nums) -> ë³µì‚¬ë³¸(dest) ë³µì‚¬
+		//ë³µì‚¬ í›„ ê°’ ì²´í¬ê¹Œì§€
+		System.out.println("-------- ê°’ ë³µì‚¬ --------");
 		for (int i=0; i<nums.length; i++) {
 			dest[i] = nums[i];
 		}
 		printData(dest);
 		
-		System.out.println("------- ÁÖ¼Ò°ª È®ÀÎ -------");
+		System.out.println("------- ì£¼ì†Œê°’ í™•ì¸ -------");
 		nums[1][0] = 999;
 		System.out.println(nums[1].toString());
 		System.out.println(dest[1].toString());
 		
 		
-		System.out.println("--- clone() ÁÖ¼Ò°ª È®ÀÎ ---");
+		System.out.println("--- clone() ì£¼ì†Œê°’ í™•ì¸ ---");
 		dest = nums.clone();
 		nums[0][0] = 888;
 		System.out.println(nums[0].toString());
 		System.out.println(dest[0].toString());
 		
-	}//main Á¾·á
+	}//main ì¢…ë£Œ
 	
 	static void printData(int[][] arr) {
 		for (int d2 = 0; d2 < arr.length; d2++) {

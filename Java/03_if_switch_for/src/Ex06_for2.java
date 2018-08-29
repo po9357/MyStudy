@@ -1,35 +1,35 @@
-
+ï»¿
 public class Ex06_for2 {
 
 	public static void main(String[] args) {
-		//for¹® : 1~10 ¼ıÀÚ Áß È¦¼ö¸¦ Ãâ·Â(1,3,5,7,9)
+		//forë¬¸ : 1~10 ìˆ«ì ì¤‘ í™€ìˆ˜ë¥¼ ì¶œë ¥(1,3,5,7,9)
 		for (int i=1; i<=10; i=i+2) {
 			System.out.println(i);
 		}
 		
 		System.out.println("-------------");
-		//for¹® : 1~10 ¼ıÀÚ Áß Â¦¼ö¸¦ Ãâ·Â(2,4,6,8,10)
+		//forë¬¸ : 1~10 ìˆ«ì ì¤‘ ì§ìˆ˜ë¥¼ ì¶œë ¥(2,4,6,8,10)
 		for (int i=2; i<=10; i=i+2) {
 			System.out.println(i);
 		}
-		System.out.println("¿©±âºÎÅÍ");
+		System.out.println("ì—¬ê¸°ë¶€í„°");
 		for (int i=1; i<=10; i++) {
 			if ((i%2) == 0) {
 				System.out.println(i);
 			}
 		}
-		System.out.println("¿©±â±îÁö");
+		System.out.println("ì—¬ê¸°ê¹Œì§€");
 		System.out.println(">>>>");
 		for (int i=1; i<=10; i++) {
-			if (i % 2 == 0) { //2·Î ³ª´« ³ª¸ÓÁö°¡ 0ÀÌ³Ä?
+			if (i % 2 == 0) { //2ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ê°€ 0ì´ëƒ?
 				System.out.println(i);
 			}
 		}
 		
 		System.out.println("================");
-		//900~1000 »çÀÌÀÇ ¼ıÀÚ Áß 17ÀÇ ¹è¼öÀÎ ¼ıÀÚ¸¸ Ãâ·Â
+		//900~1000 ì‚¬ì´ì˜ ìˆ«ì ì¤‘ 17ì˜ ë°°ìˆ˜ì¸ ìˆ«ìë§Œ ì¶œë ¥
 		for (int i=900; i<=1000; i++) {
-			if (i % 17 == 0) { //17·Î ³ª´« ³ª¸ÓÁö°¡ 0ÀÌ³Ä?
+			if (i % 17 == 0) { //17ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ê°€ 0ì´ëƒ?
 				System.out.println(i);
 			}
 		}
@@ -45,7 +45,7 @@ public class Ex06_for2 {
 			}
 		}
 		System.out.println("===================");
-		//2000~3000 »çÀÌÀÇ ¼ıÀÚ Áß 19ÀÇ ¹è¼öÀÎ ¼ıÀÚ¸¸ Ãâ·Â
+		//2000~3000 ì‚¬ì´ì˜ ìˆ«ì ì¤‘ 19ì˜ ë°°ìˆ˜ì¸ ìˆ«ìë§Œ ì¶œë ¥
 
 		
 		

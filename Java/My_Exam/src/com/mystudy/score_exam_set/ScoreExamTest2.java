@@ -1,4 +1,4 @@
-package com.mystudy.score_exam_set;
+ï»¿package com.mystudy.score_exam_set;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,11 +9,11 @@ import java.util.Set;
 public class ScoreExamTest2 {
 
 	public static void main(String[] args) {
-		ScoreExamVO2 vo1 = new ScoreExamVO2("È«±æµ¿", 90, 80, 70);
-		ScoreExamVO2 vo2 = new ScoreExamVO2("È«±æµ¿2", 50, 70, 20);
-		ScoreExamVO2 vo3 = new ScoreExamVO2("È«±æµ¿3", 60, 70, 20);
-		ScoreExamVO2 vo4 = new ScoreExamVO2("È«±æµ¿4", 70, 40, 80);
-		ScoreExamVO2 vo5 = new ScoreExamVO2("È«±æµ¿5", 80, 60, 90);
+		ScoreExamVO2 vo1 = new ScoreExamVO2("í™ê¸¸ë™", 90, 80, 70);
+		ScoreExamVO2 vo2 = new ScoreExamVO2("í™ê¸¸ë™2", 50, 70, 20);
+		ScoreExamVO2 vo3 = new ScoreExamVO2("í™ê¸¸ë™3", 60, 70, 20);
+		ScoreExamVO2 vo4 = new ScoreExamVO2("í™ê¸¸ë™4", 70, 40, 80);
+		ScoreExamVO2 vo5 = new ScoreExamVO2("í™ê¸¸ë™5", 80, 60, 90);
 		
 		List<ScoreExamVO2> list = new ArrayList<ScoreExamVO2>();
 		list.add(vo1);
@@ -24,7 +24,7 @@ public class ScoreExamTest2 {
 		
 		System.out.println(list.get(0));
 		System.out.println("=============================================");
-		System.out.println("ÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		for (int i=0; i<list.size(); i++) {
 			list.get(i).printDataAll(list.get(i));
 		}
@@ -36,7 +36,7 @@ public class ScoreExamTest2 {
 		System.out.println(set);
 		Iterator<ScoreExamVO2> ite = set.iterator();
 		System.out.println("=============================================");
-		System.out.println("ÀÌ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì´ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		while (ite.hasNext()) {
 			ite.next().printDataSet();
 		}

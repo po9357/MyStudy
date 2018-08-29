@@ -1,16 +1,16 @@
-package com.mystudy.am01_extends;
+ï»¿package com.mystudy.am01_extends;
 
-//PhoneÀ» »ó¼Ó¹Þ¾Æ(extends:È®ÀåÇØ¼­) Mp3Phone ¸¸µé±â
+//Phoneì„ ìƒì†ë°›ì•„(extends:í™•ìž¥í•´ì„œ) Mp3Phone ë§Œë“¤ê¸°
 public class Mp3Phone extends Phone {
 
 	public Mp3Phone(String phoneNo) {
-		super("Mp3Phone", phoneNo); //ºÎ¸ðÅ¬·¡½º(Phone) »ý¼ºÀÚ È£Ãâ
+		super("Mp3Phone", phoneNo); //ë¶€ëª¨í´ëž˜ìŠ¤(Phone) ìƒì„±ìž í˜¸ì¶œ
 	}
 	public Mp3Phone(String type, String phoneNo) {
 		super(type, phoneNo);
 	}
 	
 	protected void playMusic() {
-		System.out.println(">> Mp3Phone - À½¾ÇÇÃ·¹ÀÌ");
+		System.out.println(">> Mp3Phone - ìŒì•…í”Œë ˆì´");
 	}
 }

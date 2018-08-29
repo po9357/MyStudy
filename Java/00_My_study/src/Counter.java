@@ -1,7 +1,7 @@
-import java.util.ArrayList;
+ï»¿import java.util.ArrayList;
 
 public class Counter  {
-	    static int count = 0; //º¯¼ö ¾Õ¿¡ staticÀÌ ºÙ¾ú±â¿¡ ¾Æ·¡ ¸Ş¼Òµå¿¡¼­ c1,c2°´Ã¼ »ı¼º½Ã °øÀ¯µÈ °ªÀÌ ³ª¿Â´Ù.
+	    static int count = 0; //ë³€ìˆ˜ ì•ì— staticì´ ë¶™ì—ˆê¸°ì— ì•„ë˜ ë©”ì†Œë“œì—ì„œ c1,c2ê°ì²´ ìƒì„±ì‹œ ê³µìœ ëœ ê°’ì´ ë‚˜ì˜¨ë‹¤.
 	    Counter() {
 	        this.count++;
 	        System.out.println(this.count);

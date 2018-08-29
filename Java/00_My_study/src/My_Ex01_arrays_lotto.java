@@ -1,4 +1,4 @@
-
+﻿
 public class My_Ex01_arrays_lotto {
 	public static void main(String[] args) {
 		int[] ball = new int[45];

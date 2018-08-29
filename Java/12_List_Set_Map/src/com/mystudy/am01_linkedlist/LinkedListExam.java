@@ -1,4 +1,4 @@
-package com.mystudy.am01_linkedlist;
+ï»¿package com.mystudy.am01_linkedlist;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,14 +8,14 @@ import java.util.List;
 public class LinkedListExam {
 
 	public static void main(String[] args) {
-		//LinkedList : List ¼Ó¼º
+		//LinkedList : List ì†ì„±
 		LinkedList list = new LinkedList();
 		
-		String str = "È«±æµ¿,±èÀ¯½Å,°­°¨Âù,À»Áö¹®´ö,È«°æ·¡";
+		String str = "í™ê¸¸ë™,ê¹€ìœ ì‹ ,ê°•ê°ì°¬,ì„ì§€ë¬¸ë•,í™ê²½ë˜";
 		String[] strs = str.split(",");
 		System.out.println("strs : "+ Arrays.toString(strs));
 		
-		//¹è¿­¿¡ ÀÖ´Â °ªÀ» ¸®½ºÆ®¿¡ Ãß°¡
+		//ë°°ì—´ì— ìˆëŠ” ê°’ì„ ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€
 		for (int i = 0; i < strs.length; i++) {
 			list.add(strs[i]);
 		}
@@ -30,19 +30,19 @@ public class LinkedListExam {
 		Collections.sort(list);
 		printData("list", list);
 		
-		//±èÀ¯½Å »èÁ¦
-		list.remove("±èÀ¯½Å");
+		//ê¹€ìœ ì‹  ì‚­ì œ
+		list.remove("ê¹€ìœ ì‹ ");
 		printData(list);
 		
-		//È«±æµ¿ -> È«±æµ¿2 ¼öÁ¤
-		//È«±æµ¿ ÀÎµ¦½º°ª Ã£±â, set ¸Ş¼Òµå »ç¿ë
-		System.out.println("È«±æµ¿ À§Ä¡°ª(indexOf) : "+ list.indexOf("È«±æµ¿"));
-		//list.set(3, "È«±æµ¿2");
-		list.set(list.indexOf("È«±æµ¿"),  "È«±æµ¿2");
+		//í™ê¸¸ë™ -> í™ê¸¸ë™2 ìˆ˜ì •
+		//í™ê¸¸ë™ ì¸ë±ìŠ¤ê°’ ì°¾ê¸°, set ë©”ì†Œë“œ ì‚¬ìš©
+		System.out.println("í™ê¸¸ë™ ìœ„ì¹˜ê°’(indexOf) : "+ list.indexOf("í™ê¸¸ë™"));
+		//list.set(3, "í™ê¸¸ë™2");
+		list.set(list.indexOf("í™ê¸¸ë™"),  "í™ê¸¸ë™2");
 		printData("list", list);
 		
-		System.out.println("--- ÀüÃ¼ µ¥ÀÌÅÍ ¹øÈ£ : ÀÌ¸§ ÇüÅÂ Ãâ·Â ---");
-		//1 : °­°¨Âù
+		System.out.println("--- ì „ì²´ ë°ì´í„° ë²ˆí˜¸ : ì´ë¦„ í˜•íƒœ ì¶œë ¥ ---");
+		//1 : ê°•ê°ì°¬
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println((i+1) + " : " + list.get(i));
 		}
@@ -69,7 +69,7 @@ public class LinkedListExam {
 	}
 	
 	static void printData(List list) {
-		//null ¿©ºÎ È®ÀÎ
+		//null ì—¬ë¶€ í™•ì¸
 		if (list == null) return;
 		
 		System.out.print(list.get(0));
@@ -80,7 +80,7 @@ public class LinkedListExam {
 	}
 	
 	static void printData(String str, List list) {
-		//null ¿©ºÎ È®ÀÎ
+		//null ì—¬ë¶€ í™•ì¸
 		if (list == null) return;
 		
 		System.out.print(str+ " : ");

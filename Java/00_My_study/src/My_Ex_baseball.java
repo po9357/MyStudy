@@ -1,4 +1,4 @@
-import java.util.*;
+ï»¿import java.util.*;
 
 public class My_Ex_baseball {
 	public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class My_Ex_baseball {
 		char chc3;
 		char chc4;
 		while(true) {
-			System.out.println("Áßº¹µÈ ¼ö°¡ ¾ø´Â 4ÀÚ¸® Á¤¼ö¸¦ »ı¼ºÁßÀÔ´Ï´Ù.(1000 ~ 9999)");
+			System.out.println("ì¤‘ë³µëœ ìˆ˜ê°€ ì—†ëŠ” 4ìë¦¬ ì •ìˆ˜ë¥¼ ìƒì„±ì¤‘ì…ë‹ˆë‹¤.(1000 ~ 9999)");
 			com = (int)(Math.random()*9000+1000)+"";
 		 	chc1 = com.charAt(0);
 		 	chc2 = com.charAt(1);
@@ -25,7 +25,7 @@ public class My_Ex_baseball {
 		}
 		
 		while(true){
-			System.out.println("1000 ~ 9999»çÀÌÀÇ 4ÀÚ¸® Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("1000 ~ 9999ì‚¬ì´ì˜ 4ìë¦¬ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			input = sc.nextLine();
 			char chi1 = input.charAt(0);
 			char chi2 = input.charAt(1);
@@ -33,7 +33,7 @@ public class My_Ex_baseball {
 			char chi4 = input.charAt(3);
 		
 			if (com.equals(input)) {
-				System.out.println("Á¤´äÀÔ´Ï´Ù!!");
+				System.out.println("ì •ë‹µì…ë‹ˆë‹¤!!");
 				break;
 			}
 			

@@ -1,19 +1,19 @@
-public class Ex01_boolean {
+ï»¿public class Ex01_boolean {
 	public static void main(String[] args) {
-		//º¯¼ö¼±¾ğ ÇüÅÂ : µ¥ÀÌÅ¸Å¸ÀÔ º¯¼ö¸í
-		//booleanÅ¸ÀÔ : true, false °ªÀ» °¡Áü
-		boolean bool1 = true; //¹®ÀÚ¿­ "true"°¡ ¾Æ´Ô
+		//ë³€ìˆ˜ì„ ì–¸ í˜•íƒœ : ë°ì´íƒ€íƒ€ì… ë³€ìˆ˜ëª…
+		//booleaníƒ€ì… : true, false ê°’ì„ ê°€ì§
+		boolean bool1 = true; //ë¬¸ìì—´ "true"ê°€ ì•„ë‹˜
 		boolean bool2 = false;
 		System.out.println("bool1 : " + bool1);
 		System.out.println("bool2 : " + bool2);
 		System.out.println("------------------");
 		
 		bool1 = false;
-		bool1 = 100 > 200; //ºñ±³¿¬»ê °á°ú°ª ÀúÀå
+		bool1 = 100 > 200; //ë¹„êµì—°ì‚° ê²°ê³¼ê°’ ì €ì¥
 		if (bool1) {
-			System.out.println("bool1ÀÇ °ªÀº true");
+			System.out.println("bool1ì˜ ê°’ì€ true");
 		} else {
-			System.out.println("bool1ÀÇ °ªÀº false");
+			System.out.println("bool1ì˜ ê°’ì€ false");
 		}
 		
 	}

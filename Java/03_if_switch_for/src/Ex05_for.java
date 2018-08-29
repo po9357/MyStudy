@@ -1,10 +1,10 @@
-
+ï»¿
 public class Ex05_for {
 
 	public static void main(String[] args) {
-		//Á¦¾î¹® - ¹İº¹¹®(for, while, do~while)
-		//for¹®
-		//for (ÃÊ±â°ª; ½ÇÇà(Á¾°á)Á¶°Ç¹®; Áõ°¨Ä¡) {}
+		//ì œì–´ë¬¸ - ë°˜ë³µë¬¸(for, while, do~while)
+		//forë¬¸
+		//for (ì´ˆê¸°ê°’; ì‹¤í–‰(ì¢…ê²°)ì¡°ê±´ë¬¸; ì¦ê°ì¹˜) {}
 		System.out.println("*");
 		System.out.println("*");
 		System.out.println("*");
@@ -12,7 +12,7 @@ public class Ex05_for {
 		System.out.println("*");
 		System.out.println("------------------");
 		
-		//for (ÃÊ±â°ª; ½ÇÇà(Á¾°á)Á¶°Ç¹®; Áõ°¨Ä¡) {}
+		//for (ì´ˆê¸°ê°’; ì‹¤í–‰(ì¢…ê²°)ì¡°ê±´ë¬¸; ì¦ê°ì¹˜) {}
 		for (int i=1; i<=5; i++) {
 			System.out.println("*");
 		}
@@ -30,13 +30,13 @@ public class Ex05_for {
 		
 		System.out.println("*****");
 		
-		//½ÃÀÛ°ªÀ» 0 ºÎÅÍ ½ÃÀÛÇÏ°í 1¾¿ Áõ°¡½ÃÅ°¸é¼­ 10È¸ ¹İº¹ Ãâ·Â
+		//ì‹œì‘ê°’ì„ 0 ë¶€í„° ì‹œì‘í•˜ê³  1ì”© ì¦ê°€ì‹œí‚¤ë©´ì„œ 10íšŒ ë°˜ë³µ ì¶œë ¥
 		for (int i=0; i<10; i++) { //i<=9
 			System.out.println("*****");
 		}
 		System.out.println("------------------");
 		
-		//1~10 ¼ıÀÚ¸¦ Ãâ·ÂÇÏ¼¼¿ä(for¹® »ç¿ë)
+		//1~10 ìˆ«ìë¥¼ ì¶œë ¥í•˜ì„¸ìš”(forë¬¸ ì‚¬ìš©)
 		//1
 		//2
 		//...
@@ -82,11 +82,11 @@ public class Ex05_for {
 			System.out.println(i);
 		}
 		
-		//ÁÖÀÇ»çÇ×: ¹İº¹ÀÎÀÚ°ªÀ» for¹® ³»¿¡¼­ º¯È­½ÃÅ°´Â °ÍÀº ÀÚÁ¦
+		//ì£¼ì˜ì‚¬í•­: ë°˜ë³µì¸ìê°’ì„ forë¬¸ ë‚´ì—ì„œ ë³€í™”ì‹œí‚¤ëŠ” ê²ƒì€ ìì œ
 		System.out.println("*******************");
 		for (int i=1; i<=10; i++) {
 			System.out.println(i);
-			i++; //for¹® ³»¿¡¼­ i°ª º¯°æ
+			i++; //forë¬¸ ë‚´ì—ì„œ iê°’ ë³€ê²½
 		}
 	}
 

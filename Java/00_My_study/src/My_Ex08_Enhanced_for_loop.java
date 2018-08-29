@@ -1,12 +1,12 @@
-import java.util.* ;
+ï»¿import java.util.* ;
 
 public class My_Ex08_Enhanced_for_loop {
 
 	public static void main(String[] args) {
 		
-		//Çâ»óµÈ for¹®
-		//1. ¹è¿­¿¡¼­ Çâ»óµÈ for¹®
-		//	for(¹è¿­ÀÇÅ¸ÀÔ º¯¼ö¸í:¹è¿­){}
+		//í–¥ìƒëœ forë¬¸
+		//1. ë°°ì—´ì—ì„œ í–¥ìƒëœ forë¬¸
+		//	for(ë°°ì—´ì˜íƒ€ì… ë³€ìˆ˜ëª…:ë°°ì—´){}
 		int[] arr = {10, 20, 30, 40, 50};
 		
 		for (int i=0; i<arr.length; i++) {
@@ -20,9 +20,9 @@ public class My_Ex08_Enhanced_for_loop {
 		
 		System.out.println();
 		
-		//2. ÄÃ·º¼Ç
-		//ÄÃ·º¼Ç Å¬·¡½ºÀÇ list, map, µîÀÇ ¸Ş¼Òµå¸¦ ºÒ·¯¿Í »ç¿ë.
-		//listÀÇ °æ¿ì µ¥ÀÌÅÍ¸¦ ÀúÀå. Áßº¹ Çã¿ë.
+		//2. ì»¬ë ‰ì…˜
+		//ì»¬ë ‰ì…˜ í´ë˜ìŠ¤ì˜ list, map, ë“±ì˜ ë©”ì†Œë“œë¥¼ ë¶ˆëŸ¬ì™€ ì‚¬ìš©.
+		//listì˜ ê²½ìš° ë°ì´í„°ë¥¼ ì €ì¥. ì¤‘ë³µ í—ˆìš©.
 		ArrayList<Integer>list = new ArrayList<Integer>();
 		list.add(new Integer(10));
 		list.add(new Integer(20));

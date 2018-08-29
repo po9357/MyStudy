@@ -1,8 +1,8 @@
-package com.mystudy.am03_score;
+ï»¿package com.mystudy.am03_score;
 
 public class ScoreOutOfValueException extends Exception {
 	ScoreOutOfValueException(){
-		super("Á¡¼ö¹üÀ§(0~100)¸¦ ¹ş¾î³­ °ªÀÔ´Ï´Ù.");
+		super("ì ìˆ˜ë²”ìœ„(0~100)ë¥¼ ë²—ì–´ë‚œ ê°’ì…ë‹ˆë‹¤.");
 	}
 	
 	ScoreOutOfValueException(String msg){

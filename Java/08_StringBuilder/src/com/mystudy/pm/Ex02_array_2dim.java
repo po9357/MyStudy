@@ -1,13 +1,13 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 
 public class Ex02_array_2dim {
 
 	public static void main(String[] args) {
-		//2Â÷¿ø ¹è¿­
+		//2ì°¨ì› ë°°ì—´
 		/*
-		Å¸ÀÔ[][] º¯¼ö¸í = new Å¸ÀÔ[2Â÷¿øÅ©±â][1Â÷¿øÅ©±â];
-		Å¸ÀÔ º¯¼ö¸í[][] = new Å¸ÀÔ[][] {{..}, {..}, {..}, {..}, ..};
-		Å¸ÀÔ[][] = {{..}, {..}, {..}, ..};
+		íƒ€ì…[][] ë³€ìˆ˜ëª… = new íƒ€ì…[2ì°¨ì›í¬ê¸°][1ì°¨ì›í¬ê¸°];
+		íƒ€ì… ë³€ìˆ˜ëª…[][] = new íƒ€ì…[][] {{..}, {..}, {..}, {..}, ..};
+		íƒ€ì…[][] = {{..}, {..}, {..}, ..};
 		 */
 		int[][] nums = {{10, 20},		//10 : [0][0],	20: [0][1]
 						{30, 40},		//[1][0],	[1][1]
@@ -28,7 +28,7 @@ public class Ex02_array_2dim {
 		System.out.println(nums[0][0]);
 		System.out.println(nums[0][1]);
 		
-		System.out.println("-- 2Â÷¿ø¹è¿­ÀÇ Ã¹¹øÂ° ¹è¿­°ª Ãâ·Â ---");
+		System.out.println("-- 2ì°¨ì›ë°°ì—´ì˜ ì²«ë²ˆì§¸ ë°°ì—´ê°’ ì¶œë ¥ ---");
 		System.out.println("nums[0].length: " + nums[0].length);
 		for (int i=0; i<nums[0].length; i++) {
 			System.out.println(nums[0][i]);
@@ -39,7 +39,7 @@ public class Ex02_array_2dim {
 			System.out.println(nums[1][i]);
 		}
 		
-		System.out.println("--- 2Â÷¿ø ¹è¿­ ÀüÃ¼ Ãâ·Â ---");
+		System.out.println("--- 2ì°¨ì› ë°°ì—´ ì „ì²´ ì¶œë ¥ ---");
 		for (int k=0; k<nums.length; k++) {
 			for (int i=0; i<nums[k].length; i++) {
 				System.out.print(nums[k][i] + " ");
@@ -48,7 +48,7 @@ public class Ex02_array_2dim {
 		}
 		
 		//--------------------------------
-		//2Â÷¿øÀÇ ¹è¿­ º¹»ç
+		//2ì°¨ì›ì˜ ë°°ì—´ ë³µì‚¬
 		int[][] copyNum = new int[nums.length][];
 		
 	}

@@ -1,4 +1,4 @@
-package com.mystudy.am02_treemap;
+ï»¿package com.mystudy.am02_treemap;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -11,55 +11,55 @@ import java.util.Map.Entry;
 public class TreeMapExam {
 
 	public static void main(String[] args) {
-		//Map : Å° (Key) - °ª (value) ½ÖÀ¸·Î µ¥ÀÌÅÍ¸¦ °ü¸®
-		// - ¼ø¼­°¡ ¾ø´Ù (´Ü TreeMapÀÇ °æ¿ì key°¡ ¿À¸§Â÷¼ø Á¤·ÄµÇ¾î ÀúÀå)
-		// - Å° (key) : Áßº¹ Çã¿ë ÇÏÁö ¾Ê´Â´Ù.
-		// - °ª (value) : Áßº¹ÀÌ Çã¿ë µÈ´Ù.
+		//Map : í‚¤ (Key) - ê°’ (value) ìŒìœ¼ë¡œ ë°ì´í„°ë¥¼ ê´€ë¦¬
+		// - ìˆœì„œê°€ ì—†ë‹¤ (ë‹¨ TreeMapì˜ ê²½ìš° keyê°€ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ë˜ì–´ ì €ì¥)
+		// - í‚¤ (key) : ì¤‘ë³µ í—ˆìš© í•˜ì§€ ì•ŠëŠ”ë‹¤.
+		// - ê°’ (value) : ì¤‘ë³µì´ í—ˆìš© ëœë‹¤.
 		TreeMap map = new TreeMap();
 		//		key		value
-		map.put("È«±æµ¿", 100);		//100 -> Integer 100
-		map.put("±èÀ¯½Å", new Integer(95));
-		map.put("°­°¨Âù", 88);
-		map.put("°è¹é", 88);
-		map.put("È«±æµ¿", 93);		//µ¿ÀÏÇÑ key°ªÀÌ Á¸ÀçÇÏ¸é ¼öÁ¤Ã³¸® µÊ
+		map.put("í™ê¸¸ë™", 100);		//100 -> Integer 100
+		map.put("ê¹€ìœ ì‹ ", new Integer(95));
+		map.put("ê°•ê°ì°¬", 88);
+		map.put("ê³„ë°±", 88);
+		map.put("í™ê¸¸ë™", 93);		//ë™ì¼í•œ keyê°’ì´ ì¡´ì¬í•˜ë©´ ìˆ˜ì •ì²˜ë¦¬ ë¨
 		map.put("A", 14);
 		map.put("*", 67);
 		System.out.println(map);
 		
 		HashMap map2 = new HashMap();
-		map2.put("ÀÏÁö¸Å", 92);
-		map2.put("Àü¿ìÄ¡", 82);
+		map2.put("ì¼ì§€ë§¤", 92);
+		map2.put("ì „ìš°ì¹˜", 82);
 		System.out.println(map2);
 		
 		System.out.println("map.isEmpty() : "+ map.isEmpty());
-		System.out.println("map.get(\"È«±æµ¿\") : "+ map.get("È«±æµ¿"));
-		System.out.println("map.get(\"À»Áö¹®´ö\") : "+ map.get("À»Áö¹®´ö"));
-		System.out.println("map.containsKey(\"À»Áö¹®´ö\") : "+ map.containsKey("À»Áö¹®´ö"));
+		System.out.println("map.get(\"í™ê¸¸ë™\") : "+ map.get("í™ê¸¸ë™"));
+		System.out.println("map.get(\"ì„ì§€ë¬¸ë•\") : "+ map.get("ì„ì§€ë¬¸ë•"));
+		System.out.println("map.containsKey(\"ì„ì§€ë¬¸ë•\") : "+ map.containsKey("ì„ì§€ë¬¸ë•"));
 		System.out.println("map.containsValue(88) : "+ map.containsValue(88));
 
 		//////////////////////////////////////////////////////////////////////
-		//MapÀÇ Å° (key), °ª (value)À» ÇÔ²² ÃßÃâÇØ¼­ »ç¿ë
-		System.out.println("--- Å° (key) - °ª (value) ÃßÃâ  : entrySet() ---");
-		Set set = map.entrySet();			//Å° (key)¿Í °ª (value) ¸ğµÎ ÃßÃâ
+		//Mapì˜ í‚¤ (key), ê°’ (value)ì„ í•¨ê»˜ ì¶”ì¶œí•´ì„œ ì‚¬ìš©
+		System.out.println("--- í‚¤ (key) - ê°’ (value) ì¶”ì¶œ  : entrySet() ---");
+		Set set = map.entrySet();			//í‚¤ (key)ì™€ ê°’ (value) ëª¨ë‘ ì¶”ì¶œ
 		Iterator ite = set.iterator();
 		while (ite.hasNext()) {
 			Map.Entry e = (Entry) ite.next();		//Map.Entry <- Object
-			System.out.println("ÀÌ¸§ : "+ e.getKey()+ ", Á¡¼ö : "+ e.getValue());
+			System.out.println("ì´ë¦„ : "+ e.getKey()+ ", ì ìˆ˜ : "+ e.getValue());
 		}
 		System.out.println(set);
 
-		System.out.println("--- Å° (key) - °ª (value) ÃßÃâ  : keySet() ---");
-		set = map.keySet();					//Å° (key)¸¸ ÃßÃâ
+		System.out.println("--- í‚¤ (key) - ê°’ (value) ì¶”ì¶œ  : keySet() ---");
+		set = map.keySet();					//í‚¤ (key)ë§Œ ì¶”ì¶œ
 		System.out.println(set);
 		ite = set.iterator();
 		while (ite.hasNext()) {
 			String key = (String) ite.next();
 			Integer value = (Integer) map.get(key);
-			System.out.println("ÀÌ¸§ : "+ key+ ", Á¡¼ö : "+ value);
+			System.out.println("ì´ë¦„ : "+ key+ ", ì ìˆ˜ : "+ value);
 		}
 
 		//------------------------------
-		System.out.println("--- °ª (value)¸¸ ÃßÃâ »ç¿ë : values() ---");
+		System.out.println("--- ê°’ (value)ë§Œ ì¶”ì¶œ ì‚¬ìš© : values() ---");
 		Collection values = map.values();
 		ite = values.iterator();
 		int sum = 0;
@@ -69,7 +69,7 @@ public class TreeMapExam {
 			sum += num;
 		}
 		System.out.println();
-		System.out.println("Á¡¼ö ÇÕ°è : "+ sum);
+		System.out.println("ì ìˆ˜ í•©ê³„ : "+ sum);
 		
 		
 		

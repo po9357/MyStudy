@@ -1,14 +1,14 @@
-
+ï»¿
 public class Ex04_short {
 
 	public static void main(String[] args) {
-		//Á¤¼öÇü short : 2byte(°¹¼ö: 65536, ¹üÀ§: -32768 ~ 32767)
+		//ì •ìˆ˜í˜• short : 2byte(ê°¯ìˆ˜: 65536, ë²”ìœ„: -32768 ~ 32767)
 		short short1 = 20000;
 		short short2 = 30000;
 		System.out.println("short1: " + short1);
 		System.out.println("short2: " + short2);
 
-		//Ç¥Çö¹üÀ§¸¦ ¹ş¾î³ª¸é ¿øÄ¡¾Ê´Â °á°ú°ªÀ» °¡Áü
+		//í‘œí˜„ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ë©´ ì›ì¹˜ì•ŠëŠ” ê²°ê³¼ê°’ì„ ê°€ì§
 		short sum = (short)(short1 + short2);
 		System.out.println("short sum <- short1 + short2: " 
 				+ sum);

@@ -1,4 +1,4 @@
-package com.mystudy.manager;
+ï»¿package com.mystudy.manager;
 
 import java.util.Scanner;
 
@@ -6,12 +6,12 @@ import javax.swing.plaf.synth.SynthSeparatorUI;
 
 public class ScoreProcess {
 
-	/* **** ¼ºÀûÃ³¸®(È­¸éÀÛ¾÷)
-	¼ºÀûÃ³¸®(ver 1.0)
+	/* **** ì„±ì ì²˜ë¦¬(í™”ë©´ì‘ì—…)
+	ì„±ì ì²˜ë¦¬(ver 1.0)
 	-------------------------------
-	 1.Á¶È¸   2.ÀÔ·Â   3.¼öÁ¤   4.»èÁ¦    0.Á¾·á 
+	 1.ì¡°íšŒ   2.ì…ë ¥   3.ìˆ˜ì •   4.ì‚­ì œ    0.ì¢…ë£Œ 
 	-------------------------------
-	>>ÀÛ¾÷¼±ÅÃ: 
+	>>ì‘ì—…ì„ íƒ: 
 	****************************/
 	Scanner sc = new Scanner(System.in);
 	StudentManager sm = new StudentManager();
@@ -20,7 +20,7 @@ public class ScoreProcess {
 	public void end() {
 		try {
 			while(true) {
-				System.out.println("¸ŞÀÎ È­¸éÀ¸·Î µ¹¾Æ°¡½Ã°Ú½À´Ï±î? (1.¿¹ / 0.Á¾·á)");
+				System.out.println("ë©”ì¸ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ì‹œê² ìŠµë‹ˆê¹Œ? (1.ì˜ˆ / 0.ì¢…ë£Œ)");
 				button = Integer.parseInt(sc.nextLine());
 				if (button == 1) {
 					main();
@@ -28,17 +28,17 @@ public class ScoreProcess {
 				} else if (button == 0) {
 					exit();
 				} else {
-					System.out.println("¼ıÀÚ 1 È¤Àº 0À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+					System.out.println("ìˆ«ì 1 í˜¹ì€ 0ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				}
 			}
 		}catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			end();
 		}
 	}
 	
 	public void exit() {
-		System.out.println("½Ã½ºÅÛÀ» Á¾·áÇÕ´Ï´Ù.");
+		System.out.println("ì‹œìŠ¤í…œì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 		System.exit(0);
 	}
 	
@@ -46,9 +46,9 @@ public class ScoreProcess {
 		try {
 			while(true) {
 				System.out.println("-------------------------------------");
-				System.out.println("1.Á¶È¸\t2.ÀÔ·Â\t3.¼öÁ¤\t4.»èÁ¦\t0.Á¾·á");
+				System.out.println("1.ì¡°íšŒ\t2.ì…ë ¥\t3.ìˆ˜ì •\t4.ì‚­ì œ\t0.ì¢…ë£Œ");
 				System.out.println("-------------------------------------");
-				System.out.println("¿øÇÏ½Ã´Â ÀÛ¾÷À» ¼±ÅÃÇÏ¿© ÁÖ½Ê½Ã¿À (¼ıÀÚ 0 ~ 4)");
+				System.out.println("ì›í•˜ì‹œëŠ” ì‘ì—…ì„ ì„ íƒí•˜ì—¬ ì£¼ì‹­ì‹œì˜¤ (ìˆ«ì 0 ~ 4)");
 				button = Integer.parseInt(sc.nextLine());
 				if (button == 1) {
 					checkScore();
@@ -68,11 +68,11 @@ public class ScoreProcess {
 				} else if (button == 0) {
 					exit();
 				} else {
-					System.out.println("0 ~ 4 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+					System.out.println("0 ~ 4 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				}
 			}
 		}catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			main();
 		}
 	}
@@ -81,28 +81,28 @@ public class ScoreProcess {
 		try {
 			while(true) {
 				System.out.println("-----------------------------------------------------");
-				System.out.println("1.ÀÌ¸§À¸·Î Á¶È¸\t2.id·Î Á¶È¸\t3.ÀüÃ¼ Á¶È¸ \t0.Á¾·á");
+				System.out.println("1.ì´ë¦„ìœ¼ë¡œ ì¡°íšŒ\t2.idë¡œ ì¡°íšŒ\t3.ì „ì²´ ì¡°íšŒ \t0.ì¢…ë£Œ");
 				System.out.println("-----------------------------------------------------");
-				System.out.println("¿øÇÏ½Ã´Â ÀÛ¾÷À» ¼±ÅÃÇÏ¿© ÁÖ½Ê½Ã¿À (¼ıÀÚ 0 ~ 3)");
+				System.out.println("ì›í•˜ì‹œëŠ” ì‘ì—…ì„ ì„ íƒí•˜ì—¬ ì£¼ì‹­ì‹œì˜¤ (ìˆ«ì 0 ~ 3)");
 				button = Integer.parseInt(sc.nextLine());
 				if (button == 1) {
-					System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+					System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 					String name = sc.nextLine();
 					if (sm.checkName(name)) {
 						sm.displayOneName(name);
 						break;
 					} else {
-						System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+						System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 						break;
 					}
 				} else if (button == 2) {
-					System.out.println("id¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+					System.out.println("idë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 					String id = sc.nextLine();
 					if (sm.checkId(id)) {
 						sm.displayOne(id);
 						break;
 					} else {
-						System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+						System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 						break;
 					}
 				} else if (button == 3) {
@@ -111,44 +111,44 @@ public class ScoreProcess {
 				} else if (button == 0) {
 					exit();
 				} else {
-					System.out.println("0 ~ 3 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+					System.out.println("0 ~ 3 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				}
 			}
 		}catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			checkScore();
 		}
 	}
 	
 	public void inputDataMain() {
 		StudentVO vo = new StudentVO();
-		System.out.println("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÕ´Ï´Ù.");
+		System.out.println("ë°ì´í„°ë¥¼ ì…ë ¥í•©ë‹ˆë‹¤.");
 		String id;
 		try {
 		while(true) {
-			System.out.println("id¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("idë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			id = sc.nextLine();
 			if (sm.checkId(id)) {
-				System.out.println("Áßº¹µÈ id°¡ Á¸ÀçÇÕ´Ï´Ù. \n»õ·Î¿î id¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ì¤‘ë³µëœ idê°€ ì¡´ì¬í•©ë‹ˆë‹¤. \nìƒˆë¡œìš´ idë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			} else {
-				System.out.println("Á¤»óÀûÀ¸·Î idÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("ì •ìƒì ìœ¼ë¡œ idì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				break;
 			}
 		}
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿©ÁÖ½Ê½Ã¿À.");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ì£¼ì‹­ì‹œì˜¤.");
 		String name = sc.nextLine();
-		System.out.println("±¹¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+		System.out.println("êµ­ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 		int kor = Integer.parseInt(sc.nextLine());
-		System.out.println("¿µ¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+		System.out.println("ì˜ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 		int eng = Integer.parseInt(sc.nextLine());
-		System.out.println("¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+		System.out.println("ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 		int math = Integer.parseInt(sc.nextLine());
 		sm.inputData(id, name, kor, eng, math);
-		System.out.println("ÀÔ·ÂÇÏ½Å µ¥ÀÌÅÍ ÀÔ´Ï´Ù.");
+		System.out.println("ì…ë ¥í•˜ì‹  ë°ì´í„° ì…ë‹ˆë‹¤.");
 		sm.lastData();
 		}catch (NumberFormatException e) {
-			System.out.println("Á¡¼ö ÀÔ·ÂÀº ¼ıÀÚ¸¸ °¡´ÉÇÕ´Ï´Ù.");
-			System.out.println("µ¥ÀÌÅÍ¸¦ ´Ù½Ã ÀÔ·ÂÇÕ´Ï´Ù.");
+			System.out.println("ì ìˆ˜ ì…ë ¥ì€ ìˆ«ìë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
+			System.out.println("ë°ì´í„°ë¥¼ ë‹¤ì‹œ ì…ë ¥í•©ë‹ˆë‹¤.");
 			inputDataMain();
 		}
 	}
@@ -157,38 +157,38 @@ public class ScoreProcess {
 		try {
 		while(true) {
 			System.out.println("-------------------------------------");
-			System.out.println("1.ÀÌ¸§À¸·Î ÀÔ·Â\t2.id·Î ÀÔ·Â\t0.Á¾·á");
+			System.out.println("1.ì´ë¦„ìœ¼ë¡œ ì…ë ¥\t2.idë¡œ ì…ë ¥\t0.ì¢…ë£Œ");
 			System.out.println("-------------------------------------");
-			System.out.println("¿øÇÏ½Ã´Â ÀÛ¾÷À» ¼±ÅÃÇÏ¿© ÁÖ½Ê½Ã¿À (¼ıÀÚ 0 ~ 2)");
+			System.out.println("ì›í•˜ì‹œëŠ” ì‘ì—…ì„ ì„ íƒí•˜ì—¬ ì£¼ì‹­ì‹œì˜¤ (ìˆ«ì 0 ~ 2)");
 			button = Integer.parseInt(sc.nextLine());
 			if (button == 1) {
-				System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				String name = sc.nextLine();
 				if (sm.checkName(name)) {
 					updateDataMain(sm.checkNameInt(name));
 					break;
 				} else {
-					System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+					System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 					break;
 				}
 			} else if (button == 2) {
-				System.out.println("id¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("idë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				String id = sc.nextLine();
 				if (sm.checkId(id)) {
 					updateDataMain(sm.checkIdInt(id));
 					break;
 				} else {
-					System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+					System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 					break;
 				}
 			} else if (button == 0) {
 				exit();
 			} else {
-				System.out.println("0 ~ 2 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("0 ~ 2 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			}
 		}
 		}catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			updateData();
 		}
 	}
@@ -197,49 +197,49 @@ public class ScoreProcess {
 		try {
 		while(true) {
 			System.out.println("-----------------------------");
-			System.out.println("1.ÀÌ¸§\t2.±¹¾î\t3.¿µ¾î\n4.¼öÇĞ\t5.ÀüÃ¼\t0.Á¾·á");
+			System.out.println("1.ì´ë¦„\t2.êµ­ì–´\t3.ì˜ì–´\n4.ìˆ˜í•™\t5.ì „ì²´\t0.ì¢…ë£Œ");
 			System.out.println("-----------------------------");
-			System.out.println("¿øÇÏ½Ã´Â ÀÛ¾÷À» ¼±ÅÃÇÏ¿© ÁÖ½Ê½Ã¿À (¼ıÀÚ 0 ~ 5)");
+			System.out.println("ì›í•˜ì‹œëŠ” ì‘ì—…ì„ ì„ íƒí•˜ì—¬ ì£¼ì‹­ì‹œì˜¤ (ìˆ«ì 0 ~ 5)");
 			button = Integer.parseInt(sc.nextLine());
 			if (button == 1) {
-				System.out.println("¹Ù²Ù·Á´Â ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				String name = sc.nextLine();
 				sm.updateName(name, index);
 				break;
 			} else if (button == 2) {
-				System.out.println("¹Ù²Ù·Á´Â ±¹¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” êµ­ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				int kor = Integer.parseInt(sc.nextLine());
 				sm.updateKor(kor, index);
 				break;
 			} else if (button == 3) {
-				System.out.println("¹Ù²Ù·Á´Â ¿µ¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” ì˜ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				int eng = Integer.parseInt(sc.nextLine());
 				sm.updateEng(eng, index);
 				break;
 			} else if (button == 4) {
-				System.out.println("¹Ù²Ù·Á´Â ¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				int math = Integer.parseInt(sc.nextLine());
 				sm.updateMath(math, index);
 				break;
 			} else if (button == 5) {
-				System.out.println("¹Ù²Ù·Á´Â ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				String name = sc.nextLine();
-				System.out.println("¹Ù²Ù·Á´Â ±¹¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” êµ­ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				int kor = Integer.parseInt(sc.nextLine());
-				System.out.println("¹Ù²Ù·Á´Â ¿µ¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” ì˜ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				int eng = Integer.parseInt(sc.nextLine());
-				System.out.println("¹Ù²Ù·Á´Â ¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("ë°”ê¾¸ë ¤ëŠ” ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				int math = Integer.parseInt(sc.nextLine());
 				sm.updateAll(name, kor, eng, math, index);
 				break;
 			} else if (button == 0) {
 				exit();
 			} else {
-				System.out.println("0 ~ 5 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("0 ~ 5 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			}
 		}
 		}catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			updateDataMain(index);
 		}
 	}
@@ -249,34 +249,34 @@ public class ScoreProcess {
 		Outter :
 		while(true) {
 			System.out.println("-----------------------------------------------------");
-			System.out.println("1.ÀÌ¸§À¸·Î Á¶È¸ »èÁ¦\t2.id·Î Á¶È¸ »èÁ¦\t3.ÀüÃ¼ »èÁ¦ \t0.Á¾·á");
+			System.out.println("1.ì´ë¦„ìœ¼ë¡œ ì¡°íšŒ ì‚­ì œ\t2.idë¡œ ì¡°íšŒ ì‚­ì œ\t3.ì „ì²´ ì‚­ì œ \t0.ì¢…ë£Œ");
 			System.out.println("-----------------------------------------------------");
-			System.out.println("¿øÇÏ½Ã´Â ÀÛ¾÷À» ¼±ÅÃÇÏ¿© ÁÖ½Ê½Ã¿À (¼ıÀÚ 0 ~ 3)");
+			System.out.println("ì›í•˜ì‹œëŠ” ì‘ì—…ì„ ì„ íƒí•˜ì—¬ ì£¼ì‹­ì‹œì˜¤ (ìˆ«ì 0 ~ 3)");
 			button = Integer.parseInt(sc.nextLine());
 			if (button == 1) {
-				System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+				System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 				String name = sc.nextLine();
 				if (sm.checkName(name)) {
-					System.out.println(name+ "ÀÇ µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÕ´Ï´Ù.");
+					System.out.println(name+ "ì˜ ë°ì´í„°ë¥¼ ì‚­ì œí•©ë‹ˆë‹¤.");
 					sm.removeData(sm.checkNameInt(name));
 					break;
 				} else {
-					System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+					System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 					break;
 				}
 			} else if (button == 2) {
-				System.out.println("id¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+				System.out.println("idë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 				String id = sc.nextLine();
 				if (sm.checkId(id)) {
 					sm.removeData(sm.checkIdInt(id));
 					break;
 				} else {
-					System.out.println("ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+					System.out.println("ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 					break;
 				}
 			} else if (button == 3) {
 				while (true) {
-					System.out.println("ÀüÃ¼ µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î? (¿¹ : 1 / ¾Æ´Ï¿À : ¾Æ¹« ¼ıÀÚ");
+					System.out.println("ì „ì²´ ë°ì´í„°ë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? (ì˜ˆ : 1 / ì•„ë‹ˆì˜¤ : ì•„ë¬´ ìˆ«ì");
 					button = Integer.parseInt(sc.nextLine());
 					if (button == 1) {
 						sm.removeDataAll();
@@ -286,11 +286,11 @@ public class ScoreProcess {
 			} else if (button == 0) {
 				exit();
 			} else {
-				System.out.println("0 ~ 3 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+				System.out.println("0 ~ 3 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			}
 		}
 		}catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			removeData();
 		}
 		

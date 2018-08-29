@@ -1,4 +1,4 @@
-package com.mystudy.pm03_scanner;
+ï»¿package com.mystudy.pm03_scanner;
 
 import java.util.Scanner;
 
@@ -6,20 +6,20 @@ public class ScannerExam {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¹®ÀÚ¿­1: ");
+		System.out.print("ë¬¸ìì—´1: ");
 		String str1 = sc.nextLine();
 		System.out.println(">>>" + str1);
 		
-		System.out.print("¹®ÀÚ¿­2: ");
+		System.out.print("ë¬¸ìì—´2: ");
 		String str2 = sc.nextLine();
 		System.out.println(">>>" + str2);
 		
 		System.out.println("----------------");
-		System.out.println("Á¤¼ö°ª 2°³¸¦ ÀÔ·ÂÇÏ¸é ´õÇÑ °ª Ãâ·Â");
-		System.out.print("¼ıÀÚ1: ");
+		System.out.println("ì •ìˆ˜ê°’ 2ê°œë¥¼ ì…ë ¥í•˜ë©´ ë”í•œ ê°’ ì¶œë ¥");
+		System.out.print("ìˆ«ì1: ");
 		int num1 = sc.nextInt();
 		
-		System.out.print("¼ıÀÚ2: ");
+		System.out.print("ìˆ«ì2: ");
 		int num2 = sc.nextInt();
 		sc.nextLine();
 		System.out.println(num1 +" + "+ num2 +" = " + (num1 + num2));

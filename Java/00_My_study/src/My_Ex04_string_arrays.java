@@ -1,4 +1,4 @@
-	
+ï»¿	
 public class My_Ex04_string_arrays {
 
 	public static void main(String[] args) {
@@ -12,9 +12,9 @@ public class My_Ex04_string_arrays {
 		
 		for (int i=0; i<hex.length; i++) {
 			if (hex[i] >='0' && hex[i] <='9') {
-				result += binary[hex[i]-'0'];		//'8'-'0'ÀÇ °á°ú´Â 8ÀÌ´Ù.
-			} else {		//A ~ FÀÌ¸é
-				result += binary[hex[i]-'A'+10];		//'C'-'A'ÀÇ °á°ú´Â 2ÀÌ´Ù.
+				result += binary[hex[i]-'0'];		//'8'-'0'ì˜ ê²°ê³¼ëŠ” 8ì´ë‹¤.
+			} else {		//A ~ Fì´ë©´
+				result += binary[hex[i]-'A'+10];		//'C'-'A'ì˜ ê²°ê³¼ëŠ” 2ì´ë‹¤.
 			}
 		}
 										//String(char[] value)

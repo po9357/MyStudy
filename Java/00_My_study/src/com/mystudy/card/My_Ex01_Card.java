@@ -1,4 +1,4 @@
-package com.mystudy.card;
+ï»¿package com.mystudy.card;
 
 import java.util.Scanner;
 
@@ -8,249 +8,249 @@ public class My_Ex01_Card {
 		Card temp;
 		int player = 0;
 		int com = 0;
-		System.out.println("Ä«µå¸¦ ¼¯°í ÀÖ½À´Ï´Ù.");
+		System.out.println("ì¹´ë“œë¥¼ ì„ê³  ìˆìŠµë‹ˆë‹¤.");
 		Deck d = new Deck();
 		Card c = new Card();
 		d.shuffle();
 		
-		System.out.println("ÇÃ·¹ÀÌ¾î1¿¡°Ô Ä«µå¸¦ 5Àå ³ª´©¾îÁİ´Ï´Ù.");
+		System.out.println("í”Œë ˆì´ì–´1ì—ê²Œ ì¹´ë“œë¥¼ 5ì¥ ë‚˜ëˆ„ì–´ì¤ë‹ˆë‹¤.");
 		d.pickCardMe();
 		
-		System.out.println("com¿¡°Ô Ä«µå¸¦ 5Àå ³ª´©¾îÁİ´Ï´Ù.");
+		System.out.println("comì—ê²Œ ì¹´ë“œë¥¼ 5ì¥ ë‚˜ëˆ„ì–´ì¤ë‹ˆë‹¤.");
 		
-		System.out.println(">>> comÀÇ °ø°³µÈ Ä«µå 3Àå");
+		System.out.println(">>> comì˜ ê³µê°œëœ ì¹´ë“œ 3ì¥");
 		d.pickCardCom();
 		
 		boolean changeCard = true;
 		while (changeCard) {
-			System.out.println("¹Ù²Ù°í ½ÍÀº Ä«µå¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À. (¼ø¼­´ë·Î 1 ~ 5, ¹Ù²Ù°í ½ÍÀº Ä«µå°¡ ¾ø´Ù¸é 0)");
+			System.out.println("ë°”ê¾¸ê³  ì‹¶ì€ ì¹´ë“œë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤. (ìˆœì„œëŒ€ë¡œ 1 ~ 5, ë°”ê¾¸ê³  ì‹¶ì€ ì¹´ë“œê°€ ì—†ë‹¤ë©´ 0)");
 			int changeNum = sc.nextInt();
-				if(changeNum>=1 && changeNum<=5) {		//´ÙÀ½ µå·Î¿ì ÇÒ Ä«µå¿Í ¼±ÅÃÇÑ Ä«µå¸¦ ¹Ù²Ş
+				if(changeNum>=1 && changeNum<=5) {		//ë‹¤ìŒ ë“œë¡œìš° í•  ì¹´ë“œì™€ ì„ íƒí•œ ì¹´ë“œë¥¼ ë°”ê¿ˆ
 					temp = d.cardArr[changeNum-1];
 					d.cardArr[changeNum-1] = d.cardArr[10];
 					d.cardArr[10] = temp;
-					System.out.println(d.cardArr[10]+ " Ä«µå°¡ "+ d.cardArr[changeNum-1]+ "·Î ¹Ù²î¾ú½À´Ï´Ù");
+					System.out.println(d.cardArr[10]+ " ì¹´ë“œê°€ "+ d.cardArr[changeNum-1]+ "ë¡œ ë°”ë€Œì—ˆìŠµë‹ˆë‹¤");
 					changeCard = false;
 				} else if (changeNum == 0) {
 					changeCard = false;
 				} else {
-					System.out.println("¿Ã¹Ù¸¥ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+					System.out.println("ì˜¬ë°”ë¥¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 				}
 		}
 		d.pickCardMe();
 		d.resultPlayer();
 		
-		int ran = (int)(Math.random()*2);	//ÄÄÇ»ÅÍ°¡ 0 È¤Àº 1ÀÇ ¼ıÀÚ¸¦ »ı¼º
-		if (ran == 1) {						//1ÀÏ °æ¿ì ·£´ıÇÑ Ä«µå¸¦ ¹Ù²Ş
+		int ran = (int)(Math.random()*2);	//ì»´í“¨í„°ê°€ 0 í˜¹ì€ 1ì˜ ìˆ«ìë¥¼ ìƒì„±
+		if (ran == 1) {						//1ì¼ ê²½ìš° ëœë¤í•œ ì¹´ë“œë¥¼ ë°”ê¿ˆ
 			int ranNum = (int)(Math.random()*5+5);
 			temp = d.cardArr[ranNum];
 			d.cardArr[ranNum] = d.cardArr[11];
 			d.cardArr[11] = temp;
-		}//if¹® Á¾·á
+		}//ifë¬¸ ì¢…ë£Œ
 		System.out.println("-------------");
-		System.out.print("playerÀÇ Á¡¼ö´Â ");
+		System.out.print("playerì˜ ì ìˆ˜ëŠ” ");
 		int scoreMe = d.resultPlayer();
 		System.out.println(d.resultPlayer());
 		d.pickCardComAll();
-		System.out.print("comÀÇ Á¡¼ö´Â ");
+		System.out.print("comì˜ ì ìˆ˜ëŠ” ");
 		int scoreCom = d.resultCom();
 		System.out.println(d.resultCom());
 		for(int i=3; i<=13; i++) {
 			if (scoreMe == 13 && scoreCom == 13) {
 				if (d.cardArr[4].number > d.cardArr[9].number) {
-					System.out.println("ÀÌ°å½À´Ï´Ù!");
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 				} else if(d.cardArr[4].number == d.cardArr[9].number) {
 					if (d.cardArr[4].kind > d.cardArr[9].kind) {
-						System.out.println("ÀÌ°å½À´Ï´Ù!");
-					} else System.out.println("Á³½À´Ï´Ù!");
-				} else System.out.println("Á³½À´Ï´Ù!");
+						System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+					} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+				} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 				break;
 			}
 			if (scoreMe==scoreCom && scoreMe==i) {
 				if (i != 4 && i != 5 && i != 10 && i != 11 && i != 12) {
 					if (d.cardArr[4].number > d.cardArr[9].number) {
-						System.out.println("ÀÌ°å½À´Ï´Ù!");
+						System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 					} else if(d.cardArr[4].number == d.cardArr[9].number) {
 						if (d.cardArr[4].kind > d.cardArr[9].kind) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
-						} else System.out.println("Á³½À´Ï´Ù!");
-					} else System.out.println("Á³½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+						} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+					} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 				}
-				if (i == 4) {	//Æ÷Ä«µå
+				if (i == 4) {	//í¬ì¹´ë“œ
 					if (d.cardArr[2].number > d.cardArr[7].number) {
-						System.out.println("ÀÌ°å½À´Ï´Ù!");
-					} else System.out.println("Á³½À´Ï´Ù!");
+						System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+					} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 				}
-				if (i == 5 || i == 10) {	//Ç®ÇÏ¿ì½º
+				if (i == 5 || i == 10) {	//í’€í•˜ìš°ìŠ¤
 					if (d.cardArr[2].number > d.cardArr[7].number) {
-						System.out.println("ÀÌ°å½À´Ï´Ù!");
+						System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 					} else if(d.cardArr[2].number == d.cardArr[7].number) {
 						if (d.cardArr[2].kind > d.cardArr[7].kind) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
-						} else System.out.println("Á³½À´Ï´Ù!");
-					} else System.out.println("Á³½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+						} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+					} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 				}
-				if (i == 11) {	//ÅõÆä¾î
+				if (i == 11) {	//íˆ¬í˜ì–´
 					if (d.cardArr[3].number > d.cardArr[8].number) {
-						System.out.println("ÀÌ°å½À´Ï´Ù!");
+						System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 					} else if (d.cardArr[3].number == d.cardArr[8].number) {
 						if (d.cardArr[3].kind > d.cardArr[8].kind) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
-						} else System.out.println("Á³½À´Ï´Ù!");
-					} else System.out.println("Á³½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+						} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+					} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 				}
-				if (i == 12) {	//¿øÆä¾î
+				if (i == 12) {	//ì›í˜ì–´
 					if (d.cardArr[0].number == d.cardArr[1].number && d.cardArr[5].number == d.cardArr[6].number) {
 						if (d.cardArr[1].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[6].number) {
 							if (d.cardArr[1].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[1].number == d.cardArr[2].number && d.cardArr[5].number == d.cardArr[6].number) {
 						if (d.cardArr[1].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[6].number) {
 							if (d.cardArr[1].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[2].number == d.cardArr[3].number && d.cardArr[5].number == d.cardArr[6].number) {
 						if (d.cardArr[3].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[6].number) {
 							if (d.cardArr[3].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[3].number == d.cardArr[4].number && d.cardArr[5].number == d.cardArr[6].number) {
 						if (d.cardArr[3].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[6].number) {
 							if (d.cardArr[3].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[0].number == d.cardArr[1].number && d.cardArr[6].number == d.cardArr[7].number) {
 						if (d.cardArr[1].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[6].number) {
 							if (d.cardArr[1].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[1].number == d.cardArr[2].number && d.cardArr[6].number == d.cardArr[7].number) {
 						if (d.cardArr[1].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[6].number) {
 							if (d.cardArr[1].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[2].number == d.cardArr[3].number && d.cardArr[6].number == d.cardArr[7].number) {
 						if (d.cardArr[3].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[6].number) {
 							if (d.cardArr[3].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[3].number == d.cardArr[4].number && d.cardArr[6].number == d.cardArr[7].number) {
 						if (d.cardArr[3].number > d.cardArr[6].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[6].number) {
 							if (d.cardArr[3].kind > d.cardArr[6].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[0].number == d.cardArr[1].number && d.cardArr[7].number == d.cardArr[8].number) {
 						if (d.cardArr[1].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[8].number) {
 							if (d.cardArr[1].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[1].number == d.cardArr[2].number && d.cardArr[7].number == d.cardArr[8].number) {
 						if (d.cardArr[1].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[8].number) {
 							if (d.cardArr[1].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[2].number == d.cardArr[3].number && d.cardArr[7].number == d.cardArr[8].number) {
 						if (d.cardArr[3].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[8].number) {
 							if (d.cardArr[3].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[3].number == d.cardArr[4].number && d.cardArr[7].number == d.cardArr[8].number) {
 						if (d.cardArr[3].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[8].number) {
 							if (d.cardArr[3].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[0].number == d.cardArr[1].number && d.cardArr[8].number == d.cardArr[9].number) {
 						if (d.cardArr[1].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[8].number) {
 							if (d.cardArr[1].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[1].number == d.cardArr[2].number && d.cardArr[8].number == d.cardArr[9].number) {
 						if (d.cardArr[1].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[1].number == d.cardArr[8].number) {
 							if (d.cardArr[1].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[2].number == d.cardArr[3].number && d.cardArr[8].number == d.cardArr[9].number) {
 						if (d.cardArr[3].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[8].number) {
 							if (d.cardArr[3].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 					if (d.cardArr[3].number == d.cardArr[4].number && d.cardArr[8].number == d.cardArr[9].number) {
 						if (d.cardArr[3].number > d.cardArr[8].number) {
-							System.out.println("ÀÌ°å½À´Ï´Ù!");
+							System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 						} else if (d.cardArr[3].number == d.cardArr[8].number) {
 							if (d.cardArr[3].kind > d.cardArr[8].kind) {
-								System.out.println("ÀÌ°å½À´Ï´Ù!");
-							} else System.out.println("Á³½À´Ï´Ù!");
-						}else System.out.println("Á³½À´Ï´Ù!");
+								System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
+							} else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
+						}else System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 					}
 				}
 			}
 			if (scoreMe<scoreCom) {
-				System.out.println("ÀÌ°å½À´Ï´Ù!");
+				System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤!");
 				break;
 			} else {
-				System.out.println("Á³½À´Ï´Ù!");
+				System.out.println("ì¡ŒìŠµë‹ˆë‹¤!");
 				break;
 			}
 		}
@@ -283,7 +283,7 @@ class Card {
 		String[] numbers = {"", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 		
 		return "kind : "+ kinds[this.kind]+ ", number : "+ numbers[this.number];
-	}//CardÅ¬·¡½º ³¡
+	}//Cardí´ë˜ìŠ¤ ë
 	
 	
 }
@@ -332,7 +332,7 @@ class Deck {
 		}
 		for (int i=0; i<5; i++)
 		System.out.println(cardArr[i]);
-	}	//DeckÅ¬·¡½º ³¡
+	}	//Deckí´ë˜ìŠ¤ ë
 	void pickCardCom() {
 		for (int i = 7; i<10; i++)
 			System.out.println(cardArr[i]);
@@ -358,12 +358,12 @@ class Deck {
 				cardArr[0].number==1 && cardArr[1].number==10 && cardArr[2].number==11	&& cardArr[3].number==12 &&
 				cardArr[4].number==13) {
 			player = 1;
-			System.out.println("·Î¾â ½ºÆ®·¹ÀÌÆ® ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸ í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[0].kind==cardArr[1].kind && cardArr[1].kind==cardArr[2].kind && 
 				cardArr[2].kind==cardArr[3].kind && cardArr[3].kind==cardArr[4].kind && cardArr[0].kind==4 &&
 				cardArr[0].number==1 && cardArr[1].number==2 && cardArr[2].number==3 && cardArr[3].number==4 && cardArr[4].number==5) {
 			player = 2;
-			System.out.println("¹é ½ºÆ®·¹ÀÌÆ® ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("ë°± ìŠ¤íŠ¸ë ˆì´íŠ¸ í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if (((cardArr[0].number+1==cardArr[1].number && cardArr[1].number+1==cardArr[2].number && cardArr[2].number+1
 				==cardArr[3].number && cardArr[3].number+1==cardArr[4].number) || 
 				(cardArr[0].number==1 && cardArr[1].number+1==2 && cardArr[2].number==3 && cardArr[3].number==4 && cardArr[4].number==13) ||
@@ -372,25 +372,25 @@ class Deck {
 				(cardArr[0].number==1 && cardArr[1].number+1==10 && cardArr[2].number==11 && cardArr[3].number==12 && cardArr[4].number==13)) &&
 				cardArr[0].kind==cardArr[1].kind && cardArr[0].kind==cardArr[2].kind && cardArr[0].kind==cardArr[3].kind && cardArr[0].kind==cardArr[4].kind) {
 			player = 3;
-			System.out.println("½ºÆ®·¹ÀÌÆ® ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("ìŠ¤íŠ¸ë ˆì´íŠ¸ í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[0].number==cardArr[1].number && cardArr[1].number==cardArr[2].number && cardArr[2].number==cardArr[3].number) || 
 				(cardArr[1].number==cardArr[2].number && cardArr[2].number==cardArr[3].number && cardArr[3].number==cardArr[4].number)) {
 			player = 4;
-			System.out.println("Æ÷Ä«µå ÀÔ´Ï´Ù.");
+			System.out.println("í¬ì¹´ë“œ ì…ë‹ˆë‹¤.");
 		} else if (((cardArr[0].number==cardArr[1].number && cardArr[1].number==cardArr[2].number) && (cardArr[3].number==cardArr[4].number)) ||
 				((cardArr[0].number==cardArr[1].number) && (cardArr[2].number==cardArr[3].number && cardArr[3].number==cardArr[4].number))) {
 			player = 5;
-			System.out.println("Ç®ÇÏ¿ì½º ÀÔ´Ï´Ù.");
+			System.out.println("í’€í•˜ìš°ìŠ¤ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[0].kind==cardArr[1].kind && cardArr[1].kind==cardArr[2].kind && cardArr[2].kind==cardArr[3].kind && cardArr[3].kind==cardArr[4].kind) {
 			player = 6;
-			System.out.println("ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[0].number==1 && cardArr[1].number==10 && cardArr[2].number==11	&& cardArr[3].number==12 &&
 				cardArr[4].number==13) {
 			player = 7;
-			System.out.println("¸¶¿îÆ¾ ÀÔ´Ï´Ù.");
+			System.out.println("ë§ˆìš´í‹´ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[0].number==1 && cardArr[1].number==2 && cardArr[2].number==3 && cardArr[3].number==4 && cardArr[4].number==5) {
 			player = 8;
-			System.out.println("¹é½ºÆ®·¹ÀÌÆ® ÀÔ´Ï´Ù.");
+			System.out.println("ë°±ìŠ¤íŠ¸ë ˆì´íŠ¸ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[0].number+1==cardArr[1].number && cardArr[1].number+1==cardArr[2].number && cardArr[2].number+1
 				==cardArr[3].number && cardArr[3].number+1==cardArr[4].number) || 
 				(cardArr[0].number==1 && cardArr[1].number+1==2 && cardArr[2].number==3 && cardArr[3].number==4 && cardArr[4].number==13) ||
@@ -398,20 +398,20 @@ class Deck {
 				(cardArr[0].number==1 && cardArr[1].number+1==2 && cardArr[2].number==11 && cardArr[3].number==12 && cardArr[4].number==13) ||
 				(cardArr[0].number==1 && cardArr[1].number+1==10 && cardArr[2].number==11 && cardArr[3].number==12 && cardArr[4].number==13)) {
 			player = 9;
-			System.out.println(cardArr[4].number+ "½ºÆ®·¹ÀÌÆ® ÀÔ´Ï´Ù.");
+			System.out.println(cardArr[4].number+ "ìŠ¤íŠ¸ë ˆì´íŠ¸ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[0].number==cardArr[1].number && cardArr[1].number==cardArr[2].number) || (cardArr[2].number==cardArr[3].number && cardArr[3].number==cardArr[4].number) || (cardArr[1].number==cardArr[2].number && cardArr[2].number==cardArr[3].number)) {
 			player = 10;
-			System.out.println("Æ®¸®ÇÃ ÀÔ´Ï´Ù.");
+			System.out.println("íŠ¸ë¦¬í”Œ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[0].number==cardArr[1].number && cardArr[2].number==cardArr[3].number) || (cardArr[0].number==cardArr[1].number && cardArr[3].number==cardArr[4].number) || 
 			(cardArr[1].number==cardArr[2].number && cardArr[3].number==cardArr[4].number)){
 			player = 11;
-			System.out.println("ÅõÆä¾î ÀÔ´Ï´Ù.");
+			System.out.println("íˆ¬í˜ì–´ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[0].number==cardArr[1].number) || (cardArr[1].number==cardArr[2].number) || (cardArr[2].number==cardArr[3].number) || (cardArr[3].number==cardArr[4].number)) {
 			player = 12;
-			System.out.println("¿øÆä¾î ÀÔ´Ï´Ù.");
+			System.out.println("ì›í˜ì–´ ì…ë‹ˆë‹¤.");
 		} else {
 			player = 13;
-			System.out.println(cardArr[4].number+ "ÇÏÀÌ ÀÔ´Ï´Ù.");
+			System.out.println(cardArr[4].number+ "í•˜ì´ ì…ë‹ˆë‹¤.");
 		}
 		return player;
 	}
@@ -422,12 +422,12 @@ class Deck {
 				cardArr[5].number==1 && cardArr[6].number==10 && cardArr[7].number==11	&& cardArr[8].number==12 &&
 				cardArr[9].number==13) {
 			com = 1;
-			System.out.println("·Î¾â ½ºÆ®·¹ÀÌÆ® ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸ í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[5].kind==cardArr[6].kind && cardArr[6].kind==cardArr[7].kind && 
 				cardArr[7].kind==cardArr[8].kind && cardArr[8].kind==cardArr[9].kind && cardArr[5].kind==4 &&
 				cardArr[5].number==6 && cardArr[6].number==2 && cardArr[7].number==3 && cardArr[8].number==4 && cardArr[9].number==5) {
 			com = 2;
-			System.out.println("¹é ½ºÆ®·¹ÀÌÆ® ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("ë°± ìŠ¤íŠ¸ë ˆì´íŠ¸ í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if (((cardArr[5].number+1==cardArr[6].number && cardArr[6].number+1==cardArr[7].number && cardArr[7].number+1
 				==cardArr[8].number && cardArr[8].number+1==cardArr[9].number) || 
 				(cardArr[5].number==1 && cardArr[6].number+1==2 && cardArr[7].number==3 && cardArr[8].number==4 && cardArr[9].number==13) ||
@@ -436,25 +436,25 @@ class Deck {
 				(cardArr[5].number==1 && cardArr[6].number+1==10 && cardArr[7].number==11 && cardArr[8].number==12 && cardArr[9].number==13)) &&
 				cardArr[5].kind==cardArr[6].kind && cardArr[5].kind==cardArr[7].kind && cardArr[5].kind==cardArr[8].kind && cardArr[5].kind==cardArr[9].kind) {
 			com = 3;
-			System.out.println("½ºÆ®·¹ÀÌÆ® ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("ìŠ¤íŠ¸ë ˆì´íŠ¸ í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[5].number==cardArr[6].number && cardArr[6].number==cardArr[7].number && cardArr[7].number==cardArr[8].number) || 
 				(cardArr[6].number==cardArr[7].number && cardArr[7].number==cardArr[8].number && cardArr[8].number==cardArr[9].number)) {
 			com = 4;
-			System.out.println("Æ÷Ä«µå ÀÔ´Ï´Ù.");
+			System.out.println("í¬ì¹´ë“œ ì…ë‹ˆë‹¤.");
 		} else if (((cardArr[5].number==cardArr[6].number && cardArr[6].number==cardArr[7].number) && (cardArr[8].number==cardArr[9].number)) ||
 				((cardArr[5].number==cardArr[6].number) && (cardArr[7].number==cardArr[8].number && cardArr[8].number==cardArr[9].number))) {
 			com = 5;
-			System.out.println("Ç®ÇÏ¿ì½º ÀÔ´Ï´Ù.");
+			System.out.println("í’€í•˜ìš°ìŠ¤ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[5].kind==cardArr[6].kind && cardArr[6].kind==cardArr[7].kind && cardArr[7].kind==cardArr[8].kind && cardArr[8].kind==cardArr[9].kind) {
 			com = 6;
-			System.out.println("ÇÃ·¯½¬ ÀÔ´Ï´Ù.");
+			System.out.println("í”ŒëŸ¬ì‰¬ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[5].number==1 && cardArr[6].number==10 && cardArr[7].number==11	&& cardArr[8].number==12 &&
 				cardArr[9].number==13) {
 			com = 7;
-			System.out.println("¸¶¿îÆ¾ ÀÔ´Ï´Ù.");
+			System.out.println("ë§ˆìš´í‹´ ì…ë‹ˆë‹¤.");
 		} else if (cardArr[5].number==1 && cardArr[6].number==2 && cardArr[7].number==3 && cardArr[8].number==4 && cardArr[9].number==5) {
 			com = 8;
-			System.out.println("¹é½ºÆ®·¹ÀÌÆ® ÀÔ´Ï´Ù.");
+			System.out.println("ë°±ìŠ¤íŠ¸ë ˆì´íŠ¸ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[5].number+1==cardArr[6].number && cardArr[6].number+1==cardArr[7].number && cardArr[7].number+1
 				==cardArr[8].number && cardArr[8].number+1==cardArr[9].number) || 
 				(cardArr[5].number==1 && cardArr[6].number+1==2 && cardArr[7].number==3 && cardArr[8].number==4 && cardArr[9].number==13) ||
@@ -462,20 +462,20 @@ class Deck {
 				(cardArr[5].number==1 && cardArr[6].number+1==2 && cardArr[7].number==11 && cardArr[8].number==12 && cardArr[9].number==13) ||
 				(cardArr[5].number==1 && cardArr[6].number+1==10 && cardArr[7].number==11 && cardArr[8].number==12 && cardArr[9].number==13)) {
 			com = 9;
-			System.out.println(cardArr[9].number+ "½ºÆ®·¹ÀÌÆ® ÀÔ´Ï´Ù.");
+			System.out.println(cardArr[9].number+ "ìŠ¤íŠ¸ë ˆì´íŠ¸ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[5].number==cardArr[6].number && cardArr[6].number==cardArr[7].number) || (cardArr[7].number==cardArr[8].number && cardArr[8].number==cardArr[9].number) || (cardArr[6].number==cardArr[7].number && cardArr[7].number==cardArr[8].number)) {
 			com = 10;
-			System.out.println("Æ®¸®ÇÃ ÀÔ´Ï´Ù.");
+			System.out.println("íŠ¸ë¦¬í”Œ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[5].number==cardArr[6].number && cardArr[7].number==cardArr[8].number) || (cardArr[5].number==cardArr[6].number && cardArr[8].number==cardArr[9].number) || 
 			(cardArr[6].number==cardArr[7].number && cardArr[8].number==cardArr[9].number)){
 			com = 11;
-			System.out.println("ÅõÆä¾î ÀÔ´Ï´Ù.");
+			System.out.println("íˆ¬í˜ì–´ ì…ë‹ˆë‹¤.");
 		} else if ((cardArr[5].number==cardArr[6].number) || (cardArr[6].number==cardArr[7].number) || (cardArr[7].number==cardArr[8].number) || (cardArr[8].number==cardArr[9].number)) {
 			com = 12;
-			System.out.println("¿øÆä¾î ÀÔ´Ï´Ù.");
+			System.out.println("ì›í˜ì–´ ì…ë‹ˆë‹¤.");
 		} else {
 			com = 13;
-			System.out.println(cardArr[9].number+ "ÇÏÀÌ ÀÔ´Ï´Ù.");
+			System.out.println(cardArr[9].number+ "í•˜ì´ ì…ë‹ˆë‹¤.");
 		}
 		return com;
 	}

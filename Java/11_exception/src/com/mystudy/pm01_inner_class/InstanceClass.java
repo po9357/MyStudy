@@ -1,7 +1,7 @@
-package com.mystudy.pm01_inner_class;
+ï»¿package com.mystudy.pm01_inner_class;
 
-//³»ºÎÅ¬·¡½º : Å¬·¡½º ³»¿¡ ¼±¾ğµÈ Å¬·¡½º¸¦ ÅëÄª
-//ÀÎ½ºÅÏ½ºÅ¬·¡½º : ÇÊµåº¯¼ö¿Í °°Àº ·¹º§ À§Ä¡¿¡ ¼±¾ğ
+//ë‚´ë¶€í´ë˜ìŠ¤ : í´ë˜ìŠ¤ ë‚´ì— ì„ ì–¸ëœ í´ë˜ìŠ¤ë¥¼ í†µì¹­
+//ì¸ìŠ¤í„´ìŠ¤í´ë˜ìŠ¤ : í•„ë“œë³€ìˆ˜ì™€ ê°™ì€ ë ˆë²¨ ìœ„ì¹˜ì— ì„ ì–¸
 public class InstanceClass {
 	int a = 100;
 	private int b = 10;
@@ -20,19 +20,19 @@ public class InstanceClass {
 			System.out.println("private int b : "+ b);
 			System.out.println("static int c : "+ c);
 			System.out.println(sum);
-			System.out.println("³»ºÎÅ¬·¡½º ÇÊµå in : "+ in);
+			System.out.println("ë‚´ë¶€í´ë˜ìŠ¤ í•„ë“œ in : "+ in);
 		}
 	}
 	public static void main(String[] args) {
-		//¿ÜºÎÅ¬·¡½º¿¡¼­ ³»ºÎ Å¬·¡½º »ç¿ë
+		//ì™¸ë¶€í´ë˜ìŠ¤ì—ì„œ ë‚´ë¶€ í´ë˜ìŠ¤ ì‚¬ìš©
 		InstanceClass out = new InstanceClass();
 		
-		//¿ÜºÎÅ¬·¡½º¸í.³»ºÎÅ¬·¡½º¸í : ³»ºÎ Å¬·¡½ºÀÇ Å¸ÀÔ
-		//new InstanceClass().new Inner() : ¿ÜºÎÅ¬·¡½º °´Ã¼ »ı¼º ÈÄ ³»ºÎÅ¬·¡½º °´Ã¼ »ı¼º
+		//ì™¸ë¶€í´ë˜ìŠ¤ëª….ë‚´ë¶€í´ë˜ìŠ¤ëª… : ë‚´ë¶€ í´ë˜ìŠ¤ì˜ íƒ€ì…
+		//new InstanceClass().new Inner() : ì™¸ë¶€í´ë˜ìŠ¤ ê°ì²´ ìƒì„± í›„ ë‚´ë¶€í´ë˜ìŠ¤ ê°ì²´ ìƒì„±
 		InstanceClass.Inner inner = new InstanceClass().new Inner();
 		inner.printData();
 		System.out.println("----------------------------");
-		System.out.println("Inner Å¬·¡½ºÀÇ ÇÊµåº¯¼ö in : "+ inner.in);
+		System.out.println("Inner í´ë˜ìŠ¤ì˜ í•„ë“œë³€ìˆ˜ in : "+ inner.in);
 		
 	}
 }

@@ -1,4 +1,4 @@
-import java.util.*;
+ï»¿import java.util.*;
 
 public class My_Ex10_ex_shipboard {
 
@@ -20,7 +20,7 @@ public class My_Ex10_ex_shipboard {
 				{0, 0, 0, 0, 0, 1, 1, 1, 0}		//9
 		};
 		
-		//1Çà¿¡ Çà¹øÈ£¸¦, 1¿­¿¡ ¿­¹øÈ£¸¦ ÀúÀåÇÑ´Ù.
+		//1í–‰ì— í–‰ë²ˆí˜¸ë¥¼, 1ì—´ì— ì—´ë²ˆí˜¸ë¥¼ ì €ì¥í•œë‹¤.
 		for (int i=1; i<SIZE; i++) {
 			board[0][i] = board[i][0] = (char)(i+'0');
 		}
@@ -28,10 +28,10 @@ public class My_Ex10_ex_shipboard {
 		Scanner sc = new Scanner(System.in);
 		
 		while (true) {
-			System.out.print("ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ¼¼¿ä. (Á¾·á´Â 00)>");
-			String input = sc.nextLine();	//È­¸éÀÔ·Â¹ŞÀº ³»¿ëÀ» input¿¡ ÀúÀå
+			System.out.print("ì¢Œí‘œë¥¼ ì…ë ¥í•˜ì„¸ìš”. (ì¢…ë£ŒëŠ” 00)>");
+			String input = sc.nextLine();	//í™”ë©´ì…ë ¥ë°›ì€ ë‚´ìš©ì„ inputì— ì €ì¥
 			
-			if (input.length()==2) {		//µÎ ±ÛÀÚ¸¦ ÀÔ·ÂÇÑ °æ¿ì
+			if (input.length()==2) {		//ë‘ ê¸€ìë¥¼ ì…ë ¥í•œ ê²½ìš°
 				x = input.charAt(0) - '0';
 				y = input.charAt(1) - '0';
 				
@@ -39,16 +39,16 @@ public class My_Ex10_ex_shipboard {
 			}
 			
 			if (input.length()!=2 || x<=0 || x>=SIZE || y<=0 || y>=SIZE) {
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				continue;
 			}
 			
-			//shipBoard[x-1][y-1]ÀÇ °ªÀÌ 1ÀÌ¸é, 'O'À» board[x][y]¿¡ ÀúÀåÇÑ´Ù.
+			//shipBoard[x-1][y-1]ì˜ ê°’ì´ 1ì´ë©´, 'O'ì„ board[x][y]ì— ì €ì¥í•œë‹¤.
 			board[x][y] = shipBoard[x-1][y-1]==1 ? 'O' : 'X';
 			
-			//¹è¿­ boardÀÇ ³»¿ëÀ» È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
+			//ë°°ì—´ boardì˜ ë‚´ìš©ì„ í™”ë©´ì— ì¶œë ¥í•œë‹¤.
 			for (int i=0; i<SIZE; i++) {
-				System.out.println(board[i]);	//board[i]´Â 1Â÷¿ø ¹è¿­
+				System.out.println(board[i]);	//board[i]ëŠ” 1ì°¨ì› ë°°ì—´
 			}
 			System.out.println();
 			

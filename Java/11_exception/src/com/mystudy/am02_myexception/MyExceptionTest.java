@@ -1,9 +1,9 @@
-package com.mystudy.am02_myexception;
+ï»¿package com.mystudy.am02_myexception;
 
 public class MyExceptionTest {
 
 	public static void main(String[] args) {
-		System.out.println("--- main() ½ÃÀÛ ---");
+		System.out.println("--- main() ì‹œì‘ ---");
 		
 		
 		
@@ -13,21 +13,21 @@ public class MyExceptionTest {
 		} catch (MyException e) {
 //			e.printStackTrace();
 			System.out.println(">> main - catch : ");
-			System.out.println(">> ¿À·ù¸Ş½ÃÁö : "+e.getMessage());
+			System.out.println(">> ì˜¤ë¥˜ë©”ì‹œì§€ : "+e.getMessage());
 		}
 		
-		System.out.println("--- main() Á¾·á ---");
+		System.out.println("--- main() ì¢…ë£Œ ---");
 	}
 	static void firstMethod() throws MyException{
-		System.out.println("--- firstMethod() ½ÃÀÛ ---");
+		System.out.println("--- firstMethod() ì‹œì‘ ---");
 		secondMethod();
-		System.out.println("--- firstMethod() Á¾·á ---");
+		System.out.println("--- firstMethod() ì¢…ë£Œ ---");
 	}
 	static void secondMethod() throws MyException{
-		System.out.println("--- secondMethod() ½ÃÀÛ ---");
-		//¿¹¿Ü ¹ß»ı ½ÃÅ°±â
-		throw new MyException("secondMethod()¿¡¼­ ¿¹¿Ü¹ß»ı");
-//		System.out.println("--- secondMethod() Á¾·á ---");
+		System.out.println("--- secondMethod() ì‹œì‘ ---");
+		//ì˜ˆì™¸ ë°œìƒ ì‹œí‚¤ê¸°
+		throw new MyException("secondMethod()ì—ì„œ ì˜ˆì™¸ë°œìƒ");
+//		System.out.println("--- secondMethod() ì¢…ë£Œ ---");
 	}
 	
 	

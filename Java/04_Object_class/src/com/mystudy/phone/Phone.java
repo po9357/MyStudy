@@ -1,18 +1,18 @@
-package com.mystudy.phone;
+ï»¿package com.mystudy.phone;
 
-//Á¢±ÙÁ¦ÇÑÀÚ : public, protected, (default), private
-//Å¬·¡½º : public, (default)
-//»ı¼ºÀÚ : Å¬·¡½º¿Í °°Àº ¹üÀ§ÀÇ Á¦ÇÑÀÚ »ç¿ë
-//ÇÊµå, ¸Ş¼Òµå : public, protected, (default), private
+//ì ‘ê·¼ì œí•œì : public, protected, (default), private
+//í´ë˜ìŠ¤ : public, (default)
+//ìƒì„±ì : í´ë˜ìŠ¤ì™€ ê°™ì€ ë²”ìœ„ì˜ ì œí•œì ì‚¬ìš©
+//í•„ë“œ, ë©”ì†Œë“œ : public, protected, (default), private
 public class Phone {
-	//ÇÊµå¼±¾ğ(¼Ó¼º)
-	String name;	//ÂüÁ¶Çü : null·Î ÃÊ±âÈ­
+	//í•„ë“œì„ ì–¸(ì†ì„±)
+	String name;	//ì°¸ì¡°í˜• : nullë¡œ ì´ˆê¸°í™”
 	String type;
-	int hsize;	//int : 0 ÃÊ±âÈ­ (ÃÊ±â°ªÀ» Á¤ÇØÁÖÁö ¾ÊÀ»½Ã)
+	int hsize;	//int : 0 ì´ˆê¸°í™” (ì´ˆê¸°ê°’ì„ ì •í•´ì£¼ì§€ ì•Šì„ì‹œ)
 	int vsize;
 	boolean hasLCD;
 	
-	Phone () {}				//±âº» »ı¼ºÀÚ
+	Phone () {}				//ê¸°ë³¸ ìƒì„±ì
 	public Phone(String n, String t) {
 		name = n;
 		type = t;
@@ -21,37 +21,37 @@ public class Phone {
 	}
 	
 	public Phone(String n, String t, boolean l) {
-		this.name = n;			//this	-> ÇöÀç °´Ã¼°¡ °¡Áø ¼Ó¼º°ª ÀÇ¹Ì
-		type = t;				//super	-> super class(°´Ã¼)°¡ °¡Áø ¼Ó¼º°ª ÀÇ¹Ì
+		this.name = n;			//this	-> í˜„ì¬ ê°ì²´ê°€ ê°€ì§„ ì†ì„±ê°’ ì˜ë¯¸
+		type = t;				//super	-> super class(ê°ì²´)ê°€ ê°€ì§„ ì†ì„±ê°’ ì˜ë¯¸
 		hasLCD = l;
 		hsize = 50;
 		vsize = 87;
 	}
 	
 	void call() {
-		System.out.println(">>ÀüÈ­ °É±â");
+		System.out.println(">>ì „í™” ê±¸ê¸°");
 	}
 	
 	void receiveCall() {
-		System.out.println(">>ÀüÈ­ ¹Ş±â");
+		System.out.println(">>ì „í™” ë°›ê¸°");
 	}
 	
 	void sendSms(String sm) {
-		System.out.println("[¸Ş½ÃÁö Àü¼Û] : " + sm);
+		System.out.println("[ë©”ì‹œì§€ ì „ì†¡] : " + sm);
 	}
 	
 	public String receiveSms(String rm) {
-		System.out.println("[¸Ş½ÃÁö ¼ö½Å] : "+rm);
+		System.out.println("[ë©”ì‹œì§€ ìˆ˜ì‹ ] : "+rm);
 		return rm;
 	}
 	
 	public void view() {
-		System.out.println("=== ±â±â Á¤º¸ ===");
-		System.out.println("¸ğµ¨¸í : " + name);
-		System.out.println("Å¸ÀÔ : " + type);
-		System.out.println("°¡·Î Å©±â : " + hsize +"mm");
-		System.out.println("¼¼·Î Å©±â : " + vsize +"mm");
-		System.out.println("LCD À¯¹« : " + hasLCD);
+		System.out.println("=== ê¸°ê¸° ì •ë³´ ===");
+		System.out.println("ëª¨ë¸ëª… : " + name);
+		System.out.println("íƒ€ì… : " + type);
+		System.out.println("ê°€ë¡œ í¬ê¸° : " + hsize +"mm");
+		System.out.println("ì„¸ë¡œ í¬ê¸° : " + vsize +"mm");
+		System.out.println("LCD ìœ ë¬´ : " + hasLCD);
 	}
 	
 

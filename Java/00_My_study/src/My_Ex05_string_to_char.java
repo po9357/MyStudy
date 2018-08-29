@@ -1,17 +1,17 @@
-
+ï»¿
 public class My_Ex05_string_to_char {
 	
 	public static void main(String[] args) {
 		String src = "ABCDE";
 		
 		for (int i=0; i<src.length(); i++) {
-			char ch = src.charAt(i);	//srcÀÇ i¹øÂ° ¹®ÀÚ¸¦ ch¿¡ ÀúÀå
+			char ch = src.charAt(i);	//srcì˜ ië²ˆì§¸ ë¬¸ìžë¥¼ chì— ì €ìž¥
 			System.out.println("src.charAt("+i+"):"+ch);
 		}
-		//charÀ» String[]·Î º¯È¯
+		//charì„ String[]ë¡œ ë³€í™˜
 		char[] chArr = src.toCharArray();
 		
-		//String ¹è¿­(char[])À» Ãâ·Â
+		//String ë°°ì—´(char[])ì„ ì¶œë ¥
 		System.out.println(chArr);
 		
 	}

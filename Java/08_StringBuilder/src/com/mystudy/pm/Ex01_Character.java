@@ -1,4 +1,4 @@
-package com.mystudy.pm;
+ï»¿package com.mystudy.pm;
 
 public class Ex01_Character {
 
@@ -6,7 +6,7 @@ public class Ex01_Character {
 		//Wrapper class : Character
 		char chr = 'a';
 		System.out.println(Character.isAlphabetic(chr));		//true
-		System.out.println("Character.isAlphabetic('ÇÑ') : "		//true
+		System.out.println("Character.isAlphabetic('í•œ') : "		//true
 				+ Character.isAlphabetic(chr));					
 		System.out.println(Character.isAlphabetic('0'));		//false
 		System.out.println(Character.isLetter('0'));			//false
@@ -18,26 +18,26 @@ public class Ex01_Character {
 		System.out.println(Character.isDigit('0'));				//true
 		
 		//------------------------------------------------------------------
-		char[] chs = {'ÇÑ', 'a', ' ', 'A', '+', '0'};
+		char[] chs = {'í•œ', 'a', ' ', 'A', '+', '0'};
 		for (int i=0; i<chs.length; i++) {
 			System.out.println(chs[i] + " : ");
 			if (Character.isDigit(chs[i])) {
-				System.out.println(" ¼ýÀÚ");
+				System.out.println(" ìˆ«ìž");
 			}
 			if (Character.isWhitespace(chs[i])) {
-				System.out.println(" °ø¹é");
+				System.out.println(" ê³µë°±");
 			}
 			if (Character.isUpperCase(chs[i])) {
-				System.out.println(" ´ë");
+				System.out.println(" ëŒ€");
 			}
 			if (Character.isLowerCase(chs[i])) {
-				System.out.println(" ¼Ò");
+				System.out.println(" ì†Œ");
 			}
 			if (Character.isLetter(chs[i])) {
-				System.out.println(" ¹®ÀÚ");
+				System.out.println(" ë¬¸ìž");
 			}
 			if (Character.isDefined(chs[i])) {
-				System.out.println(" À¯´ÏÄÚµåÀÔ´Ï´Ù");
+				System.out.println(" ìœ ë‹ˆì½”ë“œìž…ë‹ˆë‹¤");
 			}
 			System.out.println();
 		}

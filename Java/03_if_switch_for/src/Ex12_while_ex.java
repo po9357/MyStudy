@@ -1,18 +1,18 @@
-
+ï»¿
 public class Ex12_while_ex {
 	public static void main(String[] args) {
-		//while¹®À» »ç¿ëÇØ¼­ Ã³¸®
-		//¹®Á¦1 : 1~10±îÁöÀÇ ÇÕ°è(sum)¸¦ ±¸ÇÏ°í Ãâ·Â
+		//whileë¬¸ì„ ì‚¬ìš©í•´ì„œ ì²˜ë¦¬
+		//ë¬¸ì œ1 : 1~10ê¹Œì§€ì˜ í•©ê³„(sum)ë¥¼ êµ¬í•˜ê³  ì¶œë ¥
 		int sum = 0;
 		int i = 0;
 		while (i<10) {
 			i++;
 			sum+=i;
-			System.out.println("1 ~ "+i+ "±îÁöÀÇ ÇÕÀº "+ sum +"ÀÔ´Ï´Ù.");
+			System.out.println("1 ~ "+i+ "ê¹Œì§€ì˜ í•©ì€ "+ sum +"ì…ë‹ˆë‹¤.");
 		}
 		
-		//¹®Á¦2
-		/* »ï°¢Çü ±×¸®±â
+		//ë¬¸ì œ2
+		/* ì‚¼ê°í˜• ê·¸ë¦¬ê¸°
 		 * 
 		 **
 		 ***
@@ -42,15 +42,15 @@ public class Ex12_while_ex {
 		System.out.println();
 
 		System.out.println("============================");
-		int line = 1;//(¹Ù±ùÂÊ)ÃÊ±â°ª ¼³Á¤
-		while (line <= 5) {//(¹Ù±ùÂÊ)Á¶°Ç½Ä
-			starCnt = 1;//(¾ÈÂÊ)ÃÊ±â°ª ¼³Á¤
-			while (starCnt <= line) {//(¾ÈÂÊ)Á¶°Ç½Ä
+		int line = 1;//(ë°”ê¹¥ìª½)ì´ˆê¸°ê°’ ì„¤ì •
+		while (line <= 5) {//(ë°”ê¹¥ìª½)ì¡°ê±´ì‹
+			starCnt = 1;//(ì•ˆìª½)ì´ˆê¸°ê°’ ì„¤ì •
+			while (starCnt <= line) {//(ì•ˆìª½)ì¡°ê±´ì‹
 				System.out.print("*");
-				starCnt++;//(¾ÈÂÊ)Áõ°¨½Ä
+				starCnt++;//(ì•ˆìª½)ì¦ê°ì‹
 			}
 			System.out.println();
-			line++;//(¹Ù±ùÂÊ)Áõ°¨½Ä
+			line++;//(ë°”ê¹¥ìª½)ì¦ê°ì‹
 		}
 		
 		
@@ -103,7 +103,7 @@ public class Ex12_while_ex {
 				System.out.println("inNum : "+ inNum);
 				inNum++;
 			}
-			//Áõ°¨Ä¡ ¼³Á¤
+			//ì¦ê°ì¹˜ ì„¤ì •
 			outNum++;
 		}
 	}

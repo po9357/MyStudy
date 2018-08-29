@@ -1,4 +1,4 @@
-package com.mystudy.pm01_generic;
+ï»¿package com.mystudy.pm01_generic;
 
 class BoxT<T> {
 	T obj;
@@ -8,33 +8,33 @@ class BoxT<T> {
 public class GenericWildcardExam {
 
 	public static void main(String[] args) {
-		//Á¦³×¸¯(Generic) ¿ÍÀÏµåÄ«µå
-		//1. <?> : ¸ğµç Å¬·¡½º(°´Ã¼)ÀÚ·á¿¡ ´ëÇÑ ´ëÇ¥¹®ÀÚ¸¦ ÀÇ¹Ì
-		//2. <? extends °´Ã¼ÀÚ·á> : ÀÚ·áÇüÀ» »ó¼Ó¹ŞÀº ÀÚ³à(sub) Å¬·¡½º Å¸ÀÔ »ç¿ë
-		//3. <? super °´Ã¼ÀÚ·á> : ÀÚ·áÇüÀÇ ºÎ¸ğ(super) Å¬·¡½º Å¸ÀÔÀ» »ç¿ë 
+		//ì œë„¤ë¦­(Generic) ì™€ì¼ë“œì¹´ë“œ
+		//1. <?> : ëª¨ë“  í´ë˜ìŠ¤(ê°ì²´)ìë£Œì— ëŒ€í•œ ëŒ€í‘œë¬¸ìë¥¼ ì˜ë¯¸
+		//2. <? extends ê°ì²´ìë£Œ> : ìë£Œí˜•ì„ ìƒì†ë°›ì€ ìë…€(sub) í´ë˜ìŠ¤ íƒ€ì… ì‚¬ìš©
+		//3. <? super ê°ì²´ìë£Œ> : ìë£Œí˜•ì˜ ë¶€ëª¨(super) í´ë˜ìŠ¤ íƒ€ì…ì„ ì‚¬ìš© 
 		//-------------------------------------------
 		BoxT<String> box1 = new BoxT<String>();
-		box1.setObj("¹®ÀÚ¿­");
+		box1.setObj("ë¬¸ìì—´");
 		BoxT<Integer> box2 = new BoxT<Integer>();
-		//box2.setObj("¹®ÀÚ¿­"); 		//Å¸ÀÔ¹Ì½º¸ÅÄ¡
+		//box2.setObj("ë¬¸ìì—´"); 		//íƒ€ì…ë¯¸ìŠ¤ë§¤ì¹˜
 		
-		//<?>	¸ğµç °ÍÀ» ´ãÀ» ¼ö ÀÖ´Â ÇüÅÂ
+		//<?>	ëª¨ë“  ê²ƒì„ ë‹´ì„ ìˆ˜ ìˆëŠ” í˜•íƒœ
 		BoxT<?> box3 = new BoxT<String>();
 		box3 = new BoxT<Integer>();
 		box3 = new BoxT<StringBuilder>();
 		
-		//<? extends ÀÚ·áÇü>
+		//<? extends ìë£Œí˜•>
 		BoxT<? extends Number> box10 = null;
 		box10 = new BoxT<Number>();
 		box10 = new BoxT<Integer>();
 		box10 = new BoxT<Double>();
-		//box10 = new BoxT<Character>();	//[ÄÄÆÄÀÏ¿À·ù] Number »ó¼Ó(extends)¹ŞÁö ¾ÊÀ½.
+		//box10 = new BoxT<Character>();	//[ì»´íŒŒì¼ì˜¤ë¥˜] Number ìƒì†(extends)ë°›ì§€ ì•ŠìŒ.
 		
-		//<? super ÀÚ·áÇü>
+		//<? super ìë£Œí˜•>
 		BoxT<? super Number> box20 = null;
 		box20 = new BoxT<Number>();
 		box20 = new BoxT<Object>();
-//		box20 = new BoxT<Integer>();		//[ÄÄÆÄÀÏ¿À·ù] Integer°¡ NumberÀÇ ºÎ¸ğÅ¬·¡½º Å¸ÀÔÀÌ ¾Æ´Ô
+//		box20 = new BoxT<Integer>();		//[ì»´íŒŒì¼ì˜¤ë¥˜] Integerê°€ Numberì˜ ë¶€ëª¨í´ë˜ìŠ¤ íƒ€ì…ì´ ì•„ë‹˜
 		
 		
 		

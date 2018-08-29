@@ -1,4 +1,4 @@
-public class  My_Ex17_stringBuffer
+ï»¿public class  My_Ex17_stringBuffer
 {
 	public static void main(String[] args) 
 	{
@@ -12,11 +12,11 @@ public class  My_Ex17_stringBuffer
 			data[i] = (int[])input[i].clone();
 		}
 		
-		// data¹è¿­ÀÇ °ªÀÇ º¯°æ
+		// dataë°°ì—´ì˜ ê°’ì˜ ë³€ê²½
 		data[0][1] = 10;
 
-		// input ¹è¿­ÀÇ Ãâ·Â
-		System.out.println("input Ãâ·Â");
+		// input ë°°ì—´ì˜ ì¶œë ¥
+		System.out.println("input ì¶œë ¥");
 		for(int i = 0; i < input.length; i++){
 			for(int j = 0; j < input[i].length; j++){
 				System.out.print(input[i][j]);
@@ -25,8 +25,8 @@ public class  My_Ex17_stringBuffer
 			System.out.println();
 		}//for out
 
-		// data¹è¿­ÀÇ Ãâ·Â
-		System.out.println("data Ãâ·Â");
+		// dataë°°ì—´ì˜ ì¶œë ¥
+		System.out.println("data ì¶œë ¥");
 		for(int i = 0; i < data.length; i++){
 			for(int j = 0; j < data[i].length; j++){
 				System.out.print(data[i][j]);

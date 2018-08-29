@@ -1,51 +1,51 @@
-package com.mystudy.am;
+ï»¿package com.mystudy.am;
 
 public class Ex01_parameter {
 
 	public static void main(String[] args) {
-		//ÆÄ¶ó¹ÌÅÍ °ªÀ» Àü´ÞÇÒ ¶§
-		//1. °ªÀÌ Àü´ÞµÇ´Â °æ¿ì	: ±âº» µ¥ÀÌÅÍ Å¸ÀÔ
-		//2. ÁÖ¼Ò°ªÀÌ Àü´ÞµÇ´Â °æ¿ì	: ÂüÁ¶Çü µ¥ÀÌÅÍ Å¸ÀÔ
-		//	ÂüÁ¶Çü µ¥ÀÌÅÍ Å¸ÀÔÀ» Àü´Þ¹Þ¾Æ °ªÀ» º¯°æ½Ã ¿øº» µ¥ÀÌÅÍÀÇ °ªµµ º¯°æµÈ´Ù.	(°°Àº ÀúÀå°ø°£(ÁÖ¼Ò)¸¦ °®±â ¶§¹®¿¡ ¹ß»ý)
-		//	±âº»Çü µ¥ÀÌÅÍ Å¸ÀÔÀÇ °æ¿ì ÇØ´ç µ¥ÀÌÅÍ ÀÚÃ¼°¡ ³Ñ¾î°¡±â ¶§¹®¿¡ (ÁÖ¼Ò°ªx)°ªÀ» Àü´Þ¹Þ¾Æ º¯°æ ÇÏ´õ¶óµµ ¿øº» µ¥ÀÌÅÍ´Â º¯ÇÏÁö ¾Ê´Â´Ù.
+		//íŒŒë¼ë¯¸í„° ê°’ì„ ì „ë‹¬í•  ë•Œ
+		//1. ê°’ì´ ì „ë‹¬ë˜ëŠ” ê²½ìš°	: ê¸°ë³¸ ë°ì´í„° íƒ€ìž…
+		//2. ì£¼ì†Œê°’ì´ ì „ë‹¬ë˜ëŠ” ê²½ìš°	: ì°¸ì¡°í˜• ë°ì´í„° íƒ€ìž…
+		//	ì°¸ì¡°í˜• ë°ì´í„° íƒ€ìž…ì„ ì „ë‹¬ë°›ì•„ ê°’ì„ ë³€ê²½ì‹œ ì›ë³¸ ë°ì´í„°ì˜ ê°’ë„ ë³€ê²½ëœë‹¤.	(ê°™ì€ ì €ìž¥ê³µê°„(ì£¼ì†Œ)ë¥¼ ê°–ê¸° ë•Œë¬¸ì— ë°œìƒ)
+		//	ê¸°ë³¸í˜• ë°ì´í„° íƒ€ìž…ì˜ ê²½ìš° í•´ë‹¹ ë°ì´í„° ìžì²´ê°€ ë„˜ì–´ê°€ê¸° ë•Œë¬¸ì— (ì£¼ì†Œê°’x)ê°’ì„ ì „ë‹¬ë°›ì•„ ë³€ê²½ í•˜ë”ë¼ë„ ì›ë³¸ ë°ì´í„°ëŠ” ë³€í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		int num = 100;
 		int[] arr = {100, 200, 300};
 		
-		System.out.println("Á¤¼ö num : "+ num);
+		System.out.println("ì •ìˆ˜ num : "+ num);
 		
 		changeData(num);
 		
-		System.out.println("changeData½ÇÇà ÈÄ num : "+ num);
+		System.out.println("changeDataì‹¤í–‰ í›„ num : "+ num);
 		
 		
-		System.out.println("---- ÂüÁ¶Çü µ¥ÀÌÅÍ Àü´Þ ----");
+		System.out.println("---- ì°¸ì¡°í˜• ë°ì´í„° ì „ë‹¬ ----");
 		
 		
-		System.out.print("Á¤¼ö¹è¿­ arr : ");
+		System.out.print("ì •ìˆ˜ë°°ì—´ arr : ");
 		printData(arr);
 		
 		changeData(arr);
 		
-		System.out.print("changeData ½ÇÇà ÈÄ arr: ");
+		System.out.print("changeData ì‹¤í–‰ í›„ arr: ");
 		printData(arr);
 	}
 	
-	//¸Þ¼Òµå ¿À¹ö·Îµù(method overloading)
-	//°°Àº Å¬·¡½º ³»¿¡¼­ °°Àº ¸Þ¼Òµå ÀÌ¸§À¸·Î ¸Å°³º¯¼ö(parameter)¸¦ ´Ù¸£°Ô Á¤ÀÇÇÏ¿©
-	//µ¿ÀÏÇÑ ¸Þ¼Òµå¸íÀ¸·Î ´Ù¸£°Ô µ¿ÀÛÇÏµµ·Ï Ã³¸®
+	//ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©(method overloading)
+	//ê°™ì€ í´ëž˜ìŠ¤ ë‚´ì—ì„œ ê°™ì€ ë©”ì†Œë“œ ì´ë¦„ìœ¼ë¡œ ë§¤ê°œë³€ìˆ˜(parameter)ë¥¼ ë‹¤ë¥´ê²Œ ì •ì˜í•˜ì—¬
+	//ë™ì¼í•œ ë©”ì†Œë“œëª…ìœ¼ë¡œ ë‹¤ë¥´ê²Œ ë™ìž‘í•˜ë„ë¡ ì²˜ë¦¬
 	static void changeData(int intValue) {
-		System.out.println(">> Àü´Þ ¹ÞÀº int : "+ intValue);
+		System.out.println(">> ì „ë‹¬ ë°›ì€ int : "+ intValue);
 		intValue = 999;
-		System.out.println(">> º¯°æµÈ int : "+ intValue);
+		System.out.println(">> ë³€ê²½ëœ int : "+ intValue);
 	}
 	
 	static void changeData(int[] intArr) {
-		System.out.print(">> Àü´Þ¹ÞÀº int¹è¿­ : ");
+		System.out.print(">> ì „ë‹¬ë°›ì€ intë°°ì—´ : ");
 		printData(intArr);
 		
-		//¹è¿­°ª º¯°æ
+		//ë°°ì—´ê°’ ë³€ê²½
 		intArr[0] = 999;
-		System.out.print(">> º¯°æ ÈÄ int¹è¿­ : ");
+		System.out.print(">> ë³€ê²½ í›„ intë°°ì—´ : ");
 		printData(intArr);
 	}
 	

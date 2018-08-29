@@ -1,4 +1,4 @@
-package com.mystudy.am04_list_set_map;
+ï»¿package com.mystudy.am04_list_set_map;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,26 +11,26 @@ import java.util.TreeSet;
 public class List_Set_Map {
 	
 	public static void main(String[] args) {
-		//1, List »ç¿ë
-		//ÀÌ¸§ µî·Ï : È«±æµ¿, °­°¨Âù, È«°æ·¡, ÀÌ¼ø½Å
-		//ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ Á¶È¸ÇØ¼­ È­¸é¿¡ Ãâ·Â (index : µ¥ÀÌÅÍ)
-		System.out.println("--- List »ç¿ë ---");
+		//1, List ì‚¬ìš©
+		//ì´ë¦„ ë“±ë¡ : í™ê¸¸ë™, ê°•ê°ì°¬, í™ê²½ë˜, ì´ìˆœì‹ 
+		//ì €ì¥ëœ ë°ì´í„°ë¥¼ ì¡°íšŒí•´ì„œ í™”ë©´ì— ì¶œë ¥ (index : ë°ì´í„°)
+		System.out.println("--- List ì‚¬ìš© ---");
 		List list = new ArrayList();
-		list.add("È«±æµ¿");
-		list.add("°­°¨Âù");
-		list.add("È«°æ·¡");
-		list.add("ÀÌ¼ø½Å");
-		list.add("±èÀ¯½Å");
+		list.add("í™ê¸¸ë™");
+		list.add("ê°•ê°ì°¬");
+		list.add("í™ê²½ë˜");
+		list.add("ì´ìˆœì‹ ");
+		list.add("ê¹€ìœ ì‹ ");
 		
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println((i+1)+ " : "+ list.get(i));
 		}
 		
 		/////////////////////////////////////
-		//2. Set »ç¿ë
-		//ÀÌ¸§ µî·Ï : È«±æµ¿, °­°¨Âù, È«°æ·¡, ÀÌ¼ø½Å
-		//ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ Á¶È¸ÇØ¼­ È­¸é¿¡ Ãâ·Â (¿À¸§Â÷¼øÀ¸·Î Ãâ·Â)
-		System.out.println("--- Set »ç¿ë ---");
+		//2. Set ì‚¬ìš©
+		//ì´ë¦„ ë“±ë¡ : í™ê¸¸ë™, ê°•ê°ì°¬, í™ê²½ë˜, ì´ìˆœì‹ 
+		//ì €ì¥ëœ ë°ì´í„°ë¥¼ ì¡°íšŒí•´ì„œ í™”ë©´ì— ì¶œë ¥ (ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì¶œë ¥)
+		System.out.println("--- Set ì‚¬ìš© ---");
 		Set set = new TreeSet(list);
 		Iterator ite = set.iterator();
 		int index = 1;
@@ -39,15 +39,15 @@ public class List_Set_Map {
 			index++;
 		}
 		/////////////////////////////////
-		//3. Map »ç¿ë
-		//k - v : 1810 - È«±æµ¿, 1811 - °­°¨Âù, 1812 - È«°æ·¡, 1813 - ÀÌ¼ø½Å
-		//ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ Á¶È¸ÇØ¼­ È­¸é¿¡ Ãâ·Â (key ±âÁØ ¿À¸§Â÷¼øÀ¸·Î Ãâ·Â)
-		System.out.println("--- Map »ç¿ë ---");
+		//3. Map ì‚¬ìš©
+		//k - v : 1810 - í™ê¸¸ë™, 1811 - ê°•ê°ì°¬, 1812 - í™ê²½ë˜, 1813 - ì´ìˆœì‹ 
+		//ì €ì¥ëœ ë°ì´í„°ë¥¼ ì¡°íšŒí•´ì„œ í™”ë©´ì— ì¶œë ¥ (key ê¸°ì¤€ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì¶œë ¥)
+		System.out.println("--- Map ì‚¬ìš© ---");
 		Map<String, Integer> map = new TreeMap<String, Integer>();
-		map.put("È«±æµ¿", 1810);
-		map.put("°­°¨Âù", 1811);
-		map.put("È«°æ·¡", 1812);
-		map.put("ÀÌ¼ø½Å", 1813);
+		map.put("í™ê¸¸ë™", 1810);
+		map.put("ê°•ê°ì°¬", 1811);
+		map.put("í™ê²½ë˜", 1812);
+		map.put("ì´ìˆœì‹ ", 1813);
 		System.out.println(map);
 		
 		Set<Map.Entry<String, Integer>> set1 = new TreeSet<Map.Entry<String, Integer>>();

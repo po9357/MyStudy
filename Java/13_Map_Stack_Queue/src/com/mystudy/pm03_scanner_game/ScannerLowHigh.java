@@ -1,4 +1,4 @@
-package com.mystudy.pm03_scanner_game;
+ï»¿package com.mystudy.pm03_scanner_game;
 
 import java.util.Scanner;
 
@@ -18,70 +18,70 @@ public class ScannerLowHigh {
 		while (true) {
 			cnt=1;
 			com = (int)(Math.random()*100+1);
-			System.out.println("ÄÄÇ»ÅÍ°¡ 1 ~ 100»çÀÌ ·£´ıÇÑ Á¤¼ö¸¦ »ı¼ºÇß½À´Ï´Ù.");
-			System.out.println("1 ~ 100 »çÀÌ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ì»´í“¨í„°ê°€ 1 ~ 100ì‚¬ì´ ëœë¤í•œ ì •ìˆ˜ë¥¼ ìƒì„±í–ˆìŠµë‹ˆë‹¤.");
+			System.out.println("1 ~ 100 ì‚¬ì´ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			inner:
 			while (true) {
 				if (cnt < max) {
-					System.out.println(cnt +"¹ø Â° ±âÈ¸ÀÔ´Ï´Ù.");
+					System.out.println(cnt +"ë²ˆ ì§¸ ê¸°íšŒì…ë‹ˆë‹¤.");
 					input = sc.nextInt();
-					while (input <= 0 || input > 100) {		//¹üÀ§ ¼³Á¤
-						System.out.println("1 ~ 100 »çÀÌ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+					while (input <= 0 || input > 100) {		//ë²”ìœ„ ì„¤ì •
+						System.out.println("1 ~ 100 ì‚¬ì´ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						input = sc.nextInt();
 					}
 					
-					if (input > com) {						//ÀÔ·ÂÇÑ °ªÀÌ Á¤´äº¸´Ù Å¬ °æ¿ì
-						System.out.println("´õ ³·Àº ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À."+ (max - cnt)+"¹ø ±âÈ¸ ³²¾Ò½À´Ï´Ù");
+					if (input > com) {						//ì…ë ¥í•œ ê°’ì´ ì •ë‹µë³´ë‹¤ í´ ê²½ìš°
+						System.out.println("ë” ë‚®ì€ ìˆ«ìë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤."+ (max - cnt)+"ë²ˆ ê¸°íšŒ ë‚¨ì•˜ìŠµë‹ˆë‹¤");
 						cnt++;
-					} else if (input < com) {				//ÀÔ·ÂÇÑ °ªÀÌ Á¤´äº¸´Ù ÀÛÀ» °æ¿ì
-						System.out.println("´õ ³ôÀº ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À."+ (max - cnt)+"¹ø ±âÈ¸ ³²¾Ò½À´Ï´Ù");
+					} else if (input < com) {				//ì…ë ¥í•œ ê°’ì´ ì •ë‹µë³´ë‹¤ ì‘ì„ ê²½ìš°
+						System.out.println("ë” ë†’ì€ ìˆ«ìë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤."+ (max - cnt)+"ë²ˆ ê¸°íšŒ ë‚¨ì•˜ìŠµë‹ˆë‹¤");
 						cnt++;
-					} else {								//Á¤´äÀÏ °æ¿ì
+					} else {								//ì •ë‹µì¼ ê²½ìš°
 						win++;
-						System.out.println("Á¤´äÀÔ´Ï´Ù!!!"+ cnt+ "¹ø Â° ¸¸¿¡ ¸ÂÃß¼Ì½À´Ï´Ù!");
-						System.out.println("ÇöÀç ÀüÀûÀº "+ win +"½Â, "+ lose+ "ÆĞ ÀÔ´Ï´Ù.");
-						System.out.println("°ÔÀÓÀ» °è¼Ó ÇÏ½Ã·Á¸é 1À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+						System.out.println("ì •ë‹µì…ë‹ˆë‹¤!!!"+ cnt+ "ë²ˆ ì§¸ ë§Œì— ë§ì¶”ì…¨ìŠµë‹ˆë‹¤!");
+						System.out.println("í˜„ì¬ ì „ì ì€ "+ win +"ìŠ¹, "+ lose+ "íŒ¨ ì…ë‹ˆë‹¤.");
+						System.out.println("ê²Œì„ì„ ê³„ì† í•˜ì‹œë ¤ë©´ 1ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 						chance = sc.nextInt();
 						if (chance == 1) {
 							break inner;
 						} else {
-							System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+							System.out.println("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 							break outter;
 						}
 					}
 				} else {
-					System.out.println("¸¶Áö¸· ±âÈ¸ÀÔ´Ï´Ù.");
+					System.out.println("ë§ˆì§€ë§‰ ê¸°íšŒì…ë‹ˆë‹¤.");
 					input = sc.nextInt();
-					while (input <= 0 || input > 100) {		//¹üÀ§ ¼³Á¤
-						System.out.println("1 ~ 100 »çÀÌ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+					while (input <= 0 || input > 100) {		//ë²”ìœ„ ì„¤ì •
+						System.out.println("1 ~ 100 ì‚¬ì´ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						input = sc.nextInt();
 					}
-					if (input == com){								//Á¤´äÀÏ °æ¿ì
+					if (input == com){								//ì •ë‹µì¼ ê²½ìš°
 						win++;
-						System.out.println("Á¤´äÀÔ´Ï´Ù!!!"+ cnt+ "¹ø Â° ¸¸¿¡ ¸ÂÃß¼Ì½À´Ï´Ù!");
-						System.out.println("ÇöÀç ÀüÀûÀº "+ win +"½Â, "+ lose+ "ÆĞ ÀÔ´Ï´Ù.");
-						System.out.println("°ÔÀÓÀ» °è¼Ó ÇÏ½Ã·Á¸é 1À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+						System.out.println("ì •ë‹µì…ë‹ˆë‹¤!!!"+ cnt+ "ë²ˆ ì§¸ ë§Œì— ë§ì¶”ì…¨ìŠµë‹ˆë‹¤!");
+						System.out.println("í˜„ì¬ ì „ì ì€ "+ win +"ìŠ¹, "+ lose+ "íŒ¨ ì…ë‹ˆë‹¤.");
+						System.out.println("ê²Œì„ì„ ê³„ì† í•˜ì‹œë ¤ë©´ 1ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 						chance = sc.nextInt();
 						if (chance == 1) {
 							break inner;
 						} else {
-							System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+							System.out.println("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 							break outter;
 						}
-					} else {						//±âÈ¸¸¦ ¸ğµÎ ¼Ò¸ğÇßÀ» °æ¿ì
+					} else {						//ê¸°íšŒë¥¼ ëª¨ë‘ ì†Œëª¨í–ˆì„ ê²½ìš°
 						lose++;
-						System.out.println("Æ²·È½À´Ï´Ù! Á¤´äÀº "+ com+ "ÀÌ¾ú½À´Ï´Ù!\nÇöÀç ÀüÀûÀº "+ win +"½Â, "+ lose+ "ÆĞ ÀÔ´Ï´Ù.\n»õ·Î¿î °ÔÀÓÀ» ÇÏ½Ã·Á¸é 1À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+						System.out.println("í‹€ë ¸ìŠµë‹ˆë‹¤! ì •ë‹µì€ "+ com+ "ì´ì—ˆìŠµë‹ˆë‹¤!\ní˜„ì¬ ì „ì ì€ "+ win +"ìŠ¹, "+ lose+ "íŒ¨ ì…ë‹ˆë‹¤.\nìƒˆë¡œìš´ ê²Œì„ì„ í•˜ì‹œë ¤ë©´ 1ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 						chance = sc.nextInt();
 						if (chance == 1) {
 							break inner;
 						} else {
-							System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+							System.out.println("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 							break outter;
 						}
 					}
 				}
-			}	//inner while ³¡
-		}	//outter while ³¡
+			}	//inner while ë
+		}	//outter while ë
 		
-	}	//main ³¡
-}	//class ³¡
+	}	//main ë
+}	//class ë

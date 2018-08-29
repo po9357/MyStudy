@@ -1,14 +1,14 @@
-package com.mystudy.string;
+ï»¿package com.mystudy.string;
 
 import java.util.Arrays;
 
 public class Ex01_String {
 
 	public static void main(String[] args) {
-		//¹®ÀÚ¿­ Ã³¸®¸¦ À§ÇÑ String class
-		//String class »ç¿ë Çü½Ä 2°¡Áö
-		//String str = "È«±æµ¿";					//±âº» µ¥ÀÌÅÍ Å¸ÀÔÃ³·³ »ç¿ë
-		//String str = new String("È«±æµ¿");		//°´Ã¼ »ı¼ºÇÏ¿© »ç¿ë
+		//ë¬¸ìì—´ ì²˜ë¦¬ë¥¼ ìœ„í•œ String class
+		//String class ì‚¬ìš© í˜•ì‹ 2ê°€ì§€
+		//String str = "í™ê¸¸ë™";					//ê¸°ë³¸ ë°ì´í„° íƒ€ì…ì²˜ëŸ¼ ì‚¬ìš©
+		//String str = new String("í™ê¸¸ë™");		//ê°ì²´ ìƒì„±í•˜ì—¬ ì‚¬ìš©
 		String str1 = "Java";
 		String str2 = "World";
 		String strObj1 = new String("Java");
@@ -19,15 +19,15 @@ public class Ex01_String {
 		String str11 = "Java";
 		String str22 = "World";
 		
-		//== : ÂüÁ¶°ª ºñ±³(°´Ã¼ ºñ±³)
+		//== : ì°¸ì¡°ê°’ ë¹„êµ(ê°ì²´ ë¹„êµ)
 		
-		System.out.println("--- str1 vs °´Ã¼ »ı¼º strObj1 ºñ±³ ---");
+		System.out.println("--- str1 vs ê°ì²´ ìƒì„± strObj1 ë¹„êµ ---");
 		System.out.println("str1 == str11 : "+ (str1 == str11));
 		System.out.println("str1 == strObj1 : "+ (str1 == strObj1));
 		
 		System.out.println();
 		
-		System.out.println("--- equals ºñ±³ ---");
+		System.out.println("--- equals ë¹„êµ ---");
 		System.out.println("str1.equals(strObj1) : "+ str1.equals(strObj1));
 		System.out.println("str11.equals(strObj1) : "+ str11.equals(strObj1));
 		System.out.println("str1.equals(str11) : "+ str1.equals(str11));
@@ -50,14 +50,14 @@ public class Ex01_String {
 		String c = "World";
 		System.out.println("a + b + c : "+ (a + b + c));
 		System.out.println("a.concat(b).concat(c) : "
-									+ a.concat(b).concat(c));		//chainning ±â¹ı(Ã¼ÀÌ´× ±â¹ı)
+									+ a.concat(b).concat(c));		//chainning ê¸°ë²•(ì²´ì´ë‹ ê¸°ë²•)
 		
 		System.out.println();
 		
 		System.out.println("--- charAt() ---");
 		String d = "Java World";
 		System.out.println("d : "+ d);
-		char ch = d.charAt(0);		//¸®ÅÏ °ªÀ» ÀúÀåÇÏ·Á¸é ¸®ÅÏÅ¸ÀÔ°ú µ¿ÀÏÇÑ º¯¼ö¿¡ ÀúÀå
+		char ch = d.charAt(0);		//ë¦¬í„´ ê°’ì„ ì €ì¥í•˜ë ¤ë©´ ë¦¬í„´íƒ€ì…ê³¼ ë™ì¼í•œ ë³€ìˆ˜ì— ì €ì¥
 		System.out.println("d.charAt(0) : "+ d.charAt(0));
 		
 		//char[] ch2 = {d.charAt(0), d.charAt(1), d.charAt(2)};
@@ -81,8 +81,8 @@ public class Ex01_String {
 		String str3 = String.copyValueOf(ch3);
 		System.out.println(str3);
 		
-		System.out.println(str3.startsWith("ab"));	//½ÃÀÛ ¹®ÀÚ¿­ ¿©ºÎ È®ÀÎ
-													//	str3ÀÌ ()¾È ¹®ÀÚ·Î ½ÃÀÛÇÏ´ÂÁö true, false·Î È®ÀÎ
+		System.out.println(str3.startsWith("ab"));	//ì‹œì‘ ë¬¸ìì—´ ì—¬ë¶€ í™•ì¸
+													//	str3ì´ ()ì•ˆ ë¬¸ìë¡œ ì‹œì‘í•˜ëŠ”ì§€ true, falseë¡œ í™•ì¸
 		////////////////////////////////////////////////////////////////////////////
 		
 	

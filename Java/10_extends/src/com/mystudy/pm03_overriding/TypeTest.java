@@ -1,4 +1,4 @@
-package com.mystudy.pm03_overriding;
+ï»¿package com.mystudy.pm03_overriding;
 
 public class TypeTest {
 
@@ -17,7 +17,7 @@ public class TypeTest {
 		pig.sound();
 		sheep.sound();
 		
-		System.out.println("---- sound(Animal) È£Ãâ --- ");
+		System.out.println("---- sound(Animal) í˜¸ì¶œ --- ");
 		sound(an); 
 		sound(cat);
 		sound(dog);
@@ -27,8 +27,8 @@ public class TypeTest {
 	}
 	
 	private static void sound(Animal animal) {
-		//instanceof »ç¿ë - Å¸ÀÔÈ®ÀÎ ÈÄ ÇØ´ç Å¸ÀÔÀÇ sound ¸Þ¼Òµå È£Ãâ
-		//Animal Å¸ÀÔÀÎ °æ¿ì "¿ïÀ½¾øÀ½" Ãâ·Â
+		//instanceof ì‚¬ìš© - íƒ€ìž…í™•ì¸ í›„ í•´ë‹¹ íƒ€ìž…ì˜ sound ë©”ì†Œë“œ í˜¸ì¶œ
+		//Animal íƒ€ìž…ì¸ ê²½ìš° "ìš¸ìŒì—†ìŒ" ì¶œë ¥
 		/*
 		if (animal instanceof Cat) {
 			((Cat) animal).sound();
@@ -39,7 +39,7 @@ public class TypeTest {
 		} else if (animal instanceof Pig) {
 			((Pig) animal).sound();
 		} else {
-			System.out.println(">> ¿ïÀ½¾øÀ½");
+			System.out.println(">> ìš¸ìŒì—†ìŒ");
 		}
 		*/
 		

@@ -1,4 +1,4 @@
-package com.mystudy.score_exam_scanner;
+﻿package com.mystudy.score_exam_scanner;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ public class ScoreExamVO {
 	double avg;
 	
 	public ScoreExamVO() {
-		name = "ȫ�浿";
+		name = "홍길동";
 		kor = 0;
 		eng = 0;
 		math = 0;

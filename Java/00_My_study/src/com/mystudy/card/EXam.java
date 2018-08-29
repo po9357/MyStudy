@@ -1,4 +1,4 @@
-package com.mystudy.card;
+ï»¿package com.mystudy.card;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class EXam {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("´Ü¾î¸¦ ÀÔ·ÂÇÏ¿©ÁÖ½Ê½Ã¿À(q, QÇÏ¸é Á¾·á)");
+		System.out.println("ë‹¨ì–´ë¥¼ ìž…ë ¥í•˜ì—¬ì£¼ì‹­ì‹œì˜¤(q, Qí•˜ë©´ ì¢…ë£Œ)");
 		String input = sc.nextLine();
 		
 		

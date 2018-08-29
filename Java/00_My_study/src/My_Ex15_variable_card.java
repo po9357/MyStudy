@@ -1,30 +1,30 @@
-
+ï»¿
 public class My_Ex15_variable_card {
 
 	public static void main(String[] args) {
 		System.out.println("Card.width : "+ Card.width);		
 		System.out.println("Card.heigth : "+ Card.heigth);		
-											//Card.width, Card.heigth°ú °°Àº Å¬·¡½ºº¯¼ö(staticº¯¼ö)´Â
-		Card c1 = new Card();				//	º°µµÀÇ °´Ã¼ »ı¼º ¾øÀÌ 'Å¬·¡½º.Å¬·¡½ºº¯¼ö'·Î ºÒ·¯ »ç¿ë °¡´É
+											//Card.width, Card.heigthê³¼ ê°™ì€ í´ë˜ìŠ¤ë³€ìˆ˜(staticë³€ìˆ˜)ëŠ”
+		Card c1 = new Card();				//	ë³„ë„ì˜ ê°ì²´ ìƒì„± ì—†ì´ 'í´ë˜ìŠ¤.í´ë˜ìŠ¤ë³€ìˆ˜'ë¡œ ë¶ˆëŸ¬ ì‚¬ìš© ê°€ëŠ¥
 		c1.kind = "Heart";
 		c1.number = 7;
 		
 		Card c2 = new Card();
-		c2.kind = "Spade";			//ÀÎ½ºÅÏ½º º¯¼öÀÇ °ªÀ» º¯°æ	(CardÅ¬·¡½ºÀÇ kind, number°¡ ÀÎ½ºÅÏ½ºº¯¼ö)
-		c2.number = 4;				//ÀÎ½ºÅÏ½º º¯¼öÀÇ °ªÀ» º¯°æ
+		c2.kind = "Spade";			//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì˜ ê°’ì„ ë³€ê²½	(Cardí´ë˜ìŠ¤ì˜ kind, numberê°€ ì¸ìŠ¤í„´ìŠ¤ë³€ìˆ˜)
+		c2.number = 4;				//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì˜ ê°’ì„ ë³€ê²½
 		
-		System.out.println("c1Àº "+ c1.kind +", "+ c1.number
-				+ "ÀÌ¸ç, Å©±â´Â ("+ c1.width +", "+ c1.heigth +")");
-		System.out.println("c2Àº "+ c2.kind +", "+ c2.number
-				+ "ÀÌ¸ç, Å©±â´Â ("+ c2.width +", "+ c2.heigth +")");
-		System.out.println("c1ÀÇ width¿Í height¸¦ °¢°¢ 50, 80À¸·Î º¯°æÇÕ´Ï´Ù.");
-		c1.width = 50;				//Å¬·¡½º º¯¼öÀÇ °ªÀ» º¯°æ	(Card classÀÇ staticÀÌ ºÙÀº º¯¼ö°¡
-		c1.heigth = 80;				//Å¬·¡½º º¯¼öÀÇ °ªÀ» º¯°æ		Å¬·¡½º º¯¼ö(staticº¯¼ö)ÀÌ´Ù.)
+		System.out.println("c1ì€ "+ c1.kind +", "+ c1.number
+				+ "ì´ë©°, í¬ê¸°ëŠ” ("+ c1.width +", "+ c1.heigth +")");
+		System.out.println("c2ì€ "+ c2.kind +", "+ c2.number
+				+ "ì´ë©°, í¬ê¸°ëŠ” ("+ c2.width +", "+ c2.heigth +")");
+		System.out.println("c1ì˜ widthì™€ heightë¥¼ ê°ê° 50, 80ìœ¼ë¡œ ë³€ê²½í•©ë‹ˆë‹¤.");
+		c1.width = 50;				//í´ë˜ìŠ¤ ë³€ìˆ˜ì˜ ê°’ì„ ë³€ê²½	(Card classì˜ staticì´ ë¶™ì€ ë³€ìˆ˜ê°€
+		c1.heigth = 80;				//í´ë˜ìŠ¤ ë³€ìˆ˜ì˜ ê°’ì„ ë³€ê²½		í´ë˜ìŠ¤ ë³€ìˆ˜(staticë³€ìˆ˜)ì´ë‹¤.)
 		
-		System.out.println("c1Àº "+ c1.kind +", "+ c1.number
-				+ "ÀÌ¸ç, Å©±â´Â ("+ c1.width +", "+ c1.heigth +")");
-		System.out.println("c2Àº "+ c2.kind +", "+ c2.number
-				+ "ÀÌ¸ç, Å©±â´Â ("+ c2.width +", "+ c2.heigth +")");
+		System.out.println("c1ì€ "+ c1.kind +", "+ c1.number
+				+ "ì´ë©°, í¬ê¸°ëŠ” ("+ c1.width +", "+ c1.heigth +")");
+		System.out.println("c2ì€ "+ c2.kind +", "+ c2.number
+				+ "ì´ë©°, í¬ê¸°ëŠ” ("+ c2.width +", "+ c2.heigth +")");
 		
 		
 		

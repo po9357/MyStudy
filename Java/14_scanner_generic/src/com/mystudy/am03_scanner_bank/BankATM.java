@@ -1,4 +1,4 @@
-package com.mystudy.am03_scanner_bank;
+ï»¿package com.mystudy.am03_scanner_bank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,15 +7,15 @@ import java.util.Scanner;
 public class BankATM {
 
 	public static void main(String[] args) {
-		// ÀºÇàÀÇ ATM
-		//1. ÀÔ±İ 	2. Ãâ±İ 		3. ÅëÀåÈ®ÀÎ 	0. Á¾·á
+		// ì€í–‰ì˜ ATM
+		//1. ì…ê¸ˆ 	2. ì¶œê¸ˆ 		3. í†µì¥í™•ì¸ 	0. ì¢…ë£Œ
 		//----------------------------------------
-		//°èÁÂ¸¦ ÇÏ³ª ¸¸µé°í ÀÔ±İ/Ãâ±İ/ÅëÀåÈ®ÀÎ/Á¾·á
+		//ê³„ì¢Œë¥¼ í•˜ë‚˜ ë§Œë“¤ê³  ì…ê¸ˆ/ì¶œê¸ˆ/í†µì¥í™•ì¸/ì¢…ë£Œ
 		Scanner sc = new Scanner(System.in);
 		BankFuntion bf = new BankFuntion();
 		
 		bf.Menu();
-//		ÅëÀå ÀÌ¸§ °èÁÂ¹øÈ£ ºñ¹Ğ¹øÈ£ ÀÜ¾×
+//		í†µì¥ ì´ë¦„ ê³„ì¢Œë²ˆí˜¸ ë¹„ë°€ë²ˆí˜¸ ì”ì•¡
  
 	}
 
@@ -30,12 +30,12 @@ class BankFuntion{
 	
 	
 	public BankFuntion () {
-		list.add(new BankVO("1234-5678", "È«±æµ¿", 1234, 0));
-		list.add(new BankVO("5678-5678", "º£ºê¸´Áö", 5678, 10000));
-		list.add(new BankVO("1234-1234", "Ä¿ÇÇ", 4321, 50000));
-		list.add(new BankVO("8765-4321", "¾Æ¸Ş¸®Ä«³ë", 8765, 123));
-		list.add(new BankVO("8765-8765", "¸ğ´ÏÅÍ", 7913, 587));
-		list.add(new BankVO("4321-4321", "ÄÄÇ»ÅÍ", 1346, 97000));
+		list.add(new BankVO("1234-5678", "í™ê¸¸ë™", 1234, 0));
+		list.add(new BankVO("5678-5678", "ë² ë¸Œë¦¿ì§€", 5678, 10000));
+		list.add(new BankVO("1234-1234", "ì»¤í”¼", 4321, 50000));
+		list.add(new BankVO("8765-4321", "ì•„ë©”ë¦¬ì¹´ë…¸", 8765, 123));
+		list.add(new BankVO("8765-8765", "ëª¨ë‹ˆí„°", 7913, 587));
+		list.add(new BankVO("4321-4321", "ì»´í“¨í„°", 1346, 97000));
 	}
 	
 	public void SignUp() {
@@ -43,17 +43,17 @@ class BankFuntion{
 		int newPsw;
 		int newPsw2;
 		
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 		newName = sc.nextLine();
 		while (true) {
-			System.out.println("»õ·Î¿î ºñ¹Ğ ¹øÈ£ 4ÀÚ¸®¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìƒˆë¡œìš´ ë¹„ë°€ ë²ˆí˜¸ 4ìë¦¬ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			newPsw = Integer.parseInt(sc.nextLine());
-			System.out.println("ºñ¹Ğ ¹øÈ£4ÀÚ¸®¸¦ ´Ù½Ã ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ë¹„ë°€ ë²ˆí˜¸4ìë¦¬ë¥¼ ë‹¤ì‹œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			newPsw2 = Integer.parseInt(sc.nextLine());
 			if (newPsw == newPsw2) {
-				System.out.println("ºñ¹Ğ ¹øÈ£ ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("ë¹„ë°€ ë²ˆí˜¸ ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				break;
-			} else System.out.println("ºñ¹Ğ¹øÈ£ ¼³Á¤À» ´Ù½Ã ½ÃÀÛÇÕ´Ï´Ù.");
+			} else System.out.println("ë¹„ë°€ë²ˆí˜¸ ì„¤ì •ì„ ë‹¤ì‹œ ì‹œì‘í•©ë‹ˆë‹¤.");
 		}
 		BankVO newAcc = new BankVO(addAccNum(), newName, newPsw2);
 		list.add(newAcc);
@@ -63,7 +63,7 @@ class BankFuntion{
 		String newAccNum;
 		Outter:
 		while (true) {
-			System.out.println("°èÁÂ¹øÈ£¸¦ »ı¼ºÁßÀÔ´Ï´Ù.");
+			System.out.println("ê³„ì¢Œë²ˆí˜¸ë¥¼ ìƒì„±ì¤‘ì…ë‹ˆë‹¤.");
 			char[] accN = new char[9];
 			for (int i = 0; i < accN.length; i++) {
 				accN[i] = (char)((int)(Math.random()*10));
@@ -74,7 +74,7 @@ class BankFuntion{
 				if (String.valueOf(accN).equals(list.get(i).getAccNum())) {
 					break;
 				} else {
-					System.out.println("°èÁÂ »ı¼ºÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+					System.out.println("ê³„ì¢Œ ìƒì„±ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 					break Outter;
 				}
 			}
@@ -93,75 +93,75 @@ class BankFuntion{
 	}
 	
 	public void InMoney (int i, int money) {
-		System.out.println(money+ "¿øÀ» ÀÔ±İÇÕ´Ï´Ù.");
+		System.out.println(money+ "ì›ì„ ì…ê¸ˆí•©ë‹ˆë‹¤.");
 		list.get(i).getMoney(money);
 		
-		System.out.println("ÀÔ±İµÇ¾ú½À´Ï´Ù. ÇöÀç ÀÜ¾×Àº"+list.get(i).getMoney() + "¿ø ÀÔ´Ï´Ù.");
+		System.out.println("ì…ê¸ˆë˜ì—ˆìŠµë‹ˆë‹¤. í˜„ì¬ ì”ì•¡ì€"+list.get(i).getMoney() + "ì› ì…ë‹ˆë‹¤.");
 	}
 	
 	public void OutMoney (int i, int money) {
-		System.out.println(money+ "¿øÀ» Ãâ±İÇÕ´Ï´Ù.");
+		System.out.println(money+ "ì›ì„ ì¶œê¸ˆí•©ë‹ˆë‹¤.");
 		list.get(i).outMoney(money);
 		if (list.get(i).getMoney() < 0) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© Ãâ±İÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ì¶œê¸ˆí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			list.get(i).getMoney(money);
-		} else System.out.println("Ãâ±İµÇ¾ú½À´Ï´Ù. ÇöÀç ÀÜ¾×Àº"+ list.get(i).getMoney()+ "¿ø ÀÔ´Ï´Ù.");
+		} else System.out.println("ì¶œê¸ˆë˜ì—ˆìŠµë‹ˆë‹¤. í˜„ì¬ ì”ì•¡ì€"+ list.get(i).getMoney()+ "ì› ì…ë‹ˆë‹¤.");
 	}
 	
 	public void CheckMoney (int i) {
-		System.out.println("ÇöÀç ÀÜ¾×Àº "+ list.get(i).getMoney() +"¿ø ÀÔ´Ï´Ù.");
+		System.out.println("í˜„ì¬ ì”ì•¡ì€ "+ list.get(i).getMoney() +"ì› ì…ë‹ˆë‹¤.");
 	}
 	
-	//ºñ¹Ğ¹øÈ£ Á¶È¸
+	//ë¹„ë°€ë²ˆí˜¸ ì¡°íšŒ
 	public void ComparePsw(Integer psw) {
 		int i;
 		while (true) {
 			try {
 			for (i = 0; i < list.size(); i++) {
 				if (psw == list.get(i).getPsw()) {
-					System.out.println("\nºñ¹Ğ¹øÈ£°¡ È®ÀÎµÇ¾ú½À´Ï´Ù.");
+					System.out.println("\në¹„ë°€ë²ˆí˜¸ê°€ í™•ì¸ë˜ì—ˆìŠµë‹ˆë‹¤.");
 						Menu(i);
 						return;
 					} else System.out.print("-");
 				}
-				System.out.println("ºñ¹Ğ ¹øÈ£¸¦ ´Ù½Ã ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À");
+				System.out.println("ë¹„ë°€ ë²ˆí˜¸ë¥¼ ë‹¤ì‹œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
 				psw = Integer.parseInt(sc.nextLine());
 			} catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			continue;
 			}
 		}
 	}
 	
-	//ÀÌ¸§À¸·Î Á¶È¸
+	//ì´ë¦„ìœ¼ë¡œ ì¡°íšŒ
 	public void CompareName(String name) {
 		for (int i = 0; i < list.size(); i++) {
 			if (name.equals(list.get(i).getName())) {
-				System.out.println("\nÀÌ¸§ÀÌ È®ÀÎµÇ¾ú½À´Ï´Ù.");
+				System.out.println("\nì´ë¦„ì´ í™•ì¸ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				return;
 			} else System.out.print("-");
 		}
 		int yesNo;
-		System.out.println("È¸¿ø µî·ÏÀÌ µÇ¾îÀÖÁö ¾Ê½À´Ï´Ù.");
-		System.out.println("È¸¿ø°¡ÀÔÀ» ÇÏ½Ã°Ú½À´Ï±î? (1 : ³×/ 2 : ¾Æ´Ï¿À)");
+		System.out.println("íšŒì› ë“±ë¡ì´ ë˜ì–´ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
+		System.out.println("íšŒì›ê°€ì…ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (1 : ë„¤/ 2 : ì•„ë‹ˆì˜¤)");
 		yesNo = Integer.parseInt(sc.nextLine());
 		while (true) {
 			if (yesNo == 1) {
 				SignUp();
 				break;
 			} else if (yesNo == 2) {
-				System.out.println("¸ŞÀÎ È­¸éÀ¸·Î µ¹¾Æ°¡½Ã°Ú½À´Ï±î?\n(1 : ³× , 2 : Á¾·á)");
+				System.out.println("ë©”ì¸ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ì‹œê² ìŠµë‹ˆê¹Œ?\n(1 : ë„¤ , 2 : ì¢…ë£Œ)");
 				yesNo = Integer.parseInt(sc.nextLine());
 				while (true) {
 					if (yesNo == 1) {
 						Menu();
 						return;
 					} else if (yesNo == 2) {
-						System.out.println("½Ã½ºÅÛÀ» Á¾·áÇÕ´Ï´Ù.");
+						System.out.println("ì‹œìŠ¤í…œì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 						System.exit(0);
-					} else System.out.println("¼ıÀÚ¸¦ ´Ù½Ã ´­·¯ÁÖ½Ê½Ã¿À.");
+					} else System.out.println("ìˆ«ìë¥¼ ë‹¤ì‹œ ëˆŒëŸ¬ì£¼ì‹­ì‹œì˜¤.");
 				}
-			} else System.out.println("¼ıÀÚ¸¦ ´Ù½Ã ´­·¯ÁÖ½Ê½Ã¿À.");
+			} else System.out.println("ìˆ«ìë¥¼ ë‹¤ì‹œ ëˆŒëŸ¬ì£¼ì‹­ì‹œì˜¤.");
 		}
 	}
 	
@@ -172,11 +172,11 @@ class BankFuntion{
 			while (true) {
 				try {
 					if (button == 1) {
-						System.out.println("ÀÔ±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+						System.out.println("ì…ê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 						InMoney(i, Integer.parseInt(sc.nextLine()));
 						break Outter;
 					} else if (button == 2) {
-						System.out.println("Ãâ±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+						System.out.println("ì¶œê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 						OutMoney(i, Integer.parseInt(sc.nextLine()));
 						break Outter;
 					} else if (button == 3) {
@@ -185,11 +185,11 @@ class BankFuntion{
 					} else if (button == 4) {
 						System.exit(0);
 					} else {
-						System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						break;
 					}
 				} catch (NumberFormatException e) {
-					System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+					System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 				}
 			}
 		}
@@ -200,38 +200,38 @@ class BankFuntion{
 		while (true) {
 			try {
 				System.out.println("------------------------------");
-				System.out.println("1. ÀÔ±İ   2. Ãâ±İ   3. ÅëÀåÈ®ÀÎ   4. Á¾·á");
+				System.out.println("1. ì…ê¸ˆ   2. ì¶œê¸ˆ   3. í†µì¥í™•ì¸   4. ì¢…ë£Œ");
 				System.out.println("------------------------------");
 				button = Integer.parseInt(sc.nextLine());
 				while (true) {
 					if (button == 1) {
-						System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						CompareName(sc.nextLine());
-						System.out.println("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						ComparePsw(Integer.parseInt(sc.nextLine()));
 						break;
 					} else if (button == 2) {
-						System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						CompareName(sc.nextLine());
-						System.out.println("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						ComparePsw(Integer.parseInt(sc.nextLine()));
 						break;
 					} else if (button == 3) {
-						System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						CompareName(sc.nextLine());
-						System.out.println("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						ComparePsw(Integer.parseInt(sc.nextLine()));
 						break;
 					} else if (button == 4) {
-						System.out.println("½Ã½ºÅÛÀ» Á¾·áÇÕ´Ï´Ù.");
+						System.out.println("ì‹œìŠ¤í…œì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 						System.exit(0);
 					} else {
-						System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+						System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 						break;
 					}
 				}
 			} catch (NumberFormatException e) {
-			System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¿© ÁÖ½Ê½Ã¿À.");
+			System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.");
 			}
 		}
 	}

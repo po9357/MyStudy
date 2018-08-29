@@ -1,4 +1,4 @@
-package com.mystudy.pm01_generic;
+ï»¿package com.mystudy.pm01_generic;
 
 class Box {
 	private Object obj;
@@ -10,7 +10,7 @@ class Box {
 	}
 }
 
-//Á¦³×¸¯ Àû¿ë ¹Ú½º
+//ì œë„¤ë¦­ ì ìš© ë°•ìŠ¤
 class BoxG<T> {
 	private T obj;
 	T getObj() {
@@ -23,16 +23,16 @@ class BoxG<T> {
 public class GenericExam {
 	
 	public static void main(String[] args) {
-		//Á¦³×¸¯(Generic) : ÄÃ·º¼ÇÀÌ ¾î¶² °´Ã¼µé·Î ÀÌ·ç¾îÁ³´ÂÁö Ç¥½ÃÇÏ´Â °´Ã¼Å¸ÀÔÀ» ÀÇ¹Ì
-		//Á¦³×¸¯ ÇüÅÂ : <°´Ã¼ÀÚ·á>, <>
-		//API -> <T> : °´Ã¼ÀÚ·áÇü, <E> : ÇÏ³ªÀÇ ¿ä¼Ò(Áï, °´Ã¼ÇÏ³ª)
-		//		MapÇü½Ä : <K, V> K´Â Key, V´Â value
+		//ì œë„¤ë¦­(Generic) : ì»¬ë ‰ì…˜ì´ ì–´ë–¤ ê°ì²´ë“¤ë¡œ ì´ë£¨ì–´ì¡ŒëŠ”ì§€ í‘œì‹œí•˜ëŠ” ê°ì²´íƒ€ì…ì„ ì˜ë¯¸
+		//ì œë„¤ë¦­ í˜•íƒœ : <ê°ì²´ìë£Œ>, <>
+		//API -> <T> : ê°ì²´ìë£Œí˜•, <E> : í•˜ë‚˜ì˜ ìš”ì†Œ(ì¦‰, ê°ì²´í•˜ë‚˜)
+		//		Mapí˜•ì‹ : <K, V> KëŠ” Key, VëŠ” value
 		///////////////////////////////////////////////
 		//Set<E>, List<E>, Queue<E>, Map<K, V>
 		
 		Box box = new Box();
 		box.setObj(100);
-		box.setObj("¹®ÀÚ¿­String");
+		box.setObj("ë¬¸ìì—´String");
 		String str = (String) box.getObj();
 		System.out.println(str.substring(0, 3));
 		
@@ -42,19 +42,19 @@ public class GenericExam {
 		String str1 = "Hello Java!!";
 		String str2 = "10000";
 		int str3 = 3333;
-		System.out.println("---- Á¦³×¸¯ Àû¿ë ----");
+		System.out.println("---- ì œë„¤ë¦­ ì ìš© ----");
 		BoxG<String> boxg = new BoxG<String>();
-		boxg.setObj("¹®ÀÚ¿­String");
+		boxg.setObj("ë¬¸ìì—´String");
 		boxg.setObj(str1);
 		boxg.setObj(str2);
-//		boxg.setObj(str3);		//ÄÄÆÄÀÏ ´Ü°è¿¡¼­ Å¸ÀÔÃ¼Å©·Î È®ÀÎ °¡´É
+//		boxg.setObj(str3);		//ì»´íŒŒì¼ ë‹¨ê³„ì—ì„œ íƒ€ì…ì²´í¬ë¡œ í™•ì¸ ê°€ëŠ¥
 		
 		System.out.println(boxg.getObj());
 		
 		//----------------------------------------
-		BoxG<Integer> boxg2 = new BoxG<>();		//<> ´ÙÀÌ¾Æ¸óµå ¿¬»êÀÚ Ã³¸® °¡´É
+		BoxG<Integer> boxg2 = new BoxG<>();		//<> ë‹¤ì´ì•„ëª¬ë“œ ì—°ì‚°ì ì²˜ë¦¬ ê°€ëŠ¥
 		boxg2.setObj(99999);
-		//boxg2.setObj("¹®ÀÚ¿­Àº ¾ÈµÊ");
+		//boxg2.setObj("ë¬¸ìì—´ì€ ì•ˆë¨");
 		System.out.println(boxg2.getObj());
 		
 		

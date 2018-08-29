@@ -1,17 +1,17 @@
-package com.mystudy.pm03_overriding;
+ï»¿package com.mystudy.pm03_overriding;
 
 public class Animal {
-	String name; //ÀÌ¸§, ¸íÄª
-	int legCnt; //´Ù¸®°¹¼ö
+	String name; //ì´ë¦„, ëª…ì¹­
+	int legCnt; //ë‹¤ë¦¬ê°¯ìˆ˜
 	
 	void eat() {
-		System.out.println(">> ¸Ô´Â´Ù");
+		System.out.println(">> ë¨¹ëŠ”ë‹¤");
 	}
 	void sleep() {
-		System.out.println(">> ÀáÀ» ÀÜ´Ù");
+		System.out.println(">> ìž ì„ ìž”ë‹¤");
 	}
 	
 	void sound() {
-		System.out.println(">> ¿ïÀ½¾øÀ½");
+		System.out.println(">> ìš¸ìŒì—†ìŒ");
 	}
 }

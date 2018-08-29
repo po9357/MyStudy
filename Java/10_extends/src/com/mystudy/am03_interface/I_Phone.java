@@ -1,11 +1,11 @@
-package com.mystudy.am03_interface;
+ï»¿package com.mystudy.am03_interface;
 
 public interface I_Phone {
-	//Ãß»ó ¸Ş¼Òµå(±¸ÇöµÇÁö ¾ÊÀº ¸Ş¼Òµå)
-	void view();		//0. ÀüÈ­Á¤º¸ È®ÀÎ
-	void call();		//1. ÀüÈ­°É±â
-	void receiveCall();	//2. ÀüÈ­¹Ş±â
-	void sendMsg();		//3. ¸Ş½ÃÁö º¸³»±â
-	void receiveMsg(String rms);	//4. ¸Ş½ÃÁö ¹Ş±â
+	//ì¶”ìƒ ë©”ì†Œë“œ(êµ¬í˜„ë˜ì§€ ì•Šì€ ë©”ì†Œë“œ)
+	void view();		//0. ì „í™”ì •ë³´ í™•ì¸
+	void call();		//1. ì „í™”ê±¸ê¸°
+	void receiveCall();	//2. ì „í™”ë°›ê¸°
+	void sendMsg();		//3. ë©”ì‹œì§€ ë³´ë‚´ê¸°
+	void receiveMsg(String rms);	//4. ë©”ì‹œì§€ ë°›ê¸°
 
 }

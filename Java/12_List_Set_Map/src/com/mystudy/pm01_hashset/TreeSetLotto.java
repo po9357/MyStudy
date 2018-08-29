@@ -1,4 +1,4 @@
-package com.mystudy.pm01_hashset;
+ï»¿package com.mystudy.pm01_hashset;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,35 +11,35 @@ import java.util.TreeSet;
 public class TreeSetLotto {
 
 	public static void main(String[] args) {
-		//TreeSet : Set Æ¯¼º + µ¥ÀÌÅÍÀÇ Á¤·Ä
+		//TreeSet : Set íŠ¹ì„± + ë°ì´í„°ì˜ ì •ë ¬
 		Set lotto = new TreeSet();
 		
-		//SetÀ» ÀÌ¿ëÇÑ ·Î¶Ç ¸¸µé±â : 1~45 ·£´ı¼ıÀÚ 6°³¸¦ set¿¡ ÀúÀå
-		//·Î¶Ç¹øÈ£ 6°³¸¦ ÃßÃ·ÇÏ°í, ÀÛÀº ¼ıÀÚºÎÅÍ ¼ø¼­´ë·Î È­¸é¿¡ Ç¥½Ã
+		//Setì„ ì´ìš©í•œ ë¡œë˜ ë§Œë“¤ê¸° : 1~45 ëœë¤ìˆ«ì 6ê°œë¥¼ setì— ì €ì¥
+		//ë¡œë˜ë²ˆí˜¸ 6ê°œë¥¼ ì¶”ì²¨í•˜ê³ , ì‘ì€ ìˆ«ìë¶€í„° ìˆœì„œëŒ€ë¡œ í™”ë©´ì— í‘œì‹œ
 		//Math.random();
-		//Ãâ·Â °á°ú
-		//±İÁÖÀÇ ·Î¶Ç¹øÈ£ : 5, 8, 10, 25, 33, 44
+		//ì¶œë ¥ ê²°ê³¼
+		//ê¸ˆì£¼ì˜ ë¡œë˜ë²ˆí˜¸ : 5, 8, 10, 25, 33, 44
 		
 		
 		int ran;
-//		for (; lotto.size() < 6;) {}			//ÀÌ¿Í °°Àº for¹® »ç¿ë °¡´É
+//		for (; lotto.size() < 6;) {}			//ì´ì™€ ê°™ì€ forë¬¸ ì‚¬ìš© ê°€ëŠ¥
 		while (lotto.size()<6) {
 			ran = (int)(Math.random()*45+1);
 			lotto.add(ran);
 		}
-		System.out.println("-- TreeSetÀº ÀúÀåÇÏ¸é¼­ Á¤·Ä --");
-		System.out.println(lotto);				//KEY°ªÀ» ±âÁØÀ¸·Î Á¤·Ä
+		System.out.println("-- TreeSetì€ ì €ì¥í•˜ë©´ì„œ ì •ë ¬ --");
+		System.out.println(lotto);				//KEYê°’ì„ ê¸°ì¤€ìœ¼ë¡œ ì •ë ¬
 		((TreeSet)lotto).pollFirst();
 		System.out.println(lotto);
 		((TreeSet)lotto).pollLast();
 		System.out.println(lotto);
 		
 		
-		//Set -> List¿Í °°ÀÌ º¯È¯ ÈÄ Collections.sort¸¦ ÀÌ¿ëÇØ
-		//Á¤·ÄÀ» ÇÒ ÇÊ¿ä°¡ ¾ø´Ù. TreeSetÀ» »ç¿ëÇÏ´Â °æ¿ì µ¥ÀÌÅÍ°¡ Á¤·ÄÀÌ µÇ¾î ÀúÀåµÇ±â ¶§¹®.
+		//Set -> Listì™€ ê°™ì´ ë³€í™˜ í›„ Collections.sortë¥¼ ì´ìš©í•´
+		//ì •ë ¬ì„ í•  í•„ìš”ê°€ ì—†ë‹¤. TreeSetì„ ì‚¬ìš©í•˜ëŠ” ê²½ìš° ë°ì´í„°ê°€ ì •ë ¬ì´ ë˜ì–´ ì €ì¥ë˜ê¸° ë•Œë¬¸.
 		Iterator ite = lotto.iterator();
 		
-		System.out.print("·Î¶Ç ÃßÃ· ¹øÈ£ : "+ ite.next());
+		System.out.print("ë¡œë˜ ì¶”ì²¨ ë²ˆí˜¸ : "+ ite.next());
 		while (ite.hasNext()) {
 			System.out.print(", "+ ite.next());
 		}

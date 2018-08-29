@@ -1,10 +1,10 @@
-package com.mystudy.am02_phone;
+ï»¿package com.mystudy.am02_phone;
 
 public interface I_Phone {
-	void view();		//0. ÀüÈ­Á¤º¸ È®ÀÎ
-	void call();		//1. ÀüÈ­°É±â
-	void receiveCall();	//2. ÀüÈ­¹Ş±â
-	void sendMsg();		//3. ¸Ş½ÃÁö º¸³»±â
-	void receiveMsg();	//4. ¸Ş½ÃÁö ¹Ş±â
+	void view();		//0. ì „í™”ì •ë³´ í™•ì¸
+	void call();		//1. ì „í™”ê±¸ê¸°
+	void receiveCall();	//2. ì „í™”ë°›ê¸°
+	void sendMsg();		//3. ë©”ì‹œì§€ ë³´ë‚´ê¸°
+	void receiveMsg();	//4. ë©”ì‹œì§€ ë°›ê¸°
 
 }

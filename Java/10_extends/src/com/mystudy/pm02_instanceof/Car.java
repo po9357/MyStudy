@@ -1,13 +1,13 @@
-package com.mystudy.pm02_instanceof;
+ï»¿package com.mystudy.pm02_instanceof;
 
 public class Car {
 	String type;
 	
 	void drive() {
-		System.out.println(">> ÀÌµ¿");
+		System.out.println(">> ì´ë™");
 	}
 	
 	void stop() {
-		System.out.println(">> Á¤Áö");
+		System.out.println(">> ì •ì§€");
 	}
 }

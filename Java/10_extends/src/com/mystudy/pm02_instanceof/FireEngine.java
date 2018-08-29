@@ -1,12 +1,12 @@
-package com.mystudy.pm02_instanceof;
+ï»¿package com.mystudy.pm02_instanceof;
 
-//¼Ò¹æÂ÷ Å¬·¡½º
+//ì†Œë°©ì°¨ í´ëž˜ìŠ¤
 public class FireEngine extends Car {
 	void siren() {
-		System.out.println(">> ºÒ²ô±â Ãâµ¿ »çÀÌ·»~~");
+		System.out.println(">> ë¶ˆë„ê¸° ì¶œë™ ì‚¬ì´ë Œ~~");
 	}
 	
 	void water() {
-		System.out.println(">> ¹°»Ñ¸®±â~~");
+		System.out.println(">> ë¬¼ë¿Œë¦¬ê¸°~~");
 	}
 }
