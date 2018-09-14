@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>    
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>    
+<script>
+    var lis = document.querySelectorAll('li');
+    // var lis = Array.from(document.querySelectorAll('li'));
+    // for (var i=0; i<lis.length; i++){
+    //     lis[i].style.color = 'green';
+    // }
+    for (var name in lis){
+        lis[name].style.color = 'blue';
+    }
+</script>
+</body>
+</html>
