@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQ 이미지전환</title>
+    <!-- jQuery import 방식2 : CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    //next버튼: 다음이미지, prev버튼: 이전이미지
+    $(function(){
+        //이미지 파일명이 배열에 있는 경우
+        //var imgs = ["bimg01.jpg", "bimg02.jpg"];
+        var imgs = new Array();
+        for (var i=0; i<10; i++) {
+            //배열에 파일명 입력
+        }
+        
+        $("#next").click(function(){
+            console.log("src: " + $("img").prop("src"));
+        });
+        
+        $("#prev").click(function(){
+            
+            console.log("src: " + $("img").prop("src"));
+        });
+    });
+</script>
+<style>
+    div { 
+        width: 320px; 
+        margin: 0 auto;
+        position: relative;
+    }
+    div > a {
+        /* 위치설정 */
+        position: absolute;
+        top: 150px; left: 20px;
+        background-color: yellow;
+        
+        /* 모양설정 */
+        width: 50px; height: 40px;
+        border-radius: 25%;
+        
+        /* 텍스트 설정 */
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px; //세로 중앙정렬 height와 동일값 적용
+    }
+    div > a:last-child {
+        left: 250px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <img src="images/bimg01.jpg" alt="상품이미지">
+        <a id="prev" href="#">prev</a>
+        <a id="next" href="#">next</a>
+    </div>
+</body>    
+</html>
