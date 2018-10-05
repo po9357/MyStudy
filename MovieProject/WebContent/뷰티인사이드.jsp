@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>어벤져스</title>
-     <!-- jQuery import 방식1 -->
-    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-    
-    <!-- jQuery import 방식2: CDN -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
     <script src="https://code.jQuery.com/jquery-3.3.1.min.js"></script>
     <style>
         .prev {
@@ -34,12 +32,19 @@
             $("#back").click(function(){
                 history.back();
             });
+            
+            $("#booking").click(function(){
+            	<% session.removeAttribute("movie"); %>
+	            <% session.setAttribute("movie", "뷰티 인사이드"); %>
+				alert('[${sessionScope.movie}]예매를 진행합니다');            	
+            });
+            
         });
     </script>
 </head>
 <body>
     <p class="prev">
-            <!-- 영화 예고편 iframe(유투브) -->
+        <iframe src="https://www.youtube.com/embed/ESPFTY8Y-xM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </p>
     <hr>
     <div class="description">
@@ -48,7 +53,9 @@
     <footer>
         <div class="btn">
             <input type="button" value="뒤로가기" id="back">
-            <input type="button" value="예매하기" id="booking">
+            <form action="./booking">
+	            <input type="submit" value="예매하기" id="booking">
+            </form>
         </div>
     </footer>
         
