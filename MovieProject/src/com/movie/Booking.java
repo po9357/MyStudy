@@ -28,6 +28,16 @@ public class Booking extends HttpServlet {
 		movieDAO dao = new movieDAO();
 		HashMap<String, Integer> seatMap = dao.cntSeat("1관");
 		HashMap<String, ArrayList<String>> mvThMap = dao.mvNothName(movieName);
+		session.setAttribute("theater", mvThMap);
+		request.setAttribute("mapSize", seatMap.size());
+		request.setAttribute("map", seatMap);
+		
+		RequestDispatcher view = request.getRequestDispatcher("bookingTest2.jsp");
+		view.forward(request, response);
+		
+		
+		
+		
 //		Iterator<String> ite = seatMap.keySet().iterator();
 //		int cnt = 0;
 //		int colNum = 0;
@@ -44,12 +54,6 @@ public class Booking extends HttpServlet {
 //		}
 //		request.setAttribute("rowName", rowList);
 //		request.setAttribute("colNum", colList);
-		session.setAttribute("theater", mvThMap);
-		request.setAttribute("mapSize", seatMap.size());
-		request.setAttribute("map", seatMap);
-		
-		RequestDispatcher view = request.getRequestDispatcher("bookingTest.jsp");
-		view.forward(request, response);
 		
 		
 		

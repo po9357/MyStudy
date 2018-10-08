@@ -79,9 +79,9 @@ public class movieDAO {
 	public boolean logIn(String id, String password) {
 		boolean check = false;
 		try {
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@203.236.209.182:1521:xe", "LUNCH", "lunch");
+			conn = DriverManager.getConnection(URL, USER, PASSWORD);
 			
-			String sql = "SELECT * FROM MEMBER WHERE ID = ? AND PASSWORD = ?";
+			String sql = "SELECT * FROM MEMBER WHERE MEMBERID = ? AND PASSWORD = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, password);
