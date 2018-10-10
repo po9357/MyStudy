@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>어벤져스</title>
+     <!-- jQuery import 방식1 -->
+    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+    
+    <!-- jQuery import 방식2: CDN -->
+    <script src="https://code.jQuery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        .prev {
+            /* border: 1px black solid; */
+            text-align: center;
+        }
+        iframe {
+            width: 80%;
+            height: 450px;
+        }
+        .description, .btn {
+            margin: auto;
+            width: 80%;
+        }
+        .btn>input {
+            float: right;
+            border: 1px solid black;
+        }
+        hr{
+            width: 80%;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#back").click(function(){
+                history.back();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p class="prev">
+            <iframe src="https://www.youtube.com/embed/xUDhdCsLkjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+    <hr>
+    <div class="description">
+        설명
+    </div>
+    <footer>
+        <div class="btn">
+            <input type="button" value="뒤로가기" id="back">
+            <form src="#">
+            <input type="button" value="예매하기" id="booking">
+            </form>
+        </div>
+    </footer>
+        
+</body>
+</html>
